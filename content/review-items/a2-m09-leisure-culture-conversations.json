@@ -1,0 +1,1973 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-vt-lemma-hobby-m9",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “hobby”.",
+      "expectedAnswer": "hobby",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hobby-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "hobby"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-vt-lemma-vrije-tijd",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “free time”.",
+      "expectedAnswer": "vrije tijd",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vrije-tijd",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vrije tijd"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-vt-lemma-weekend-m9",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-vt-lemma-sport-m9",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “sport”.",
+      "expectedAnswer": "sport",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-sport-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "sport"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-vt-lemma-muziek-m9",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “music”.",
+      "expectedAnswer": "muziek",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-muziek-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "muziek"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-gt-a2.3-leisure-hobbies",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Hobbies & free time”?",
+      "expectedAnswer": "Ik hou van koken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-hobbies",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Hobbies & free time"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-gt-a2.3-leisure-conversation-flow",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Keeping the conversation going”?",
+      "expectedAnswer": "Wat doe jij graag in het weekend?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-conversation-flow",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Keeping the conversation going"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-ph-ik-hou-van",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I love … (strong like)).",
+      "expectedAnswer": "Ik hou van …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik hou van …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-ph-ik-ga-graag",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I like going …).",
+      "expectedAnswer": "Ik ga graag …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik ga graag …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-ph-wat-doe-jij-graag",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What do you like to do …?).",
+      "expectedAnswer": "Wat doe jij graag …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Wat doe jij graag …?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l01-listening-hobbies-catch-gist-ph-en-jij",
+      "sourceLessonId": "a2-m09-l01-listening-hobbies-catch-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: And you?).",
+      "expectedAnswer": "En jij?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "En jij?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-vt-lemma-film-m9",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “film”.",
+      "expectedAnswer": "film",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-film-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "film"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-vt-lemma-boek-m9",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “book”.",
+      "expectedAnswer": "boek",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boek-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "boek"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-vt-lemma-leuk-m9",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice / fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-vt-lemma-saai-m9",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “boring”.",
+      "expectedAnswer": "saai",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-saai-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "saai"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-vt-lemma-vriend-m9",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-gt-a2.3-leisure-hobbies",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Hobbies & free time”?",
+      "expectedAnswer": "Ik hou van koken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-hobbies",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Hobbies & free time"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-gt-a2.3-leisure-opinions",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving opinions (informal)”?",
+      "expectedAnswer": "Ik vind jazz erg leuk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-opinions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Giving opinions (informal)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-ph-ik-vind-leuk-saai",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I find … fun / boring.).",
+      "expectedAnswer": "Ik vind … leuk / saai.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik vind … leuk / saai."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-ph-ik-lees-liever",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'd rather read …).",
+      "expectedAnswer": "Ik lees liever …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik lees liever …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-ph-snap-ik",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I get it.).",
+      "expectedAnswer": "Snap ik.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Snap ik."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l02-listen-read-interests-preferences-ph-nog-niet",
+      "sourceLessonId": "a2-m09-l02-listen-read-interests-preferences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Not yet!).",
+      "expectedAnswer": "Nog niet!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Nog niet!"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-vt-lemma-vinden-m9",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to find / think (opinion)”.",
+      "expectedAnswer": "vinden",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vinden-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vinden"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-vt-lemma-denken-m9",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to think”.",
+      "expectedAnswer": "denken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-denken-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "denken"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-vt-lemma-volgens-mij-m9",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “in my opinion”.",
+      "expectedAnswer": "volgens",
+      "variants": [
+        "volgens mij"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-volgens-mij-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "volgens"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-vt-lemma-mening-m9",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “opinion”.",
+      "expectedAnswer": "mening",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mening-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "mening"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-vt-lemma-want-m9",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-gt-a2.3-leisure-opinions",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving opinions (informal)”?",
+      "expectedAnswer": "Ik vind jazz erg leuk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-opinions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Giving opinions (informal)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-gt-a2.3-leisure-connectors",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking in conversation”?",
+      "expectedAnswer": "Ik ga mee, want ik heb tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-connectors",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Linking in conversation"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-ph-ik-vind-het",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I find it …).",
+      "expectedAnswer": "Ik vind het …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik vind het …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-ph-ik-denk-dat",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I think that …).",
+      "expectedAnswer": "Ik denk dat …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik denk dat …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-ph-volgens-mij",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: In my opinion …).",
+      "expectedAnswer": "Volgens mij …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Volgens mij …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l03-grammar-opinions-ik-vind-ik-denk-ph-misschien",
+      "sourceLessonId": "a2-m09-l03-grammar-opinions-ik-vind-ik-denk",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Maybe …).",
+      "expectedAnswer": "Misschien …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Misschien …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-vt-lemma-leuk-m9",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice / fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-vt-lemma-saai-m9",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “boring”.",
+      "expectedAnswer": "saai",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-saai-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "saai"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-vt-lemma-interessant-m9",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “interesting”.",
+      "expectedAnswer": "interessant",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-interessant-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "interessant"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-vt-lemma-want-m9",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-vt-lemma-omdat-m9",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (subord.)”.",
+      "expectedAnswer": "omdat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-omdat-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-gt-a2.3-leisure-opinions",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving opinions (informal)”?",
+      "expectedAnswer": "Ik vind jazz erg leuk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-opinions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Giving opinions (informal)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-gt-a2.3-leisure-connectors",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking in conversation”?",
+      "expectedAnswer": "Ik ga mee, want ik heb tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-connectors",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Linking in conversation"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-ph-want",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: …, because … (two main clauses)).",
+      "expectedAnswer": "…, want …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "…, want …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-ph-omdat-ik",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: …, because I …).",
+      "expectedAnswer": "…, omdat ik …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "…, omdat ik …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-ph-maar",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: …, but …).",
+      "expectedAnswer": "…, maar …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "…, maar …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l04-practice-likes-dislikes-reasons-ph-soms-vaak",
+      "sourceLessonId": "a2-m09-l04-practice-likes-dislikes-reasons",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Sometimes …, often …).",
+      "expectedAnswer": "Soms …, vaak …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Soms …, vaak …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-vt-lemma-hobby-m9",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “hobby”.",
+      "expectedAnswer": "hobby",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hobby-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "hobby"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-vt-lemma-vrije-tijd",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “free time”.",
+      "expectedAnswer": "vrije tijd",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vrije-tijd",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vrije tijd"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-vt-lemma-echt-m9",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “really”.",
+      "expectedAnswer": "echt",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-echt-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "echt"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-vt-lemma-vaak-m9",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “often”.",
+      "expectedAnswer": "vaak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vaak-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vaak"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-vt-lemma-soms-m9",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “sometimes”.",
+      "expectedAnswer": "soms",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-soms-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "soms"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-gt-a2.3-leisure-conversation-flow",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Keeping the conversation going”?",
+      "expectedAnswer": "Wat doe jij graag in het weekend?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-conversation-flow",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Keeping the conversation going"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-gt-a2.3-leisure-reactions",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Natural reactions”?",
+      "expectedAnswer": "Echt? Waarom vind je dat?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-reactions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Natural reactions"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-ph-echt",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Really?).",
+      "expectedAnswer": "Echt?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Echt?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-ph-oh-leuk",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Oh nice!).",
+      "expectedAnswer": "Oh leuk!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Oh leuk!"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-ph-waarom",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Why?).",
+      "expectedAnswer": "Waarom?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Waarom?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l05-speaking-talk-hobbies-ph-hoe-vaak",
+      "sourceLessonId": "a2-m09-l05-speaking-talk-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: How often …?).",
+      "expectedAnswer": "Hoe vaak …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Hoe vaak …?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-vt-lemma-weekend-m9",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-vt-lemma-vriend-m9",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-vt-lemma-uitgaan-m9",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to go out”.",
+      "expectedAnswer": "uitgaan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-uitgaan-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "uitgaan"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-vt-lemma-festival-m9",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “festival”.",
+      "expectedAnswer": "festival",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-festival-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "festival"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-vt-lemma-misschien-m9",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “maybe”.",
+      "expectedAnswer": "misschien",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misschien-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "misschien"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-gt-a2.3-leisure-conversation-flow",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Keeping the conversation going”?",
+      "expectedAnswer": "Wat doe jij graag in het weekend?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-conversation-flow",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Keeping the conversation going"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-gt-a2.3-leisure-reactions",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Natural reactions”?",
+      "expectedAnswer": "Echt? Waarom vind je dat?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-reactions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Natural reactions"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-ph-zullen-we",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Shall we …?).",
+      "expectedAnswer": "Zullen we …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Zullen we …?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-ph-ik-ben-in",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm in!).",
+      "expectedAnswer": "Ik ben in!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik ben in!"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-ph-hmm-ik-ben-meer-van",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Hmm, I'm more into …).",
+      "expectedAnswer": "Hmm, ik ben meer van …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Hmm, ik ben meer van …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l06-listening-social-weekend-plans-ph-wat-lijkt-jou",
+      "sourceLessonId": "a2-m09-l06-listening-social-weekend-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What sounds … to you?).",
+      "expectedAnswer": "Wat lijkt jou …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Wat lijkt jou …?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-vt-lemma-gisteren-m9",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “yesterday”.",
+      "expectedAnswer": "gisteren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gisteren-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "gisteren"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-vt-lemma-vandaag-m9",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-vt-lemma-film-m9",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “film”.",
+      "expectedAnswer": "film",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-film-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "film"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-vt-lemma-museum-m9",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “museum”.",
+      "expectedAnswer": "museum",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-museum-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "museum"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-vt-lemma-want-m9",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-gt-a2.3-leisure-perfectum-light",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Light past (perfectum)”?",
+      "expectedAnswer": "Gisteren heb ik een film gekeken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-perfectum-light",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Light past (perfectum)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-gt-a2.3-leisure-connectors",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking in conversation”?",
+      "expectedAnswer": "Ik ga mee, want ik heb tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-connectors",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Linking in conversation"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-ph-gisteren-heb-ik-gekeken",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Yesterday I watched …).",
+      "expectedAnswer": "Gisteren heb ik … gekeken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Gisteren heb ik … gekeken."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-ph-ik-ben-geweest",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have been …).",
+      "expectedAnswer": "Ik ben … geweest.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik ben … geweest."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-ph-ik-heb-gekocht",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I bought …).",
+      "expectedAnswer": "Ik heb … gekocht.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik heb … gekocht."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l07-grammar-past-experiences-light-perfectum-ph-het-was",
+      "sourceLessonId": "a2-m09-l07-grammar-past-experiences-light-perfectum",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It was …).",
+      "expectedAnswer": "Het was …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Het was …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-vt-lemma-weekend-m9",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-vt-lemma-vriend-m9",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-vt-lemma-leuk-m9",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice / fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-vt-lemma-gisteren-m9",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “yesterday”.",
+      "expectedAnswer": "gisteren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gisteren-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "gisteren"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-vt-lemma-muziek-m9",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “music”.",
+      "expectedAnswer": "muziek",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-muziek-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "muziek"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-gt-a2.3-leisure-perfectum-light",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Light past (perfectum)”?",
+      "expectedAnswer": "Gisteren heb ik een film gekeken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-perfectum-light",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Light past (perfectum)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-gt-a2.3-leisure-conversation-flow",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Keeping the conversation going”?",
+      "expectedAnswer": "Wat doe jij graag in het weekend?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-conversation-flow",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Keeping the conversation going"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-ph-hoi",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Hi! …).",
+      "expectedAnswer": "Hoi! …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Hoi! …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-ph-gisteren-heb-ben-ik",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Yesterday I …).",
+      "expectedAnswer": "Gisteren heb/ben ik …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Gisteren heb/ben ik …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-ph-het-was",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It was …).",
+      "expectedAnswer": "Het was …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Het was …"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l08-writing-short-messages-weekend-hobbies-ph-zullen-we-groetjes",
+      "sourceLessonId": "a2-m09-l08-writing-short-messages-weekend-hobbies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Shall we …? Bye!).",
+      "expectedAnswer": "Zullen we …? Groetjes!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Zullen we …? Groetjes!"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-vt-lemma-hobby-m9",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “hobby”.",
+      "expectedAnswer": "hobby",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hobby-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "hobby"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-vt-lemma-weekend-m9",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-vt-lemma-leuk-m9",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice / fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-vt-lemma-echt-m9",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “really”.",
+      "expectedAnswer": "echt",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-echt-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "echt"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-vt-lemma-vriend-m9",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-gt-a2.3-leisure-conversation-flow",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Keeping the conversation going”?",
+      "expectedAnswer": "Wat doe jij graag in het weekend?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-conversation-flow",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Keeping the conversation going"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-gt-a2.3-leisure-reactions",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Natural reactions”?",
+      "expectedAnswer": "Echt? Waarom vind je dat?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-reactions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Natural reactions"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-ph-echt-vervolgvraag",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Really? + follow-up).",
+      "expectedAnswer": "Echt? + vervolgvraag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Echt? + vervolgvraag"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-ph-dat-lijkt-me-leuk",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That sounds fun.).",
+      "expectedAnswer": "Dat lijkt me leuk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Dat lijkt me leuk."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-ph-en-jij-en-wat-doe-jij",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: And you? …).",
+      "expectedAnswer": "En jij? / En wat doe jij …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "En jij? / En wat doe jij …?"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l09-task-short-conversation-guided-ph-laten-we-appen-afspreken",
+      "sourceLessonId": "a2-m09-l09-task-short-conversation-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Let's text / arrange …).",
+      "expectedAnswer": "Laten we … appen / afspreken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Laten we … appen / afspreken."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-vt-lemma-mening-m9",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “opinion”.",
+      "expectedAnswer": "mening",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mening-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "mening"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-vt-lemma-eens-m9",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “agree (het eens zijn)”.",
+      "expectedAnswer": "eens",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-eens-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "eens"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-vt-lemma-oneens-m9",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “disagree”.",
+      "expectedAnswer": "oneens",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-oneens-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "oneens"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-vt-lemma-misschien-m9",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “maybe”.",
+      "expectedAnswer": "misschien",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misschien-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "misschien"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-vt-lemma-film-m9",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “film”.",
+      "expectedAnswer": "film",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-film-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "film"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-gt-a2.3-leisure-opinions",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving opinions (informal)”?",
+      "expectedAnswer": "Ik vind jazz erg leuk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-opinions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Giving opinions (informal)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-gt-a2.3-leisure-reactions",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Natural reactions”?",
+      "expectedAnswer": "Echt? Waarom vind je dat?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-reactions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Natural reactions"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-ph-ik-snap-wat-je-bedoelt",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I get what you mean.).",
+      "expectedAnswer": "Ik snap wat je bedoelt.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Ik snap wat je bedoelt."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-ph-volgens-mij-is-het-anders",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: In my view it's different.).",
+      "expectedAnswer": "Volgens mij is het anders.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Volgens mij is het anders."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-ph-misschien-is-het-niet-jouw-smaak",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Maybe it's not your taste.).",
+      "expectedAnswer": "Misschien is het niet jouw smaak.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Misschien is het niet jouw smaak."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l10-task-social-discussion-simulation-ph-laten-we-samen-proberen",
+      "sourceLessonId": "a2-m09-l10-task-social-discussion-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Let's try … together.).",
+      "expectedAnswer": "Laten we … samen proberen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "phraseNl": "Laten we … samen proberen."
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-vt-lemma-hobby-m9",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “hobby”.",
+      "expectedAnswer": "hobby",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hobby-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "hobby"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-vt-lemma-vinden-m9",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to find / think (opinion)”.",
+      "expectedAnswer": "vinden",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vinden-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "vinden"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-vt-lemma-gisteren-m9",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “yesterday”.",
+      "expectedAnswer": "gisteren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gisteren-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "gisteren"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-vt-lemma-want-m9",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-vt-lemma-echt-m9",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “really”.",
+      "expectedAnswer": "echt",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-echt-m9",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "lemma": "echt"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-gt-a2.3-leisure-opinions",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving opinions (informal)”?",
+      "expectedAnswer": "Ik vind jazz erg leuk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-opinions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Giving opinions (informal)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-gt-a2.3-leisure-perfectum-light",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Light past (perfectum)”?",
+      "expectedAnswer": "Gisteren heb ik een film gekeken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-perfectum-light",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Light past (perfectum)"
+      }
+    },
+    {
+      "id": "rev-a2-m09-l11-review-leisure-conversations-gt-a2.3-leisure-reactions",
+      "sourceLessonId": "a2-m09-l11-review-leisure-conversations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Natural reactions”?",
+      "expectedAnswer": "Echt? Waarom vind je dat?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m09-leisure-culture-conversations"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-leisure-reactions",
+        "moduleId": "a2-m09-leisure-culture-conversations",
+        "grammarLabel": "Natural reactions"
+      }
+    }
+  ]
+}

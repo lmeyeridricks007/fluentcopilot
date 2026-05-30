@@ -1,0 +1,6 @@
+export { NextBestActionHero } from '@/features/dashboard/components/NextBestActionHero'
+export { ReadinessB1MiniCard } from '@/features/dashboard/components/ReadinessB1MiniCard'
+export { ConfidenceTrendMiniCard } from '@/features/dashboard/components/ConfidenceTrendMiniCard'
+export { WeakAreasSummaryCard } from '@/features/dashboard/components/WeakAreasSummaryCard'
+export { MasterySnapshotCard } from '@/features/dashboard/components/MasterySnapshotCard'
+export { PracticeHabitStrip } from '@/features/dashboard/components/PracticeHabitStrip'

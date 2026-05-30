@@ -1,0 +1,8 @@
+node_modules
+dist
+azurite-data
+local.settings.json
+*.log
+bin
+obj
+.azurefunctions

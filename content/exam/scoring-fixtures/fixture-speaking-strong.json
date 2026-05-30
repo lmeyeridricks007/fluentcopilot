@@ -1,0 +1,35 @@
+{
+  "_comment": "Speaking — strong A2-style response. AI payload + expected engine outcomes after aggregation.",
+  "mode": "training",
+  "responseText": "Ik ga meestal met de tram naar mijn werk omdat dat snel is. Als het mooi weer is, fiets ik. Ik ga het liefst met de fiets want dan ben ik buiten en het is gratis.",
+  "transcriptConfidence": 0.88,
+  "aiPayload": {
+    "scores": {
+      "execution": 3,
+      "vocabulary": 2,
+      "grammar": 2,
+      "fluency": 2,
+      "clearness": 1,
+      "pronunciation": 2
+    },
+    "rationales": {
+      "execution": "Answers transport preference with two means and a clear preference.",
+      "vocabulary": "Appropriate range: tram, werk, fiets, weer.",
+      "grammar": "Subordinate clauses mostly correct; meaning always clear.",
+      "fluency": "Natural flow with connectors.",
+      "clearness": "Easy to follow structure.",
+      "pronunciation": "Inferred intelligible from consistent transcript."
+    },
+    "certainty": 0.81
+  },
+  "expected": {
+    "rawTotal": 12,
+    "maxTotal": 12,
+    "normalizedPercent": 100,
+    "tenPointScale": 10,
+    "pass": true,
+    "exerciseOutcomeBand": "pass",
+    "readinessLabel": "strong",
+    "executionGatingApplied": false
+  }
+}

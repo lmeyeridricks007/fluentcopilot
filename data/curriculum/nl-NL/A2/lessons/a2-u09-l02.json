@@ -1,0 +1,282 @@
+{
+  "id": "a2-u09-l02",
+  "unit_id": "a2-u09",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "A",
+    "primary_skills": [
+      "listening",
+      "reading"
+    ]
+  },
+  "catalog": {
+    "title": "Listen & read · Who said what? Listen, read, respond",
+    "description": "Who said what? Listen, read, respond · A2 listen & read in “Culture & integration context”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Culture & society",
+    "type": "dialogue",
+    "durationMinutes": 21,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can understand short input about culture & integration context, notice useful chunks, and answer gist/detail questions",
+    "can_do_outcomes": [
+      "Understand basics of primary school routines and parent contact (rough picture)",
+      "Describe one or two civic habits (cycling, calendars, punctuality) simply",
+      "Follow a short exchange in this theme and reuse one chunk."
+    ],
+    "grammar_primary": "a2.3-impersonal-men",
+    "grammar_primary_label": "General statements (men / je / veel mensen …)",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "oud en nieuw",
+      "basisschool",
+      "ouderspreekuur",
+      "directheid",
+      "fietsen",
+      "agenda",
+      "borrel",
+      "traditie",
+      "integratie",
+      "Koningsdag",
+      "Sinterklaas",
+      "kerst"
+    ],
+    "grammar_points": [
+      {
+        "point": "impersonal constructions (men …, je … as 'one')",
+        "examples_nl": [
+          "In Nederland dragen sommige mensen oranje.",
+          "Mag ik vragen hoe jullie Koningsdag vieren?",
+          "Ik praat vandaag over oud en nieuw."
+        ],
+        "examples_en": [
+          "In the Netherlands some people wear orange.",
+          "May I ask how you celebrate King's Day?",
+          "Today I'm talking about oud en nieuw."
+        ]
+      },
+      {
+        "point": "present tense narratives about customs",
+        "examples_nl": [
+          "Men plant sociale afspraken vaak een dag van tevoren.",
+          "Je spreekt hier vaak rustig aan bij de balie."
+        ],
+        "examples_en": [
+          "People often plan social meetups a day ahead.",
+          "Here people often address the desk calmly."
+        ]
+      },
+      {
+        "point": "fixed expressions for holidays and greetings",
+        "examples_nl": [
+          "Integratie is taal én gewoontes leren.",
+          "Fijne feestdagen en tot volgend jaar!"
+        ],
+        "examples_en": [
+          "Integration is language and learning habits.",
+          "Happy holidays and see you next year!"
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about culture & integration context in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 7,
+    "practice_minutes": 9,
+    "check_minutes": 3,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Understand short input about culture & integration context, notice useful chunks, and answer gist/detail questions\n\n**Grammar thread today:** General statements (men / je / veel mensen …) — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **Culture & integration context**.\n\nWords you might use today:\n• **oud en nieuw**\n• **basisschool**\n• **ouderspreekuur**\n• **directheid**\n• **fietsen**\n• **agenda**\n• **borrel**\n• **traditie**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren sprak ik met een vriend over **Koningsdag** en Nederlandse tradities. We dronken koffie en wandelden een half uur door de buurt.",
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "oud en nieuw",
+          "directheid"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Listen & read",
+        "activity": "**Listen & read** this short conversation. Read twice: first for gist, then for details.\n\n**Ouder:** Op de basisschool krijgen we berichten via de ouderapp.\n\n**Andere ouder:** Wij ook. Soms is er ouderavond over huiswerk.\n\n**Ouder:** En wie spreek je bij problemen?\n\n**Andere ouder:** Eerst de leerkracht, daarna de directie. Alles rustig en direct.\n\n**Gist check:** Who are the people, and what is the situation?\n**Detail check:** Note one time phrase or place you recognise.",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Today's grammar — general statements**\n\n**Rule:** *In Nederland …* · *Veel mensen …* · *Je …* (one) — useful for culture talk without blaming.\n\n**Patterns:**\n• *In Nederland fietsen veel mensen.* · *Je spreekt hier rustig aan bij de balie.*\n\n**Produce:**\n1. One neutral sentence about a habit with *In Nederland …*.\n2. One careful question: *Mag ik vragen of …?*\n\n**Pronunciation (listen + repeat)**\n**Pronunciation — sch / sj:** *school* vs *sjabloon* — listen twice, then shadow.\n\n**Language focus — patterns you can reuse**\n\n**impersonal constructions (men …, je … as 'one')**\n• NL: In Nederland dragen sommige mensen oranje. / Mag ik vragen hoe jullie Koningsdag vieren?\n• EN: In the Netherlands some people wear orange. / May I ask how you celebrate King's Day?\n\n**present tense narratives about customs**\n• NL: Men plant sociale afspraken vaak een dag van tevoren. / Je spreekt hier vaak rustig aan bij de balie.\n• EN: People often plan social meetups a day ahead. / Here people often address the desk calmly.\n\n**fixed expressions for holidays and greetings**\n• NL: Integratie is taal én gewoontes leren. / Fijne feestdagen en tot volgend jaar!\n• EN: Integration is language and learning habits. / Happy holidays and see you next year!\n\n**Try this:** pick one Dutch sentence above and change only the time or the person (ik → wij / vandaag → morgen), **or** do the “Produce” task from the grammar box above.\n\n\n**Culture tip:** This unit foregrounds situated cultural knowledge; every lesson links language to real Netherlands contexts.\n*How does this compare with where you live? One sentence in your own words.*",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "oud en nieuw",
+          "directheid"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Match** (say the pairs out loud)\n• **oud en nieuw** ↔ a word you connect with daily life\n• **basisschool** ↔ a place or thing from this unit\n\n**2 — Gap-fill**\nComplete: Ik _____ om acht uur. *(opstaan → stem: Ik **sta** … **op**)*\n\n**3 — Mini dialogue**\n**A:** Hoe laat ben je klaar? **B:** Om half zes, denk ik.\n\n**4 — Find the odd one**\nWhich word fits *least* with this unit: **ouderspreekuur**, **broodje**, **trein**? Why?\n\n**5 — True / false**\nSay **waar** or **niet waar**: \"In Dutch, the verb often moves when you ask a yes/no question.\"\n\n**6 — Your sentence**\nWrite one true sentence about yourself using **oud en nieuw** or **basisschool**.\n\n**7 — Transform**\nMake this informal line a bit more formal: \"Kun je me helpen?\" → start with **Kunt u …**\n\n**8 — Quick translation check**\n\"In Nederland dragen sommige mensen oranje.\" — what does it mean in English (your own words)?\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *Ouder: Op de basisschool krijgen we berichten via de ouderapp.*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *Ouder: Op de basisschool krijgen we berichten via de ouderapp.*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **oud en nieuw** and fits *General statements (men / je / veel mensen …)*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Phrase bank (use freely)**\n• oud en nieuw\n• basisschool\n• ouderspreekuur\n• directheid\n• fietsen\n• agenda\n• borrel\n• traditie\n• integratie\n• Koningsdag\n• Sinterklaas\n• kerst\n\n**Your task:** Write or say **4–6 short sentences** in Dutch about this unit theme.\nRules: include **at least one question** and one connector (**en**, **maar**, or **want**).\n\n**Example starter (you can change it):**\nVandaag … Ik wil … **want** … **En jij?**",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "mixed",
+        "recycle_lemmas": [
+          "oud en nieuw",
+          "directheid"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "verb_position"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "article"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "word_order"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "modal_choice"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **oud en nieuw**.",
+              "exampleAnswer": "Example: *Ik wil graag oud en nieuw met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Patterns & drills · Word order without the headache** — we keep building **Culture & integration context** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\n**Direct** feedback can sound blunt in Dutch but often aims at clarity, not rudeness. *Eerlijk gezegd* signals straight talk is coming.\n\n**Phrases — school & integration tone**\n\n| Dutch | English |\n|-------|--------|\n| *Mag ik een afspraak met de leerkracht?* | May I have an appointment with the teacher? |\n| *Mijn kind heeft moeite met huiswerk.* | My child struggles with homework. |\n| *Hoe meld ik mijn kind ziek?* | How do I report my child sick? |\n\n**Mini dialogue**\n\n**Ouder:** Goedemiddag, ik bel over de ouderavond volgende week.\n**School:** Zeker. De avond begint om 19:30; u krijgt een link per e-mail.\n\n**Say or write:** Ask one respectful question about a Dutch tradition with *Mag ik vragen …?*\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **oud en nieuw** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": "a2-u09_l02_dlg",
+    "listening_asset_id": null,
+    "notes": "Slow audio assumed for lines marked *slow* in builder CMS."
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  }
+}

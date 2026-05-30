@@ -1,0 +1,41 @@
+{
+  "id": "a2-u06",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.2",
+  "title": "Mid A2 — Health & doctor visits",
+  "summary": "Describe symptoms, talk with a GP or pharmacy, make appointments, and follow simple instructions (moeten/mogen) — calm, practical Dutch.",
+  "objectives_can_do": [
+    "Name common symptoms and say how long you have felt unwell",
+    "Follow a short doctor or pharmacy conversation and ask for repetition",
+    "Make or change a simple appointment by phone or message",
+    "Understand basic medicine instructions (how often, before/after food)",
+    "Use moeten/mogen/kunnen in short advice sentences",
+    "Stay polite and clear under mild stress at spreekuur"
+  ],
+  "integration_scripts_summary": "GP intake, pharmacy pickup, appointment desk — aligned to Stage 6 schema module a2-m06-health-doctor (eleven lessons).",
+  "grammar_focus": [
+    "symptom patterns: ik heb … / ik voel me … / het doet pijn",
+    "doctor questions: sinds wanneer, hoe lang al, waar",
+    "light perfectum: slecht geslapen, koorts gehad",
+    "modals in advice: u moet, u mag, u kunt",
+    "clarifying: kunt u herhalen, langzamer praten, ik begrijp het niet"
+  ],
+  "vocabulary_domains": [
+    "health",
+    "body",
+    "pharmacy",
+    "appointments",
+    "symptoms"
+  ],
+  "lesson_ids": [
+    "a2-u06-l01",
+    "a2-u06-l02",
+    "a2-u06-l03",
+    "a2-u06-l04",
+    "a2-u06-l05",
+    "a2-u06-l06",
+    "a2-u06-l07",
+    "a2-u06-l08"
+  ]
+}

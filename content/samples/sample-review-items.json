@@ -1,0 +1,77 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-sample-lemma-bon",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "vocab",
+      "prompt": "What is the Dutch for \"receipt\" (in a shop)?",
+      "expectedAnswer": "bon",
+      "variants": ["de bon", "het bon"],
+      "difficulty": "A2_low",
+      "tags": ["shopping", "lemma-bon"],
+      "metadata": { "lemma": "bon" }
+    },
+    {
+      "id": "rev-sample-lemma-brood",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "vocab",
+      "prompt": "Translate: bread",
+      "expectedAnswer": "brood",
+      "difficulty": "A2_low",
+      "tags": ["food"],
+      "metadata": { "lemma": "brood" }
+    },
+    {
+      "id": "rev-sample-phrase-mag-ik",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "phrase",
+      "prompt": "Complete: ___ ik een bon, alstublieft?",
+      "expectedAnswer": "Mag",
+      "variants": ["mag"],
+      "difficulty": "A2_mid",
+      "tags": ["register", "chunk"],
+      "metadata": {}
+    },
+    {
+      "id": "rev-sample-grammar-modals",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "grammar",
+      "prompt": "Choose: permission / polite request — which modal fits? \"___ ik een bon?\"",
+      "expectedAnswer": "Mag",
+      "difficulty": "A2_mid",
+      "tags": ["a2.1-modals-requests"],
+      "metadata": { "grammarTargetId": "a2.1-modals-requests" }
+    },
+    {
+      "id": "rev-sample-listening-order",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "listening",
+      "prompt": "Listen (same clip as lesson). What does the customer buy first?",
+      "expectedAnswer": ["bruin brood", "een bruin brood"],
+      "difficulty": "A2_mid",
+      "tags": ["listening", "word-order"],
+      "metadata": { "audioRef": "audio://samples/bakery-dialogue-01.mp3" }
+    },
+    {
+      "id": "rev-sample-speak-order",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "speaking",
+      "prompt": "Say politely: \"I'd like a receipt.\"",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "variants": ["Mag ik de bon, alstublieft?", "Ik wil graag een bon."],
+      "difficulty": "A2_mid",
+      "tags": ["speaking", "register"],
+      "metadata": {}
+    },
+    {
+      "id": "rev-sample-graag-slot",
+      "sourceLessonId": "sample-lesson-bakery-01",
+      "type": "vocab",
+      "prompt": "Fill in: Ik wil ___ een bruin brood.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_low",
+      "tags": ["lemma-graag", "word-order"],
+      "metadata": {}
+    }
+  ]
+}

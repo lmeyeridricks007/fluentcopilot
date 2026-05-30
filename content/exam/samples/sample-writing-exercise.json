@@ -1,0 +1,33 @@
+{
+  "id": "ex-a2-write-message-01",
+  "title": "Bericht aan de buur",
+  "promptDutch": "Je buur speelt 's avonds hard muziek en je kunt niet slapen. Schrijf een kort, beleefd bericht waarin je het probleem uitlegt en een oplossing voorstelt.",
+  "promptEnglishOptional": "Your neighbor plays loud music in the evening and you cannot sleep. Write a short, polite message explaining the problem and suggesting a solution.",
+  "instructions": "Schrijf 40–60 woorden. Gebruik een passende aanhef en afsluiting.",
+  "bulletRequirements": [
+    "Leg het probleem uit",
+    "Stel een concrete oplossing voor",
+    "Houd een vriendelijke toon"
+  ],
+  "modesAllowed": ["training", "simulation"],
+  "hintsAllowedInContent": true,
+  "hints": [
+    "Aanhef: 'Beste buur,' of 'Hoi ...,'",
+    "Sluit af met 'Groeten' of 'Met vriendelijke groet,'"
+  ],
+  "scoringRubricId": "rubric-a2-writing-standard-v1",
+  "modelAnswerId": "model-ex-a2-write-message-01",
+  "tags": ["a2", "writing", "message", "neighbor"],
+  "timeLimitSecondsResponse": 900,
+  "examType": "writing",
+  "writingSpec": {
+    "subtype": "message",
+    "minWords": 40,
+    "maxWords": 60,
+    "requiredContentChecks": [
+      "Probleem (geluid / slapen) genoemd",
+      "Voorstel (andere tijd / zachter) aanwezig",
+      "Beleefd register"
+    ]
+  }
+}

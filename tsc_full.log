@@ -1,0 +1,46 @@
+backend/src/domain/learningMemory/learningMemoryMerge.extended.test.ts(48,11): error TS6133: 'rowAudio' is declared but its value is never read.
+backend/src/domain/learningMemory/userLearningProfileDocument.test.ts(7,8): error TS6133: 'UserLearningProfile' is declared but its value is never read.
+backend/src/domain/skills/extractors/extractSkillEvidenceFromScenarioReport.ts(6,3): error TS6133: 'clamp01' is declared but its value is never read.
+backend/src/domain/skills/skillRecommendationEngine.ts(183,36): error TS6133: 'doc' is declared but its value is never read.
+backend/src/repositories/contracts/quickCaptureDomainRepository.contract.ts(5,3): error TS6196: 'CaptureType' is declared but never used.
+backend/src/repositories/sql/quickCaptureDomainSqlRepository.ts(1,1): error TS6133: 'sql' is declared but its value is never read.
+backend/src/services/generated-exercise-packs/generateSavedWordExercisePack.ts(60,24): error TS6133: 'type' is declared but its value is never read.
+backend/src/services/generated-exercise-packs/generateSavedWordExercisePack.ts(250,9): error TS6133: 'profile' is declared but its value is never read.
+backend/src/services/learning-memory/contracts/fluentCopilotLearningMemoryContract.ts(13,3): error TS6196: 'SessionLearningInsightsDTO' is declared but never used.
+backend/src/services/listening/listeningModeService.ts(6,3): error TS6133: 'getCatalogClipByKey' is declared but its value is never read.
+backend/src/services/speak-live/liveSessionEvaluationOrchestrator.ts(25,3): error TS6196: 'CombinedScores' is declared but never used.
+backend/src/services/speak-live/liveSessionEvaluationOrchestrator.ts(645,9): error TS6133: 'assessTurnsStartedAt' is declared but its value is never read.
+backend/src/services/speak-live/speakLiveAzureSpeechEvaluationArtifactService.ts(32,10): error TS6133: 'ticksToMs' is declared but its value is never read.
+backend/src/services/speak-live/speakLiveScenarioVoiceReportOptimized.test.ts(137,8): error TS6133: 'params' is declared but its value is never read.
+src/app/api/exam/sessions/[id]/evaluate-answers/route.ts(14,36): error TS2552: Cannot find name 'req'. Did you mean '_req'?
+src/features/exam-system/ExamHistoryClient.tsx(4,34): error TS6133: 'ReactNode' is declared but its value is never read.
+src/features/exam-system/ExamRunSessionClient.tsx(57,38): error TS6133: 'parseWritingFillInAnswer' is declared but its value is never read.
+src/features/exam-system/ExamRunSessionClient.tsx(370,29): error TS18048: 'session' is possibly 'undefined'.
+src/features/exam-system/ExamRunSessionClient.tsx(1626,50): error TS2367: This comparison appears to be unintentional because the types '"answer" | "prep"' and '"reflect"' have no overlap.
+src/features/generated-exercise-pack/PackReferenceAudioControls.tsx(334,40): error TS2345: Argument of type 'string | null' is not assignable to parameter of type 'string | undefined'.
+  Type 'null' is not assignable to type 'string | undefined'.
+src/features/practice-hub/talkNextRepHubModel.test.ts(73,32): error TS2345: Argument of type '{ workingOnChip: string | null; bestNextStep: string | null; recommendedScenarioSlug: string | null; recommendedReadAloudProfile: string | null; recommendedBecause: string | null; coldStart: boolean; scenarioPersonalizationLine?: string | ... 1 more ... | undefined; recommendations?: { ...; }[] | undefined; skillsPr...' is not assignable to parameter of type '{ workingOnChip: string | null; bestNextStep: string | null; recommendedScenarioSlug: string | null; recommendedReadAloudProfile: string | null; recommendedBecause: string | null; coldStart: boolean; scenarioPersonalizationLine?: string | ... 1 more ... | undefined; recommendations?: { ...; }[] | undefined; skillsPr...'.
+  Type 'undefined' is not assignable to type '{ workingOnChip: string | null; bestNextStep: string | null; recommendedScenarioSlug: string | null; recommendedReadAloudProfile: string | null; recommendedBecause: string | null; coldStart: boolean; scenarioPersonalizationLine?: string | ... 1 more ... | undefined; recommendations?: { ...; }[] | undefined; skillsPr...'.
+src/features/quick-capture/interactivePack/buildInteractiveSessionFromSteps.test.ts(46,24): error TS2339: Property 'title' does not exist on type 'InteractiveExercise'.
+  Property 'title' does not exist on type 'MultipleChoiceExercise'.
+src/features/quick-capture/interactivePack/packProgressStorage.test.ts(45,35): error TS1355: A 'const' assertions can only be applied to references to enum members, or string, number, boolean, array, or object literals.
+src/features/speak-live/live/LiveSessionControls.tsx(341,16): error TS2304: Cannot find name 'showDevDebugEntry'.
+src/features/speak-live/live/LiveSessionControls.tsx(341,37): error TS2304: Cannot find name 'onOpenDevDebug'.
+src/features/speak-live/live/LiveSessionControls.tsx(348,23): error TS2304: Cannot find name 'onOpenDevDebug'.
+src/features/speak-live/live/SpeakLiveScenarioCard.tsx(237,36): error TS2367: This comparison appears to be unintentional because the types '"default" | "browseFeatured"' and '"browseRow"' have no overlap.
+src/features/speak-live/SpeakLiveEvaluationPage.tsx(4293,23): error TS18048: 'improvements' is possibly 'undefined'.
+src/lib/exam-system/__tests__/examReadinessLevelsAndFlows.test.ts(98,12): error TS18048: 'snap.rationale' is possibly 'undefined'.
+src/lib/exam-system/__tests__/examSystem.test.ts(6,1): error TS6133: 'sampleUniqueIndices' is declared but its value is never read.
+src/lib/exam-system/listeningSpeakerNamePersonalization.ts(65,7): error TS2367: This comparison appears to be unintentional because the types '"Mark" | "Tim" | "Tom" | "Rick" | "Noah" | "Finn" | "Lars" | "Daan" | "Bram" | "Luuk" | "Sem" | "Milan" | "Thijs" | "Erik" | "Bas" | "Hugo" | "Koen" | "Jesse" | "Olivier" | "Stefan"' and '"Sophie" | "Lisa" | "Eva" | "Mila" | "Sara" | "Iris" | "Nina" | "Noor" | "Emma" | "Julia" | "Anna" | "Fleur" | "Lotte" | "Nora" | "Liv" | "Isa" | "Roos" | "Eline" | "Marie" | "Laura"' have no overlap.
+src/lib/exam-system/reportBuilder.ts(197,30): error TS2339: Property 'replace' does not exist on type 'never'.
+src/lib/exam-system/reportBuilder.ts(422,3): error TS6133: 'profile' is declared but its value is never read.
+src/lib/exam-system/trainingCoach.ts(4,58): error TS6133: 'level' is declared but its value is never read.
+src/lib/exam-system/trainingSupportPolicy.ts(31,39): error TS6133: 'support' is declared but its value is never read.
+src/lib/exam-system/writingFormFillReportFeedback.ts(63,39): error TS6133: 'b' is declared but its value is never read.
+src/lib/listening-mode/listeningPersonalizedRecommendations.ts(124,10): error TS6133: 'stress' is declared but its value is never read.
+src/lib/review-engine/reviewListeningPrompt.test.ts(34,11): error TS2322: Type '{ prompt: string; id: string; sourceLessonId: string; type: string; difficulty: "A2_low"; expectedAnswer: string; metadata: {}; }' is not assignable to type '{ id: string; type: "grammar" | "listening" | "speaking" | "phrase" | "vocab" | "kmn"; prompt: string; difficulty: "A2_low" | "A2_mid" | "A2_high"; sourceLessonId: string; expectedAnswer: string | string[]; tags?: string[] | undefined; metadata?: Record<...> | undefined; variants?: string[] | undefined; }'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"grammar" | "listening" | "speaking" | "phrase" | "vocab" | "kmn"'.
+src/lib/review-engine/reviewListeningPrompt.test.ts(45,11): error TS2322: Type '{ prompt: string; metadata: { listeningNl: string; }; id: string; sourceLessonId: string; type: string; difficulty: "A2_low"; expectedAnswer: string; }' is not assignable to type '{ id: string; type: "grammar" | "listening" | "speaking" | "phrase" | "vocab" | "kmn"; prompt: string; difficulty: "A2_low" | "A2_mid" | "A2_high"; sourceLessonId: string; expectedAnswer: string | string[]; tags?: string[] | undefined; metadata?: Record<...> | undefined; variants?: string[] | undefined; }'.
+  Types of property 'type' are incompatible.
+    Type 'string' is not assignable to type '"grammar" | "listening" | "speaking" | "phrase" | "vocab" | "kmn"'.

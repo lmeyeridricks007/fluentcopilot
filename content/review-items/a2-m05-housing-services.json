@@ -1,0 +1,2237 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-vt-lemma-appartement",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “apartment / flat”.",
+      "expectedAnswer": "appartement",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-appartement",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "appartement"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-vt-lemma-verhuurder",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “landlord / lessor”.",
+      "expectedAnswer": "verhuurder",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verhuurder",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verhuurder"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-vt-lemma-lekkage",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “leak”.",
+      "expectedAnswer": "lekkage",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-lekkage",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "lekkage"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-vt-lemma-verwarming",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “heating”.",
+      "expectedAnswer": "verwarming",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verwarming",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verwarming"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-vt-lemma-probleem",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “problem”.",
+      "expectedAnswer": "probleem",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-probleem",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "probleem"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-gt-a2.2-housing-living",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Describing where you live”?",
+      "expectedAnswer": "Ik woon in een appartement op de tweede verdieping.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-housing-living",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Describing where you live"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-ph-ik-woon-in-een-appartement",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I live in a flat.).",
+      "expectedAnswer": "Ik woon in een appartement.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik woon in een appartement."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-ph-er-is-een-probleem-met",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There is a problem with …).",
+      "expectedAnswer": "Er is een probleem met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Er is een probleem met …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-ph-bel-de-verhuurder-of-meld-het-via-de-app",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Call the landlord or report via the app.).",
+      "expectedAnswer": "Bel de verhuurder of meld het via de app.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Bel de verhuurder of meld het via de app."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l01-listening-at-home-situations-ph-kunt-u-mij-helpen",
+      "sourceLessonId": "a2-m05-l01-listening-at-home-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you help me? (formal)).",
+      "expectedAnswer": "Kunt u mij helpen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u mij helpen?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-vt-lemma-huis",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “house”.",
+      "expectedAnswer": "huis",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-huis",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "huis"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-vt-lemma-huur",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “rent”.",
+      "expectedAnswer": "huur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-huur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "huur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-vt-lemma-balkon",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “balcony”.",
+      "expectedAnswer": "balkon",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-balkon",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "balkon"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-vt-lemma-keuken",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “kitchen”.",
+      "expectedAnswer": "keuken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-keuken",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "keuken"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-vt-lemma-sleutel",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “key”.",
+      "expectedAnswer": "sleutel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-sleutel",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "sleutel"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-gt-a2.2-housing-living",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Describing where you live”?",
+      "expectedAnswer": "Ik woon in een appartement op de tweede verdieping.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-housing-living",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Describing where you live"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-gt-a2.2-linking-housing",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Want / omdat (housing)”?",
+      "expectedAnswer": "Het is koud, want de verwarming doet het niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-linking-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Want / omdat (housing)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-ph-ik-huur-een-appartement",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I rent a flat.).",
+      "expectedAnswer": "Ik huur een appartement.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik huur een appartement."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-ph-de-huur-is-per-maand",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: The rent is … per month.).",
+      "expectedAnswer": "De huur is … per maand.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "De huur is … per maand."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-ph-ik-heb-een-vraag",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have a question: …).",
+      "expectedAnswer": "Ik heb een vraag: …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik heb een vraag: …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l02-listen-read-housing-descriptions-ph-dank-u-wel",
+      "sourceLessonId": "a2-m05-l02-listen-read-housing-descriptions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Thank you (formal).).",
+      "expectedAnswer": "Dank u wel.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Dank u wel."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-vt-lemma-woon",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to live / reside”.",
+      "expectedAnswer": "wonen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-woon",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "wonen"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-vt-lemma-appartement",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “apartment / flat”.",
+      "expectedAnswer": "appartement",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-appartement",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "appartement"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-vt-lemma-badkamer",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “bathroom”.",
+      "expectedAnswer": "badkamer",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-badkamer",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "badkamer"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-vt-lemma-balkon",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “balcony”.",
+      "expectedAnswer": "balkon",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-balkon",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "balkon"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-vt-lemma-huur",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “rent”.",
+      "expectedAnswer": "huur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-huur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "huur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-gt-a2.2-housing-living",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Describing where you live”?",
+      "expectedAnswer": "Ik woon in een appartement op de tweede verdieping.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-housing-living",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Describing where you live"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-ph-ik-woon-in-een-met",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I live in a … with …).",
+      "expectedAnswer": "Ik woon in een … met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik woon in een … met …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-ph-we-hebben",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: We have …).",
+      "expectedAnswer": "We hebben …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "We hebben …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-ph-er-is-een-probleem-met",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There is a problem with …).",
+      "expectedAnswer": "Er is een probleem met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Er is een probleem met …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l03-grammar-talking-about-your-home-ph-het-is-kapot",
+      "sourceLessonId": "a2-m05-l03-grammar-talking-about-your-home",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It's broken.).",
+      "expectedAnswer": "Het is kapot.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Het is kapot."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-vt-lemma-internet",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “internet”.",
+      "expectedAnswer": "internet",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-internet",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "internet"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-vt-lemma-stroom",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “power / electricity”.",
+      "expectedAnswer": "stroom",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-stroom",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "stroom"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-vt-lemma-boiler",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “boiler / water heater”.",
+      "expectedAnswer": "boiler",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boiler",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "boiler"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-vt-lemma-dringend",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “urgent”.",
+      "expectedAnswer": "dringend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-dringend",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "dringend"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-vt-lemma-repareren",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repair”.",
+      "expectedAnswer": "repareren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-repareren",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "repareren"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-vt-lemma-monteur",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “technician / repair person”.",
+      "expectedAnswer": "monteur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-monteur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "monteur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-ph-ik-heb-geen-stroom-internet",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have no power / internet.).",
+      "expectedAnswer": "Ik heb geen stroom / internet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik heb geen stroom / internet."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-ph-kunt-u-controleren",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you check …?).",
+      "expectedAnswer": "Kunt u … controleren?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u … controleren?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-ph-het-is-nog-steeds-uit",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It's still off.).",
+      "expectedAnswer": "Het is nog steeds uit.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Het is nog steeds uit."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l04-practice-problems-basic-sentences-ph-dat-is-dringend",
+      "sourceLessonId": "a2-m05-l04-practice-problems-basic-sentences",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's urgent.).",
+      "expectedAnswer": "Dat is dringend.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Dat is dringend."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-vt-lemma-appartement",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “apartment / flat”.",
+      "expectedAnswer": "appartement",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-appartement",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "appartement"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-vt-lemma-huur",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “rent”.",
+      "expectedAnswer": "huur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-huur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "huur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-vt-lemma-badkamer",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “bathroom”.",
+      "expectedAnswer": "badkamer",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-badkamer",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "badkamer"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-vt-lemma-probleem",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “problem”.",
+      "expectedAnswer": "probleem",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-probleem",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "probleem"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-vt-lemma-helpen",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-gt-a2.2-housing-living",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Describing where you live”?",
+      "expectedAnswer": "Ik woon in een appartement op de tweede verdieping.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-housing-living",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Describing where you live"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-ph-ik-woon-op-in-appartement",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I live at … / in flat …).",
+      "expectedAnswer": "Ik woon op … / in appartement …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik woon op … / in appartement …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-ph-er-is-een-probleem-met",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There is a problem with …).",
+      "expectedAnswer": "Er is een probleem met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Er is een probleem met …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-ph-kunt-u-alstublieft",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you …, please?).",
+      "expectedAnswer": "Kunt u …, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u …, alstublieft?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l05-speaking-describe-living-situation-ph-dat-is-duidelijk",
+      "sourceLessonId": "a2-m05-l05-speaking-describe-living-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's clear.).",
+      "expectedAnswer": "Dat is duidelijk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Dat is duidelijk."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-vt-lemma-monteur",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “technician / repair person”.",
+      "expectedAnswer": "monteur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-monteur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "monteur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-vt-lemma-afspraak",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-vt-lemma-repareren",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repair”.",
+      "expectedAnswer": "repareren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-repareren",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "repareren"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-vt-lemma-boiler",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “boiler / water heater”.",
+      "expectedAnswer": "boiler",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boiler",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "boiler"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-vt-lemma-dringend",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “urgent”.",
+      "expectedAnswer": "dringend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-dringend",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "dringend"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-gt-a2.2-perfectum-light",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Perfectum (light, practical)”?",
+      "expectedAnswer": "Ik heb gisteren naar de verhuurder gebeld.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-perfectum-light",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Perfectum (light, practical)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-ph-ik-heb-gedaan",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have done … (fixed phrases only).).",
+      "expectedAnswer": "Ik heb … gedaan.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik heb … gedaan."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-ph-ik-heb-al-gebeld",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I've already called.).",
+      "expectedAnswer": "Ik heb al gebeld.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik heb al gebeld."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-ph-kunt-u-aanzetten-uitzetten",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you switch on/off?).",
+      "expectedAnswer": "Kunt u … aanzetten / uitzetten?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u … aanzetten / uitzetten?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-ph-zou-u-kunnen-sturen",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you send …?).",
+      "expectedAnswer": "Zou u … kunnen sturen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Zou u … kunnen sturen?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l06-listening-service-conversations-repairs-ph-is-dat-goed",
+      "sourceLessonId": "a2-m05-l06-listening-service-conversations-repairs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Is that okay?).",
+      "expectedAnswer": "Is dat goed?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Is dat goed?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-vt-lemma-verwarming",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “heating”.",
+      "expectedAnswer": "verwarming",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verwarming",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verwarming"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-vt-lemma-bellen",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to call / phone”.",
+      "expectedAnswer": "bellen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bellen",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "bellen"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-vt-lemma-internet",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “internet”.",
+      "expectedAnswer": "internet",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-internet",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "internet"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-vt-lemma-stroom",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “power / electricity”.",
+      "expectedAnswer": "stroom",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-stroom",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "stroom"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-vt-lemma-alstublieft",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “please (formal)”.",
+      "expectedAnswer": "alstublieft",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-alstublieft",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "alstublieft"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-gt-a2.2-separable-housing",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs: aan / uit / op (utilities)”?",
+      "expectedAnswer": "Kun je de boiler even aanzetten?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Separable verbs: aan / uit / op (utilities)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-gt-a2.2-linking-housing",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Want / omdat (housing)”?",
+      "expectedAnswer": "Het is koud, want de verwarming doet het niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-linking-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Want / omdat (housing)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-ph-aanzetten",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: to switch on (particle at end)).",
+      "expectedAnswer": "… aanzetten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "… aanzetten"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-ph-uitzetten",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: to switch off).",
+      "expectedAnswer": "… uitzetten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "… uitzetten"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-ph-opbellen",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: to call (up)).",
+      "expectedAnswer": "… opbellen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "… opbellen"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l07-grammar-separable-verbs-utilities-ph-want-omdat",
+      "sourceLessonId": "a2-m05-l07-grammar-separable-verbs-utilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: reason (short link)).",
+      "expectedAnswer": "want / omdat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "want / omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-vt-lemma-bericht-m5",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht-m5",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-vt-lemma-lekkage",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “leak”.",
+      "expectedAnswer": "lekkage",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-lekkage",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "lekkage"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-vt-lemma-dringend",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “urgent”.",
+      "expectedAnswer": "dringend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-dringend",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "dringend"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-vt-lemma-verhuurder",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “landlord / lessor”.",
+      "expectedAnswer": "verhuurder",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verhuurder",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verhuurder"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-vt-lemma-boiler",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “boiler / water heater”.",
+      "expectedAnswer": "boiler",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boiler",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "boiler"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-gt-a2.2-perfectum-light",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Perfectum (light, practical)”?",
+      "expectedAnswer": "Ik heb gisteren naar de verhuurder gebeld.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-perfectum-light",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Perfectum (light, practical)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-ph-ik-wil-melden-dat",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I want to report that …).",
+      "expectedAnswer": "Ik wil melden dat …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik wil melden dat …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-ph-ik-heb-sinds-gisteren-geen-meer",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I haven't had … since yesterday.).",
+      "expectedAnswer": "Ik heb sinds gisteren geen … meer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik heb sinds gisteren geen … meer."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-ph-kunt-u-sturen-alstublieft",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you send …, please?).",
+      "expectedAnswer": "Kunt u … sturen, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u … sturen, alstublieft?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l08-writing-report-problem-short-message-ph-met-vriendelijke-groet",
+      "sourceLessonId": "a2-m05-l08-writing-report-problem-short-message",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Kind regards,).",
+      "expectedAnswer": "Met vriendelijke groet,",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Met vriendelijke groet,"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-vt-lemma-verhuurder",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “landlord / lessor”.",
+      "expectedAnswer": "verhuurder",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verhuurder",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verhuurder"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-vt-lemma-lekkage",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “leak”.",
+      "expectedAnswer": "lekkage",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-lekkage",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "lekkage"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-vt-lemma-afspraak",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-vt-lemma-langskomen",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to come by”.",
+      "expectedAnswer": "langskomen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-langskomen",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "langskomen"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-vt-lemma-alstublieft",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “please (formal)”.",
+      "expectedAnswer": "alstublieft",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-alstublieft",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "alstublieft"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-gt-a2.2-perfectum-light",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Perfectum (light, practical)”?",
+      "expectedAnswer": "Ik heb gisteren naar de verhuurder gebeld.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-perfectum-light",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Perfectum (light, practical)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-ph-ik-bel-over",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm calling about …).",
+      "expectedAnswer": "Ik bel over …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik bel over …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-ph-er-is-een-lekkage-bij",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There's a leak at …).",
+      "expectedAnswer": "Er is een lekkage bij …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Er is een lekkage bij …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-ph-dat-lukt",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That works / I can do that.).",
+      "expectedAnswer": "Dat lukt.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Dat lukt."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l09-task-call-landlord-guided-ph-kunt-u-bevestigen",
+      "sourceLessonId": "a2-m05-l09-task-call-landlord-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you confirm …?).",
+      "expectedAnswer": "Kunt u bevestigen …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u bevestigen …?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-vt-lemma-afspraak",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-vt-lemma-monteur",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “technician / repair person”.",
+      "expectedAnswer": "monteur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-monteur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "monteur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-vt-lemma-beschikbaar",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “available”.",
+      "expectedAnswer": "beschikbaar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-beschikbaar",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "beschikbaar"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-vt-lemma-internet",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “internet”.",
+      "expectedAnswer": "internet",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-internet",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "internet"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-vt-lemma-bericht-m5",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht-m5",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-gt-a2.2-separable-housing",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs: aan / uit / op (utilities)”?",
+      "expectedAnswer": "Kun je de boiler even aanzetten?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Separable verbs: aan / uit / op (utilities)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-ph-ik-wil-graag-een-afspraak",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'd like an appointment.).",
+      "expectedAnswer": "Ik wil graag een afspraak.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik wil graag een afspraak."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-ph-hoe-laat-bent-u-beschikbaar",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What time are you available?).",
+      "expectedAnswer": "Hoe laat bent u beschikbaar?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Hoe laat bent u beschikbaar?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-ph-ik-stuur-een-sms-ter-bevestiging",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'll send an SMS to confirm.).",
+      "expectedAnswer": "Ik stuur een sms ter bevestiging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik stuur een sms ter bevestiging."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l10-task-book-repair-appointment-ph-vanaf-negen-uur",
+      "sourceLessonId": "a2-m05-l10-task-book-repair-appointment",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: From nine o'clock.).",
+      "expectedAnswer": "Vanaf negen uur.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Vanaf negen uur."
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-appartement",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “apartment / flat”.",
+      "expectedAnswer": "appartement",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-appartement",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "appartement"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-verhuurder",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “landlord / lessor”.",
+      "expectedAnswer": "verhuurder",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verhuurder",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verhuurder"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-lekkage",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “leak”.",
+      "expectedAnswer": "lekkage",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-lekkage",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "lekkage"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-verwarming",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “heating”.",
+      "expectedAnswer": "verwarming",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verwarming",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "verwarming"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-monteur",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “technician / repair person”.",
+      "expectedAnswer": "monteur",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-monteur",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "monteur"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-afspraak",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-vt-lemma-bellen",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to call / phone”.",
+      "expectedAnswer": "bellen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bellen",
+        "moduleId": "a2-m05-housing-services",
+        "lemma": "bellen"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-gt-a2.2-housing-living",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Describing where you live”?",
+      "expectedAnswer": "Ik woon in een appartement op de tweede verdieping.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-housing-living",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Describing where you live"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-gt-a2.2-reporting-problems",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Reporting housing problems”?",
+      "expectedAnswer": "Er is een lekkage in de badkamer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-reporting-problems",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Reporting housing problems"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-gt-a2.2-polite-u-housing",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Polite requests (u)”?",
+      "expectedAnswer": "Kunt u morgen langskomen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-polite-u-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Polite requests (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-gt-a2.2-perfectum-light",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Perfectum (light, practical)”?",
+      "expectedAnswer": "Ik heb gisteren naar de verhuurder gebeld.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-perfectum-light",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Perfectum (light, practical)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-gt-a2.2-separable-housing",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs: aan / uit / op (utilities)”?",
+      "expectedAnswer": "Kun je de boiler even aanzetten?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Separable verbs: aan / uit / op (utilities)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-gt-a2.2-linking-housing",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Want / omdat (housing)”?",
+      "expectedAnswer": "Het is koud, want de verwarming doet het niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-linking-housing",
+        "moduleId": "a2-m05-housing-services",
+        "grammarLabel": "Want / omdat (housing)"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-ph-ik-woon-in",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I live in …).",
+      "expectedAnswer": "Ik woon in …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik woon in …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-ph-er-is-een-probleem-met",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There is a problem with …).",
+      "expectedAnswer": "Er is een probleem met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Er is een probleem met …"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-ph-kunt-u-alstublieft",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you …, please?).",
+      "expectedAnswer": "Kunt u …, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Kunt u …, alstublieft?"
+      }
+    },
+    {
+      "id": "rev-a2-m05-l11-review-housing-services-ph-ik-zet-uit-aan",
+      "sourceLessonId": "a2-m05-l11-review-housing-services",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I switch … off/on.).",
+      "expectedAnswer": "Ik zet … uit / aan.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m05-housing-services"
+      ],
+      "metadata": {
+        "moduleId": "a2-m05-housing-services",
+        "phraseNl": "Ik zet … uit / aan."
+      }
+    }
+  ]
+}

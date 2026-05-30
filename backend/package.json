@@ -1,0 +1,39 @@
+{
+  "name": "@fluentcopilot/backend-functions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Azure Functions API — FluentCopilot conversation backend",
+  "main": "dist/main.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "azureFunctions": {
+    "programmingModel": "v4"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json --watch",
+    "prestart": "npm run build",
+    "start": "cross-env FUNCTIONS_WORKER_RUNTIME=node func start",
+    "lint": "eslint src --ext .ts",
+    "azurite": "azurite --silent --skipApiVersionCheck --location ./azurite-data --debug ./azurite-debug.log"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.7.0",
+    "@azure/service-bus": "^7.9.5",
+    "@azure/storage-blob": "^12.26.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.42.0",
+    "mssql": "^11.0.1",
+    "openai": "^4.77.0",
+    "uuid": "^11.0.5",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/mssql": "^9.1.5",
+    "@types/node": "^22.10.0",
+    "@types/uuid": "^10.0.0",
+    "azurite": "^3.35.0",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,35 @@
+2026-03-28T18:48:24.553Z 	 info: Azurite Blob service is starting on 127.0.0.1:10000
+2026-03-28T18:48:24.555Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-03-28T18:48:24.555Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-03-28T18:48:24.560Z 	 info: BlobGCManager:start() Starting BlobGCManager. Set status to Initializing.
+2026-03-28T18:48:24.560Z 	 info: BlobGCManager:start() Trigger mark and sweep loop. Set status to Running.
+2026-03-28T18:48:24.560Z 	 info: BlobGCManager:markSweepLoop() Start next mark and sweep.
+2026-03-28T18:48:24.560Z 	 info: BlobGCManager:markSweep() Get all extents.
+2026-03-28T18:48:24.561Z 	 info: BlobGCManager:start() BlobGCManager successfully started.
+2026-03-28T18:48:24.562Z 	 info: BlobGCManager:markSweep() Got 0 extents.
+2026-03-28T18:48:24.562Z 	 info: BlobGCManager:markSweep() Get referred extents.
+2026-03-28T18:48:24.562Z 	 info: BlobGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-03-28T18:48:24.562Z 	 info: BlobGCManager:markSweepLoop() Mark and sweep finished, taken 2ms.
+2026-03-28T18:48:24.562Z 	 info: BlobGCManager:markSweepLoop() Sleep for 600000ms.
+2026-03-28T18:48:24.566Z 	 info: Azurite Blob service successfully listens on http://127.0.0.1:10000
+2026-03-28T18:48:24.566Z 	 info: Azurite Queue service is starting on 127.0.0.1:10001
+2026-03-28T18:48:24.566Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-03-28T18:48:24.566Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-03-28T18:48:24.571Z 	 info: QueueGCManager:start() Starting QueueGCManager, set status to Initializing
+2026-03-28T18:48:24.571Z 	 info: QueueGCManager:start() Trigger mark and sweep loop, set status to Running.
+2026-03-28T18:48:24.571Z 	 info: QueueGCManager:markSweepLoop() Start new mark and sweep.
+2026-03-28T18:48:24.571Z 	 info: QueueGCManger:markSweep() Get all extents.
+2026-03-28T18:48:24.571Z 	 info: QueueGCManager:start() QueueGCManager successfully started.
+2026-03-28T18:48:24.571Z 	 info: QueueGCManager:marksweep() Get 0 extents.
+2026-03-28T18:48:24.572Z 	 info: QueueGCManager:markSweep() Get referred extents, then remove from allExtents.
+2026-03-28T18:48:24.572Z 	 info: QueueGCManager:markSweep() Got referred extents, unreferenced extents count is 0.
+2026-03-28T18:48:24.572Z 	 info: QueueGCManager:markSweepLoop() Mark and sweep finished, take 1ms.
+2026-03-28T18:48:24.572Z 	 info: QueueGCManager:markSweepLoop() Sleep for 60000
+2026-03-28T18:48:24.576Z 	 info: Azurite Queue service successfully listens on http://127.0.0.1:10001
+2026-03-28T18:48:24.576Z 	 info: Azurite Table service is starting on 127.0.0.1:10002
+2026-03-28T18:48:24.576Z 	 info: AccountDataStore:init() Refresh accounts from environment variable AZURITE_ACCOUNTS with value undefined
+2026-03-28T18:48:24.576Z 	 info: AccountDataStore:init() Fallback to default emulator account devstoreaccount1.
+2026-03-28T18:48:24.578Z 	 info: Azurite Table service successfully listens on http://127.0.0.1:10002
+2026-03-28T18:48:24.579Z 	 info: InstaceID 7b04af60-5625-40d5-9242-08ed8bb58ee6, SessionID 1f963fdc-134d-4a9c-93d3-70bfc99a4946.
+2026-03-28T18:48:24.597Z 	 info: Telemetry initialize successfully.
+2026-03-28T18:48:24.599Z 	 verbose: Send start telemetry

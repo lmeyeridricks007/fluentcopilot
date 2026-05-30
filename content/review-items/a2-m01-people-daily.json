@@ -1,0 +1,1798 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-vriend",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "people",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-gaan",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to go”.",
+      "expectedAnswer": "gaan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "motion",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gaan",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "gaan"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-hoe",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how”.",
+      "expectedAnswer": "hoe",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoe",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "hoe"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-ph-hoe-gaat-het",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: How are you?).",
+      "expectedAnswer": "Hoe gaat het?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Hoe gaat het?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-ph-wat-doe-je-vandaag",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What are you doing today?).",
+      "expectedAnswer": "Wat doe je vandaag?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Wat doe je vandaag?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l01-listening-friendly-chats-gist-ph-ik-ga-werken",
+      "sourceLessonId": "a2-m01-l01-listening-friendly-chats-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm going to work.).",
+      "expectedAnswer": "Ik ga werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ga werken."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-vt-lemma-naam",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “name”.",
+      "expectedAnswer": "naam",
+      "difficulty": "A2_mid",
+      "tags": [
+        "people",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-naam",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "naam"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-vt-lemma-thuis",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “at home”.",
+      "expectedAnswer": "thuis",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuis",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "thuis"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-vt-lemma-studeren",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to study”.",
+      "expectedAnswer": "studeren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-studeren",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "studeren"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-vt-lemma-collega",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “colleague”.",
+      "expectedAnswer": "collega",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-collega",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "collega"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-ph-ik-ben-tim",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm Tim.).",
+      "expectedAnswer": "Ik ben Tim.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ben Tim."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-ph-ik-werk-in-een-winkel",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I work in a shop.).",
+      "expectedAnswer": "Ik werk in een winkel.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik werk in een winkel."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l02-listening-intro-routines-ph-ik-studeer-nog",
+      "sourceLessonId": "a2-m01-l02-listening-intro-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm still studying.).",
+      "expectedAnswer": "Ik studeer nog.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik studeer nog."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-gaan",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to go”.",
+      "expectedAnswer": "gaan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "motion",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gaan",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "gaan"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-eten",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to eat; food”.",
+      "expectedAnswer": "eten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-eten",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "eten"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-slapen",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to sleep”.",
+      "expectedAnswer": "slapen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-slapen",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "slapen"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-ph-ik-ga-vandaag-werken",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm going to work today.).",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ga vandaag werken."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-ph-ga-je-vandaag-werken",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Are you going to work today?).",
+      "expectedAnswer": "Ga je vandaag werken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ga je vandaag werken?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l03-grammar-present-daily-verbs-ph-ik-ga-zo-eten",
+      "sourceLessonId": "a2-m01-l03-grammar-present-daily-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm going to eat soon.).",
+      "expectedAnswer": "Ik ga zo eten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ga zo eten."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-wat",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “what”.",
+      "expectedAnswer": "wat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wat",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "wat"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-waar",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “where”.",
+      "expectedAnswer": "waar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-waar",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "waar"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-hoe",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how”.",
+      "expectedAnswer": "hoe",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoe",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "hoe"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-wanneer",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “when”.",
+      "expectedAnswer": "wanneer",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wanneer",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "wanneer"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “WH-questions & yes/no”?",
+      "expectedAnswer": "Waar woon je?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "WH-questions & yes/no"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-ph-wat-doe-je",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What are you doing?).",
+      "expectedAnswer": "Wat doe je?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Wat doe je?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-ph-waar-woon-je",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where do you live?).",
+      "expectedAnswer": "Waar woon je?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Waar woon je?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-ph-hoe-gaat-het",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: How are you?).",
+      "expectedAnswer": "Hoe gaat het?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Hoe gaat het?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l04-practice-questions-word-order-ph-wanneer-ben-je-vrij",
+      "sourceLessonId": "a2-m01-l04-practice-questions-word-order",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: When are you free?).",
+      "expectedAnswer": "Wanneer ben je vrij?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Wanneer ben je vrij?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-ochtend",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “morning”.",
+      "expectedAnswer": "ochtend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-ochtend",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "ochtend"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-avond",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “evening”.",
+      "expectedAnswer": "avond",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-avond",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "avond"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-thuis",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “at home”.",
+      "expectedAnswer": "thuis",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuis",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "thuis"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-eten",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to eat; food”.",
+      "expectedAnswer": "eten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-eten",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "eten"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l05-speaking-daily-routine-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l05-speaking-daily-routine",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-vt-lemma-vanavond",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “this evening; tonight”.",
+      "expectedAnswer": "vanavond",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vanavond",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vanavond"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-vt-lemma-straks",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “later; in a bit”.",
+      "expectedAnswer": "straks",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-straks",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "straks"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-vt-lemma-morgen",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tomorrow”.",
+      "expectedAnswer": "morgen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-morgen",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "morgen"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-vt-lemma-boodschappen",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “groceries; errands”.",
+      "expectedAnswer": "boodschappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boodschappen",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "boodschappen"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-vt-lemma-koffie",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “coffee”.",
+      "expectedAnswer": "koffie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-koffie",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "koffie"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-gt-a2.1-time-phrases",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Time phrases”?",
+      "expectedAnswer": "Straks ga ik sporten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-time-phrases",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Time phrases"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-ph-vanavond-ben-ik-thuis",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Tonight I'm home.).",
+      "expectedAnswer": "Vanavond ben ik thuis.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Vanavond ben ik thuis."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-ph-straks-ga-ik-boodschappen-doen",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Later I'm going grocery shopping.).",
+      "expectedAnswer": "Straks ga ik boodschappen doen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Straks ga ik boodschappen doen."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l06-listening-variation-plans-ph-morgen-werk-ik-op-kantoor",
+      "sourceLessonId": "a2-m01-l06-listening-variation-plans",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Tomorrow I work at the office.).",
+      "expectedAnswer": "Morgen werk ik op kantoor.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Morgen werk ik op kantoor."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-moe",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tired”.",
+      "expectedAnswer": "moe",
+      "difficulty": "A2_mid",
+      "tags": [
+        "state",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-moe",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "moe"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-druk",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “busy”.",
+      "expectedAnswer": "druk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "state",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-druk",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "druk"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-thuis",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “at home”.",
+      "expectedAnswer": "thuis",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuis",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "thuis"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-vriend",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "people",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-familie",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “family”.",
+      "expectedAnswer": "familie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "people",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-familie",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "familie"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-gt-a2.1-zijn-hebben",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Zijn & hebben (present)”?",
+      "expectedAnswer": "Ik ben moe.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-zijn-hebben",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Zijn & hebben (present)"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-ph-ik-ben-moe",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm tired.).",
+      "expectedAnswer": "Ik ben moe.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ben moe."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-ph-ik-heb-tijd",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have time.).",
+      "expectedAnswer": "Ik heb tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik heb tijd."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l07-grammar-zijn-hebben-ph-ik-ben-druk-vandaag",
+      "sourceLessonId": "a2-m01-l07-grammar-zijn-hebben",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm busy today.).",
+      "expectedAnswer": "Ik ben druk vandaag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ben druk vandaag."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-vt-lemma-nu",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “now”.",
+      "expectedAnswer": "nu",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nu",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "nu"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-vt-lemma-thuis",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “at home”.",
+      "expectedAnswer": "thuis",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuis",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "thuis"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-vt-lemma-leuk",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice; fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l08-writing-short-update-gt-a2.1-time-phrases",
+      "sourceLessonId": "a2-m01-l08-writing-short-update",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Time phrases”?",
+      "expectedAnswer": "Straks ga ik sporten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-time-phrases",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Time phrases"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-hoe",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how”.",
+      "expectedAnswer": "hoe",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoe",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "hoe"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-wat",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “what”.",
+      "expectedAnswer": "wat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wat",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "wat"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-leuk",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice; fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-straks",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “later; in a bit”.",
+      "expectedAnswer": "straks",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-straks",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "straks"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l09-task-chat-scaffolded-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m01-l09-task-chat-scaffolded",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “WH-questions & yes/no”?",
+      "expectedAnswer": "Waar woon je?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "WH-questions & yes/no"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-weekend",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-morgen",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tomorrow”.",
+      "expectedAnswer": "morgen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-morgen",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "morgen"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-vanavond",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “this evening; tonight”.",
+      "expectedAnswer": "vanavond",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vanavond",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vanavond"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-familie",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “family”.",
+      "expectedAnswer": "familie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "people",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-familie",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "familie"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-gt-a2.1-time-phrases",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Time phrases”?",
+      "expectedAnswer": "Straks ga ik sporten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-time-phrases",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Time phrases"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-ph-wat-doe-je-dit-weekend",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What are you doing this weekend?).",
+      "expectedAnswer": "Wat doe je dit weekend?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Wat doe je dit weekend?"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-ph-ik-ga-mijn-familie-bezoeken",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm going to visit my family.).",
+      "expectedAnswer": "Ik ga mijn familie bezoeken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Ik ga mijn familie bezoeken."
+      }
+    },
+    {
+      "id": "rev-a2-m01-l10-task-mini-dialogue-ph-fijn-weekend",
+      "sourceLessonId": "a2-m01-l10-task-mini-dialogue",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Have a nice weekend!).",
+      "expectedAnswer": "Fijn weekend!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "moduleId": "a2-m01-people-daily",
+        "phraseNl": "Fijn weekend!"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-vandaag",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “today”.",
+      "expectedAnswer": "vandaag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vandaag",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "vandaag"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-hoe",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how”.",
+      "expectedAnswer": "hoe",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoe",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "hoe"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-gaan",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to go”.",
+      "expectedAnswer": "gaan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "motion",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gaan",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "gaan"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-werken",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "work",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-thuis",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “at home”.",
+      "expectedAnswer": "thuis",
+      "difficulty": "A2_mid",
+      "tags": [
+        "daily",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuis",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "thuis"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-straks",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “later; in a bit”.",
+      "expectedAnswer": "straks",
+      "difficulty": "A2_mid",
+      "tags": [
+        "chat",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-straks",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "straks"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-vt-lemma-morgen",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tomorrow”.",
+      "expectedAnswer": "morgen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "time",
+        "A2.1",
+        "vocab",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-morgen",
+        "moduleId": "a2-m01-people-daily",
+        "lemma": "morgen"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense & word order”?",
+      "expectedAnswer": "Ik ga vandaag werken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Present tense & word order"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-gt-a2.1-zijn-hebben",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Zijn & hebben (present)”?",
+      "expectedAnswer": "Ik ben moe.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-zijn-hebben",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Zijn & hebben (present)"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “WH-questions & yes/no”?",
+      "expectedAnswer": "Waar woon je?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "WH-questions & yes/no"
+      }
+    },
+    {
+      "id": "rev-a2-m01-l11-mixed-review-gt-a2.1-time-phrases",
+      "sourceLessonId": "a2-m01-l11-mixed-review",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Time phrases”?",
+      "expectedAnswer": "Straks ga ik sporten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m01-people-daily"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-time-phrases",
+        "moduleId": "a2-m01-people-daily",
+        "grammarLabel": "Time phrases"
+      }
+    }
+  ]
+}

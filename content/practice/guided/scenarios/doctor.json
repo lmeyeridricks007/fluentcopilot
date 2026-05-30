@@ -1,0 +1,166 @@
+{
+  "scenarioId": "doctor",
+  "version": 1,
+  "progressTotal": 5,
+  "intro": {
+    "headline": "Doctor visit",
+    "setting": "You're at the huisartsenpraktijk speaking with the doctor.",
+    "yourRole": "You're the patient.",
+    "situation": "Explain how you feel, say how long it's been going on, and understand short advice."
+  },
+  "goals": [
+    "Describe your main symptom clearly",
+    "Answer how long you've had it",
+    "React politely to simple advice"
+  ],
+  "phrases": [
+    { "id": "p-ik-heb", "nl": "Ik heb last van …", "en": "I have trouble with / pain in …" },
+    { "id": "p-sinds", "nl": "Het is er sinds …", "en": "It's been there since …" },
+    { "id": "p-dagen", "nl": "Een paar dagen.", "en": "A few days." },
+    { "id": "p-begrijp", "nl": "Ik begrijp het, dank u.", "en": "I understand, thank you." },
+    { "id": "p-erg", "nl": "Het doet best veel pijn.", "en": "It hurts quite a lot." }
+  ],
+  "hintsByTurnId": {
+    "t_intake": "Name the body part + simple verb: mijn keel doet pijn / ik ben misselijk.",
+    "t_duration": "Use sinds + day, or een paar dagen / een week.",
+    "t_advice": "Short acknowledgment + dank u is enough."
+  },
+  "startTurnId": "t_intake",
+  "turns": [
+    {
+      "id": "t_intake",
+      "aiMessage": "Goedemiddag. Wat is er aan de hand?",
+      "freedomTier": "full_support",
+      "suggestedReplies": [
+        {
+          "id": "r_keel",
+          "nl": "Ik heb al een paar dagen last van mijn keel. Het brandt een beetje.",
+          "en": "I've had a sore throat for a few days. It burns a little.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_hoofd",
+          "nl": "Ik heb hoofdpijn en ik voel me moe.",
+          "en": "I have a headache and I feel tired.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_vaag",
+          "nl": "Ik voel me niet zo lekker.",
+          "en": "I don't feel very well.",
+          "branchQuality": "weak"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Describe your symptom…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_keel": "t_duration",
+        "r_hoofd": "t_duration",
+        "r_vaag": "t_duration"
+      },
+      "nextFallbackId": "t_duration"
+    },
+    {
+      "id": "t_duration",
+      "aiMessage": "Oké. En sinds wanneer merkt u dat precies?",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_sinds_gisteren",
+          "nl": "Sinds gisteren is het erger geworden.",
+          "en": "Since yesterday it's gotten worse.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_paar_dagen",
+          "nl": "Ongeveer drie dagen.",
+          "en": "About three days.",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Say how long…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_sinds_gisteren": "t_advice",
+        "r_paar_dagen": "t_advice"
+      },
+      "nextFallbackId": "t_advice"
+    },
+    {
+      "id": "t_advice",
+      "aiMessage": "Ik stel voor: veel drinken, rust en paracetamol volgens de bijsluiter. Bij koorts of geen verbetering na drie dagen: bel de praktijk terug.",
+      "freedomTier": "light",
+      "suggestedReplies": [
+        {
+          "id": "r_ok",
+          "nl": "Dank u wel, dat ga ik doen.",
+          "en": "Thank you, I'll do that.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_check",
+          "nl": "Oké, en mag ik gewoon werken?",
+          "en": "OK, and am I allowed to work?",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "React to the advice…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_ok": "t_close",
+        "r_check": "t_close"
+      },
+      "nextFallbackId": "t_close"
+    },
+    {
+      "id": "t_close",
+      "aiMessage": "Prima. Beterschap en tot ziens.",
+      "freedomTier": "open",
+      "suggestedReplies": [
+        {
+          "id": "r_bye",
+          "nl": "Dank u wel, tot ziens.",
+          "en": "Thank you, goodbye.",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Say goodbye…",
+      "acceptAnyCustomText": true,
+      "terminalAfterUser": true,
+      "endOutcome": "success"
+    }
+  ],
+  "evaluation": {
+    "successTitle": "Strong doctor visit flow",
+    "partialTitle": "You got through it — add a bit more detail next time",
+    "needsPracticeTitle": "Health Dutch needs one more slow run",
+    "wentWellBullets": [
+      "You gave the doctor something concrete to work with",
+      "You answered the timing question",
+      "You closed politely"
+    ],
+    "improveBullets": [
+      "Name symptom + place: mijn … doet pijn",
+      "Use sinds + time for clearer duration",
+      "Ask one short follow-up if you missed a word"
+    ],
+    "betterPhrases": [
+      { "nl": "Het jeukt en ik heb ook een lichte koorts.", "en": "It itches and I also have a slight fever." },
+      { "nl": "Mag ik een recept voor …?", "en": "May I have a prescription for …?" }
+    ],
+    "nextActions": [
+      { "label": "Repeat scenario", "href": "/app/practice/scenario/doctor", "variant": "primary" },
+      { "label": "Train station Dutch", "href": "/app/practice/scenario/train", "variant": "secondary" },
+      { "label": "Scenario library", "href": "/app/practice/scenarios", "variant": "ghost" }
+    ]
+  },
+  "metadata": {
+    "contentType": "guided_scenario",
+    "locale": "nl-NL",
+    "instructionLocale": "en"
+  }
+}

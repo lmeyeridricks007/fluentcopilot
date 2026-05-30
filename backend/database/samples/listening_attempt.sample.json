@@ -1,0 +1,24 @@
+{
+  "id": "00000000-0000-4000-8000-000000000002",
+  "sessionId": "00000000-0000-4000-8000-000000000001",
+  "clipId": "cafe-gist-1",
+  "drillType": "gist",
+  "answer": {
+    "selectedIndex": 0,
+    "selectedLabel": "Ordering food and drink",
+    "raw": null
+  },
+  "answerMode": "mcq",
+  "correctGist": true,
+  "correctDetails": null,
+  "replayCount": 1,
+  "slowerReplayUsed": false,
+  "transcriptRevealed": false,
+  "responseLatencyMs": 4200,
+  "evaluation": {
+    "correct": true,
+    "notes": ["Locked gist on first pass."],
+    "tags": ["gist", "service_phrases"]
+  },
+  "createdAt": "2026-04-21T12:01:00.000Z"
+}

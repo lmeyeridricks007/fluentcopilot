@@ -1,0 +1,290 @@
+{
+  "id": "a2-u04-l05",
+  "unit_id": "a2-u04",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "G",
+    "primary_skills": [
+      "speaking"
+    ],
+    "voice_optional": true
+  },
+  "catalog": {
+    "title": "Speaking · Say it out loud—then shorten it",
+    "description": "Say it out loud—then shorten it · A2 speaking in “Transport & city”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Travel & city",
+    "type": "dialogue",
+    "durationMinutes": 22,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can use structured speaking frames about transport & city (text-first) to hold a short exchange",
+    "can_do_outcomes": [
+      "Describe a city trip or commute in a few connected sentences",
+      "Buy or check-in for train, bus, tram, or metro travel in the Netherlands",
+      "Produce a short spoken or text dialogue with polite frames."
+    ],
+    "grammar_primary": "a2.2-future-gaan",
+    "grammar_primary_label": "Future plans with gaan + infinitive",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "OV-chipkaart",
+      "inchecken",
+      "uitchecken",
+      "vertraging",
+      "spoor",
+      "perron",
+      " overstap",
+      "fietsenstalling",
+      "route",
+      "kaartje"
+    ],
+    "grammar_points": [
+      {
+        "point": "motion verbs + preposition (naar, met, van … naar …)",
+        "examples_nl": [
+          "Ik ga met de bus naar het station.",
+          "We reizen van Utrecht naar Amsterdam."
+        ],
+        "examples_en": [
+          "I'm taking the bus to the station.",
+          "We're travelling from Utrecht to Amsterdam."
+        ]
+      },
+      {
+        "point": "connectors: eerst, daarna, totdat (simple sequences)",
+        "examples_nl": [
+          "We gaan morgen naar het museum.",
+          "Ik ga vanavond uit eten met een vriend."
+        ],
+        "examples_en": [
+          "We're going to the museum tomorrow.",
+          "I'm going out for dinner with a friend tonight."
+        ]
+      },
+      {
+        "point": "future with gaan + infinitive for plans",
+        "examples_nl": [
+          "Als de trein vertraging heeft, stuur ik een appje.",
+          "Wanneer je incheckt, vergeet niet uit te checken."
+        ],
+        "examples_en": [
+          "If the train is delayed, I'll send a text.",
+          "When you check in, don't forget to check out."
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about transport & city in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 7,
+    "practice_minutes": 10,
+    "check_minutes": 3,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Use structured speaking frames about transport & city (text-first) to hold a short exchange\n\n**Grammar thread today:** Future plans with gaan + infinitive — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **Transport & city**.\n\nWords you might use today:\n• **OV-chipkaart**\n• **inchecken**\n• **uitchecken**\n• **vertraging**\n• **spoor**\n• **perron**\n• ** overstap**\n• **fietsenstalling**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren nam ik de bus naar het centrum en wisselde ik één keer over. Ik was een beetje te laat, maar ik stuurde een appje: *Sorry, ik ben zo daar.*",
+        "illustration": {
+          "src": "/curriculum/nl-NL/A2/illustrations/u04-ov-route.svg",
+          "alt": "Simple route from A to B with a transfer stop in the middle and OV label",
+          "width": 400,
+          "height": 132
+        },
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "OV-chipkaart",
+          "vertraging"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Situation",
+        "activity": "**Speaking setup (you can stay text-only)**\n\nYou are practising short exchanges. Read both roles aloud, then swap.\n\nRol A/B dialogues (text-first). Gebruik frames: A: Ik heb last van … B: Dan moet je misschien … | A: Moet ik een afspraak maken? B: Ja, bel …\n\nTip: add **alstublieft** / **dank u wel** in formal situations.",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "skill_focus": "speaking"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Today's grammar — future with *gaan***\n\n**Rule:** *gaan + infinitive* plans near future: *Ik **ga** morgen **werken***.\n\n**Patterns:**\n• *We gaan zaterdag naar de markt.* · *Ga je vanavond mee?*\n\n**Produce:**\n1. Three plans for next week with *gaan*.\n2. One negative: *Ik ga niet …* + reason with *want*.\n\n**Pronunciation (listen + repeat)**\n**Pronunciation — g / ch:** practise *goed — licht — dag — nacht* with TTS; back *g* vs softer *ch*.\n\n**Language focus — patterns you can reuse**\n\n**motion verbs + preposition (naar, met, van … naar …)**\n• NL: Ik ga met de bus naar het station. / We reizen van Utrecht naar Amsterdam.\n• EN: I'm taking the bus to the station. / We're travelling from Utrecht to Amsterdam.\n\n**connectors: eerst, daarna, totdat (simple sequences)**\n• NL: We gaan morgen naar het museum. / Ik ga vanavond uit eten met een vriend.\n• EN: We're going to the museum tomorrow. / I'm going out for dinner with a friend tonight.\n\n**future with gaan + infinitive for plans**\n• NL: Als de trein vertraging heeft, stuur ik een appje. / Wanneer je incheckt, vergeet niet uit te checken.\n• EN: If the train is delayed, I'll send a text. / When you check in, don't forget to check out.\n\n**Try this:** pick one Dutch sentence above and change only the time or the person (ik → wij / vandaag → morgen), **or** do the “Produce” task from the grammar box above.\n",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "OV-chipkaart",
+          "vertraging"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Choral read:** read role A, then B, then swap.\n\n**2 — Slot-fill:** **A:** Mag ik …? **B:** **Natuurlijk**, …\n\n**3 — Add one polite word** to each turn.\n\n**4 — Branch:** B says \"Helaas, ik kan niet.\" — how does A answer kindly?\n\n**5 — Write three lines** at the gemeente desk (text only).\n\n**6 — Opinion:** **Ik vind … leuk, want …** finish it.\n\n**7 — Invite:** suggest a time with **Zullen we … om …?**\n\n**8 — Self-check:** did you use **u** where needed?\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *Ik ga met de bus naar het station.*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *Ik ga met de bus naar het station.*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **OV-chipkaart** and fits *Future plans with gaan + infinitive*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Speaking task (text is fine — voice optional)**\n\nWrite a **6-line** dialogue between you and a neighbour or colleague. Use the frames from step 3 and at least three words from the bank.\n\n**Phrase bank:**\n• OV-chipkaart\n• inchecken\n• uitchecken\n• vertraging\n• spoor\n• perron\n•  overstap\n• fietsenstalling\n• route\n• kaartje",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "OV-chipkaart",
+          "vertraging"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "modal_choice"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "word_order",
+                "polite_register"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "verb_position",
+                "article"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "modal_choice",
+                "word_order"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **OV-chipkaart**.",
+              "exampleAnswer": "Example: *Ik wil graag OV-chipkaart met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Real-life task · Fix a polite message—real stakes** — we keep building **Transport & city** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\n**OV-chipkaart** and contactless check-in/out are standard; forgetting *uitchecken* can cost extra. *Vertraging* announcements are part of life; *De trein rijdt niet* is worth recognising by ear.\n\n**Phrases — OV & delays**\n\n| Dutch | English |\n|-------|--------|\n| *Excuseer, welke tram gaat naar …?* | Excuse me, which tram goes to …? |\n| *Ik moet overstappen bij …* | I have to transfer at … |\n| *Er is vertraging door werkzaamheden.* | There is a delay due to engineering works. |\n\n**Mini dialogue**\n\n**Reiziger:** Hoe laat vertrekt de volgende bus naar het ziekenhuis?\n**Medewerker:** Over zes minuten, halte twee. Vergeet niet in te checken.\n\n**Say or write:** Say you are late and will send an app using *Sorry, ik heb vertraging*.\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **OV-chipkaart** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": "a2-u04_l05_dlg",
+    "listening_asset_id": null,
+    "notes": null
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  },
+  "content_outline": {
+    "speaking_frames_nl": "Rol A/B dialogues (text-first). Gebruik frames: A: Ik heb last van … B: Dan moet je misschien … | A: Moet ik een afspraak maken? B: Ja, bel …"
+  }
+}

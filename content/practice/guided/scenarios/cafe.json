@@ -1,0 +1,187 @@
+{
+  "scenarioId": "cafe",
+  "version": 1,
+  "progressTotal": 5,
+  "intro": {
+    "headline": "At the café",
+    "setting": "You're at the counter in a small Dutch café.",
+    "yourRole": "You're the customer.",
+    "situation": "Order a drink, answer a quick follow-up about milk, pay mentally, and close politely."
+  },
+  "goals": [
+    "Order one drink politely",
+    "Answer whether you want milk",
+    "Decline extras and thank the barista"
+  ],
+  "phrases": [
+    { "id": "p-mag-ik", "nl": "Mag ik …, alstublieft?", "en": "May I have …, please?" },
+    { "id": "p-ik-wil", "nl": "Ik wil graag …", "en": "I'd like …" },
+    { "id": "p-met-melk", "nl": "Met melk, graag.", "en": "With milk, please." },
+    { "id": "p-zwart", "nl": "Zwart, alstublieft.", "en": "Black, please." },
+    { "id": "p-nee-dank", "nl": "Nee, dank u. Dat is alles.", "en": "No, thank you. That's all." }
+  ],
+  "hintsByTurnId": {
+    "t_greet": "Start with Mag ik … or Ik wil graag … + your drink + alstublieft.",
+    "t_milk": "Ja / Nee + short reason if you like — met melk or zwart.",
+    "t_extras": "Nee, dank u works well to close the order.",
+    "t_close": "A short dank u wel + tot ziens sounds natural."
+  },
+  "startTurnId": "t_greet",
+  "turns": [
+    {
+      "id": "t_greet",
+      "aiMessage": "Goedemiddag! Wat mag het zijn?",
+      "freedomTier": "full_support",
+      "suggestedReplies": [
+        {
+          "id": "r_koffie",
+          "nl": "Mag ik een koffie, alstublieft?",
+          "en": "May I have a coffee, please?",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_thee",
+          "nl": "Ik wil graag een thee, alstublieft.",
+          "en": "I'd like a tea, please.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_water",
+          "nl": "Een water, alstublieft.",
+          "en": "A water, please.",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Type your order in Dutch…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_koffie": "t_milk",
+        "r_thee": "t_milk",
+        "r_water": "t_milk"
+      },
+      "nextFallbackId": "t_milk"
+    },
+    {
+      "id": "t_milk",
+      "aiMessage": "Prima. Met melk?",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_ja_melk",
+          "nl": "Ja, met melk, graag.",
+          "en": "Yes, with milk, please.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_nee_zwart",
+          "nl": "Nee, zwart, alstublieft.",
+          "en": "No, black, please.",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Answer in your own words…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_ja_melk": "t_extras",
+        "r_nee_zwart": "t_extras"
+      },
+      "nextFallbackId": "t_extras"
+    },
+    {
+      "id": "t_extras",
+      "aiMessage": "Goed. Dat is twee euro vijftig. Nog iets anders?",
+      "freedomTier": "light",
+      "suggestedReplies": [
+        {
+          "id": "r_nee_alles",
+          "nl": "Nee, dank u. Dat is alles.",
+          "en": "No, thank you. That's all.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_broodje",
+          "nl": "Misschien een broodje, alstublieft.",
+          "en": "Maybe a sandwich, please.",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Say if you want anything else…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_nee_alles": "t_close",
+        "r_broodje": "t_extra_item"
+      },
+      "nextFallbackId": "t_close"
+    },
+    {
+      "id": "t_extra_item",
+      "aiMessage": "Natuurlijk. Het broodje is drie euro. Samen vijf euro vijftig, alstublieft.",
+      "freedomTier": "open",
+      "suggestedReplies": [
+        {
+          "id": "r_ok",
+          "nl": "Prima, dank u.",
+          "en": "Fine, thank you.",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "React briefly…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_ok": "t_close"
+      },
+      "nextFallbackId": "t_close"
+    },
+    {
+      "id": "t_close",
+      "aiMessage": "Alstublieft. Eet smakelijk en tot ziens!",
+      "freedomTier": "open",
+      "suggestedReplies": [
+        {
+          "id": "r_bye",
+          "nl": "Dank u wel, tot ziens!",
+          "en": "Thank you, goodbye!",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Close the chat politely…",
+      "acceptAnyCustomText": true,
+      "terminalAfterUser": true,
+      "endOutcome": "success"
+    }
+  ],
+  "evaluation": {
+    "successTitle": "Nice — you kept the café chat moving",
+    "partialTitle": "Good effort — a bit more polish will make it smoother",
+    "needsPracticeTitle": "Let's rehearse this situation again soon",
+    "wentWellBullets": [
+      "You opened with a polite order",
+      "You answered the milk question clearly",
+      "You closed with a natural thank-you"
+    ],
+    "improveBullets": [
+      "Try Ik wil graag … for a warmer, everyday tone",
+      "Add alstublieft after ja/nee when the setting is formal",
+      "Keep answers short — one idea per sentence is enough at A2"
+    ],
+    "betterPhrases": [
+      { "nl": "Mag ik een cappuccino om mee te nemen, alstublieft?", "en": "May I have a cappuccino to go, please?" },
+      { "nl": "Liever zonder suiker, dank u.", "en": "Preferably without sugar, thank you." }
+    ],
+    "nextActions": [
+      { "label": "Repeat this scenario", "href": "/app/practice/scenario/cafe", "variant": "primary" },
+      { "label": "Browse scenarios", "href": "/app/practice/scenarios", "variant": "secondary" },
+      { "label": "Practice hub", "href": "/app/practice", "variant": "ghost" }
+    ]
+  },
+  "metadata": {
+    "contentType": "guided_scenario",
+    "locale": "nl-NL",
+    "instructionLocale": "en"
+  }
+}

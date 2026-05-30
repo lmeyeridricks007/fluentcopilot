@@ -1,0 +1,6 @@
+export { buildNextBestAction } from '@/lib/dashboard/nextBestAction'
+export type { NextBestActionVm, NextBestActionKind } from '@/lib/dashboard/nextBestAction'
+export { buildConfidenceTrendSummary } from '@/lib/dashboard/confidenceTrendSummary'
+export type { ConfidenceTrendSummaryVm } from '@/lib/dashboard/confidenceTrendSummary'
+export { buildMasterySnapshotRows } from '@/lib/dashboard/masterySnapshot'
+export type { MasterySnapshotRowVm } from '@/lib/dashboard/dashboardTypes'

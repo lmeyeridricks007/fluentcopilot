@@ -1,0 +1,40 @@
+{
+  "id": "a2-u01",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.1",
+  "title": "Early A2 — People & daily rhythm",
+  "summary": "Introduce yourself and others, talk about routines, time, and simple plans in Dutch daily life.",
+  "objectives_can_do": [
+    "Exchange basic personal information and describe family or household in simple terms",
+    "Talk about typical weekday and weekend routines using present tense",
+    "Ask and answer about time, appointments, and simple future plans",
+    "Use polite forms (u/jij) appropriately in short service-style exchanges",
+    "Understand short spoken or written messages about schedules if vocabulary is familiar",
+    "React appropriately to simple social questions about habits and preferences"
+  ],
+  "integration_scripts_summary": "Neighbour and rooster chat; kennismaken in informal Dutch.",
+  "grammar_focus": [
+    "present tense (weak verbs, common irregulars: zijn, hebben, gaan)",
+    "word order in main clauses and yes/no questions",
+    "separable verbs in present (opstaan, meenemen)",
+    "expressions with te + infinitive (te laat zijn)"
+  ],
+  "vocabulary_domains": [
+    "identity",
+    "family",
+    "time",
+    "routines",
+    "plans"
+  ],
+  "lesson_ids": [
+    "a2-u01-l01",
+    "a2-u01-l02",
+    "a2-u01-l03",
+    "a2-u01-l04",
+    "a2-u01-l05",
+    "a2-u01-l06",
+    "a2-u01-l07",
+    "a2-u01-l08"
+  ]
+}

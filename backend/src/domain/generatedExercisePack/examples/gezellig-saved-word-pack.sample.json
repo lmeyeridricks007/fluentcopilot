@@ -1,0 +1,117 @@
+{
+  "title": "Pack: gezellig",
+  "subtitle": "Warm-up → meaning → usage → your line → Talk",
+  "theme": "Social vibe / company",
+  "estimatedMinutes": 6,
+  "xpPotential": 44,
+  "packType": "capture_word",
+  "level": "A2",
+  "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+  "blocks": [
+    {
+      "id": "b-explain-001",
+      "type": "explanation_card",
+      "title": "“gezellig”",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["vocabulary", "register"],
+      "estimatedSeconds": 70,
+      "config": {
+        "dutch": "gezellig",
+        "englishMeaning": "Warm, sociable atmosphere — good company. Not “efficient” or “strictly formal”.",
+        "shortUsageNote": "People, evenings, cafés, homes: “het was gezellig” is everyday Dutch.",
+        "exampleLines": [
+          { "dutch": "Het was heel gezellig gisteravond.", "english": "It was really nice last night (good company)." },
+          { "dutch": "Zullen we ergens gezellig gaan zitten?", "english": "Shall we sit somewhere relaxed / cosy?" },
+          { "dutch": "Ik vond het café erg gezellig.", "english": "I found the café really cosy / friendly." }
+        ]
+      }
+    },
+    {
+      "id": "b-mc-mean-002",
+      "type": "multiple_choice_meaning",
+      "instruction": "Pick the closest meaning in real life.",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["vocabulary"],
+      "estimatedSeconds": 45,
+      "config": {
+        "prompt": "What does “gezellig” usually communicate in conversation?",
+        "options": [
+          { "id": "ok", "label": "Warm, sociable atmosphere — good company.", "isCorrect": true },
+          { "id": "w1", "label": "Only “strictly efficient” or productive time", "isCorrect": false },
+          { "id": "w2", "label": "Only used for bad weather warnings", "isCorrect": false },
+          { "id": "w3", "label": "A formal legal warning", "isCorrect": false }
+        ],
+        "correctExplanation": "Gezellig is about warmth and company — not efficiency."
+      }
+    },
+    {
+      "id": "b-hear-003",
+      "type": "hear_and_repeat",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["listening", "speaking"],
+      "estimatedSeconds": 50,
+      "config": {
+        "targetText": "Het was heel gezellig gisteravond.",
+        "hint": "Use device audio — listen once, repeat twice.",
+        "repeatCount": 2
+      }
+    },
+    {
+      "id": "b-usage-004",
+      "type": "choose_best_phrase",
+      "instruction": "Which line sounds natural?",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["usage"],
+      "estimatedSeconds": 50,
+      "config": {
+        "prompt": "Which usage fits everyday Dutch best?",
+        "options": [
+          { "id": "u1", "label": "Het was heel gezellig — lekker bijgepraat.", "isCorrect": true },
+          { "id": "u2", "label": "Het was heel gezellig — dus we werkten snel door.", "isCorrect": false },
+          { "id": "u3", "label": "Het was gezellig — ik vond het te duur.", "isCorrect": false },
+          { "id": "u4", "label": "Gezellig — dus ik wilde meteen naar huis.", "isCorrect": false }
+        ],
+        "correctExplanation": "Gezellig pairs with social warmth, not “we worked fast”."
+      }
+    },
+    {
+      "id": "b-write-005",
+      "type": "write_your_own_line",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["writing", "production"],
+      "estimatedSeconds": 120,
+      "config": {
+        "prompt": "Write one Dutch sentence with “gezellig” about your real day (not copied from the examples).",
+        "targetWordOrPhrase": "gezellig",
+        "evaluationMode": "llm",
+        "feedbackStyle": "light",
+        "minChars": 8
+      }
+    },
+    {
+      "id": "b-say-006",
+      "type": "say_it_aloud",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["speaking"],
+      "estimatedSeconds": 40,
+      "config": {
+        "instruction": "Say your new sentence out loud twice — relaxed shoulders.",
+        "targetNl": "Het was heel gezellig gisteravond."
+      }
+    },
+    {
+      "id": "b-scen-007",
+      "type": "scenario_jumpoff",
+      "title": "Go deeper",
+      "sourceCaptureIds": ["00000000-0000-4000-8000-0000000000aa"],
+      "skillTags": ["transfer"],
+      "estimatedSeconds": 35,
+      "config": {
+        "scenarioId": "cafe-chat",
+        "ctaLabel": "Open Talk for a short live rep",
+        "reason": "When you want feedback on tone and word choice, a live drill helps.",
+        "href": "/app/talk"
+      }
+    }
+  ]
+}

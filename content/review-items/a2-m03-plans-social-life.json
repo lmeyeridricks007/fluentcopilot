@@ -1,0 +1,1701 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-vt-lemma-vanavond",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tonight”.",
+      "expectedAnswer": "vanavond",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vanavond",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "vanavond"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-vt-lemma-morgen",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tomorrow”.",
+      "expectedAnswer": "morgen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-morgen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "morgen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-vt-lemma-film",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “film”.",
+      "expectedAnswer": "film",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-film",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "film"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-vt-lemma-afspreken",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to arrange to meet”.",
+      "expectedAnswer": "afspreken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspreken",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "afspreken"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-gt-a2.1-plans-time-phrases",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Plans & time references”?",
+      "expectedAnswer": "Vanavond heb ik tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-plans-time-phrases",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Plans & time references"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in social plans”?",
+      "expectedAnswer": "Ik heb al plannen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Present tense in social plans"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-ph-heb-je-zin-om",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Fancy …?).",
+      "expectedAnswer": "Heb je zin om …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Heb je zin om …?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-ph-dat-klinkt-leuk",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That sounds fun!).",
+      "expectedAnswer": "Dat klinkt leuk!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Dat klinkt leuk!"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-ph-hoe-laat",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What time?).",
+      "expectedAnswer": "Hoe laat?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Hoe laat?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l01-listening-making-plans-gist-ph-waar-spreken-we-af",
+      "sourceLessonId": "a2-m03-l01-listening-making-plans-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where shall we meet?).",
+      "expectedAnswer": "Waar spreken we af?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Waar spreken we af?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-vt-lemma-zin",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “inclination (heb je zin)”.",
+      "expectedAnswer": "zin",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-zin",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "zin"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-vt-lemma-graag",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “gladly / please”.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-graag",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "graag"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-vt-lemma-helaas",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “unfortunately”.",
+      "expectedAnswer": "helaas",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helaas",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "helaas"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-vt-lemma-misschien",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “maybe”.",
+      "expectedAnswer": "misschien",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misschien",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "misschien"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-vt-lemma-plan",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “plan”.",
+      "expectedAnswer": "plan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-plan",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "plan"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in social plans”?",
+      "expectedAnswer": "Ik heb al plannen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Present tense in social plans"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-ph-zullen-we",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Shall we …?).",
+      "expectedAnswer": "Zullen we …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Zullen we …?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-ph-helaas-ik-kan-niet",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Unfortunately, I can't.).",
+      "expectedAnswer": "Helaas, ik kan niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Helaas, ik kan niet."
+      }
+    },
+    {
+      "id": "rev-a2-m03-l02-listen-read-invitations-replies-ph-misschien-later",
+      "sourceLessonId": "a2-m03-l02-listen-read-invitations-replies",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Maybe later.).",
+      "expectedAnswer": "Misschien later.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Misschien later."
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-vt-lemma-zin",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “inclination (heb je zin)”.",
+      "expectedAnswer": "zin",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-zin",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "zin"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-vt-lemma-mee",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “along (with)”.",
+      "expectedAnswer": "mee",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mee",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "mee"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-vt-lemma-zullen",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “shall / will (modal)”.",
+      "expectedAnswer": "zullen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-zullen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "zullen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-vt-lemma-kunnen",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “can / to be able”.",
+      "expectedAnswer": "kunnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kunnen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "kunnen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l03-grammar-invitations-patterns-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m03-l03-grammar-invitations-patterns",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions in invitations”?",
+      "expectedAnswer": "Hoe laat treffen we elkaar?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Questions in invitations"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-vt-lemma-hoelaat",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “what time”.",
+      "expectedAnswer": "hoe laat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoelaat",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "hoe laat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-vt-lemma-waar",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “where”.",
+      "expectedAnswer": "waar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-waar",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "waar"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-vt-lemma-tijd",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “time”.",
+      "expectedAnswer": "tijd",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-tijd",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "tijd"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-vt-lemma-weekend",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-vt-lemma-samen",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “together”.",
+      "expectedAnswer": "samen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-samen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "samen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions in invitations”?",
+      "expectedAnswer": "Hoe laat treffen we elkaar?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Questions in invitations"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-ph-wanneer-heb-je-tijd",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: When are you free?).",
+      "expectedAnswer": "Wanneer heb je tijd?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Wanneer heb je tijd?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-ph-waar-spreken-we-af",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where shall we meet?).",
+      "expectedAnswer": "Waar spreken we af?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Waar spreken we af?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l04-practice-questions-responses-ph-hoe-laat-ben-je-daar",
+      "sourceLessonId": "a2-m03-l04-practice-questions-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What time will you be there?).",
+      "expectedAnswer": "Hoe laat ben je daar?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Hoe laat ben je daar?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-vt-lemma-zin",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “inclination (heb je zin)”.",
+      "expectedAnswer": "zin",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-zin",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "zin"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-vt-lemma-koffie",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “coffee”.",
+      "expectedAnswer": "koffie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-koffie",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "koffie"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-vt-lemma-vanavond",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tonight”.",
+      "expectedAnswer": "vanavond",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vanavond",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "vanavond"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-vt-lemma-samen",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “together”.",
+      "expectedAnswer": "samen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-samen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "samen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-vt-lemma-leuk",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice / fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-gt-a2.1-plans-time-phrases",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Plans & time references”?",
+      "expectedAnswer": "Vanavond heb ik tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-plans-time-phrases",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Plans & time references"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-ph-heb-je-zin-om-langs-te-komen",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Fancy coming over?).",
+      "expectedAnswer": "Heb je zin om langs te komen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Heb je zin om langs te komen?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-ph-moet-ik-iets-meenemen",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Should I bring something?).",
+      "expectedAnswer": "Moet ik iets meenemen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Moet ik iets meenemen?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l05-speaking-invite-guided-ph-tot-straks",
+      "sourceLessonId": "a2-m03-l05-speaking-invite-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: See you in a bit!).",
+      "expectedAnswer": "Tot straks!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Tot straks!"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-vt-lemma-weekend",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “weekend”.",
+      "expectedAnswer": "weekend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-weekend",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "weekend"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-vt-lemma-vriend",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “friend”.",
+      "expectedAnswer": "vriend",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vriend",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "vriend"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-vt-lemma-plan",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “plan”.",
+      "expectedAnswer": "plan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-plan",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "plan"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-vt-lemma-samen",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “together”.",
+      "expectedAnswer": "samen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-samen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "samen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-gt-a2.1-plans-time-phrases",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Plans & time references”?",
+      "expectedAnswer": "Vanavond heb ik tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-plans-time-phrases",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Plans & time references"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l06-listening-variations-social-contexts-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m03-l06-listening-variations-social-contexts",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in social plans”?",
+      "expectedAnswer": "Ik heb al plannen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Present tense in social plans"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-vt-lemma-want",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-vt-lemma-omdat",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (subord.)”.",
+      "expectedAnswer": "omdat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-omdat",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-vt-lemma-maar",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “but”.",
+      "expectedAnswer": "maar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-maar",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "maar"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-vt-lemma-en",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “and”.",
+      "expectedAnswer": "en",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-en",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "en"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-vt-lemma-helaas",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “unfortunately”.",
+      "expectedAnswer": "helaas",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helaas",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "helaas"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-gt-a2.1-linking-connectors",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking: en / maar / want / omdat”?",
+      "expectedAnswer": "Ik wil wel, maar ik heb geen tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-linking-connectors",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Linking: en / maar / want / omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l07-grammar-linking-sentences-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m03-l07-grammar-linking-sentences",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in social plans”?",
+      "expectedAnswer": "Ik heb al plannen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Present tense in social plans"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-vt-lemma-bericht",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-vt-lemma-straks",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “later / in a bit”.",
+      "expectedAnswer": "straks",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-straks",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "straks"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-vt-lemma-morgen",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tomorrow”.",
+      "expectedAnswer": "morgen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-morgen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "morgen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-vt-lemma-graag",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “gladly / please”.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-graag",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "graag"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-gt-a2.1-linking-connectors",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking: en / maar / want / omdat”?",
+      "expectedAnswer": "Ik wil wel, maar ik heb geen tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-linking-connectors",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Linking: en / maar / want / omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-ph-zullen-we-straks-een-koffie-doen",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Shall we grab a coffee in a bit?).",
+      "expectedAnswer": "Zullen we straks een koffie doen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Zullen we straks een koffie doen?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-ph-ik-moet-daarna-weg-want-ik-heb-sport",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have to leave after, because I have sports.).",
+      "expectedAnswer": "Ik moet daarna weg, want ik heb sport.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Ik moet daarna weg, want ik heb sport."
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-ph-ik-kan-niet-want-ik-werk-laat",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I can't, because I'm working late.).",
+      "expectedAnswer": "Ik kan niet, want ik werk laat.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Ik kan niet, want ik werk laat."
+      }
+    },
+    {
+      "id": "rev-a2-m03-l08-writing-short-plan-messages-ph-misschien-morgenavond",
+      "sourceLessonId": "a2-m03-l08-writing-short-plan-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Maybe tomorrow evening?).",
+      "expectedAnswer": "Misschien morgenavond?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Misschien morgenavond?"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-vt-lemma-hoelaat",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “what time”.",
+      "expectedAnswer": "hoe laat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoelaat",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "hoe laat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-vt-lemma-waar",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “where”.",
+      "expectedAnswer": "waar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-waar",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "waar"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-vt-lemma-leuk",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nice / fun”.",
+      "expectedAnswer": "leuk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-leuk",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "leuk"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-vt-lemma-afspreken",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to arrange to meet”.",
+      "expectedAnswer": "afspreken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspreken",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "afspreken"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l09-task-plan-meetup-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m03-l09-task-plan-meetup",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions in invitations”?",
+      "expectedAnswer": "Hoe laat treffen we elkaar?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Questions in invitations"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-vt-lemma-vanavond",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tonight”.",
+      "expectedAnswer": "vanavond",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vanavond",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "vanavond"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-vt-lemma-film",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “film”.",
+      "expectedAnswer": "film",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-film",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "film"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-vt-lemma-misschien",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “maybe”.",
+      "expectedAnswer": "misschien",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misschien",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "misschien"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-vt-lemma-graag",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “gladly / please”.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-graag",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "graag"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-gt-a2.1-plans-time-phrases",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Plans & time references”?",
+      "expectedAnswer": "Vanavond heb ik tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-plans-time-phrases",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Plans & time references"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-gt-a2.1-linking-connectors",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking: en / maar / want / omdat”?",
+      "expectedAnswer": "Ik wil wel, maar ik heb geen tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-linking-connectors",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Linking: en / maar / want / omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-ph-laten-we-iets-leuks-doen",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Let's do something fun!).",
+      "expectedAnswer": "Laten we iets leuks doen!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Laten we iets leuks doen!"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-ph-ik-heb-al-plannen",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I already have plans.).",
+      "expectedAnswer": "Ik heb al plannen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Ik heb al plannen."
+      }
+    },
+    {
+      "id": "rev-a2-m03-l10-task-full-conversation-simulation-ph-tot-vanavond",
+      "sourceLessonId": "a2-m03-l10-task-full-conversation-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: See you tonight!).",
+      "expectedAnswer": "Tot vanavond!",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "moduleId": "a2-m03-plans-social-life",
+        "phraseNl": "Tot vanavond!"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-zin",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “inclination (heb je zin)”.",
+      "expectedAnswer": "zin",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-zin",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "zin"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-want",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-morgen",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tomorrow”.",
+      "expectedAnswer": "morgen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-morgen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "morgen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-cafe",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-afspreken",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to arrange to meet”.",
+      "expectedAnswer": "afspreken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspreken",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "afspreken"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-uitnodigen",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to invite”.",
+      "expectedAnswer": "uitnodigen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-uitnodigen",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "uitnodigen"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-vt-lemma-reden",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “reason”.",
+      "expectedAnswer": "reden",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-reden",
+        "moduleId": "a2-m03-plans-social-life",
+        "lemma": "reden"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-gt-a2.1-invitations-patterns",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Invitations & suggestions”?",
+      "expectedAnswer": "Heb je zin om koffie te drinken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-invitations-patterns",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Invitations & suggestions"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-gt-a2.1-linking-connectors",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking: en / maar / want / omdat”?",
+      "expectedAnswer": "Ik wil wel, maar ik heb geen tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-linking-connectors",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Linking: en / maar / want / omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m03-l11-review-plans-social-life-gt-a2.1-plans-time-phrases",
+      "sourceLessonId": "a2-m03-l11-review-plans-social-life",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Plans & time references”?",
+      "expectedAnswer": "Vanavond heb ik tijd.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m03-plans-social-life"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-plans-time-phrases",
+        "moduleId": "a2-m03-plans-social-life",
+        "grammarLabel": "Plans & time references"
+      }
+    }
+  ]
+}

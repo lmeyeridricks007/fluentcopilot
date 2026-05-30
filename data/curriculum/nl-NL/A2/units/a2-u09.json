@@ -1,0 +1,40 @@
+{
+  "id": "a2-u09",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.3",
+  "title": "Late A2 — Culture & integration context",
+  "summary": "Explore Dutch holidays, school touchpoints, etiquette, and institutions at A2 depth.",
+  "objectives_can_do": [
+    "Name major Dutch holidays and what people typically do",
+    "Understand basics of primary school routines and parent contact (rough picture)",
+    "Adjust tone for direct but polite Dutch communication in familiar settings",
+    "Describe one or two civic habits (cycling, calendars, punctuality) simply",
+    "Understand short texts about traditions without exam-specific copying",
+    "Ask respectful questions about local customs"
+  ],
+  "integration_scripts_summary": "Holidays, schools, and polite directness — chunk-based Dutch.",
+  "grammar_focus": [
+    "impersonal constructions (men …, je … as 'one')",
+    "present tense narratives about customs",
+    "fixed expressions for holidays and greetings",
+    "contrast: formal/informal in public settings"
+  ],
+  "vocabulary_domains": [
+    "holidays",
+    "school",
+    "etiquette",
+    "institutions",
+    "traditions"
+  ],
+  "lesson_ids": [
+    "a2-u09-l01",
+    "a2-u09-l02",
+    "a2-u09-l03",
+    "a2-u09-l04",
+    "a2-u09-l05",
+    "a2-u09-l06",
+    "a2-u09-l07",
+    "a2-u09-l08"
+  ]
+}

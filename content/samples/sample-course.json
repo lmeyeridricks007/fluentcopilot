@@ -1,0 +1,289 @@
+{
+  "id": "course-nl-a2-sample",
+  "title": "Dutch A2 (sample course shell)",
+  "language": "nl",
+  "cefrLevel": "A2",
+  "description": "Illustrates schema wiring: one sample module with one lesson. Full 12-module course is authored separately.",
+  "metadata": {
+    "schemaVersion": 1,
+    "note": "Replace modules[] with production data or load from CMS."
+  },
+  "modules": [
+    {
+      "id": "sample-module-a2-m02",
+      "title": "Food & shopping (sample module)",
+      "band": "A2.1",
+      "description": "Practise short transactions, polite requests, and bakery vocabulary.",
+      "order": 0,
+      "learningGoals": [
+        "Complete a simple purchase dialogue",
+        "Use modals and polite chunks in service contexts"
+      ],
+      "grammarTargets": [
+        {
+          "id": "a2.1-modals-requests",
+          "name": "Modals for requests",
+          "description": "kunnen / mogen / willen for polite requests and permission.",
+          "examples": [
+            { "nl": "Mag ik een bon?", "en": "May I have a receipt?" },
+            { "nl": "Ik wil graag een brood.", "en": "I'd like a loaf of bread." }
+          ],
+          "cefrLevel": "A2",
+          "rules": {
+            "summary": "Modal + infinitive; polite register in shops often uses *u* forms in prompts the learner hears."
+          },
+          "metadata": { "spineId": "a2.1-modals-requests" }
+        },
+        {
+          "id": "a2.1-imperatives-service",
+          "name": "Service imperatives (recognition)",
+          "description": "Understand short instructions at the counter.",
+          "examples": [
+            { "nl": "Een momentje.", "en": "One moment." },
+            { "nl": "Vijf euro, alstublieft.", "en": "Five euros, please." }
+          ],
+          "cefrLevel": "A2",
+          "metadata": { "spineId": "a2.1-imperatives-service" }
+        }
+      ],
+      "vocabTargets": [
+        {
+          "id": "lemma-bon",
+          "word": "bon",
+          "lemma": "bon",
+          "translation": "receipt",
+          "partOfSpeech": "noun",
+          "example": { "nl": "Mag ik de bon?", "en": "May I have the receipt?" },
+          "tags": ["shopping", "A2.1"],
+          "metadata": {}
+        },
+        {
+          "id": "lemma-brood",
+          "word": "brood",
+          "lemma": "brood",
+          "translation": "bread",
+          "partOfSpeech": "noun",
+          "example": { "nl": "Ik wil graag een bruin brood.", "en": "I'd like a brown loaf." },
+          "tags": ["food", "A2.1"],
+          "metadata": {}
+        },
+        {
+          "id": "lemma-graag",
+          "word": "graag",
+          "lemma": "graag",
+          "translation": "gladly; I'd like",
+          "partOfSpeech": "adverb",
+          "example": { "nl": "Ik wil graag een koffie.", "en": "I'd like a coffee." },
+          "tags": ["service", "A2.1"],
+          "metadata": {}
+        }
+      ],
+      "metadata": { "schemaVersion": 1 },
+      "lessons": [
+        {
+          "id": "sample-lesson-bakery-01",
+          "moduleId": "sample-module-a2-m02",
+          "title": "At the bakery (sample)",
+          "lessonType": "practice",
+          "order": 0,
+          "cefrLevel": "A2",
+          "durationEstimate": 14,
+          "grammarTargets": ["a2.1-modals-requests", "a2.1-imperatives-service"],
+          "vocabTargets": ["lemma-bon", "lemma-brood", "lemma-graag"],
+          "canDoStatements": [
+            "I can ask for a receipt politely in a shop.",
+            "I can use a short imperative chunk I hear at the counter."
+          ],
+          "reviewItemRefs": [
+            "rev-sample-lemma-bon",
+            "rev-sample-lemma-brood",
+            "rev-sample-phrase-mag-ik",
+            "rev-sample-grammar-modals",
+            "rev-sample-listening-order",
+            "rev-sample-speak-order",
+            "rev-sample-graag-slot"
+          ],
+          "mistakeFocus": ["word-order", "register"],
+          "metadata": {
+            "schemaVersion": 1,
+            "archetype": "pattern_practice_task"
+          },
+          "steps": [
+            {
+              "id": "step-preview-01",
+              "type": "preview",
+              "prompt": "You are at a Dutch bakery counter. Goal: ask for bread and a receipt.",
+              "content": {
+                "bullets": [
+                  "Listen for polite chunks",
+                  "Fix word order in short requests",
+                  "Say one line out loud"
+                ]
+              },
+              "metadata": {}
+            },
+            {
+              "id": "step-listen-01",
+              "type": "listening",
+              "prompt": "Luister. Wat koopt de klant?",
+              "audioRefs": ["audio://samples/bakery-dialogue-01.mp3"],
+              "interactionConfig": { "maxPlays": 4, "showTranscriptAfterPlays": 2 },
+              "feedbackConfig": {
+                "hint": "Let op: brood en bon."
+              },
+              "metadata": {}
+            },
+            {
+              "id": "step-listen-read-01",
+              "type": "listen_read",
+              "prompt": "Lees mee met de audio.",
+              "audioRefs": ["audio://samples/bakery-dialogue-01.mp3"],
+              "content": {
+                "transcriptNl": "Goedemorgen. Ik wil graag een bruin brood. Mag ik ook een bon?",
+                "transcriptEn": "Good morning. I'd like a brown loaf. May I also have a receipt?"
+              },
+              "metadata": {}
+            },
+            {
+              "id": "step-discovery-01",
+              "type": "discovery",
+              "prompt": "Welke zin vraagt om toestemming?",
+              "content": { "choices": ["Ik wil graag een brood.", "Mag ik een bon?"] },
+              "correctAnswers": "Mag ik een bon?",
+              "feedbackConfig": {
+                "correctFeedback": "Ja — *Mag ik …?* vraagt om permissie.",
+                "incorrectFeedback": "Zoek de zin met *Mag ik*.",
+                "errorTags": ["register"]
+              },
+              "metadata": {}
+            },
+            {
+              "id": "step-grammar-01",
+              "type": "grammar_card",
+              "prompt": "Korte regel: modals voor verzoeken",
+              "content": {
+                "ruleSummary": "kunnen / mogen / willen + infinitief",
+                "examples": [
+                  { "nl": "Mag ik een bon?", "en": "May I have a receipt?" },
+                  { "nl": "Ik wil graag een brood.", "en": "I'd like a loaf of bread." }
+                ]
+              },
+              "feedbackConfig": {
+                "hint": "In de winkel: vaak *Mag ik …* of *Ik wil graag …*."
+              },
+              "metadata": { "grammarTargetId": "a2.1-modals-requests" }
+            },
+            {
+              "id": "step-mcq-01",
+              "type": "mcq",
+              "prompt": "Kies het beste antwoord in de winkel.",
+              "exercises": [
+                {
+                  "id": "ex-bakery-mcq-01",
+                  "type": "multiple_choice",
+                  "question": "Je vraagt vriendelijk om een bon. Wat zeg je?",
+                  "options": [
+                    "Geef bon nu.",
+                    "Mag ik een bon, alstublieft?",
+                    "Ik heb bon willen."
+                  ],
+                  "correctAnswer": "Mag ik een bon, alstublieft?",
+                  "explanation": "Hofelijk verzoek met *Mag ik* + *alstublieft*.",
+                  "difficulty": "A2_mid",
+                  "metadata": {}
+                }
+              ],
+              "feedbackConfig": {
+                "incorrectFeedback": "Kies de zin met *Mag ik* en *alstublieft*.",
+                "errorTags": ["register"]
+              },
+              "metadata": {}
+            },
+            {
+              "id": "step-reorder-01",
+              "type": "reorder",
+              "prompt": "Zet de woorden in de juiste volgorde.",
+              "exercises": [
+                {
+                  "id": "ex-bakery-reorder-01",
+                  "type": "reorder",
+                  "question": "Maak een correcte zin.",
+                  "options": ["graag", "Ik", "wil", "een", "bon"],
+                  "correctAnswer": "Ik wil graag een bon",
+                  "difficulty": "A2_low",
+                  "metadata": {}
+                }
+              ],
+              "interactionConfig": { "delimiter": " " },
+              "feedbackConfig": { "errorTags": ["word-order"] },
+              "metadata": {}
+            },
+            {
+              "id": "step-fill-01",
+              "type": "fill_blank",
+              "prompt": "Vul het ontbrekende woord in.",
+              "exercises": [
+                {
+                  "id": "ex-bakery-fill-01",
+                  "type": "fill_blank",
+                  "question": "Ik wil ___ een bruin brood.",
+                  "options": ["graag", "morgen", "maar"],
+                  "correctAnswer": "graag",
+                  "difficulty": "A2_low",
+                  "metadata": {}
+                }
+              ],
+              "metadata": {}
+            },
+            {
+              "id": "step-speak-01",
+              "type": "speaking",
+              "prompt": "Zeg hardop: vraag om een bon, beleefd.",
+              "content": {
+                "targetNl": "Mag ik een bon, alstublieft?",
+                "maxRecordingSeconds": 45
+              },
+              "interactionConfig": { "requiresMicrophone": true, "aiFeedback": false },
+              "feedbackConfig": {
+                "pronunciationTips": "Let op de klank van *Mag* en *bon*."
+              },
+              "metadata": {}
+            },
+            {
+              "id": "step-write-01",
+              "type": "writing",
+              "prompt": "Schrijf één zin (max. 12 woorden): je vraagt om bruin brood.",
+              "content": { "maxWords": 12, "minWords": 4 },
+              "interactionConfig": { "aiFeedback": false },
+              "metadata": {}
+            },
+            {
+              "id": "step-scenario-01",
+              "type": "scenario_chat",
+              "prompt": "Je bent aan de toonbank. Reageer kort.",
+              "content": {
+                "scenarioCode": "SHOP_BAKERY_COUNTER",
+                "turnsMax": 4
+              },
+              "interactionConfig": { "mode": "text_only" },
+              "metadata": {}
+            },
+            {
+              "id": "step-recap-01",
+              "type": "recap",
+              "prompt": "Samenvatting",
+              "content": {
+                "lemmas": ["bon", "brood", "graag"],
+                "chunks": ["Mag ik een bon, alstublieft?", "Ik wil graag een brood."]
+              },
+              "feedbackConfig": {
+                "upgradeSuggestion": "Oefen de woorden in Review."
+              },
+              "metadata": {}
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

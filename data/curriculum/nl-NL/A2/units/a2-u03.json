@@ -1,0 +1,40 @@
+{
+  "id": "a2-u03",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.1",
+  "title": "Early A2 — Housing & neighbourhood",
+  "summary": "Describe your home, talk to neighbours, and handle simple housing and building issues.",
+  "objectives_can_do": [
+    "Describe rooms, furniture, and rental basics (huur, borg) in simple Dutch",
+    "Ask a neighbour or landlord for help with a small problem",
+    "Understand short notices about building rules or maintenance",
+    "Give simple directions inside a flat or small building",
+    "Fill in basic fields on a housing-related form with support",
+    "Express likes/dislikes about living area and facilities"
+  ],
+  "integration_scripts_summary": "Landlord and buren messages; housing repairs vocabulary.",
+  "grammar_focus": [
+    "prepositions of place (naast, boven, achter, tussen)",
+    "er + locative (er is, er zijn)",
+    "possessive pronouns (mijn, jouw, zijn/haar, ons)",
+    "simple passive-style signs (niet roken, verboden toegang)"
+  ],
+  "vocabulary_domains": [
+    "rooms",
+    "furniture",
+    "rent",
+    "neighbours",
+    "repairs"
+  ],
+  "lesson_ids": [
+    "a2-u03-l01",
+    "a2-u03-l02",
+    "a2-u03-l03",
+    "a2-u03-l04",
+    "a2-u03-l05",
+    "a2-u03-l06",
+    "a2-u03-l07",
+    "a2-u03-l08"
+  ]
+}

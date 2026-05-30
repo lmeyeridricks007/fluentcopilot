@@ -1,0 +1,179 @@
+{
+  "scenarioId": "supermarket_shop",
+  "version": 1,
+  "progressTotal": 4,
+  "intro": {
+    "headline": "Supermarket / shop",
+    "setting": "You're on the shop floor in the Netherlands.",
+    "yourRole": "You're the customer.",
+    "situation": "Ask where one item is, understand the short answer, and thank the staff."
+  },
+  "goals": [
+    "Ask clearly where a product is",
+    "Confirm you understood (aisle / direction)",
+    "Thank the staff briefly"
+  ],
+  "phrases": [
+    { "id": "p-waar", "nl": "Waar vind ik …?", "en": "Where do I find …?" },
+    { "id": "p-mag", "nl": "Mag ik …, alstublieft?", "en": "May I have …, please?" },
+    { "id": "p-dank", "nl": "Dank u wel.", "en": "Thank you." },
+    { "id": "p-gangpad", "nl": "Dus in gangpad twee?", "en": "So in aisle two?" }
+  ],
+  "hintsByTurnId": {
+    "t_ask": "Use Waar vind ik … + product + alstublieft if you like.",
+    "t_dir": "Short echo: Dus … + gangpad or links/rechts.",
+    "t_followup_where": "You can thank again, or ask one more clear Waar … question.",
+    "t_thanks": "Dank u wel or Bedankt is enough."
+  },
+  "startTurnId": "t_ask",
+  "turns": [
+    {
+      "id": "t_ask",
+      "aiMessage": "Goedemiddag, kan ik u ergens mee helpen?",
+      "freedomTier": "full_support",
+      "suggestedReplies": [
+        {
+          "id": "r_milk",
+          "nl": "Waar vind ik de melk, alstublieft?",
+          "en": "Where do I find the milk, please?",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_bread",
+          "nl": "Waar ligt het volkoren brood?",
+          "en": "Where is the wholemeal bread?",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Ask where something is…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_milk": "t_dir",
+        "r_bread": "t_dir"
+      },
+      "nextFallbackId": "t_dir"
+    },
+    {
+      "id": "t_dir",
+      "aiMessage": "De melk staat in gangpad 3, rechts bij de koeling.",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_ok",
+          "nl": "Dus in gangpad drie, rechts. Dank u wel.",
+          "en": "So aisle three, on the right. Thank you.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_short",
+          "nl": "Prima, bedankt.",
+          "en": "Fine, thanks.",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Confirm or thank…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_ok": "t_thanks",
+        "r_short": "t_thanks"
+      },
+      "nextWhenCustomContains": [
+        {
+          "terms": [
+            "waar kan",
+            "waar vind",
+            "waar ligt",
+            "waar is de",
+            "waar is het",
+            "waar staat",
+            "waar staan",
+            "waar zit",
+            "waar zijn",
+            "ik zoek de",
+            "ik zoek het",
+            "nog een",
+            "die ananas"
+          ],
+          "nextId": "t_followup_where"
+        }
+      ],
+      "nextFallbackId": "t_thanks"
+    },
+    {
+      "id": "t_followup_where",
+      "aiMessage": "Natuurlijk. De ananas ligt bij de verse fruitafdeling, meestal centraal in de winkel of vlak bij de groente. Soms ook bij het gesneden fruit.",
+      "freedomTier": "light",
+      "suggestedReplies": [
+        {
+          "id": "r_thanks_fruit",
+          "nl": "Helder, dank u wel.",
+          "en": "Clear, thank you.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_short_ok",
+          "nl": "Prima, bedankt.",
+          "en": "Great, thanks.",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Thank or close briefly…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_thanks_fruit": "t_thanks",
+        "r_short_ok": "t_thanks"
+      },
+      "nextFallbackId": "t_thanks"
+    },
+    {
+      "id": "t_thanks",
+      "aiMessage": "Graag gedaan. Prettige dag verder!",
+      "freedomTier": "light",
+      "suggestedReplies": [
+        {
+          "id": "r_bye",
+          "nl": "Dank u, prettige dag ook.",
+          "en": "Thanks, have a good day too.",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Short goodbye…",
+      "acceptAnyCustomText": true,
+      "terminalAfterUser": true,
+      "endOutcome": "success"
+    }
+  ],
+  "evaluation": {
+    "successTitle": "Nice — you handled the shop floor exchange",
+    "partialTitle": "Good start — tighten one question or confirmation",
+    "needsPracticeTitle": "Let's rehearse directions and polite closings again",
+    "wentWellBullets": [
+      "You asked where something was clearly",
+      "You echoed the direction in short Dutch",
+      "You closed politely"
+    ],
+    "improveBullets": [
+      "Try Waar vind ik … + product for a natural opener",
+      "Repeat gangpad + number to show you understood",
+      "Add alstublieft when the setting feels busy or formal"
+    ],
+    "betterPhrases": [
+      { "nl": "Waar ligt de volle melk, alstublieft?", "en": "Where is the full-fat milk, please?" },
+      { "nl": "Is dat ver hier vandaan in de winkel?", "en": "Is that far from here in the store?" }
+    ],
+    "nextActions": [
+      { "label": "Repeat this scenario", "href": "/app/practice/scenario/supermarket_shop", "variant": "primary" },
+      { "label": "Speak Live · Supermarket", "href": "/app/talk/live/run?scenarioId=supermarket_shop&level=A2", "variant": "secondary" },
+      { "label": "Browse scenarios", "href": "/app/practice/scenarios", "variant": "ghost" }
+    ]
+  },
+  "metadata": {
+    "contentType": "guided_scenario",
+    "locale": "nl-NL",
+    "instructionLocale": "en"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "language-tutor",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": "20.x"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "content-engine:cli": "tsx src/content-engine/cli/run.ts",
+    "validate-content": "tsx --tsconfig tsconfig.json tools/validate-content.ts",
+    "validate-practice": "tsx --tsconfig tsconfig.json tools/validate-practice-content.ts --all-samples",
+    "validate-exam": "tsx --tsconfig tsconfig.json tools/validate-exam-content.ts --all-samples",
+    "content:validate": "tsx --tsconfig tsconfig.json tools/validate-content.ts --manifest content/courses/nl-a2/course.manifest.json --review content/review-items/a2-m01-people-daily.json",
+    "content:extract-review": "tsx --tsconfig tsconfig.json tools/extract-review-items.ts content/modules/a2-m01-people-daily/module.json --out content/review-items/a2-m01-people-daily.json --patch-module",
+    "content:audit-module": "tsx --tsconfig tsconfig.json tools/audit-content.ts --module content/modules/a2-m01-people-daily/module.json",
+    "review:simulate": "tsx --tsconfig tsconfig.json tools/simulate-review-session.ts",
+    "backend:build": "npm run build --prefix backend",
+    "backend:start": "npm run start --prefix backend",
+    "benchmark:scenario-report": "vitest run backend/src/services/speak-live/speakLiveScenarioReportBenchmark.test.ts",
+    "benchmark:scenario-report:json": "BENCHMARK_SCENARIO_REPORT_JSON=1 vitest run backend/src/services/speak-live/speakLiveScenarioReportBenchmark.test.ts",
+    "benchmark:scenario-report:live": "BENCHMARK_REAL_PROVIDERS=1 vitest run backend/src/services/speak-live/speakLiveScenarioReportBenchmark.integration.test.ts"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.59.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.42.0",
+    "next": "^15.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.0",
+    "zod": "^3.23.8",
+    "zustand": "^5.0.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "tsx": "^4.19.0",
+    "typescript": "~5.6.2",
+    "vitest": "^2.1.0"
+  }
+}

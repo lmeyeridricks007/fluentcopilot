@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 2,
+  "userId": "00000000-0000-4000-8000-000000000001",
+  "levelEstimate": "B1",
+  "activeFocusAreas": ["prepositions_in_short_replies", "station (pronunciation)", "word order in subclauses"],
+  "strongestAreas": ["greetings", "train-station"],
+  "updatedAt": "2026-04-21T12:00:00.000Z",
+  "version": 14,
+  "weakVocabulary": [
+    {
+      "normalizedKey": "het station",
+      "displayText": "het station",
+      "category": "article_noun",
+      "severityScore": 1.4,
+      "confidence": 0.62,
+      "firstSeenAt": "2026-04-10T09:00:00.000Z",
+      "lastSeenAt": "2026-04-20T18:22:00.000Z",
+      "occurrences": 5,
+      "scenarioIds": ["aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"],
+      "evidenceRefs": ["turn:1", "thread:t1", "feedback_row"],
+      "recoveryScore": 0.28
+    }
+  ],
+  "weakGrammarPatterns": [
+    {
+      "patternId": "pat_word_order_subclause",
+      "label": "Syntax: subordinate clause word order",
+      "explanation": "Verb cluster placement after conjunctions like omdat, als.",
+      "severityScore": 1.2,
+      "confidence": 0.55,
+      "firstSeenAt": "2026-04-12T10:00:00.000Z",
+      "lastSeenAt": "2026-04-20T18:22:00.000Z",
+      "occurrences": 3,
+      "scenarioIds": ["aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"],
+      "evidenceRefs": ["turn:2", "transcript_issue"],
+      "recoveryScore": 0.22
+    }
+  ],
+  "pronunciationIssues": [
+    {
+      "targetKey": "station:stress",
+      "issueType": "stress",
+      "severityScore": 1.1,
+      "confidence": 0.71,
+      "firstSeenAt": "2026-04-15T11:00:00.000Z",
+      "lastSeenAt": "2026-04-20T18:22:00.000Z",
+      "occurrences": 4,
+      "scenarioIds": ["aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"],
+      "evidenceRefs": ["turn:3"],
+      "recoveryScore": 0.3
+    }
+  ],
+  "hesitationPatterns": [
+    {
+      "patternId": "hes_before_prep",
+      "label": "Hesitation before prepositions",
+      "severityScore": 1.0,
+      "confidence": 0.44,
+      "firstSeenAt": "2026-04-18T08:00:00.000Z",
+      "lastSeenAt": "2026-04-20T18:22:00.000Z",
+      "occurrences": 6,
+      "scenarioIds": ["aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"],
+      "evidenceRefs": ["thread-uuid:hes_before_prep"],
+      "recoveryScore": 0.25
+    }
+  ],
+  "scenarioPerformance": {
+    "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee": {
+      "scenarioId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+      "scenarioSlug": "train-station",
+      "attempts": 4,
+      "rollingScore": 74.2,
+      "recentScore": 76.0,
+      "confidence": 0.58,
+      "strongSubskills": ["openers", "polite forms"],
+      "weakSubskills": ["prepositions", "question intonation"],
+      "lastAttemptAt": "2026-04-20T18:22:00.000Z"
+    }
+  },
+  "practiceRecommendations": [
+    {
+      "type": "speak_live_scenario",
+      "targetId": "train-station",
+      "reason": "Recommended because travel Dutch mixes clear questions with practical vocabulary.",
+      "confidence": 0.55,
+      "generatedAt": "2026-04-21T12:00:00.000Z"
+    },
+    {
+      "type": "read_aloud_profile",
+      "targetId": "pronunciation_focus",
+      "reason": "Built around sounds and words you have been practicing aloud.",
+      "confidence": 0.52,
+      "generatedAt": "2026-04-21T12:00:00.000Z"
+    }
+  ],
+  "totalSessionsObserved": 12,
+  "recentScenarioSlugs": ["train-station", "phone-call"],
+  "lastSessionModality": "listening",
+  "listeningMemorySignals": [
+    {
+      "signalId": "fast_transport_replies_struggle",
+      "label": "Fast travel-desk style replies",
+      "severityScore": 1.1,
+      "confidence": 0.52,
+      "firstSeenAt": "2026-04-19T10:00:00.000Z",
+      "lastSeenAt": "2026-04-21T11:30:00.000Z",
+      "occurrences": 3,
+      "evidenceRefs": ["listening-session-uuid:attempt-1"],
+      "recoveryScore": 0.3
+    }
+  ]
+}

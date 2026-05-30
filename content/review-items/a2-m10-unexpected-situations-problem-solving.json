@@ -1,0 +1,2155 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-vt-lemma-probleem-m10",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “problem”.",
+      "expectedAnswer": "probleem",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-probleem-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "probleem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-vt-lemma-bestelling-m10",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “order”.",
+      "expectedAnswer": "bestelling",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bestelling-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "bestelling"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-vt-lemma-fout-m10",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “wrong / mistake”.",
+      "expectedAnswer": "fout",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-fout-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "fout"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-vt-lemma-sorry-m10",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “sorry”.",
+      "expectedAnswer": "sorry",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-sorry-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "sorry"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-vt-lemma-helpen-m10",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-gt-a2.3-recovery-problems",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Stating a simple problem”?",
+      "expectedAnswer": "Er is een probleem met mijn bestelling.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-problems",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Stating a simple problem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-ph-sorry-ik-begrijp-het-niet",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Sorry, I don't understand.).",
+      "expectedAnswer": "Sorry, ik begrijp het niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Sorry, ik begrijp het niet."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-ph-er-is-een-probleem-met",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There's a problem with …).",
+      "expectedAnswer": "Er is een probleem met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Er is een probleem met …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-ph-kunt-u-dat-herhalen",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you repeat that?).",
+      "expectedAnswer": "Kunt u dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-ph-geen-probleem",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: No problem. / That's OK.).",
+      "expectedAnswer": "Geen probleem.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Geen probleem."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l01-listening-something-wrong-catch-situation-ph-pardon-ik-verstond-u-niet",
+      "sourceLessonId": "a2-m10-l01-listening-something-wrong-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Pardon, I didn't catch that.).",
+      "expectedAnswer": "Pardon, ik verstond u niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Pardon, ik verstond u niet."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-vt-lemma-misverstand-m10",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “misunderstanding”.",
+      "expectedAnswer": "misverstand",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misverstand-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "misverstand"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-vt-lemma-betekenen-m10",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to mean”.",
+      "expectedAnswer": "bedoelen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-betekenen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "bedoelen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-vt-lemma-wacht-m10",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “wait a moment”.",
+      "expectedAnswer": "wacht",
+      "variants": [
+        "wacht even"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wacht-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "wacht"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-vt-lemma-vraag-m10",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “question”.",
+      "expectedAnswer": "vraag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vraag-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "vraag"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-vt-lemma-maar-m10",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “but”.",
+      "expectedAnswer": "maar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-maar-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "maar"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-gt-a2.3-recovery-repair",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Conversation repair”?",
+      "expectedAnswer": "Wacht even — ik bedoelde morgen, niet vandaag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-repair",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Conversation repair"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-ph-wacht-even",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Wait …).",
+      "expectedAnswer": "Wacht even …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Wacht even …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-ph-dat-is-niet-wat-ik-bedoelde",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's not what I meant.).",
+      "expectedAnswer": "Dat is niet wat ik bedoelde.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Dat is niet wat ik bedoelde."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-ph-wat-bedoel-je-precies",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What do you mean exactly?).",
+      "expectedAnswer": "Wat bedoel je precies?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Wat bedoel je precies?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-ph-nu-snap-ik-het",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Now I get it.).",
+      "expectedAnswer": "Nu snap ik het.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Nu snap ik het."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l02-listen-read-problems-misunderstandings-ph-sorry-ik-hoor-je-niet-goed",
+      "sourceLessonId": "a2-m10-l02-listen-read-problems-misunderstandings",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Sorry, I can't hear you well.).",
+      "expectedAnswer": "Sorry, ik hoor je niet goed.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Sorry, ik hoor je niet goed."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-vt-lemma-begrijpen-m10",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to understand”.",
+      "expectedAnswer": "begrijpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-begrijpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "begrijpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-vt-lemma-herhalen-m10",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-vt-lemma-langzaam-m10",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “slow(ly)”.",
+      "expectedAnswer": "langzaam",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-langzaam-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "langzaam"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-vt-lemma-kunnen-m10",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “can / to be able”.",
+      "expectedAnswer": "kunnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kunnen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "kunnen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-vt-lemma-mogen-m10",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “may / to be allowed”.",
+      "expectedAnswer": "mogen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mogen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "mogen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-gt-a2.3-recovery-modals",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for help & permission”?",
+      "expectedAnswer": "Kunt u mij naar perron zes wijzen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-modals",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Modals for help & permission"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-ph-kunt-u-winkel",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you …? (shop)).",
+      "expectedAnswer": "Kunt u …? (winkel)",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u …? (winkel)"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-ph-kun-je-vriend",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you …? (friend)).",
+      "expectedAnswer": "Kun je …? (vriend)",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kun je …? (vriend)"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-ph-sorry-even-storen",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Sorry to bother you …).",
+      "expectedAnswer": "Sorry, even storen …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Sorry, even storen …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-ph-eén-vraag-per-keer",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: One question at a time).",
+      "expectedAnswer": "Eén vraag per keer",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Eén vraag per keer"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l03-grammar-clarifying-asking-help-ph-pardon-sorry-ik-verstond-u-niet",
+      "sourceLessonId": "a2-m10-l03-grammar-clarifying-asking-help",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Pardon? / Sorry, I didn't catch that.).",
+      "expectedAnswer": "Pardon? / Sorry, ik verstond u niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Pardon? / Sorry, ik verstond u niet."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-vt-lemma-werken-m10",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work (function)”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-vt-lemma-kloppen-m10",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to be correct”.",
+      "expectedAnswer": "kloppen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kloppen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "kloppen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-vt-lemma-winkel-m10",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “shop”.",
+      "expectedAnswer": "winkel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-winkel-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "winkel"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-vt-lemma-want-m10",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-vt-lemma-omdat-m10",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (subord.)”.",
+      "expectedAnswer": "omdat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-omdat-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-gt-a2.3-recovery-problems",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Stating a simple problem”?",
+      "expectedAnswer": "Er is een probleem met mijn bestelling.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-problems",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Stating a simple problem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-gt-a2.3-recovery-connectors",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Connectors in repair (maar / want / omdat)”?",
+      "expectedAnswer": "Ik wil helpen, maar ik spreek nog niet zo goed Nederlands.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-connectors",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Connectors in repair (maar / want / omdat)"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-ph-geen-zorgen",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Don't worry.).",
+      "expectedAnswer": "Geen zorgen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Geen zorgen."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-ph-laat-even-zien",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Let me see.).",
+      "expectedAnswer": "Laat even zien.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Laat even zien."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-ph-we-kunnen",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: We can …).",
+      "expectedAnswer": "We kunnen …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "We kunnen …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l04-practice-problem-statements-responses-ph-komt-u-mee",
+      "sourceLessonId": "a2-m10-l04-practice-problem-statements-responses",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Will you come with me?).",
+      "expectedAnswer": "Komt u mee?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Komt u mee?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-vt-lemma-helpen-m10",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-vt-lemma-balie-m10",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “counter / desk”.",
+      "expectedAnswer": "balie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-balie-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "balie"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-vt-lemma-perron-m10",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “platform”.",
+      "expectedAnswer": "perron",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-perron-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "perron"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-vt-lemma-druk-m10",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “busy / crowded”.",
+      "expectedAnswer": "druk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-druk-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "druk"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-vt-lemma-sorry-m10",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “sorry”.",
+      "expectedAnswer": "sorry",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-sorry-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "sorry"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-gt-a2.3-recovery-modals",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for help & permission”?",
+      "expectedAnswer": "Kunt u mij naar perron zes wijzen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-modals",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Modals for help & permission"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-ph-excuseer-sorry",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Excuse me / Sorry …).",
+      "expectedAnswer": "Excuseer / Sorry …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Excuseer / Sorry …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-ph-ik-heb-een-probleem-ik-zoek",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have a problem / I'm looking for …).",
+      "expectedAnswer": "Ik heb een probleem / ik zoek …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Ik heb een probleem / ik zoek …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-ph-kunt-u",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you …?).",
+      "expectedAnswer": "Kunt u …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u …?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l05-speaking-ask-help-clearly-ph-dank-je-dank-u-wel",
+      "sourceLessonId": "a2-m10-l05-speaking-ask-help-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Thanks / Thank you).",
+      "expectedAnswer": "Dank je / Dank u wel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Dank je / Dank u wel"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-vt-lemma-trein-m10",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “train”.",
+      "expectedAnswer": "trein",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-trein-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "trein"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-vt-lemma-kaartje-m10",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “ticket”.",
+      "expectedAnswer": "kaartje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kaartje-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "kaartje"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-vt-lemma-verwacht-m10",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to expect”.",
+      "expectedAnswer": "verwachten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verwacht-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "verwachten"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-vt-lemma-fout-m10",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “wrong / mistake”.",
+      "expectedAnswer": "fout",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-fout-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "fout"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-vt-lemma-wacht-m10",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “wait a moment”.",
+      "expectedAnswer": "wacht",
+      "variants": [
+        "wacht even"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wacht-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "wacht"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-gt-a2.3-recovery-problems",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Stating a simple problem”?",
+      "expectedAnswer": "Er is een probleem met mijn bestelling.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-problems",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Stating a simple problem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-gt-a2.3-recovery-repair",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Conversation repair”?",
+      "expectedAnswer": "Wacht even — ik bedoelde morgen, niet vandaag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-repair",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Conversation repair"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-ph-let-op",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Attention: …).",
+      "expectedAnswer": "Let op: …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Let op: …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-ph-wat-kan-ik-doen",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What can I do?).",
+      "expectedAnswer": "Wat kan ik doen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Wat kan ik doen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-ph-welk-nummer-zei-u",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Which number did you say?).",
+      "expectedAnswer": "Welk nummer zei u?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Welk nummer zei u?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l06-listening-unexpected-service-transport-ph-geen-zorgen",
+      "sourceLessonId": "a2-m10-l06-listening-unexpected-service-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Don't worry.).",
+      "expectedAnswer": "Geen zorgen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Geen zorgen."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-vt-lemma-want-m10",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-vt-lemma-omdat-m10",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (subord.)”.",
+      "expectedAnswer": "omdat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-omdat-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "omdat"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-vt-lemma-maar-m10",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “but”.",
+      "expectedAnswer": "maar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-maar-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "maar"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-vt-lemma-uitleg-m10",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “explanation”.",
+      "expectedAnswer": "uitleg",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-uitleg-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "uitleg"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-vt-lemma-betekenen-m10",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to mean”.",
+      "expectedAnswer": "bedoelen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-betekenen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "bedoelen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-gt-a2.3-recovery-explain",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Simple explanations (want / omdat)”?",
+      "expectedAnswer": "Ik moet nu weg, want ik heb een afspraak.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-explain",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Simple explanations (want / omdat)"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-gt-a2.3-recovery-repair",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Conversation repair”?",
+      "expectedAnswer": "Wacht even — ik bedoelde morgen, niet vandaag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-repair",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Conversation repair"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-ph-ik-bedoelde",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I meant …).",
+      "expectedAnswer": "Ik bedoelde …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Ik bedoelde …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-ph-niet-maar",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Not …, but …).",
+      "expectedAnswer": "Niet …, maar …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Niet …, maar …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-ph-omdat-ik",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Because I …, …).",
+      "expectedAnswer": "Omdat ik …, …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Omdat ik …, …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-ph-want-ik",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: …, because I …).",
+      "expectedAnswer": "…, want ik …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "…, want ik …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l07-grammar-explaining-correcting-ph-laat-me-het-anders-zeggen",
+      "sourceLessonId": "a2-m10-l07-grammar-explaining-correcting",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Let me put it another way.).",
+      "expectedAnswer": "Laat me het anders zeggen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Laat me het anders zeggen."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-vt-lemma-probleem-m10",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “problem”.",
+      "expectedAnswer": "probleem",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-probleem-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "probleem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-vt-lemma-werken-m10",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work (function)”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-vt-lemma-vraag-m10",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “question”.",
+      "expectedAnswer": "vraag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vraag-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "vraag"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-vt-lemma-sorry-m10",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “sorry”.",
+      "expectedAnswer": "sorry",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-sorry-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "sorry"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-vt-lemma-helpen-m10",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-gt-a2.3-recovery-problems",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Stating a simple problem”?",
+      "expectedAnswer": "Er is een probleem met mijn bestelling.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-problems",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Stating a simple problem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-ph-dit-werkt-niet",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: This doesn't work.).",
+      "expectedAnswer": "Dit werkt niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Dit werkt niet."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-ph-ik-heb-een-probleem-met",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have a problem with …).",
+      "expectedAnswer": "Ik heb een probleem met …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Ik heb een probleem met …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-ph-kunt-u-mij-helpen",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you help me? (formeel)).",
+      "expectedAnswer": "Kunt u mij helpen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u mij helpen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l08-writing-short-problem-messages-ph-kun-je-dat-uitleggen",
+      "sourceLessonId": "a2-m10-l08-writing-short-problem-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you explain that? (informeel chat)).",
+      "expectedAnswer": "Kun je dat uitleggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kun je dat uitleggen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-vt-lemma-misverstand-m10",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “misunderstanding”.",
+      "expectedAnswer": "misverstand",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misverstand-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "misverstand"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-vt-lemma-betekenen-m10",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to mean”.",
+      "expectedAnswer": "bedoelen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-betekenen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "bedoelen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-vt-lemma-wacht-m10",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “wait a moment”.",
+      "expectedAnswer": "wacht",
+      "variants": [
+        "wacht even"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wacht-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "wacht"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-vt-lemma-begrijpen-m10",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to understand”.",
+      "expectedAnswer": "begrijpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-begrijpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "begrijpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-vt-lemma-sorry-m10",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “sorry”.",
+      "expectedAnswer": "sorry",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-sorry-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "sorry"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-gt-a2.3-recovery-repair",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Conversation repair”?",
+      "expectedAnswer": "Wacht even — ik bedoelde morgen, niet vandaag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-repair",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Conversation repair"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-ph-wacht-even",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Wait …).",
+      "expectedAnswer": "Wacht even …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Wacht even …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-ph-kun-je-kunt-u-herhalen",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you … repeat? (je = collega; u = balie)).",
+      "expectedAnswer": "Kun je / Kunt u … herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kun je / Kunt u … herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-ph-nu-snap-ik-het",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Now I get it.).",
+      "expectedAnswer": "Nu snap ik het.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Nu snap ik het."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l09-task-misunderstanding-guided-ph-geen-zorgen",
+      "sourceLessonId": "a2-m10-l09-task-misunderstanding-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Don't worry.).",
+      "expectedAnswer": "Geen zorgen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Geen zorgen."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-vt-lemma-bestelling-m10",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “order”.",
+      "expectedAnswer": "bestelling",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bestelling-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "bestelling"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-vt-lemma-fout-m10",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “wrong / mistake”.",
+      "expectedAnswer": "fout",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-fout-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "fout"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-vt-lemma-helpen-m10",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-vt-lemma-adres-m10",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “address”.",
+      "expectedAnswer": "adres",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-adres-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "adres"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-vt-lemma-winkel-m10",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “shop”.",
+      "expectedAnswer": "winkel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-winkel-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "winkel"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-gt-a2.3-recovery-problems",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Stating a simple problem”?",
+      "expectedAnswer": "Er is een probleem met mijn bestelling.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-problems",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Stating a simple problem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-gt-a2.3-recovery-modals",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for help & permission”?",
+      "expectedAnswer": "Kunt u mij naar perron zes wijzen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-modals",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Modals for help & permission"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-ph-sorry-dit-klopt-niet",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Sorry, this isn't right: …).",
+      "expectedAnswer": "Sorry, dit klopt niet: …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Sorry, dit klopt niet: …"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-ph-kunt-u-dit-checken",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you check this?).",
+      "expectedAnswer": "Kunt u dit checken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u dit checken?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-ph-wat-is-de-oplossing",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What's the solution?).",
+      "expectedAnswer": "Wat is de oplossing?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Wat is de oplossing?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l10-task-problem-solving-simulation-ph-dank-voor-uw-hulp",
+      "sourceLessonId": "a2-m10-l10-task-problem-solving-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Thanks for your help.).",
+      "expectedAnswer": "Dank voor uw hulp.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Dank voor uw hulp."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-vt-lemma-begrijpen-m10",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to understand”.",
+      "expectedAnswer": "begrijpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-begrijpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "begrijpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-vt-lemma-helpen-m10",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-vt-lemma-probleem-m10",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “problem”.",
+      "expectedAnswer": "probleem",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-probleem-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "probleem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-vt-lemma-misverstand-m10",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “misunderstanding”.",
+      "expectedAnswer": "misverstand",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-misverstand-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "misverstand"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-vt-lemma-want-m10",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want-m10",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-gt-a2.3-recovery-clarify",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarifying & slowing down”?",
+      "expectedAnswer": "Sorry, ik begrijp het niet. Kunt u dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-clarify",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Clarifying & slowing down"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-gt-a2.3-recovery-repair",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Conversation repair”?",
+      "expectedAnswer": "Wacht even — ik bedoelde morgen, niet vandaag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-repair",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Conversation repair"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-gt-a2.3-recovery-problems",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Stating a simple problem”?",
+      "expectedAnswer": "Er is een probleem met mijn bestelling.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.3-recovery-problems",
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "grammarLabel": "Stating a simple problem"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-ik-begrijp-het-niet",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I don't understand.).",
+      "expectedAnswer": "Ik begrijp het niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Ik begrijp het niet."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-kunt-u-dat-herhalen",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you repeat that?).",
+      "expectedAnswer": "Kunt u dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-wat-bedoelt-u",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What do you mean?).",
+      "expectedAnswer": "Wat bedoelt u?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Wat bedoelt u?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-dat-klopt-niet",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's not right.).",
+      "expectedAnswer": "Dat klopt niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Dat klopt niet."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-kunt-u-mij-helpen",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you help me?).",
+      "expectedAnswer": "Kunt u mij helpen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Kunt u mij helpen?"
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-geen-probleem",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: No problem.).",
+      "expectedAnswer": "Geen probleem.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Geen probleem."
+      }
+    },
+    {
+      "id": "rev-a2-m10-l11-review-unexpected-situations-ph-pardon-kun-je-dat-nog-een-keer-zeggen",
+      "sourceLessonId": "a2-m10-l11-review-unexpected-situations",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Sorry? Can you say that again?).",
+      "expectedAnswer": "Pardon? Kun je dat nog een keer zeggen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m10-unexpected-situations-problem-solving"
+      ],
+      "metadata": {
+        "moduleId": "a2-m10-unexpected-situations-problem-solving",
+        "phraseNl": "Pardon? Kun je dat nog een keer zeggen?"
+      }
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "id": "a2-u06-l04",
+  "unit_id": "a2-u06",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "E",
+    "primary_skills": [
+      "reading"
+    ]
+  },
+  "catalog": {
+    "title": "Reading · Read threads & signs like a local",
+    "description": "Read threads & signs like a local · A2 reading in “Work & study”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Work & study",
+    "type": "vocabulary",
+    "durationMinutes": 23,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can read an authentic-style text about work & study and extract both gist and specific information",
+    "can_do_outcomes": [
+      "Understand short instructions in a familiar work/study context",
+      "Accept or suggest a short meeting time",
+      "Extract gist and one supporting detail from a short text."
+    ],
+    "grammar_primary": "a2.3-formal-email-register",
+    "grammar_primary_label": "Formal e-mail openers and closings",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "salaris",
+      "thuiswerken",
+      "inbox",
+      "collega",
+      "vergadering",
+      "deadline",
+      "pauze",
+      "dienst",
+      "rooster",
+      "stage",
+      "opleiding",
+      "werkgever"
+    ],
+    "grammar_points": [
+      {
+        "point": "infinitive clauses with om … te for purpose",
+        "examples_nl": [
+          "We mailen om de deadline te bevestigen.",
+          "Ik bel om een afspraak te maken."
+        ],
+        "examples_en": [
+          "We're emailing to confirm the deadline.",
+          "I'm calling to make an appointment."
+        ]
+      },
+      {
+        "point": "separable verbs in work context (meeting inplannen, doorgeven)",
+        "examples_nl": [
+          "Ben je op tijd bij de vergadering gekomen?",
+          "Ik heb het verslag gisteren afgerond."
+        ],
+        "examples_en": [
+          "Did you get to the meeting on time?",
+          "I finished the report yesterday."
+        ]
+      },
+      {
+        "point": "present perfect recognition (ik heb … gedaan) for experience",
+        "examples_nl": [
+          "Met vriendelijke groet, …",
+          "Goedemorgen, ik werk vandaag thuis."
+        ],
+        "examples_en": [
+          "Kind regards, …",
+          "Good morning, I'm working from home today."
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about work & study in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 8,
+    "practice_minutes": 9,
+    "check_minutes": 4,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Read an authentic-style text about work & study and extract both gist and specific information\n\n**Grammar thread today:** Formal e-mail openers and closings — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **Work & study**.\n\nWords you might use today:\n• **salaris**\n• **thuiswerken**\n• **inbox**\n• **collega**\n• **vergadering**\n• **deadline**\n• **pauze**\n• **dienst**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren had ik een drukke dag op kantoor. Na het werk maakte ik aantekeningen voor een cursus en belde ik een collega kort.",
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "salaris",
+          "collega"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Listen & read",
+        "activity": "**Reading focus**\n\nRead this real-life style text slowly.\n\n[Interne memo]\nCollega's, de printer op de 2e verdieping doet het niet. Gebruik tot nader order de printer bij receptie.\nGroet, Facilitair\n\n**After reading:** in one English sentence, what is this text mainly about?",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "skill_focus": "reading"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Today's grammar — formal e-mail frame**\n\n**Rule:** *Geachte mevrouw/meneer*, concrete subject, *Met vriendelijke groet*.\n\n**Patterns:**\n• *Geachte mevrouw Jansen,* … *Met vriendelijke groet,*\n\n**Produce:**\n1. Write opening + one-line purpose + closing (placeholders ok).\n2. Replace *Hoi* with a formal opener in a given line.\n\n**Pronunciation (listen + repeat)**\n**Pronunciation — ui / eu / ij:** round lips for *huis — leeuw*; *mijn* is one smooth glide.\n\n**Language focus — patterns you can reuse**\n\n**infinitive clauses with om … te for purpose**\n• NL: We mailen om de deadline te bevestigen. / Ik bel om een afspraak te maken.\n• EN: We're emailing to confirm the deadline. / I'm calling to make an appointment.\n\n**separable verbs in work context (meeting inplannen, doorgeven)**\n• NL: Ben je op tijd bij de vergadering gekomen? / Ik heb het verslag gisteren afgerond.\n• EN: Did you get to the meeting on time? / I finished the report yesterday.\n\n**present perfect recognition (ik heb … gedaan) for experience**\n• NL: Met vriendelijke groet, … / Goedemorgen, ik werk vandaag thuis.\n• EN: Kind regards, … / Good morning, I'm working from home today.\n\n**Try this:** pick one Dutch sentence above and change only the time or the person (ik → wij / vandaag → morgen), **or** do the “Produce” task from the grammar box above.\n",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "salaris",
+          "collega"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Headline:** give this thread a title in English (max 6 words).\n\n**2 — Times:** list every time or date you see.\n\n**3 — Who must do what?** One sentence in English.\n\n**4 — Gap-fill from text:** \"De lift is morgen … voor onderhoud.\" *(from context)*\n\n**5 — Problem / solution:** what is the problem and what is suggested?\n\n**6 — Word guess:** what might **onderhoud** mean?\n\n**7 — True / false:** \"Everyone is angry in this chat.\"\n\n**8 — Your reply:** write one short Dutch sentence you could post in this group.\n\n**Text:**\n[Interne memo]\nCollega's, de printer op de 2e verdieping doet het niet. Gebruik tot nader order de printer bij receptie.\nGroet, Facilitair\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *[Interne memo]*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *[Interne memo]*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **salaris** and fits *Formal e-mail openers and closings*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Phrase bank (use freely)**\n• salaris\n• thuiswerken\n• inbox\n• collega\n• vergadering\n• deadline\n• pauze\n• dienst\n• rooster\n• stage\n• opleiding\n• werkgever\n\n**Your task:** Write or say **4–6 short sentences** in Dutch about this unit theme.\nRules: include **at least one question** and one connector (**en**, **maar**, or **want**).\n\n**Example starter (you can change it):**\nVandaag … Ik wil … **want** … **En jij?**",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "mixed",
+        "recycle_lemmas": [
+          "salaris",
+          "collega"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "word_order"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "modal_choice"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "word_order",
+                "polite_register"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "verb_position",
+                "article"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **salaris**.",
+              "exampleAnswer": "Example: *Ik wil graag salaris met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Speaking · Text-first speaking—build courage** — we keep building **Work & study** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\n**Hybrid** patterns (*thuiswerken*, *op kantoor*) show up in planning talk. *Laten we een Teams-link delen* reflects everyday office Dutch.\n\n**Phrases — e-mail & office**\n\n| Dutch | English |\n|-------|--------|\n| *Goedemorgen, ik werk vandaag thuis.* | Good morning, I'm WFH today. |\n| *Kunt u het concept vandaag nog sturen?* | Could you send the draft today? |\n| *Met vriendelijke groet,* | Kind regards, |\n\n**Mini dialogue**\n\n**A:** Kun je donderdag om 10:00 vergaderen?\n**B:** Helaas niet; kan het om 14:00?\n**A:** Prima, ik stuur een Teams-uitnodiging.\n\n**Say or write:** Reschedule one meeting in one polite Dutch sentence.\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **salaris** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": null,
+    "listening_asset_id": null,
+    "notes": null
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  },
+  "content_outline": {
+    "reading_text_nl": "[Interne memo]\nCollega's, de printer op de 2e verdieping doet het niet. Gebruik tot nader order de printer bij receptie.\nGroet, Facilitair"
+  }
+}

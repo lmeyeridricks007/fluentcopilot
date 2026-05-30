@@ -1,0 +1,2119 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-vt-lemma-collega",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “colleague”.",
+      "expectedAnswer": "collega",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-collega",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "collega"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-vt-lemma-kantoor",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “office”.",
+      "expectedAnswer": "kantoor",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kantoor",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "kantoor"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-vt-lemma-afdeling",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “department”.",
+      "expectedAnswer": "afdeling",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afdeling",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "afdeling"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-vt-lemma-teamleider",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “team lead”.",
+      "expectedAnswer": "teamleider",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-teamleider",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "teamleider"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-vt-lemma-bericht",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-gt-a2.2-clarification-work",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarification & confirmation”?",
+      "expectedAnswer": "Wat bedoel je met ‘deadline’?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-clarification-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Clarification & confirmation"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-ph-leuk-om-kennis-te-maken",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Nice to meet you.).",
+      "expectedAnswer": "Leuk om kennis te maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Leuk om kennis te maken."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-ph-ik-ben-ik-werk-als",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm …, I work as …).",
+      "expectedAnswer": "Ik ben …, ik werk als …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik ben …, ik werk als …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-ph-mag-ik-even-een-vraag-stellen",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: May I ask a question?).",
+      "expectedAnswer": "Mag ik even een vraag stellen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Mag ik even een vraag stellen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l01-listening-at-work-introductions-ph-geen-probleem",
+      "sourceLessonId": "a2-m04-l01-listening-at-work-introductions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: No problem.).",
+      "expectedAnswer": "Geen probleem.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Geen probleem."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-vt-lemma-werken",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-vt-lemma-taak",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “task”.",
+      "expectedAnswer": "taak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-taak",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "taak"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-vt-lemma-project",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “project”.",
+      "expectedAnswer": "project",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-project",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "project"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-vt-lemma-verantwoordelijk",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “responsible”.",
+      "expectedAnswer": "verantwoordelijk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verantwoordelijk",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "verantwoordelijk"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-ph-ik-werk-als",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I work as …).",
+      "expectedAnswer": "Ik werk als …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik werk als …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-ph-ik-ben-verantwoordelijk-voor",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm responsible for …).",
+      "expectedAnswer": "Ik ben verantwoordelijk voor …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik ben verantwoordelijk voor …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-ph-ik-doe-meestal",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I usually do …).",
+      "expectedAnswer": "Ik doe meestal …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik doe meestal …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l02-listen-read-jobs-responsibilities-ph-ik-ben-beschikbaar",
+      "sourceLessonId": "a2-m04-l02-listen-read-jobs-responsibilities",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm available …).",
+      "expectedAnswer": "Ik ben beschikbaar …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik ben beschikbaar …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-vt-lemma-werken",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-vt-lemma-taak",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “task”.",
+      "expectedAnswer": "taak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-taak",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "taak"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-vt-lemma-want",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “because (coord.)”.",
+      "expectedAnswer": "want",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-want",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "want"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-vt-lemma-maar",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “but”.",
+      "expectedAnswer": "maar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-maar",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "maar"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-gt-a2.2-linking-work",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Linking: want / omdat / maar”?",
+      "expectedAnswer": "Ik ben laat, want de trein had vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-linking-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Linking: want / omdat / maar"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-ph-ik-werk-vandaag-thuis",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm working from home today.).",
+      "expectedAnswer": "Ik werk vandaag thuis.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik werk vandaag thuis."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-ph-ik-heb-veel-taken-maar-het-lukt",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have many tasks, but it's working out.).",
+      "expectedAnswer": "Ik heb veel taken, maar het lukt.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik heb veel taken, maar het lukt."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-ph-ik-kan-niet-mee-want-ik-heb-een-deadline",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I can't join, because I have a deadline.).",
+      "expectedAnswer": "Ik kan niet mee, want ik heb een deadline.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik kan niet mee, want ik heb een deadline."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l03-grammar-talking-about-your-job-ph-dat-is-duidelijk",
+      "sourceLessonId": "a2-m04-l03-grammar-talking-about-your-job",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's clear.).",
+      "expectedAnswer": "Dat is duidelijk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Dat is duidelijk."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-vt-lemma-updaten",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to update”.",
+      "expectedAnswer": "updaten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-updaten",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "updaten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-vt-lemma-agenda",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “calendar / agenda”.",
+      "expectedAnswer": "agenda",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-agenda",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "agenda"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-vt-lemma-bericht",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-vt-lemma-kunnen",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “can / to be able”.",
+      "expectedAnswer": "kunnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kunnen",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "kunnen"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-vt-lemma-moeten",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “must / have to”.",
+      "expectedAnswer": "moeten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-moeten",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-ph-ik-moet-bijwerken",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have to update …).",
+      "expectedAnswer": "Ik moet … bijwerken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik moet … bijwerken."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-ph-ik-kan-om-een-overleg-doen",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I can have a short meeting at …).",
+      "expectedAnswer": "Ik kan om … een overleg doen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik kan om … een overleg doen."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-ph-ik-stuur-je-een-bericht-via",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'll send you a message via …).",
+      "expectedAnswer": "Ik stuur je een bericht via …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik stuur je een bericht via …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l04-practice-work-verbs-routines-ph-geen-probleem",
+      "sourceLessonId": "a2-m04-l04-practice-work-verbs-routines",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: No problem.).",
+      "expectedAnswer": "Geen probleem.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Geen probleem."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-vt-lemma-collega",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “colleague”.",
+      "expectedAnswer": "collega",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-collega",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "collega"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-vt-lemma-teamleider",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “team lead”.",
+      "expectedAnswer": "teamleider",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-teamleider",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "teamleider"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-vt-lemma-werken",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-vt-lemma-project",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “project”.",
+      "expectedAnswer": "project",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-project",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "project"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-vt-lemma-afdeling",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “department”.",
+      "expectedAnswer": "afdeling",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afdeling",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "afdeling"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-gt-a2.2-clarification-work",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarification & confirmation”?",
+      "expectedAnswer": "Wat bedoel je met ‘deadline’?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-clarification-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Clarification & confirmation"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-ph-ik-ben-ik-werk-als",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm … I work as …).",
+      "expectedAnswer": "Ik ben … Ik werk als …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik ben … Ik werk als …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-ph-ik-werk-hier-sinds",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I've worked here since …).",
+      "expectedAnswer": "Ik werk hier sinds …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik werk hier sinds …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-ph-ik-heb-nog-een-vraag",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have another question: …).",
+      "expectedAnswer": "Ik heb nog een vraag: …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik heb nog een vraag: …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l05-speaking-introduce-yourself-at-work-ph-kun-je-dat-herhalen",
+      "sourceLessonId": "a2-m04-l05-speaking-introduce-yourself-at-work",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you repeat that?).",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-vt-lemma-agenda",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “calendar / agenda”.",
+      "expectedAnswer": "agenda",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-agenda",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "agenda"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-vt-lemma-beschikbaar",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “available”.",
+      "expectedAnswer": "beschikbaar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-beschikbaar",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "beschikbaar"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-vt-lemma-herhalen",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-vt-lemma-duidelijk",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “clear”.",
+      "expectedAnswer": "duidelijk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-duidelijk",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "duidelijk"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-gt-a2.2-clarification-work",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarification & confirmation”?",
+      "expectedAnswer": "Wat bedoel je met ‘deadline’?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-clarification-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Clarification & confirmation"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-ph-wanneer-is-de-meeting",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: When is the meeting?).",
+      "expectedAnswer": "Wanneer is de meeting?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Wanneer is de meeting?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-ph-ik-geef-een-korte-update",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'll give a short update.).",
+      "expectedAnswer": "Ik geef een korte update.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik geef een korte update."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-ph-kun-je-dat-herhalen",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you repeat that?).",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l06-listening-meetings-workplace-ph-dat-is-duidelijk",
+      "sourceLessonId": "a2-m04-l06-listening-meetings-workplace",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's clear.).",
+      "expectedAnswer": "Dat is duidelijk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Dat is duidelijk."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-vt-lemma-afmaken",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to finish”.",
+      "expectedAnswer": "afmaken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afmaken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "afmaken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-vt-lemma-voorbereiden",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to prepare”.",
+      "expectedAnswer": "voorbereiden",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-voorbereiden",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "voorbereiden"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-vt-lemma-meenemen",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to bring along”.",
+      "expectedAnswer": "meenemen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meenemen",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meenemen"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-vt-lemma-meewerken",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to cooperate / contribute”.",
+      "expectedAnswer": "meewerken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meewerken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meewerken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-vt-lemma-opstaan",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to get up”.",
+      "expectedAnswer": "opstaan",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-opstaan",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "opstaan"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-gt-a2.2-separable-verbs-work",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs at work”?",
+      "expectedAnswer": "Ik maak dit rapport af.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-verbs-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Separable verbs at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-ph-ik-werk-vandaag-mee-aan-de-workshop",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm participating in the workshop today.).",
+      "expectedAnswer": "Ik werk vandaag mee aan de workshop.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik werk vandaag mee aan de workshop."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-ph-ik-moet-het-rapport-afmaken",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have to finish the report.).",
+      "expectedAnswer": "Ik moet het rapport afmaken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik moet het rapport afmaken."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-ph-kun-je-de-documenten-meenemen",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you bring the documents?).",
+      "expectedAnswer": "Kun je de documenten meenemen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je de documenten meenemen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l07-grammar-separable-verbs-ph-ik-sta-elke-dag-vroeg-op",
+      "sourceLessonId": "a2-m04-l07-grammar-separable-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I get up early every day.).",
+      "expectedAnswer": "Ik sta elke dag vroeg op.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik sta elke dag vroeg op."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-vt-lemma-bericht",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-vt-lemma-thuiswerken",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work from home”.",
+      "expectedAnswer": "thuiswerken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuiswerken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "thuiswerken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-vt-lemma-updaten",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to update”.",
+      "expectedAnswer": "updaten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-updaten",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "updaten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-vt-lemma-beschikbaar",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “available”.",
+      "expectedAnswer": "beschikbaar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-beschikbaar",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "beschikbaar"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-ph-ik-werk-vandaag-thuis",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm working from home today.).",
+      "expectedAnswer": "Ik werk vandaag thuis.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik werk vandaag thuis."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-ph-ik-stuur-je-een-bericht",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'll send you a message.).",
+      "expectedAnswer": "Ik stuur je een bericht.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik stuur je een bericht."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-ph-geen-probleem",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: No problem.).",
+      "expectedAnswer": "Geen probleem.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Geen probleem."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l08-writing-short-work-messages-ph-kun-je-bijwerken",
+      "sourceLessonId": "a2-m04-l08-writing-short-work-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you update …?).",
+      "expectedAnswer": "Kun je … bijwerken?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je … bijwerken?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-vt-lemma-herhalen",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-vt-lemma-bedoelen",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to mean”.",
+      "expectedAnswer": "bedoelen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bedoelen",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "bedoelen"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-vt-lemma-duidelijk",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “clear”.",
+      "expectedAnswer": "duidelijk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-duidelijk",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "duidelijk"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-vt-lemma-geen-probleem",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “no problem”.",
+      "expectedAnswer": "geen probleem",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-geen-probleem",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "geen probleem"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-vt-lemma-taak",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “task”.",
+      "expectedAnswer": "taak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-taak",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "taak"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-gt-a2.2-clarification-work",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarification & confirmation”?",
+      "expectedAnswer": "Wat bedoel je met ‘deadline’?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-clarification-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Clarification & confirmation"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-ph-kun-je-dat-herhalen",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you repeat that?).",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-ph-wat-bedoel-je-met",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What do you mean by …?).",
+      "expectedAnswer": "Wat bedoel je met …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Wat bedoel je met …?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-ph-is-dat-zo-duidelijk",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Is that clear (enough)?).",
+      "expectedAnswer": "Is dat zo duidelijk?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Is dat zo duidelijk?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l09-task-ask-clarification-ph-dat-is-duidelijk",
+      "sourceLessonId": "a2-m04-l09-task-ask-clarification",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That's clear.).",
+      "expectedAnswer": "Dat is duidelijk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Dat is duidelijk."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-vt-lemma-agenda",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “calendar / agenda”.",
+      "expectedAnswer": "agenda",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-agenda",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "agenda"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-vt-lemma-afmaken",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to finish”.",
+      "expectedAnswer": "afmaken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afmaken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "afmaken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-vt-lemma-voorbereiden",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to prepare”.",
+      "expectedAnswer": "voorbereiden",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-voorbereiden",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "voorbereiden"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-vt-lemma-beschikbaar",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “available”.",
+      "expectedAnswer": "beschikbaar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-beschikbaar",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "beschikbaar"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-gt-a2.2-separable-verbs-work",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs at work”?",
+      "expectedAnswer": "Ik maak dit rapport af.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-verbs-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Separable verbs at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-gt-a2.2-clarification-work",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarification & confirmation”?",
+      "expectedAnswer": "Wat bedoel je met ‘deadline’?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-clarification-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Clarification & confirmation"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-ph-kun-je-morgen-even-afstemmen",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you align briefly tomorrow?).",
+      "expectedAnswer": "Kun je morgen even afstemmen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je morgen even afstemmen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-ph-ik-bereid-voor",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm preparing …).",
+      "expectedAnswer": "Ik bereid … voor.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik bereid … voor."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-ph-we-moeten-afmaken",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: We have to finish …).",
+      "expectedAnswer": "We moeten … afmaken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "We moeten … afmaken."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l10-task-simple-meeting-interaction-ph-ik-stuur-zo-een-bericht",
+      "sourceLessonId": "a2-m04-l10-task-simple-meeting-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'll send a message shortly.).",
+      "expectedAnswer": "Ik stuur zo een bericht.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik stuur zo een bericht."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-werken",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work”.",
+      "expectedAnswer": "werken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-werken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "werken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-collega",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “colleague”.",
+      "expectedAnswer": "collega",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-collega",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "collega"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-meeting",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “meeting”.",
+      "expectedAnswer": "meeting",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meeting",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "meeting"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-bericht",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “message”.",
+      "expectedAnswer": "bericht",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bericht",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "bericht"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-afmaken",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to finish”.",
+      "expectedAnswer": "afmaken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afmaken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "afmaken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-herhalen",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-vt-lemma-thuiswerken",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to work from home”.",
+      "expectedAnswer": "thuiswerken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-thuiswerken",
+        "moduleId": "a2-m04-work-professional",
+        "lemma": "thuiswerken"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-gt-a2.2-present-workplace",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense at work”?",
+      "expectedAnswer": "Ik werk als developer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-present-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Present tense at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-gt-a2.2-modals-workplace",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals: kunnen / moeten”?",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-modals-workplace",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Modals: kunnen / moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-gt-a2.2-separable-verbs-work",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs at work”?",
+      "expectedAnswer": "Ik maak dit rapport af.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-verbs-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Separable verbs at work"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-gt-a2.2-clarification-work",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Clarification & confirmation”?",
+      "expectedAnswer": "Wat bedoel je met ‘deadline’?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-clarification-work",
+        "moduleId": "a2-m04-work-professional",
+        "grammarLabel": "Clarification & confirmation"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-ph-ik-werk-als",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I work as …).",
+      "expectedAnswer": "Ik werk als …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik werk als …"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-ph-ik-moet-afmaken",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have to finish …).",
+      "expectedAnswer": "Ik moet … afmaken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Ik moet … afmaken."
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-ph-kun-je-dat-herhalen",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you repeat that?).",
+      "expectedAnswer": "Kun je dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Kun je dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m04-l11-review-work-professional-ph-wanneer-is-de-meeting",
+      "sourceLessonId": "a2-m04-l11-review-work-professional",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: When is the meeting?).",
+      "expectedAnswer": "Wanneer is de meeting?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m04-work-professional"
+      ],
+      "metadata": {
+        "moduleId": "a2-m04-work-professional",
+        "phraseNl": "Wanneer is de meeting?"
+      }
+    }
+  ]
+}

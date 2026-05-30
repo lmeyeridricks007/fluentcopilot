@@ -1,0 +1,30 @@
+{
+  "_comment": "Speaking — off-task / execution 0 triggers full rubric gate.",
+  "mode": "simulation",
+  "responseText": "Ik weet het niet.",
+  "transcriptConfidence": 0.72,
+  "aiPayload": {
+    "scores": {
+      "execution": 0,
+      "vocabulary": 2,
+      "grammar": 2,
+      "fluency": 1,
+      "clearness": 1,
+      "pronunciation": 2
+    },
+    "rationales": {
+      "execution": "Does not address the transport/preference task.",
+      "vocabulary": "Model incorrectly tried to score despite task failure — engine must gate."
+    },
+    "certainty": 0.55
+  },
+  "expected": {
+    "rawTotal": 0,
+    "maxTotal": 12,
+    "normalizedPercent": 0,
+    "pass": false,
+    "exerciseOutcomeBand": "fail",
+    "readinessLabel": "needs_work",
+    "executionGatingApplied": true
+  }
+}

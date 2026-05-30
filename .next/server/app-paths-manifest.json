@@ -1,0 +1,10 @@
+{
+  "/api/progression/today/route": "app/api/progression/today/route.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
+  "/api/progression/session-complete/route": "app/api/progression/session-complete/route.js",
+  "/app/talk/live/run/page": "app/app/talk/live/run/page.js",
+  "/app/talk/page": "app/app/talk/page.js",
+  "/app/talk/live/page": "app/app/talk/live/page.js",
+  "/app/talk/live/session/[sessionId]/evaluation/page": "app/app/talk/live/session/[sessionId]/evaluation/page.js",
+  "/app/exam/page": "app/app/exam/page.js"
+}

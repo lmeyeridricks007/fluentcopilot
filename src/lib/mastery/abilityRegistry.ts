@@ -1,0 +1,122 @@
+import type { PracticalAbilityDefinition } from '@/lib/mastery/types'
+
+/**
+ * Real-world Dutch abilities — scenario-anchored, learner-meaningful.
+ * Maps to demo scenarios + skill tracks + weakness categories for personalization.
+ */
+export const ABILITY_DEFINITIONS: PracticalAbilityDefinition[] = [
+  {
+    id: 'ordering_food',
+    title: 'Ordering food & drink',
+    description: 'Cafés, counters, paying — clear, polite lines.',
+    mapGroup: 'daily_life',
+    lifeArea: 'food_drink',
+    scenarioIds: ['cafe', 'supermarket_shop'],
+    skillTrackIds: ['writing_messages', 'speaking_fluency'],
+    weaknessCategoryIds: ['polite_requests', 'question_word_order'],
+  },
+  {
+    id: 'asking_for_help',
+    title: 'Asking for help',
+    description: 'Explain what you need at desk, counter, or service window.',
+    mapGroup: 'daily_life',
+    lifeArea: 'other',
+    scenarioIds: ['doctor', 'municipality', 'housing', 'supermarket_shop'],
+    skillTrackIds: ['listening_confidence', 'writing_messages'],
+    weaknessCategoryIds: ['polite_requests', 'listening_fast'],
+  },
+  {
+    id: 'doctor_conversation',
+    title: 'Doctor conversations',
+    description: 'Symptoms, advice, and next steps at the huisarts.',
+    mapGroup: 'health',
+    lifeArea: 'health',
+    scenarioIds: ['doctor', 'exam_speaking_training'],
+    skillTrackIds: ['listening_confidence', 'speaking_fluency', 'reading_real_life'],
+    weaknessCategoryIds: ['symptom_descriptions', 'listening_fast', 'polite_requests'],
+  },
+  {
+    id: 'work_introduction',
+    title: 'Work introductions',
+    description: 'Meetings, quick intros, sharing your view.',
+    mapGroup: 'work',
+    lifeArea: 'work',
+    scenarioIds: ['work', 'exam_speaking_training'],
+    skillTrackIds: ['speaking_fluency', 'writing_messages'],
+    weaknessCategoryIds: ['sentence_linking', 'question_word_order'],
+  },
+  {
+    id: 'gemeente_appointment',
+    title: 'Gemeente & appointments',
+    description: 'Documents, times, and calm admin Dutch.',
+    mapGroup: 'admin',
+    lifeArea: 'admin',
+    scenarioIds: ['municipality'],
+    skillTrackIds: ['reading_real_life', 'writing_messages'],
+    weaknessCategoryIds: ['admin_formal', 'time_phrases', 'polite_requests'],
+  },
+  {
+    id: 'small_talk',
+    title: 'Small talk & plans',
+    description: 'Light chat, invitations, and making plans.',
+    mapGroup: 'social',
+    lifeArea: 'social',
+    scenarioIds: ['social_plans', 'cafe', 'exam_speaking_training'],
+    skillTrackIds: ['speaking_fluency', 'listening_confidence'],
+    weaknessCategoryIds: ['sentence_linking'],
+  },
+  {
+    id: 'handling_delays',
+    title: 'Handling delays & changes',
+    description: 'Platforms, times, and staying polite under stress.',
+    mapGroup: 'daily_life',
+    lifeArea: 'transport',
+    scenarioIds: ['train', 'problem_solving'],
+    skillTrackIds: ['listening_confidence', 'conversation_repair'],
+    weaknessCategoryIds: ['listening_fast', 'transport_questions', 'conversation_repair'],
+  },
+  {
+    id: 'fixing_misunderstandings',
+    title: 'Fixing misunderstandings',
+    description: 'Clarify, repair, and close the loop calmly.',
+    mapGroup: 'recovery',
+    lifeArea: 'shopping',
+    scenarioIds: ['problem_solving', 'supermarket_shop', 'social_plans'],
+    skillTrackIds: ['conversation_repair', 'listening_confidence'],
+    weaknessCategoryIds: ['conversation_repair', 'listening_fast'],
+  },
+  {
+    id: 'housing_repair',
+    title: 'Housing & repairs',
+    description: 'Landlord messages and practical home issues.',
+    mapGroup: 'daily_life',
+    lifeArea: 'housing',
+    scenarioIds: ['housing'],
+    skillTrackIds: ['writing_messages', 'reading_real_life'],
+    weaknessCategoryIds: ['admin_formal', 'polite_requests'],
+  },
+  {
+    id: 'transport_navigation',
+    title: 'Transport & tickets',
+    description: 'Stations, directions, and ticket lines.',
+    mapGroup: 'daily_life',
+    lifeArea: 'transport',
+    scenarioIds: ['train'],
+    skillTrackIds: ['listening_confidence', 'reading_real_life'],
+    weaknessCategoryIds: ['transport_questions', 'listening_fast'],
+  },
+  {
+    id: 'pharmacy_shopping',
+    title: 'Pharmacy & errands',
+    description: 'Short, precise lines in shops and at the counter.',
+    mapGroup: 'health',
+    lifeArea: 'shopping',
+    scenarioIds: ['supermarket_shop', 'doctor'],
+    skillTrackIds: ['reading_real_life', 'writing_messages'],
+    weaknessCategoryIds: ['vocab_clarity'],
+  },
+]
+
+export function getAbilityDefinition(id: string): PracticalAbilityDefinition | undefined {
+  return ABILITY_DEFINITIONS.find((a) => a.id === id)
+}

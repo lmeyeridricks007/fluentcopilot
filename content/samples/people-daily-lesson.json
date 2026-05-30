@@ -1,0 +1,352 @@
+{
+  "moduleCatalog": {
+    "grammarTargets": [
+      {
+        "id": "a2.1-present-tense",
+        "name": "Present tense & word order",
+        "description": "Simple statements: subject — verb (2) — rest. Questions: verb first.",
+        "examples": [
+          { "nl": "Ik ga vandaag werken.", "en": "I'm going to work today." },
+          { "nl": "Wat doe je vandaag?", "en": "What are you doing today?" },
+          { "nl": "Hoe gaat het?", "en": "How are you?" }
+        ],
+        "cefrLevel": "A2",
+        "rules": {
+          "statement": "Subject + finite verb + ...",
+          "question": "Finite verb + subject + ..."
+        },
+        "metadata": { "module": "People & daily rhythm" }
+      }
+    ],
+    "vocabTargets": [
+      {
+        "id": "lemma-vriend",
+        "word": "vriend",
+        "lemma": "vriend",
+        "translation": "friend",
+        "partOfSpeech": "noun",
+        "example": { "nl": "Dit is mijn vriend.", "en": "This is my friend." },
+        "tags": ["people", "A2.1"],
+        "metadata": {}
+      },
+      {
+        "id": "lemma-vandaag",
+        "word": "vandaag",
+        "lemma": "vandaag",
+        "translation": "today",
+        "partOfSpeech": "adverb",
+        "example": { "nl": "Wat doe je vandaag?", "en": "What are you doing today?" },
+        "tags": ["time", "A2.1"],
+        "metadata": {}
+      },
+      {
+        "id": "lemma-werken",
+        "word": "werken",
+        "lemma": "werken",
+        "translation": "to work",
+        "partOfSpeech": "verb",
+        "example": { "nl": "Ik ga werken.", "en": "I'm going to work." },
+        "tags": ["work", "A2.1"],
+        "metadata": {}
+      },
+      {
+        "id": "lemma-gaan",
+        "word": "gaan",
+        "lemma": "gaan",
+        "translation": "to go",
+        "partOfSpeech": "verb",
+        "example": { "nl": "Ik ga naar huis.", "en": "I'm going home." },
+        "tags": ["motion", "A2.1"],
+        "metadata": {}
+      },
+      {
+        "id": "lemma-hoe",
+        "word": "hoe",
+        "lemma": "hoe",
+        "translation": "how",
+        "partOfSpeech": "pronoun",
+        "example": { "nl": "Hoe gaat het?", "en": "How are you?" },
+        "tags": ["chat", "A2.1"],
+        "metadata": {}
+      }
+    ]
+  },
+  "lesson": {
+    "id": "schema-people-daily-chat-01",
+    "moduleId": "a2-m01-people-daily",
+    "title": "Listening & reading — short friendly chats",
+    "lessonType": "practice",
+    "order": 0,
+    "cefrLevel": "A2",
+    "durationEstimate": 16,
+    "grammarTargets": ["a2.1-present-tense"],
+    "vocabTargets": [
+      "lemma-vriend",
+      "lemma-vandaag",
+      "lemma-werken",
+      "lemma-gaan",
+      "lemma-hoe"
+    ],
+    "canDoStatements": [
+      "I can follow a very short chat about plans for today.",
+      "I can recognise and use three friendly chat phrases."
+    ],
+    "reviewItemRefs": [],
+    "mistakeFocus": ["word-order", "vocab"],
+    "metadata": {
+      "theme": "people_daily_rhythm",
+      "schemaPlayer": true
+    },
+    "steps": [
+      {
+        "id": "step-preview",
+        "type": "preview",
+        "prompt": "Swipe — word of the day",
+        "content": {
+          "previewItems": [
+            {
+              "id": "pv-1",
+              "word": "vriend",
+              "lemma": "vriend",
+              "translationEn": "friend",
+              "emoji": "🙂"
+            },
+            {
+              "id": "pv-2",
+              "word": "vandaag",
+              "lemma": "vandaag",
+              "translationEn": "today",
+              "emoji": "📅"
+            },
+            {
+              "id": "pv-3",
+              "word": "werken",
+              "lemma": "werken",
+              "translationEn": "to work",
+              "emoji": "💼"
+            },
+            {
+              "id": "pv-4",
+              "word": "gaan",
+              "lemma": "gaan",
+              "translationEn": "to go",
+              "emoji": "🚶"
+            },
+            {
+              "id": "pv-5",
+              "word": "hoe",
+              "lemma": "hoe",
+              "translationEn": "how",
+              "emoji": "❓"
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-listen-hook",
+        "type": "listening",
+        "prompt": "Luister eerst — geen stress.",
+        "content": {
+          "dialogue": [
+            { "speaker": "Sam", "nl": "Hoe gaat het?", "en": "How are you?" },
+            { "speaker": "Kim", "nl": "Goed! En met jou?", "en": "Good! And you?" },
+            { "speaker": "Sam", "nl": "Ook goed. Wat doe je vandaag?", "en": "Also good. What are you doing today?" },
+            { "speaker": "Kim", "nl": "Ik ga werken. En jij?", "en": "I'm going to work. And you?" },
+            { "speaker": "Sam", "nl": "Ik ga vandaag sporten.", "en": "I'm going to exercise today." }
+          ],
+          "hideTranscriptUntilPlayed": true
+        },
+        "exercises": [
+          {
+            "id": "ex-listen-mcq",
+            "type": "multiple_choice",
+            "question": "Wat doet Kim vandaag?",
+            "options": [
+              "Ze gaat werken.",
+              "Ze gaat sporten.",
+              "Ze gaat slapen."
+            ],
+            "correctAnswer": "Ze gaat werken.",
+            "explanation": "Kim zegt: *Ik ga werken.*",
+            "difficulty": "A2_low",
+            "metadata": {}
+          }
+        ],
+        "feedbackConfig": {
+          "hint": "Luister naar de zin met *werken*.",
+          "errorTags": ["listening"]
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-discovery",
+        "type": "discovery",
+        "prompt": "Tik op een zin",
+        "content": {
+          "phrases": [
+            {
+              "nl": "Hoe gaat het?",
+              "en": "How are you?",
+              "focus": "gaat"
+            },
+            {
+              "nl": "Wat doe je vandaag?",
+              "en": "What are you doing today?",
+              "focus": "vandaag"
+            },
+            {
+              "nl": "Ik ga werken.",
+              "en": "I'm going to work.",
+              "focus": "ga"
+            }
+          ]
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-grammar",
+        "type": "grammar_card",
+        "prompt": "Mini-regel",
+        "content": {
+          "title": "Present — korte zinnen",
+          "summary": "In een gewone zin: **ik** + **werkwoord** + rest. Vraag: **werkwoord** eerst.",
+          "examples": [
+            { "nl": "Ik ga vandaag werken.", "en": "I'm going to work today." },
+            { "nl": "Ga je vandaag werken?", "en": "Are you going to work today?" }
+          ]
+        },
+        "feedbackConfig": {
+          "hint": "Kijk naar de plek van *ga* en *werk*."
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-mcq-practice",
+        "type": "mcq",
+        "prompt": "Kies de natuurlijke reactie",
+        "exercises": [
+          {
+            "id": "ex-chat-mcq",
+            "type": "multiple_choice",
+            "question": "Je vriend vraagt: *Hoe gaat het?*",
+            "options": [
+              "Goed, dank je!",
+              "Ik ga vandaag werken.",
+              "Tot straks!"
+            ],
+            "correctAnswer": "Goed, dank je!",
+            "explanation": "Eerst antwoord op *hoe gaat het*; de rest is extra.",
+            "difficulty": "A2_mid",
+            "metadata": {}
+          }
+        ],
+        "feedbackConfig": {
+          "incorrectFeedback": "Ze vragen hoe het met je gaat — kies een korte, vriendelijke status.",
+          "errorTags": ["register"]
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-reorder-micro",
+        "type": "reorder",
+        "prompt": "Maak de zin",
+        "exercises": [
+          {
+            "id": "ex-reorder-1",
+            "type": "reorder",
+            "question": "Zet in de juiste volgorde.",
+            "options": ["vandaag", "Ik", "ga", "werken"],
+            "correctAnswer": "Ik ga vandaag werken",
+            "difficulty": "A2_low",
+            "metadata": {}
+          }
+        ],
+        "interactionConfig": { "delimiter": " " },
+        "feedbackConfig": {
+          "incorrectFeedback": "Begin met *Ik*, dan *ga*.",
+          "errorTags": ["word-order"]
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-speak",
+        "type": "speaking",
+        "prompt": "Zeg het hardop",
+        "content": {
+          "targetNl": "Wat doe je vandaag?",
+          "acceptable": ["Wat doe je vandaag", "wat doe je vandaag"],
+          "maxRecordingSeconds": 30
+        },
+        "interactionConfig": { "requiresMicrophone": false, "mockTranscript": "Wat doe je vandaag" },
+        "feedbackConfig": {
+          "pronunciationTips": "Let op *doe* en *vandaag*.",
+          "upgradeSuggestion": "Natuurlijker: lichte intonatie aan het eind (vraag)."
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-mini-build",
+        "type": "fill_blank",
+        "prompt": "Mini-build: één zin",
+        "exercises": [
+          {
+            "id": "ex-fill-build",
+            "type": "fill_blank",
+            "question": "Vul in: Hoe ___ het?",
+            "options": ["gaat", "ben", "heb"],
+            "correctAnswer": "gaat",
+            "explanation": "Vaste groet: *Hoe gaat het?*",
+            "difficulty": "A2_low",
+            "metadata": {}
+          }
+        ],
+        "content": {
+          "followUpReorder": {
+            "tokens": ["het?", "gaat", "Hoe"],
+            "correctAnswer": "Hoe gaat het?"
+          }
+        },
+        "feedbackConfig": {
+          "errorTags": ["vocab", "word-order"]
+        },
+        "metadata": {}
+      },
+      {
+        "id": "step-recap",
+        "type": "recap",
+        "prompt": "Ronde af — 4 snelle checks",
+        "content": {
+          "lemmas": ["vriend", "vandaag", "werken", "gaan", "hoe"],
+          "tasks": [
+            {
+              "kind": "listen_mcq",
+              "question": "Kim zegt: wat doet ze?",
+              "snippetNl": "Ik ga werken.",
+              "options": ["Ze gaat werken.", "Ze gaat slapen.", "Ze gaat koken."],
+              "correctAnswer": "Ze gaat werken."
+            },
+            {
+              "kind": "speak",
+              "prompt": "Zeg: *Ik ga vandaag werken.*",
+              "targetNl": "Ik ga vandaag werken.",
+              "mockPass": true
+            },
+            {
+              "kind": "fill_blank",
+              "sentence": "___ doe je vandaag?",
+              "options": ["Wat", "Hoe", "Waar"],
+              "correctAnswer": "Wat"
+            },
+            {
+              "kind": "reorder",
+              "tokens": ["Hoe", "gaat", "het?"],
+              "correctAnswer": "Hoe gaat het?"
+            }
+          ]
+        },
+        "metadata": {}
+      }
+    ]
+  }
+}

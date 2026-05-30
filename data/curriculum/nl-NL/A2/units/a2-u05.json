@@ -1,0 +1,40 @@
+{
+  "id": "a2-u05",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.2",
+  "title": "Mid A2 — Health & body",
+  "summary": "Describe symptoms, use GP and pharmacy phrases, and follow simple health advice.",
+  "objectives_can_do": [
+    "Name common body parts and mild symptoms in Dutch",
+    "Make a short appointment request with a huisartsenpraktijk",
+    "Understand simple instructions from a GP assistant or pharmacist",
+    "Ask for over-the-counter medicine with basic constraints",
+    "Describe pain level and duration in simple phrases",
+    "React appropriately to advice (rust, water drinken, paracetamol)"
+  ],
+  "integration_scripts_summary": "Huisarts phone scripts; pharmacy and symptom chunks.",
+  "grammar_focus": [
+    "reflexive verbs (zich voelen, zich wassen)",
+    "modal zullen for soft advice (Je zult moeten …) — recognition",
+    "past tense recognition (ik had pijn) for narratives",
+    "polite requests with zou … kunnen"
+  ],
+  "vocabulary_domains": [
+    "symptoms",
+    "body",
+    "GP",
+    "pharmacy",
+    "advice"
+  ],
+  "lesson_ids": [
+    "a2-u05-l01",
+    "a2-u05-l02",
+    "a2-u05-l03",
+    "a2-u05-l04",
+    "a2-u05-l05",
+    "a2-u05-l06",
+    "a2-u05-l07",
+    "a2-u05-l08"
+  ]
+}

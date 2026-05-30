@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "locale": "nl-NL",
+  "instruction_locale": "en",
+  "cefr_level": "A2",
+  "title": "A2 Dutch — Multimodal everyday path (nl-NL)",
+  "summary": "Ten thematic units (83 lessons) rotating input, pattern practice, extended listening/reading, writing/speaking studios, real-world tasks, and culture capsules. Aligned to CEFR A2 with explicit 8-phase lesson spine.",
+  "unit_order": [
+    "a2-u01",
+    "a2-u02",
+    "a2-u03",
+    "a2-u04",
+    "a2-u05",
+    "a2-u06",
+    "a2-u07",
+    "a2-u08",
+    "a2-u09",
+    "a2-u10"
+  ],
+  "a2_bands": [
+    {
+      "band": "A2.1",
+      "label": "Early A2 — survival expansion",
+      "unit_ids": [
+        "a2-u01",
+        "a2-u02",
+        "a2-u03"
+      ]
+    },
+    {
+      "band": "A2.2",
+      "label": "Mid A2 — independence",
+      "unit_ids": [
+        "a2-u04",
+        "a2-u05",
+        "a2-u06"
+      ]
+    },
+    {
+      "band": "A2.3",
+      "label": "Late A2 — confidence",
+      "unit_ids": [
+        "a2-u07",
+        "a2-u08",
+        "a2-u09",
+        "a2-u10"
+      ]
+    }
+  ],
+  "exam_alignment_notes": "Themes echo common civic-integration domains using original scenarios only — not exam-specific wording.",
+  "source_notes": "Author: curriculum generator script; original Dutch samples; pedagogy from a2-multimodal-curriculum-design.md; 2026-03-25."
+}

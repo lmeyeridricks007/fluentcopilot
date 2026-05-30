@@ -1,0 +1,1982 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-vt-lemma-station",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “station”.",
+      "expectedAnswer": "station",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-station",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "station"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-vt-lemma-perron",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “platform”.",
+      "expectedAnswer": "perron",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-perron",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "perron"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-vt-lemma-trein",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “train”.",
+      "expectedAnswer": "trein",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-trein",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "trein"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-vt-lemma-vertraging",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “delay”.",
+      "expectedAnswer": "vertraging",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vertraging",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "vertraging"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-vt-lemma-kaartje",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “ticket”.",
+      "expectedAnswer": "kaartje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kaartje",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "kaartje"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-gt-a2.2-announcements-chunks",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Simple station & OV chunks”?",
+      "expectedAnswer": "De trein heeft vijf minuten vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-announcements-chunks",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Simple station & OV chunks"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-ph-hoe-laat-vertrekt-de-trein",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What time does the train leave?).",
+      "expectedAnswer": "Hoe laat vertrekt de trein?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Hoe laat vertrekt de trein?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-ph-er-is-vertraging",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There is a delay.).",
+      "expectedAnswer": "Er is vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Er is vertraging."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-ph-van-welk-perron",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: From which platform?).",
+      "expectedAnswer": "Van welk perron?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Van welk perron?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l01-listening-station-catch-situation-ph-waar-wilt-u-naartoe",
+      "sourceLessonId": "a2-m07-l01-listening-station-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where do you want to go? (formal)).",
+      "expectedAnswer": "Waar wilt u naartoe?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Waar wilt u naartoe?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-vt-lemma-rechtdoor",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “straight ahead”.",
+      "expectedAnswer": "rechtdoor",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-rechtdoor",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "rechtdoor"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-vt-lemma-links",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “left”.",
+      "expectedAnswer": "links",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-links",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "links"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-vt-lemma-rechts",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “right”.",
+      "expectedAnswer": "rechts",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-rechts",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "rechts"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-vt-lemma-halte",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “stop”.",
+      "expectedAnswer": "halte",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-halte",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "halte"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-vt-lemma-station",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “station”.",
+      "expectedAnswer": "station",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-station",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "station"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-gt-a2.2-directions-core",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Directions you hear on the street”?",
+      "expectedAnswer": "Ga hier rechtdoor en dan links bij de brug.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-directions-core",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Directions you hear on the street"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-ph-ga-rechtdoor",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Go straight.).",
+      "expectedAnswer": "Ga rechtdoor.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ga rechtdoor."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-ph-sla-linksaf-rechtsaf",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Turn left / right.).",
+      "expectedAnswer": "Sla linksaf / rechtsaf.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Sla linksaf / rechtsaf."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-ph-de-halte-is-naast",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: The stop is next to …).",
+      "expectedAnswer": "De halte is naast …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "De halte is naast …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l02-listen-read-directions-route-questions-ph-welke-tram-moet-ik-nemen",
+      "sourceLessonId": "a2-m07-l02-listen-read-directions-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Which tram should I take?).",
+      "expectedAnswer": "Welke tram moet ik nemen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Welke tram moet ik nemen?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-vt-lemma-waar",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “where”.",
+      "expectedAnswer": "waar",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-waar",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "waar"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-vt-lemma-hoe",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how”.",
+      "expectedAnswer": "hoe",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoe",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "hoe"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-vt-lemma-welke",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “which”.",
+      "expectedAnswer": "welke",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-welke",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "welke"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-vt-lemma-overstappen",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to change (vehicles)”.",
+      "expectedAnswer": "overstappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-overstappen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "overstappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-vt-lemma-herhalen",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-gt-a2.2-moeten-kunnen-transport",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in travel talk”?",
+      "expectedAnswer": "Moet ik hier overstappen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-moeten-kunnen-transport",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Moeten / kunnen in travel talk"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-ph-hoe-kom-ik-bij",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: How do I get to …?).",
+      "expectedAnswer": "Hoe kom ik bij …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Hoe kom ik bij …?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-ph-waar-is",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where is …?).",
+      "expectedAnswer": "Waar is …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Waar is …?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-ph-welke-lijn-tram-bus",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Which line / tram / bus?).",
+      "expectedAnswer": "Welke lijn / tram / bus?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Welke lijn / tram / bus?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l03-grammar-route-questions-ph-moet-ik",
+      "sourceLessonId": "a2-m07-l03-grammar-route-questions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Do I have to …?).",
+      "expectedAnswer": "Moet ik …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Moet ik …?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-vt-lemma-rechtdoor",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “straight ahead”.",
+      "expectedAnswer": "rechtdoor",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-rechtdoor",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "rechtdoor"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-vt-lemma-links",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “left”.",
+      "expectedAnswer": "links",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-links",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "links"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-vt-lemma-rechts",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “right”.",
+      "expectedAnswer": "rechts",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-rechts",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "rechts"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-vt-lemma-ingang",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “entrance”.",
+      "expectedAnswer": "ingang",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-ingang",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "ingang"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-vt-lemma-volgende-halte",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “next stop”.",
+      "expectedAnswer": "halte",
+      "variants": [
+        "volgende halte"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-volgende-halte",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "halte"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-gt-a2.2-directions-core",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Directions you hear on the street”?",
+      "expectedAnswer": "Ga hier rechtdoor en dan links bij de brug.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-directions-core",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Directions you hear on the street"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-gt-a2.2-sequence-travel",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Eerst, dan, daarna (simple routes)”?",
+      "expectedAnswer": "Eerst neem je tram 4, dan loop je twee minuten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-sequence-travel",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Eerst, dan, daarna (simple routes)"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-ph-ga-rechtdoor-tot",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Go straight until …).",
+      "expectedAnswer": "Ga rechtdoor tot …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ga rechtdoor tot …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-ph-sla-linksaf-bij",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Turn left at …).",
+      "expectedAnswer": "Sla linksaf bij …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Sla linksaf bij …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-ph-het-is-om-de-hoek",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It's around the corner.).",
+      "expectedAnswer": "Het is om de hoek.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Het is om de hoek."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l04-practice-directions-turns-ph-eerst-dan",
+      "sourceLessonId": "a2-m07-l04-practice-directions-turns",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: First …, then …).",
+      "expectedAnswer": "Eerst …, dan …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Eerst …, dan …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-vt-lemma-verdwaald",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “lost”.",
+      "expectedAnswer": "verdwaald",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-verdwaald",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "verdwaald"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-vt-lemma-helpen-m7",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m7",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-vt-lemma-station",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “station”.",
+      "expectedAnswer": "station",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-station",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "station"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-vt-lemma-rechtdoor",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “straight ahead”.",
+      "expectedAnswer": "rechtdoor",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-rechtdoor",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "rechtdoor"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-vt-lemma-links",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “left”.",
+      "expectedAnswer": "links",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-links",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "links"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-gt-a2.2-directions-core",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Directions you hear on the street”?",
+      "expectedAnswer": "Ga hier rechtdoor en dan links bij de brug.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-directions-core",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Directions you hear on the street"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-ph-ik-ben-verdwaald",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm lost.).",
+      "expectedAnswer": "Ik ben verdwaald.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ik ben verdwaald."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-ph-waar-is",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where is …?).",
+      "expectedAnswer": "Waar is …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Waar is …?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-ph-kunt-u-dat-herhalen",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you repeat that?).",
+      "expectedAnswer": "Kunt u dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Kunt u dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l05-speaking-ask-directions-ph-dank-u-wel-dank-je-wel",
+      "sourceLessonId": "a2-m07-l05-speaking-ask-directions",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Thank you.).",
+      "expectedAnswer": "Dank u wel / Dank je wel.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Dank u wel / Dank je wel."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-vt-lemma-vertraging",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “delay”.",
+      "expectedAnswer": "vertraging",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vertraging",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "vertraging"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-vt-lemma-spoor",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “track (spoor X)”.",
+      "expectedAnswer": "spoor",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-spoor",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "spoor"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-vt-lemma-eindbestemming",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “final destination”.",
+      "expectedAnswer": "eindbestemming",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-eindbestemming",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "eindbestemming"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-vt-lemma-volgende-halte",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “next stop”.",
+      "expectedAnswer": "halte",
+      "variants": [
+        "volgende halte"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-volgende-halte",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "halte"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-vt-lemma-omleiding",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “diversion / detour”.",
+      "expectedAnswer": "omleiding",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-omleiding",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "omleiding"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-gt-a2.2-announcements-chunks",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Simple station & OV chunks”?",
+      "expectedAnswer": "De trein heeft vijf minuten vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-announcements-chunks",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Simple station & OV chunks"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-gt-a2.2-separable-transport",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs: in-/uit-/over- + stappen”?",
+      "expectedAnswer": "U moet bij Station Zuid uitstappen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-transport",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Separable verbs: in-/uit-/over- + stappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-ph-heeft-minuten-vertraging",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: … is … minutes late.).",
+      "expectedAnswer": "… heeft … minuten vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "… heeft … minuten vertraging."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-ph-u-vertrekt-van-spoor",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It departs from track …).",
+      "expectedAnswer": "U vertrekt van spoor …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "U vertrekt van spoor …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-ph-volgende-halte",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Next stop: …).",
+      "expectedAnswer": "Volgende halte: …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Volgende halte: …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l06-listening-delays-announcements-ph-door-een-omleiding",
+      "sourceLessonId": "a2-m07-l06-listening-delays-announcements",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Due to a diversion …).",
+      "expectedAnswer": "Door een omleiding …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Door een omleiding …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-vt-lemma-overstappen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to change (vehicles)”.",
+      "expectedAnswer": "overstappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-overstappen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "overstappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-vt-lemma-uitstappen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to get off”.",
+      "expectedAnswer": "uitstappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-uitstappen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "uitstappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-vt-lemma-instappen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to get on”.",
+      "expectedAnswer": "instappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-instappen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "instappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-vt-lemma-herhalen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-vt-lemma-ov-chipkaart",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “OV-chip card”.",
+      "expectedAnswer": "OV-chipkaart",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-ov-chipkaart",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "OV-chipkaart"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-gt-a2.2-moeten-kunnen-transport",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in travel talk”?",
+      "expectedAnswer": "Moet ik hier overstappen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-moeten-kunnen-transport",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Moeten / kunnen in travel talk"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-gt-a2.2-separable-transport",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Separable verbs: in-/uit-/over- + stappen”?",
+      "expectedAnswer": "U moet bij Station Zuid uitstappen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-separable-transport",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Separable verbs: in-/uit-/over- + stappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-ph-uitstappen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: … get off.).",
+      "expectedAnswer": "… uitstappen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "… uitstappen."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-ph-overstappen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: … change.).",
+      "expectedAnswer": "… overstappen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "… overstappen."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-ph-instappen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: … get on.).",
+      "expectedAnswer": "… instappen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "… instappen."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l07-grammar-moeten-kunnen-transport-ph-kunt-u-herhalen",
+      "sourceLessonId": "a2-m07-l07-grammar-moeten-kunnen-transport",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you repeat …?).",
+      "expectedAnswer": "Kunt u … herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Kunt u … herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-vt-lemma-vertraging",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “delay”.",
+      "expectedAnswer": "vertraging",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vertraging",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "vertraging"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-vt-lemma-trein",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “train”.",
+      "expectedAnswer": "trein",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-trein",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "trein"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-vt-lemma-tram",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tram”.",
+      "expectedAnswer": "tram",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-tram",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "tram"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-vt-lemma-aankomen",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to arrive”.",
+      "expectedAnswer": "aankomen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-aankomen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "aankomen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-vt-lemma-vertrekken",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to depart”.",
+      "expectedAnswer": "vertrekken",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vertrekken",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "vertrekken"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-gt-a2.2-sequence-travel",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Eerst, dan, daarna (simple routes)”?",
+      "expectedAnswer": "Eerst neem je tram 4, dan loop je twee minuten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-sequence-travel",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Eerst, dan, daarna (simple routes)"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-ph-ik-ben-onderweg",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm on my way.).",
+      "expectedAnswer": "Ik ben onderweg.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ik ben onderweg."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-ph-ik-heb-vertraging",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'm delayed.).",
+      "expectedAnswer": "Ik heb vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ik heb vertraging."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-ph-ik-kom-aan",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'll arrive …).",
+      "expectedAnswer": "Ik kom … aan.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ik kom … aan."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l08-writing-travel-messages-ph-zullen-we-afspreken-bij",
+      "sourceLessonId": "a2-m07-l08-writing-travel-messages",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Shall we meet at …?).",
+      "expectedAnswer": "Zullen we afspreken bij …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Zullen we afspreken bij …?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-vt-lemma-kaartje",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “ticket”.",
+      "expectedAnswer": "kaartje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kaartje",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "kaartje"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-vt-lemma-retour",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “return ticket”.",
+      "expectedAnswer": "retour",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-retour",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "retour"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-vt-lemma-enkele-reis",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “single ticket”.",
+      "expectedAnswer": "reis",
+      "variants": [
+        "enkele reis"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-enkele-reis",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "reis"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-vt-lemma-ticketautomaat",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “ticket machine”.",
+      "expectedAnswer": "ticketautomaat",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-ticketautomaat",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "ticketautomaat"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-vt-lemma-station",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “station”.",
+      "expectedAnswer": "station",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-station",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "station"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-gt-a2.2-moeten-kunnen-transport",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in travel talk”?",
+      "expectedAnswer": "Moet ik hier overstappen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-moeten-kunnen-transport",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Moeten / kunnen in travel talk"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-ph-ik-wil-graag-een-kaartje-naar",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'd like a ticket to …).",
+      "expectedAnswer": "Ik wil graag een kaartje naar …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Ik wil graag een kaartje naar …"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-ph-enkele-reis-retour",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Single / return).",
+      "expectedAnswer": "Enkele reis / retour",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Enkele reis / retour"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-ph-kan-ik-pinnen",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can I pay by card?).",
+      "expectedAnswer": "Kan ik pinnen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Kan ik pinnen?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l09-task-ticket-route-guided-ph-dank-u-wel",
+      "sourceLessonId": "a2-m07-l09-task-ticket-route-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Thank you.).",
+      "expectedAnswer": "Dank u wel.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Dank u wel."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-vt-lemma-perron",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “platform”.",
+      "expectedAnswer": "perron",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-perron",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "perron"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-vt-lemma-vertraging",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “delay”.",
+      "expectedAnswer": "vertraging",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vertraging",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "vertraging"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-vt-lemma-uitstappen",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to get off”.",
+      "expectedAnswer": "uitstappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-uitstappen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "uitstappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-vt-lemma-volgende-halte",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “next stop”.",
+      "expectedAnswer": "halte",
+      "variants": [
+        "volgende halte"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-volgende-halte",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "halte"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-vt-lemma-helpen-m7",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to help”.",
+      "expectedAnswer": "helpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-helpen-m7",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "helpen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-gt-a2.2-announcements-chunks",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Simple station & OV chunks”?",
+      "expectedAnswer": "De trein heeft vijf minuten vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-announcements-chunks",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Simple station & OV chunks"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-gt-a2.2-directions-core",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Directions you hear on the street”?",
+      "expectedAnswer": "Ga hier rechtdoor en dan links bij de brug.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-directions-core",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Directions you hear on the street"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-ph-is-dit-de-juiste-tram-trein",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Is this the right tram/train?).",
+      "expectedAnswer": "Is dit de juiste tram/trein?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Is dit de juiste tram/trein?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-ph-er-is-vertraging",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: There's a delay.).",
+      "expectedAnswer": "Er is vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Er is vertraging."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-ph-u-moet-inchecken",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: You have to check in.).",
+      "expectedAnswer": "U moet inchecken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "U moet inchecken."
+      }
+    },
+    {
+      "id": "rev-a2-m07-l10-task-station-tram-interaction-ph-bij-welke-deur-uitstappen",
+      "sourceLessonId": "a2-m07-l10-task-station-tram-interaction",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Which door to get off?).",
+      "expectedAnswer": "Bij welke deur uitstappen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "moduleId": "a2-m07-transport-getting-around",
+        "phraseNl": "Bij welke deur uitstappen?"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-vt-lemma-station",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “station”.",
+      "expectedAnswer": "station",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-station",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "station"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-vt-lemma-tram",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “tram”.",
+      "expectedAnswer": "tram",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-tram",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "tram"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-vt-lemma-vertraging",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “delay”.",
+      "expectedAnswer": "vertraging",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vertraging",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "vertraging"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-vt-lemma-overstappen",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to change (vehicles)”.",
+      "expectedAnswer": "overstappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-overstappen",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "overstappen"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-vt-lemma-rechtdoor",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “straight ahead”.",
+      "expectedAnswer": "rechtdoor",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-rechtdoor",
+        "moduleId": "a2-m07-transport-getting-around",
+        "lemma": "rechtdoor"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-gt-a2.2-transport-questions",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Route & transport questions”?",
+      "expectedAnswer": "Hoe kom ik bij het station?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-transport-questions",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Route & transport questions"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-gt-a2.2-directions-core",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Directions you hear on the street”?",
+      "expectedAnswer": "Ga hier rechtdoor en dan links bij de brug.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-directions-core",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Directions you hear on the street"
+      }
+    },
+    {
+      "id": "rev-a2-m07-l11-review-transport-getting-around-gt-a2.2-announcements-chunks",
+      "sourceLessonId": "a2-m07-l11-review-transport-getting-around",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Simple station & OV chunks”?",
+      "expectedAnswer": "De trein heeft vijf minuten vertraging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m07-transport-getting-around"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-announcements-chunks",
+        "moduleId": "a2-m07-transport-getting-around",
+        "grammarLabel": "Simple station & OV chunks"
+      }
+    }
+  ]
+}

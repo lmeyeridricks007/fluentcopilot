@@ -1,0 +1,6535 @@
+{
+  "id": "a2-m01-people-daily",
+  "title": "People & daily rhythm",
+  "band": "A2.1",
+  "description": "Practical A2.1 Dutch for daily social life: greetings, light introductions, routines, today/tonight plans, present tense, zijn/hebben, questions, and short chats. Stage 6 reference module (11 lessons). Lesson depth v2: multi-loop practice (preview → input → noticing → controlled practice → output → recap), ~25–40 micro-interactions per lesson.",
+  "order": 0,
+  "lessons": [
+    {
+      "id": "a2-m01-l01-listening-friendly-chats-gist",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Listening · Short friendly chats · catch the gist",
+      "lessonType": "input",
+      "order": 0,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-vriend",
+        "lemma-vandaag",
+        "lemma-werken",
+        "lemma-gaan",
+        "lemma-hoe"
+      ],
+      "canDoStatements": [
+        "I can follow a very short chat about plans for today.",
+        "I can recognise and use three friendly chat phrases."
+      ],
+      "steps": [
+        {
+          "id": "m01-l01-step-preview",
+          "prompt": "Swipe — word of the day",
+          "content": {
+            "previewItems": [
+              {
+                "id": "m01-l01-pv-1",
+                "word": "vriend",
+                "lemma": "vriend",
+                "translationEn": "friend",
+                "emoji": "🙂"
+              },
+              {
+                "id": "m01-l01-pv-2",
+                "word": "vandaag",
+                "lemma": "vandaag",
+                "translationEn": "today",
+                "emoji": "📅"
+              },
+              {
+                "id": "m01-l01-pv-3",
+                "word": "werken",
+                "lemma": "werken",
+                "translationEn": "to work",
+                "emoji": "💼"
+              },
+              {
+                "id": "m01-l01-pv-4",
+                "word": "gaan",
+                "lemma": "gaan",
+                "translationEn": "to go",
+                "emoji": "🚶"
+              },
+              {
+                "id": "m01-l01-pv-5",
+                "word": "hoe",
+                "lemma": "hoe",
+                "translationEn": "how",
+                "emoji": "❓"
+              }
+            ]
+          },
+          "interactionConfig": {
+            "requireAllPreviewPlayed": true
+          },
+          "metadata": {},
+          "type": "preview"
+        },
+        {
+          "id": "m01-l01-step-listen-hook",
+          "prompt": "Luister eerst — geen stress.",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Sam",
+                "nl": "Hoe gaat het?",
+                "en": "How are you?"
+              },
+              {
+                "speaker": "Kim",
+                "nl": "Goed! En met jou?",
+                "en": "Good! And you?"
+              },
+              {
+                "speaker": "Sam",
+                "nl": "Ook goed. Wat doe je vandaag?",
+                "en": "Also good. What are you doing today?"
+              },
+              {
+                "speaker": "Kim",
+                "nl": "Ik ga werken. En jij?",
+                "en": "I'm going to work. And you?"
+              },
+              {
+                "speaker": "Sam",
+                "nl": "Ik ga vandaag sporten.",
+                "en": "I'm going to exercise today."
+              }
+            ],
+            "hideTranscriptUntilPlayed": true
+          },
+          "feedbackConfig": {
+            "hint": "Luister naar de zin met *werken*.",
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l01-ex-listen-gist",
+              "question": "Eerst globaal: waar gaat dit gesprek vooral over?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Korte, vriendelijke plannen voor vandaag",
+                "Een doktersafspraak",
+                "Werk op kantoor alleen"
+              ],
+              "correctAnswer": "Korte, vriendelijke plannen voor vandaag"
+            },
+            {
+              "id": "m01-l01-ex-listen-sam",
+              "question": "Wat doet Sam vandaag nog (na het werk)?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hij gaat sporten",
+                "Hij gaat slapen",
+                "Hij gaat studeren"
+              ],
+              "correctAnswer": "Hij gaat sporten"
+            },
+            {
+              "id": "m01-l01-ex-listen-keyword",
+              "question": "Welke zin zegt Kim over haar plan met werk?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga werken",
+                "Ik ga sporten",
+                "Hoe gaat het?"
+              ],
+              "correctAnswer": "Ik ga werken"
+            },
+            {
+              "id": "m01-l01-ex-listen-mcq",
+              "question": "Wat gaat Kim vandaag doen?",
+              "explanation": "Kim zegt: *Ik ga werken.*",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ze gaat werken.",
+                "Ze gaat sporten.",
+                "Ze gaat slapen."
+              ],
+              "correctAnswer": "Ze gaat werken."
+            }
+          ],
+          "metadata": {},
+          "type": "listening"
+        },
+        {
+          "id": "m01-l01-step-discovery",
+          "prompt": "Tik op een zin",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Hoe gaat het?",
+                "en": "How are you?",
+                "focus": "gaat"
+              },
+              {
+                "nl": "Wat doe je vandaag?",
+                "en": "What are you doing today?",
+                "focus": "vandaag"
+              },
+              {
+                "nl": "Ik ga werken.",
+                "en": "I'm going to work.",
+                "focus": "ga"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l01-step-notice-loop",
+          "prompt": "Patroon herkennen (6×)",
+          "content": {
+            "lemmas": [
+              "gaan",
+              "vandaag",
+              "werken"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "hint": "Let op vraagzin vs zin.",
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l01-pl-1",
+              "question": "Welke zin is een vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je vandaag?",
+                "Ik ga werken.",
+                "Goed, dank je."
+              ],
+              "correctAnswer": "Wat doe je vandaag?"
+            },
+            {
+              "id": "m01-l01-pl-2",
+              "question": "Welke reactie past bij *Hoe gaat het?*",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goed, dank je!",
+                "Ik ga vandaag werken.",
+                "Tot straks!"
+              ],
+              "correctAnswer": "Goed, dank je!"
+            },
+            {
+              "id": "m01-l01-pl-3",
+              "question": "Vul in: ___ gaat het?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            },
+            {
+              "id": "m01-l01-pl-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "vandaag",
+                "Ik",
+                "ga",
+                "werken"
+              ],
+              "correctAnswer": "Ik ga vandaag werken"
+            },
+            {
+              "id": "m01-l01-pl-5",
+              "question": "Betere versie?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga vandaag werken.",
+                "Ik vandaag ga werken.",
+                "Werken ik vandaag ga."
+              ],
+              "correctAnswer": "Ik ga vandaag werken."
+            },
+            {
+              "id": "m01-l01-pl-6",
+              "question": "___ doe je vandaag?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Wat",
+                "Hoe",
+                "Waar"
+              ],
+              "correctAnswer": "Wat"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l01-step-grammar",
+          "prompt": "Mini-regel",
+          "content": {
+            "title": "Present — korte zinnen",
+            "summary": "In een gewone zin: **ik** + **werkwoord** + rest. Vraag: **werkwoord** eerst.",
+            "examples": [
+              {
+                "nl": "Ik ga vandaag werken.",
+                "en": "I'm going to work today."
+              },
+              {
+                "nl": "Ga je vandaag werken?",
+                "en": "Are you going to work today?"
+              }
+            ]
+          },
+          "feedbackConfig": {
+            "hint": "Kijk naar de plek van *ga* en *werk*."
+          },
+          "metadata": {},
+          "type": "grammar_card"
+        },
+        {
+          "id": "m01-l01-step-mcq-practice",
+          "prompt": "Kies de natuurlijke reactie",
+          "feedbackConfig": {
+            "incorrectFeedback": "Ze vragen hoe het met je gaat — kies een korte, vriendelijke status.",
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l01-ex-chat-mcq",
+              "question": "Je vriend vraagt: *Hoe gaat het?*",
+              "explanation": "Eerst antwoord op *hoe gaat het*; de rest is extra.",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goed, dank je!",
+                "Ik ga vandaag werken.",
+                "Tot straks!"
+              ],
+              "correctAnswer": "Goed, dank je!"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l01-step-reorder-micro",
+          "prompt": "Maak de zin",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "incorrectFeedback": "Begin met *Ik*, dan *ga*.",
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l01-ex-reorder-1",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "vandaag",
+                "Ik",
+                "ga",
+                "werken"
+              ],
+              "correctAnswer": "Ik ga vandaag werken"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l01-step-speak",
+          "prompt": "Zeg het hardop",
+          "content": {
+            "targetNl": "Wat doe je vandaag?",
+            "acceptable": [
+              "Wat doe je vandaag",
+              "wat doe je vandaag"
+            ],
+            "maxRecordingSeconds": 30
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Wat doe je vandaag"
+          },
+          "feedbackConfig": {
+            "upgradeSuggestion": "Natuurlijker: lichte intonatie aan het eind (vraag).",
+            "pronunciationTips": "Let op *doe* en *vandaag*."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l01-step-speak-2",
+          "prompt": "Herhaal en verbeter: antwoord op de groet",
+          "content": {
+            "targetNl": "Goed, dank je!",
+            "acceptable": [
+              "Goed dank je",
+              "goed dank je",
+              "Goed, dank je"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Goed dank je"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Kort en vriendelijk."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l01-step-speak-3",
+          "prompt": "Variatie: stel dezelfde vraag",
+          "content": {
+            "targetNl": "En jij?",
+            "acceptable": [
+              "En jij",
+              "en jij"
+            ],
+            "maxRecordingSeconds": 20
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "En jij"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l01-step-mini-build",
+          "prompt": "Mini-build: één zin",
+          "content": {
+            "followUpReorder": {
+              "tokens": [
+                "het?",
+                "gaat",
+                "Hoe"
+              ],
+              "correctAnswer": "Hoe gaat het?"
+            }
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "vocab",
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l01-ex-fill-build",
+              "question": "Vul in: Hoe ___ het?",
+              "explanation": "Vaste groet: *Hoe gaat het?*",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "gaat",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "gaat"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l01-depth-v2",
+          "prompt": "Nog een ronde — vriendelijke chat (6×)",
+          "content": {
+            "lemmas": [
+              "vriend",
+              "vandaag",
+              "gaan",
+              "werken"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "listening",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l01-dv2-1",
+              "question": "Welke zin is een groet?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hoe gaat het?",
+                "Ik ga werken.",
+                "Vandaag ben ik moe."
+              ],
+              "correctAnswer": "Hoe gaat het?"
+            },
+            {
+              "id": "m01-l01-dv2-2",
+              "question": "Natuurlijk antwoord op *Hoe gaat het?*",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goed!",
+                "Tot ziens.",
+                "Waar woon je?"
+              ],
+              "correctAnswer": "Goed!"
+            },
+            {
+              "id": "m01-l01-dv2-3",
+              "question": "Ik ___ vandaag werken.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ga",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "ga"
+            },
+            {
+              "id": "m01-l01-dv2-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "Ik",
+                "ga",
+                "vandaag",
+                "werken"
+              ],
+              "correctAnswer": "Ik ga vandaag werken"
+            },
+            {
+              "id": "m01-l01-dv2-5",
+              "question": "Wat is *vandaag*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "een dag-deel",
+                "een naam",
+                "een werkwoord"
+              ],
+              "correctAnswer": "een dag-deel"
+            },
+            {
+              "id": "m01-l01-dv2-6",
+              "question": "___ gaat het met je?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l01-step-recap",
+          "prompt": "Ronde af — 4 snelle checks",
+          "content": {
+            "lemmas": [
+              "vriend",
+              "vandaag",
+              "werken",
+              "gaan",
+              "hoe"
+            ],
+            "tasks": [
+              {
+                "kind": "listen_mcq",
+                "question": "Volgens Kim: wat gaat zij vandaag doen?",
+                "snippetNl": "Ik ga werken.",
+                "options": [
+                  "Ze gaat werken.",
+                  "Ze gaat slapen.",
+                  "Ze gaat koken."
+                ],
+                "correctAnswer": "Ze gaat werken."
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *Ik ga vandaag werken.*",
+                "targetNl": "Ik ga vandaag werken.",
+                "mockPass": true
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ doe je vandaag?",
+                "options": [
+                  "Wat",
+                  "Hoe",
+                  "Waar"
+                ],
+                "correctAnswer": "Wat"
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "Hoe",
+                  "gaat",
+                  "het?"
+                ],
+                "correctAnswer": "Hoe gaat het?"
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik ga vandaag ___.",
+                "options": [
+                  "werken",
+                  "moe",
+                  "thuis"
+                ],
+                "correctAnswer": "werken"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke toon past bij een vriend?",
+                "snippetNl": "Hoe gaat het?",
+                "options": [
+                  "Informeel en kort.",
+                  "Zeer formeel.",
+                  "Alleen zakelijk."
+                ],
+                "correctAnswer": "Informeel en kort."
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-vriend",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-vandaag",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-werken",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-gaan",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-vt-lemma-hoe",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-gt-a2.1-present-tense",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-ph-hoe-gaat-het",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-ph-wat-doe-je-vandaag",
+        "rev-a2-m01-l01-listening-friendly-chats-gist-ph-ik-ga-werken"
+      ],
+      "mistakeFocus": [
+        "word-order",
+        "vocab"
+      ],
+      "metadata": {
+        "theme": "people_daily_rhythm",
+        "schemaPlayer": true,
+        "archetype": "input_a",
+        "stage6": true,
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l02-listening-intro-routines",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Listening & reading · Light introductions · routines",
+      "lessonType": "input",
+      "order": 1,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-naam",
+        "lemma-thuis",
+        "lemma-werken",
+        "lemma-studeren",
+        "lemma-collega"
+      ],
+      "canDoStatements": [
+        "I can catch a name and one routine fact in a short clip.",
+        "I can recognise “ik werk / ik studeer / ik ben thuis”."
+      ],
+      "steps": [
+        {
+          "id": "m01-l02-preview",
+          "prompt": "Vier woorden",
+          "content": {
+            "previewItems": [
+              {
+                "id": "pv-n",
+                "word": "naam",
+                "lemma": "naam",
+                "translationEn": "name",
+                "emoji": "🏷️"
+              },
+              {
+                "id": "pv-w",
+                "word": "werk",
+                "lemma": "werken",
+                "translationEn": "work",
+                "emoji": "💼"
+              },
+              {
+                "id": "pv-h",
+                "word": "thuis",
+                "lemma": "thuis",
+                "translationEn": "at home",
+                "emoji": "🏠"
+              },
+              {
+                "id": "pv-c",
+                "word": "collega",
+                "lemma": "collega",
+                "translationEn": "colleague",
+                "emoji": "🤝"
+              }
+            ]
+          },
+          "interactionConfig": {
+            "requireAllPreviewPlayed": true
+          },
+          "metadata": {},
+          "type": "preview"
+        },
+        {
+          "id": "m01-l02-listen",
+          "prompt": "Luister — korte intro.",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Noa",
+                "nl": "Hoi! Ik ben Noa. Wat is jouw naam?",
+                "en": "Hi! I'm Noa. What's your name?"
+              },
+              {
+                "speaker": "Tim",
+                "nl": "Ik ben Tim. Ik werk in een winkel met een collega.",
+                "en": "I'm Tim. I work in a shop with a colleague."
+              },
+              {
+                "speaker": "Noa",
+                "nl": "Leuk! Ik studeer nog. Waar woon je?",
+                "en": "Nice! I'm still studying. Where do you live?"
+              },
+              {
+                "speaker": "Tim",
+                "nl": "In Utrecht. En jij?",
+                "en": "In Utrecht. And you?"
+              },
+              {
+                "speaker": "Noa",
+                "nl": "Ik woon ook in Utrecht. Ik ben vaak thuis.",
+                "en": "I also live in Utrecht. I'm often home."
+              }
+            ],
+            "hideTranscriptUntilPlayed": false
+          },
+          "feedbackConfig": {
+            "hint": "Zoek het werkwoord bij Tim.",
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l02-ex-gist",
+              "question": "Globaal: waar gaat dit gesprek over?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Kennismaken + werk/studie + wonen",
+                "Alleen het weer",
+                "Een treinkaartje"
+              ],
+              "correctAnswer": "Kennismaken + werk/studie + wonen"
+            },
+            {
+              "id": "m01-l02-ex-detail",
+              "question": "Waar woont Tim?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "In Utrecht",
+                "In Amsterdam",
+                "In Rotterdam"
+              ],
+              "correctAnswer": "In Utrecht"
+            },
+            {
+              "id": "m01-l02-ex-noa",
+              "question": "Wat doet Noa (studie)?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ze studeert nog",
+                "Ze werkt in een winkel",
+                "Ze is met pensioen"
+              ],
+              "correctAnswer": "Ze studeert nog"
+            },
+            {
+              "id": "m01-l02-listen-ex",
+              "question": "Wat doet Tim?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hij studeert.",
+                "Hij werkt in een winkel.",
+                "Hij is op vakantie."
+              ],
+              "correctAnswer": "Hij werkt in een winkel."
+            }
+          ],
+          "metadata": {},
+          "type": "listen_read"
+        },
+        {
+          "id": "m01-l02-discovery",
+          "prompt": "Tik op een zin",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Ik ben Tim.",
+                "en": "I'm Tim.",
+                "focus": "ben"
+              },
+              {
+                "nl": "Ik werk in een winkel.",
+                "en": "I work in a shop.",
+                "focus": "werk"
+              },
+              {
+                "nl": "Ik studeer nog.",
+                "en": "I'm still studying.",
+                "focus": "studeer"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l02-phrase-loop",
+          "prompt": "Zinnen uit het gesprek (5×)",
+          "content": {
+            "lemmas": [
+              "naam",
+              "werken",
+              "thuis"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l02-pl-1",
+              "question": "Betere introductie?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben Tim.",
+                "Ben ik Tim.",
+                "Tim ik ben."
+              ],
+              "correctAnswer": "Ik ben Tim."
+            },
+            {
+              "id": "m01-l02-pl-2",
+              "question": "Ik werk in een ___.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "winkel",
+                "trein",
+                "ochtend"
+              ],
+              "correctAnswer": "winkel"
+            },
+            {
+              "id": "m01-l02-pl-3",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "studeer",
+                "Ik",
+                "nog"
+              ],
+              "correctAnswer": "Ik studeer nog"
+            },
+            {
+              "id": "m01-l02-pl-4",
+              "question": "Natuurlijke vraag over wonen?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Waar woon je?",
+                "Waar je woont?",
+                "Woon waar je?"
+              ],
+              "correctAnswer": "Waar woon je?"
+            },
+            {
+              "id": "m01-l02-pl-5",
+              "question": "Ik ben vaak ___.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "thuis",
+                "werk",
+                "naam"
+              ],
+              "correctAnswer": "thuis"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l02-mcq",
+          "prompt": "Kies het beste antwoord",
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l02-mcq-ex",
+              "question": "Noa vraagt: “Wat is jouw naam?” Jij antwoordt informeel:",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben Sam.",
+                "Goedemorgen.",
+                "Tot straks."
+              ],
+              "correctAnswer": "Ik ben Sam."
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l02-fix",
+          "prompt": "Kies de betere versie",
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l02-fix-ex",
+              "question": "Welke zin klinkt natuurlijker?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik werk vandaag thuis.",
+                "Ik vandaag werk thuis.",
+                "Werk ik thuis vandaag."
+              ],
+              "correctAnswer": "Ik werk vandaag thuis."
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l02-speak",
+          "prompt": "Zeg hardop",
+          "content": {
+            "targetNl": "Ik werk thuis.",
+            "acceptable": [
+              "Ik werk thuis",
+              "ik werk thuis"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Ik werk thuis"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Korte *ik* + *werk*."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l02-speak-2",
+          "prompt": "Herhaal: Noa over studie",
+          "content": {
+            "targetNl": "Ik studeer nog.",
+            "acceptable": [
+              "Ik studeer nog",
+              "ik studeer nog"
+            ],
+            "maxRecordingSeconds": 24
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Ik studeer nog"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Let op *studeer* + *nog*."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l02-depth-v2",
+          "prompt": "Herhaal & varieer — introducties (6×)",
+          "content": {
+            "lemmas": [
+              "naam",
+              "werk",
+              "thuis",
+              "studeer"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l02-dv2-1",
+              "question": "Welke zin stelt je voor?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben Noa.",
+                "Waar woon je?",
+                "Tot straks."
+              ],
+              "correctAnswer": "Ik ben Noa."
+            },
+            {
+              "id": "m01-l02-dv2-2",
+              "question": "Ik werk in een ___.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "winkel",
+                "naam",
+                "thuis"
+              ],
+              "correctAnswer": "winkel"
+            },
+            {
+              "id": "m01-l02-dv2-3",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "ben",
+                "Ik",
+                "Tim"
+              ],
+              "correctAnswer": "Ik ben Tim"
+            },
+            {
+              "id": "m01-l02-dv2-4",
+              "question": "Betere vraag over wonen?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Waar woon je?",
+                "Waar je woont?",
+                "Woon je waar?"
+              ],
+              "correctAnswer": "Waar woon je?"
+            },
+            {
+              "id": "m01-l02-dv2-5",
+              "question": "Ik studeer ___.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "nog",
+                "niet",
+                "gisteren"
+              ],
+              "correctAnswer": "nog"
+            },
+            {
+              "id": "m01-l02-dv2-6",
+              "question": "Wat betekent *collega* ongeveer?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "iemand van werk",
+                "alleen familie",
+                "een vakantie"
+              ],
+              "correctAnswer": "iemand van werk"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l02-recap",
+          "prompt": "Check",
+          "content": {
+            "lemmas": [
+              "naam",
+              "werk",
+              "thuis"
+            ],
+            "tasks": [
+              {
+                "kind": "listen_mcq",
+                "question": "Tim zegt:",
+                "snippetNl": "Ik werk in een winkel.",
+                "options": [
+                  "Hij werkt.",
+                  "Hij studeert.",
+                  "Hij slaapt."
+                ],
+                "correctAnswer": "Hij werkt."
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik ___ Tim.",
+                "options": [
+                  "ben",
+                  "heb",
+                  "ga"
+                ],
+                "correctAnswer": "ben"
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "studeer",
+                  "Ik",
+                  "Nog"
+                ],
+                "correctAnswer": "Ik studeer nog"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg hardop: *Ik werk in een winkel.*",
+                "targetNl": "Ik werk in een winkel.",
+                "mockPass": true
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik werk met een ___.",
+                "options": [
+                  "collega",
+                  "trein",
+                  "ochtend"
+                ],
+                "correctAnswer": "collega"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l02-listening-intro-routines-vt-lemma-naam",
+        "rev-a2-m01-l02-listening-intro-routines-vt-lemma-thuis",
+        "rev-a2-m01-l02-listening-intro-routines-vt-lemma-werken",
+        "rev-a2-m01-l02-listening-intro-routines-vt-lemma-studeren",
+        "rev-a2-m01-l02-listening-intro-routines-vt-lemma-collega",
+        "rev-a2-m01-l02-listening-intro-routines-gt-a2.1-present-tense",
+        "rev-a2-m01-l02-listening-intro-routines-ph-ik-ben-tim",
+        "rev-a2-m01-l02-listening-intro-routines-ph-ik-werk-in-een-winkel",
+        "rev-a2-m01-l02-listening-intro-routines-ph-ik-studeer-nog"
+      ],
+      "mistakeFocus": [
+        "listening",
+        "vocab"
+      ],
+      "metadata": {
+        "theme": "people_daily_rhythm",
+        "stage6": true,
+        "archetype": "input_b",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l03-grammar-present-daily-verbs",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Grammar & patterns · Present tense · daily verbs",
+      "lessonType": "pattern",
+      "order": 2,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-gaan",
+        "lemma-werken",
+        "lemma-eten",
+        "lemma-slapen",
+        "lemma-vandaag"
+      ],
+      "canDoStatements": [
+        "I can place the verb correctly in a short present-tense line.",
+        "I can spot a question vs a statement."
+      ],
+      "steps": [
+        {
+          "id": "m01-l03-grammar",
+          "prompt": "Mini-regel",
+          "content": {
+            "title": "Tegenwoordige tijd — korte zin",
+            "summary": "Stelling: **ik** + **werkwoord** + rest. Ja/nee-vraag: **werkwoord** eerst.",
+            "examples": [
+              {
+                "nl": "Ik ga vandaag werken.",
+                "en": "I'm going to work today."
+              },
+              {
+                "nl": "Ga je vandaag werken?",
+                "en": "Are you going to work today?"
+              },
+              {
+                "nl": "Ik ga zo eten.",
+                "en": "I'm going to eat soon."
+              },
+              {
+                "nl": "Ik ga slapen.",
+                "en": "I'm going to sleep."
+              }
+            ]
+          },
+          "feedbackConfig": {
+            "hint": "Tel: waar staat *ga*?"
+          },
+          "metadata": {},
+          "type": "grammar_card"
+        },
+        {
+          "id": "m01-l03-discovery-mini",
+          "prompt": "Tik — merk het werkwoord",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Ik ga vandaag werken.",
+                "en": "I'm going to work today.",
+                "focus": "ga"
+              },
+              {
+                "nl": "Ga je vandaag werken?",
+                "en": "Are you going to work today?",
+                "focus": "Ga"
+              },
+              {
+                "nl": "Ik ga zo eten.",
+                "en": "I'm going to eat soon.",
+                "focus": "eten"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l03-drill",
+          "prompt": "Present — transform & fix (8×)",
+          "content": {
+            "lemmas": [
+              "gaan",
+              "werken",
+              "eten",
+              "slapen",
+              "vandaag"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l03-d1",
+              "question": "Welke zin is een vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ga je naar huis?",
+                "Ik ga naar huis.",
+                "Naar huis ga ik."
+              ],
+              "correctAnswer": "Ga je naar huis?"
+            },
+            {
+              "id": "m01-l03-d2",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "vandaag",
+                "Ik",
+                "werk",
+                "thuis"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            },
+            {
+              "id": "m01-l03-d3",
+              "question": "___ je vandaag vrij?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Ben",
+                "Heb",
+                "Ga"
+              ],
+              "correctAnswer": "Ben"
+            },
+            {
+              "id": "m01-l03-d4",
+              "question": "Juiste zin?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga zo eten.",
+                "Ik eten zo ga.",
+                "Zo ga ik eten fout."
+              ],
+              "correctAnswer": "Ik ga zo eten."
+            },
+            {
+              "id": "m01-l03-d5",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "slapen",
+                "Ik",
+                "ga",
+                "zo"
+              ],
+              "correctAnswer": "Ik ga zo slapen"
+            },
+            {
+              "id": "m01-l03-d6",
+              "question": "Ik ___ naar huis. (ik-wijs)",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ga",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "ga"
+            },
+            {
+              "id": "m01-l03-d7",
+              "question": "Welke zin heeft goede woordvolgorde?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Morgen ga ik werken.",
+                "Ik morgen ga werken.",
+                "Ga ik morgen werken fout."
+              ],
+              "correctAnswer": "Morgen ga ik werken."
+            },
+            {
+              "id": "m01-l03-d8",
+              "question": "___ ga je vandaag doen?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Wat",
+                "Hoe",
+                "Waar"
+              ],
+              "correctAnswer": "Wat"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l03-reorder-1",
+          "prompt": "Maak de stelling",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "incorrectFeedback": "Begin met *Ik*.",
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l03-reorder-1-ex",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "vandaag",
+                "Ik",
+                "werk",
+                "thuis"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l03-mcq-q",
+          "prompt": "Vraag of zin?",
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l03-mcq-q-ex",
+              "question": "Welke zin is een vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga naar huis.",
+                "Ga je naar huis?",
+                "Hij gaat naar huis."
+              ],
+              "correctAnswer": "Ga je naar huis?"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l03-fill",
+          "prompt": "Vul in",
+          "feedbackConfig": {
+            "hint": "We gebruiken *zijn* + *vrij*.",
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l03-fill-ex",
+              "question": "Vul in: ___ je vandaag vrij?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Ben",
+                "Ga",
+                "Heb"
+              ],
+              "correctAnswer": "Ben"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l03-speak",
+          "prompt": "Zeg de zin",
+          "content": {
+            "targetNl": "Ik ga vandaag werken.",
+            "acceptable": [
+              "Ik ga vandaag werken"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Ik ga vandaag werken"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Rustig tempo."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l03-depth-v2",
+          "prompt": "Extra present-tense — snelle mix (6×)",
+          "content": {
+            "lemmas": [
+              "gaan",
+              "werken",
+              "eten",
+              "slapen"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l03-dv2-1",
+              "question": "Welke zin klinkt als plan?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga zo eten.",
+                "Ik eten zo ga.",
+                "Zo eten ik ga."
+              ],
+              "correctAnswer": "Ik ga zo eten."
+            },
+            {
+              "id": "m01-l03-dv2-2",
+              "question": "___ je vandaag thuis?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Ben",
+                "Ga",
+                "Heb"
+              ],
+              "correctAnswer": "Ben"
+            },
+            {
+              "id": "m01-l03-dv2-3",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "Ik",
+                "slapen",
+                "ga",
+                "zo"
+              ],
+              "correctAnswer": "Ik ga zo slapen"
+            },
+            {
+              "id": "m01-l03-dv2-4",
+              "question": "Welke zin is een ja/nee-vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ga je mee?",
+                "Ik ga mee.",
+                "Mee ga ik."
+              ],
+              "correctAnswer": "Ga je mee?"
+            },
+            {
+              "id": "m01-l03-dv2-5",
+              "question": "Ik ___ vandaag vrij.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ben",
+                "ga",
+                "heb"
+              ],
+              "correctAnswer": "ben"
+            },
+            {
+              "id": "m01-l03-dv2-6",
+              "question": "Beste woordvolgorde?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga vandaag werken.",
+                "Ik vandaag ga werken.",
+                "Werken ik ga vandaag."
+              ],
+              "correctAnswer": "Ik ga vandaag werken."
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l03-recap",
+          "prompt": "Mini-check",
+          "content": {
+            "lemmas": [
+              "gaan",
+              "werken"
+            ],
+            "tasks": [
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "je",
+                  "naar",
+                  "Ga",
+                  "huis?"
+                ],
+                "correctAnswer": "Ga je naar huis?"
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik ga zo ___.",
+                "options": [
+                  "slapen",
+                  "eten",
+                  "werken"
+                ],
+                "correctAnswer": "slapen"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *Ik werk thuis.*",
+                "targetNl": "Ik werk thuis.",
+                "mockPass": true
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welk plan?",
+                "snippetNl": "Ik ga zo eten.",
+                "options": [
+                  "Eten.",
+                  "Slapen.",
+                  "Werken."
+                ],
+                "correctAnswer": "Eten."
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ je naar huis?",
+                "options": [
+                  "Ga",
+                  "Ben",
+                  "Heb"
+                ],
+                "correctAnswer": "Ga"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-gaan",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-werken",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-eten",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-slapen",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-vt-lemma-vandaag",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-gt-a2.1-present-tense",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-ph-ik-ga-vandaag-werken",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-ph-ga-je-vandaag-werken",
+        "rev-a2-m01-l03-grammar-present-daily-verbs-ph-ik-ga-zo-eten"
+      ],
+      "mistakeFocus": [
+        "word-order",
+        "grammar"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "pattern_1",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l04-practice-questions-word-order",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Controlled practice · Questions · word order",
+      "lessonType": "practice",
+      "order": 3,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-questions-basics",
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-wat",
+        "lemma-waar",
+        "lemma-hoe",
+        "lemma-wanneer",
+        "lemma-vandaag"
+      ],
+      "canDoStatements": [
+        "I can form a simple WH-question in Dutch.",
+        "I can fix basic word order in a short line."
+      ],
+      "steps": [
+        {
+          "id": "m01-l04-discovery",
+          "prompt": "Vraagwoorden",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Wat doe je?",
+                "en": "What are you doing?"
+              },
+              {
+                "nl": "Waar woon je?",
+                "en": "Where do you live?"
+              },
+              {
+                "nl": "Hoe gaat het?",
+                "en": "How are you?"
+              },
+              {
+                "nl": "Wanneer ben je vrij?",
+                "en": "When are you free?"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l04-notice",
+          "prompt": "Vraagvorm — snel herkennen (5×)",
+          "content": {
+            "lemmas": [
+              "wat",
+              "waar",
+              "hoe",
+              "wanneer"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-n1",
+              "question": "Welk woord start meestal een WH-vraag over plek?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Waar",
+                "Hoe",
+                "Goed"
+              ],
+              "correctAnswer": "Waar"
+            },
+            {
+              "id": "m01-l04-n2",
+              "question": "Welk woord past bij “op welk moment”?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wanneer",
+                "Waar",
+                "Wat"
+              ],
+              "correctAnswer": "Wanneer"
+            },
+            {
+              "id": "m01-l04-n3",
+              "question": "___ woon je?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Waar",
+                "Wat",
+                "Hoe"
+              ],
+              "correctAnswer": "Waar"
+            },
+            {
+              "id": "m01-l04-n4",
+              "question": "Betere vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je?",
+                "Doe wat je?",
+                "Je wat doe?"
+              ],
+              "correctAnswer": "Wat doe je?"
+            },
+            {
+              "id": "m01-l04-n5",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "het?",
+                "gaat",
+                "Hoe"
+              ],
+              "correctAnswer": "Hoe gaat het?"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l04-mcq-1",
+          "prompt": "Welk vraagwoord?",
+          "feedbackConfig": {
+            "errorTags": [
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-mcq-1-ex",
+              "question": "Je wilt weten waar iemand woont. Wat vraag je?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat?",
+                "Waar?",
+                "Hoe?"
+              ],
+              "correctAnswer": "Waar?"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l04-mcq-2",
+          "prompt": "Welk vraagwoord?",
+          "feedbackConfig": {
+            "errorTags": [
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-mcq-2-ex",
+              "question": "Je wilt weten op welk moment iemand iets doet. Wat vraag je?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Waar?",
+                "Wanneer?",
+                "Wat?"
+              ],
+              "correctAnswer": "Wanneer?"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l04-fix-loop",
+          "prompt": "Verbeter de zin (4×)",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-f1",
+              "question": "Welke vraag is goed?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Waar woon je?",
+                "Woon je waar?",
+                "Je waar woon?"
+              ],
+              "correctAnswer": "Waar woon je?"
+            },
+            {
+              "id": "m01-l04-f2",
+              "question": "Welke vraag is goed?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wanneer ben je vrij?",
+                "Ben wanneer je vrij?",
+                "Vrij ben je wanneer?"
+              ],
+              "correctAnswer": "Wanneer ben je vrij?"
+            },
+            {
+              "id": "m01-l04-f3",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "je",
+                "vandaag",
+                "Wat",
+                "doe",
+                "?"
+              ],
+              "correctAnswer": "Wat doe je vandaag?"
+            },
+            {
+              "id": "m01-l04-f4",
+              "question": "___ gaat het met je?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l04-reorder",
+          "prompt": "Maak de vraag",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-reorder-ex",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "woon",
+                "je",
+                "Waar",
+                "?"
+              ],
+              "correctAnswer": "Waar woon je?"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l04-fill",
+          "prompt": "Vul in",
+          "feedbackConfig": {
+            "hint": "Vaste groet."
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-fill-ex",
+              "question": "___ gaat het?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l04-speak",
+          "prompt": "Stel de vraag",
+          "content": {
+            "targetNl": "Wat doe je vandaag?",
+            "acceptable": [
+              "Wat doe je vandaag"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Wat doe je vandaag"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Intonatie: vraagtoon aan het eind."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l04-speak-2",
+          "prompt": "Variatie: vraag naar “waar”",
+          "content": {
+            "targetNl": "Waar woon je?",
+            "acceptable": [
+              "Waar woon je",
+              "waar woon je"
+            ],
+            "maxRecordingSeconds": 24
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Waar woon je"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l04-depth-v2",
+          "prompt": "Vragen — nog een drill (6×)",
+          "content": {
+            "lemmas": [
+              "wat",
+              "hoe",
+              "waar",
+              "wanneer"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l04-dv2-1",
+              "question": "Welke zin is een echte vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je?",
+                "Ik doe wat.",
+                "Wat ik doe."
+              ],
+              "correctAnswer": "Wat doe je?"
+            },
+            {
+              "id": "m01-l04-dv2-2",
+              "question": "___ woon je?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Waar",
+                "Waarom",
+                "Wanneer"
+              ],
+              "correctAnswer": "Waar"
+            },
+            {
+              "id": "m01-l04-dv2-r1",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "Hoe",
+                "gaat",
+                "het",
+                "?"
+              ],
+              "correctAnswer": "Hoe gaat het?"
+            },
+            {
+              "id": "m01-l04-dv2-4b",
+              "question": "Welke vraag hoort bij *tijd*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wanneer?",
+                "Waar?",
+                "Wie?"
+              ],
+              "correctAnswer": "Wanneer?"
+            },
+            {
+              "id": "m01-l04-dv2-5",
+              "question": "___ doe je vanavond?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Wat",
+                "Hoe",
+                "Waar"
+              ],
+              "correctAnswer": "Wat"
+            },
+            {
+              "id": "m01-l04-dv2-6",
+              "question": "Welke zin heeft goede woordvolgorde?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Waar kom je vandaan?",
+                "Waar vandaan kom je?",
+                "Kom je waar vandaan?"
+              ],
+              "correctAnswer": "Waar kom je vandaan?"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l04-recap",
+          "prompt": "Snelle check",
+          "content": {
+            "lemmas": [
+              "wat",
+              "waar"
+            ],
+            "tasks": [
+              {
+                "kind": "fill_blank",
+                "sentence": "___ woon je?",
+                "options": [
+                  "Waar",
+                  "Wat",
+                  "Hoe"
+                ],
+                "correctAnswer": "Waar"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke vraag hoor je?",
+                "snippetNl": "Hoe gaat het?",
+                "options": [
+                  "Hoe gaat het?",
+                  "Wat is dat?",
+                  "Waar ben je?"
+                ],
+                "correctAnswer": "Hoe gaat het?"
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "vandaag",
+                  "doe",
+                  "je",
+                  "Wat",
+                  "?"
+                ],
+                "correctAnswer": "Wat doe je vandaag?"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *Wanneer ben je vrij?*",
+                "targetNl": "Wanneer ben je vrij?",
+                "mockPass": true
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ gaat het met je?",
+                "options": [
+                  "Hoe",
+                  "Wat",
+                  "Waar"
+                ],
+                "correctAnswer": "Hoe"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke vraag hoort bij een plek?",
+                "snippetNl": "Waar woon je?",
+                "options": [
+                  "Naar wonen.",
+                  "Naar eten.",
+                  "Naar slapen."
+                ],
+                "correctAnswer": "Naar wonen."
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-wat",
+        "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-waar",
+        "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-hoe",
+        "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-wanneer",
+        "rev-a2-m01-l04-practice-questions-word-order-vt-lemma-vandaag",
+        "rev-a2-m01-l04-practice-questions-word-order-gt-a2.1-questions-basics",
+        "rev-a2-m01-l04-practice-questions-word-order-gt-a2.1-present-tense",
+        "rev-a2-m01-l04-practice-questions-word-order-ph-wat-doe-je",
+        "rev-a2-m01-l04-practice-questions-word-order-ph-waar-woon-je",
+        "rev-a2-m01-l04-practice-questions-word-order-ph-hoe-gaat-het",
+        "rev-a2-m01-l04-practice-questions-word-order-ph-wanneer-ben-je-vrij"
+      ],
+      "mistakeFocus": [
+        "word-order"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "practice_controlled",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l05-speaking-daily-routine",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Speaking · Daily routine · talk about your day",
+      "lessonType": "speaking",
+      "order": 4,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-vandaag",
+        "lemma-ochtend",
+        "lemma-avond",
+        "lemma-werken",
+        "lemma-thuis",
+        "lemma-eten"
+      ],
+      "canDoStatements": [
+        "I can say one sentence about what I do today.",
+        "I can use a time word naturally."
+      ],
+      "steps": [
+        {
+          "id": "m01-l05-preview",
+          "prompt": "Tijd van de dag",
+          "content": {
+            "previewItems": [
+              {
+                "id": "pv1",
+                "word": "ochtend",
+                "lemma": "ochtend",
+                "translationEn": "morning",
+                "emoji": "🌅"
+              },
+              {
+                "id": "pv2",
+                "word": "avond",
+                "lemma": "avond",
+                "translationEn": "evening",
+                "emoji": "🌙"
+              },
+              {
+                "id": "pv3",
+                "word": "vandaag",
+                "lemma": "vandaag",
+                "translationEn": "today",
+                "emoji": "📅"
+              }
+            ]
+          },
+          "interactionConfig": {
+            "requireAllPreviewPlayed": true
+          },
+          "metadata": {},
+          "type": "preview"
+        },
+        {
+          "id": "m01-l05-listen",
+          "prompt": "Voorbeeld — korte routine",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Lisa",
+                "nl": "Vandaag werk ik thuis. 's Avonds ga ik uit eten met een vriend.",
+                "en": "Today I work from home. This evening I am going out for dinner with a friend."
+              }
+            ],
+            "hideTranscriptUntilPlayed": true
+          },
+          "feedbackConfig": {
+            "hint": "Luister nog een keer.",
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l05-l1",
+              "question": "Wat doet Lisa ’s avonds?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ze gaat uit eten",
+                "Ze werkt thuis",
+                "Ze gaat slapen"
+              ],
+              "correctAnswer": "Ze gaat uit eten"
+            },
+            {
+              "id": "m01-l05-l2",
+              "question": "Welk deel gaat over overdag?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Vandaag werk ik thuis",
+                "Met een vriend",
+                "Uit eten"
+              ],
+              "correctAnswer": "Vandaag werk ik thuis"
+            },
+            {
+              "id": "m01-l05-l3",
+              "question": "Welk woord geeft “later op de dag”?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "'s Avonds",
+                "Vandaag",
+                "Nu"
+              ],
+              "correctAnswer": "'s Avonds"
+            },
+            {
+              "id": "m01-l05-listen-ex",
+              "question": "Wat doet Lisa vandaag overdag?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ze gaat sporten.",
+                "Ze werkt thuis.",
+                "Ze slaapt."
+              ],
+              "correctAnswer": "Ze werkt thuis."
+            }
+          ],
+          "metadata": {},
+          "type": "listening"
+        },
+        {
+          "id": "m01-l05-mcq",
+          "prompt": "Natuurlijke zin",
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l05-mcq-ex",
+              "question": "Kies een natuurlijke zin over vandaag.",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga vandaag werken.",
+                "Ik vandaag ga werken.",
+                "Werken ik vandaag ga."
+              ],
+              "correctAnswer": "Ik ga vandaag werken."
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l05-loop",
+          "prompt": "Routine — mini-drill (5×)",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "avond",
+              "thuis",
+              "werken"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l05-p1",
+              "question": "Natuurlijker?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Vandaag werk ik thuis.",
+                "Ik werk thuis vandaag fout.",
+                "Vandaag ik werk thuis."
+              ],
+              "correctAnswer": "Vandaag werk ik thuis."
+            },
+            {
+              "id": "m01-l05-p2",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "eten",
+                "ga",
+                "ik",
+                "'s Avonds",
+                "uit"
+              ],
+              "correctAnswer": "'s Avonds ga ik uit eten"
+            },
+            {
+              "id": "m01-l05-p3",
+              "question": "___ werk ik thuis.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Vandaag",
+                "Avond",
+                "Straks"
+              ],
+              "correctAnswer": "Vandaag"
+            },
+            {
+              "id": "m01-l05-p4",
+              "question": "Welke tijd hoort bij ochtend?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "ochtend",
+                "vanavond",
+                "straks"
+              ],
+              "correctAnswer": "ochtend"
+            },
+            {
+              "id": "m01-l05-p5",
+              "question": "In de ___ drink ik koffie.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ochtend",
+                "werk",
+                "huis"
+              ],
+              "correctAnswer": "ochtend"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l05-speak-1",
+          "prompt": "Jouw beurt (1)",
+          "content": {
+            "targetNl": "Vandaag werk ik thuis.",
+            "acceptable": [
+              "Vandaag werk ik thuis",
+              "ik werk vandaag thuis"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Vandaag werk ik thuis"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l05-speak-2",
+          "prompt": "Jouw beurt (2)",
+          "content": {
+            "targetNl": "'s Avonds ga ik eten.",
+            "acceptable": [
+              "s Avonds ga ik eten",
+              "Avonds ga ik eten"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "s Avonds ga ik eten"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l05-speak-3",
+          "prompt": "Vrije mini-respons: jouw echte dag (1 zin)",
+          "content": {
+            "targetNl": "Vandaag werk ik en vanavond ontspan ik.",
+            "acceptable": [
+              "Vandaag werk ik",
+              "vandaag werk ik",
+              "Ik werk vandaag",
+              "ik werk vandaag",
+              "Vandaag ben ik druk",
+              "vandaag ben ik druk"
+            ],
+            "maxRecordingSeconds": 32
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Vandaag werk ik"
+          },
+          "feedbackConfig": {
+            "upgradeSuggestion": "Mag kort en eerlijk — geen perfect nodig."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l05-depth-v2",
+          "prompt": "Routine — luisteren & kiezen (6×)",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "ochtend",
+              "avond",
+              "werken"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "listening",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l05-dv2-1",
+              "question": "Welk deel gaat over *later op de dag*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "'s Avonds",
+                "'s Ochtends",
+                "Vorig jaar"
+              ],
+              "correctAnswer": "'s Avonds"
+            },
+            {
+              "id": "m01-l05-dv2-2",
+              "question": "Vandaag ___ ik thuis.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "werk",
+                "werken",
+                "werkt"
+              ],
+              "correctAnswer": "werk"
+            },
+            {
+              "id": "m01-l05-dv2-3",
+              "question": "Welke zin is over *plan*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga uit eten.",
+                "Ik ben moe.",
+                "Het is koud."
+              ],
+              "correctAnswer": "Ik ga uit eten."
+            },
+            {
+              "id": "m01-l05-dv2-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "werk",
+                "Ik",
+                "thuis",
+                "Vandaag"
+              ],
+              "correctAnswer": "Vandaag werk ik thuis"
+            },
+            {
+              "id": "m01-l05-dv2-5",
+              "question": "___ avond ga ik naar huis.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "'s",
+                "In",
+                "Op"
+              ],
+              "correctAnswer": "'s"
+            },
+            {
+              "id": "m01-l05-dv2-6",
+              "question": "Synoniem voor *later vandaag* (informeel)?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "straks",
+                "gisteren",
+                "ooit"
+              ],
+              "correctAnswer": "straks"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l05-recap",
+          "prompt": "Afronden",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "thuis"
+            ],
+            "tasks": [
+              {
+                "kind": "speak",
+                "prompt": "Zeg in het Nederlands: *Today I work.*",
+                "targetNl": "Vandaag werk ik.",
+                "mockPass": true
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "thuis",
+                  "Ik",
+                  "werk",
+                  "vandaag"
+                ],
+                "correctAnswer": "Ik werk vandaag thuis"
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "In de ___ kijk ik tv.",
+                "options": [
+                  "avond",
+                  "ochtend",
+                  "werk"
+                ],
+                "correctAnswer": "avond"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Lisa zegt overdag:",
+                "snippetNl": "Vandaag werk ik thuis.",
+                "options": [
+                  "Ze werkt thuis.",
+                  "Ze gaat meteen uit eten.",
+                  "Ze is op vakantie."
+                ],
+                "correctAnswer": "Ze werkt thuis."
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "eten",
+                  "ga",
+                  "ik",
+                  "uit",
+                  "'s Avonds"
+                ],
+                "correctAnswer": "'s Avonds ga ik uit eten"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-vandaag",
+        "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-ochtend",
+        "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-avond",
+        "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-werken",
+        "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-thuis",
+        "rev-a2-m01-l05-speaking-daily-routine-vt-lemma-eten",
+        "rev-a2-m01-l05-speaking-daily-routine-gt-a2.1-present-tense"
+      ],
+      "mistakeFocus": [
+        "pronunciation",
+        "word-order"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "speaking",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l06-listening-variation-plans",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Listening · Variation · plans for today / tonight",
+      "lessonType": "input",
+      "order": 5,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-time-phrases",
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-vanavond",
+        "lemma-straks",
+        "lemma-morgen",
+        "lemma-boodschappen",
+        "lemma-koffie"
+      ],
+      "canDoStatements": [
+        "I can follow simple plans with vanavond / straks / morgen.",
+        "I can pick the main plan from two options."
+      ],
+      "steps": [
+        {
+          "id": "m01-l06-discovery",
+          "prompt": "Tijdwoorden",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Vanavond ben ik thuis.",
+                "en": "Tonight I'm home."
+              },
+              {
+                "nl": "Straks ga ik boodschappen doen.",
+                "en": "Later I'm going grocery shopping."
+              },
+              {
+                "nl": "Morgen werk ik op kantoor.",
+                "en": "Tomorrow I work at the office."
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l06-listen",
+          "prompt": "Luister — plannen",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Eva",
+                "nl": "Wat doe je vanavond?",
+                "en": "What are you doing tonight?"
+              },
+              {
+                "speaker": "Jasper",
+                "nl": "Straks ga ik sporten. Daarna koffie met een collega.",
+                "en": "Later I'm going to exercise. Then coffee with a colleague."
+              },
+              {
+                "speaker": "Eva",
+                "nl": "Leuk! Ik ga morgen mijn familie bezoeken.",
+                "en": "Nice! I'm visiting my family tomorrow."
+              }
+            ],
+            "hideTranscriptUntilPlayed": true
+          },
+          "feedbackConfig": {
+            "hint": "Luister nog een keer.",
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l06-l1",
+              "question": "Globaal: waar gaat het gesprek over?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Plannen met tijdwoorden",
+                "Het weer op vakantie",
+                "Sportuitslagen"
+              ],
+              "correctAnswer": "Plannen met tijdwoorden"
+            },
+            {
+              "id": "m01-l06-l2",
+              "question": "Wat doet Jasper ná het sporten?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Koffie met een collega",
+                "Naar huis zonder iets",
+                "Naar bed"
+              ],
+              "correctAnswer": "Koffie met een collega"
+            },
+            {
+              "id": "m01-l06-l3",
+              "question": "Wanneer bezoekt Eva familie?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Morgen",
+                "Vanavond",
+                "Straks"
+              ],
+              "correctAnswer": "Morgen"
+            },
+            {
+              "id": "m01-l06-listen-ex",
+              "question": "Wat doet Jasper straks eerst?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Koffie drinken.",
+                "Sporten.",
+                "Familie bezoeken."
+              ],
+              "correctAnswer": "Sporten."
+            }
+          ],
+          "metadata": {},
+          "type": "listening"
+        },
+        {
+          "id": "m01-l06-mcq",
+          "prompt": "Welk tijdwoord past?",
+          "feedbackConfig": {
+            "errorTags": [
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l06-mcq-ex",
+              "question": "Je plant iets later vandaag, niet morgenochtend. Typisch woord:",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "morgen",
+                "straks",
+                "gisteren"
+              ],
+              "correctAnswer": "straks"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l06-match-loop",
+          "prompt": "Tijdwoord + zin (5×)",
+          "content": {
+            "lemmas": [
+              "vanavond",
+              "straks",
+              "morgen"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l06-p1",
+              "question": "Welk woord: “later vandaag”?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "straks",
+                "morgen",
+                "gisteren"
+              ],
+              "correctAnswer": "straks"
+            },
+            {
+              "id": "m01-l06-p2",
+              "question": "Welk woord: “de avond van vandaag”?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "vanavond",
+                "ochtend",
+                "weekend"
+              ],
+              "correctAnswer": "vanavond"
+            },
+            {
+              "id": "m01-l06-p3",
+              "question": "___ werk ik op kantoor.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Morgen",
+                "Straks",
+                "Nu"
+              ],
+              "correctAnswer": "Morgen"
+            },
+            {
+              "id": "m01-l06-p4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "boodschappen",
+                "Straks",
+                "ik",
+                "ga",
+                "doen"
+              ],
+              "correctAnswer": "Straks ga ik boodschappen doen"
+            },
+            {
+              "id": "m01-l06-p5",
+              "question": "Welke zin klopt?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Vanavond ben ik thuis.",
+                "Ik ben thuis vanavond fout.",
+                "Thuis ben ik vanavond."
+              ],
+              "correctAnswer": "Vanavond ben ik thuis."
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l06-fill",
+          "prompt": "Vul in",
+          "feedbackConfig": {},
+          "exercises": [
+            {
+              "id": "m01-l06-fill-ex",
+              "question": "___ ga ik naar huis. (vanavond)",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Vanavond",
+                "Morgen",
+                "Straks"
+              ],
+              "correctAnswer": "Vanavond"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l06-speak",
+          "prompt": "Zeg je plan",
+          "content": {
+            "targetNl": "Straks ga ik boodschappen doen.",
+            "acceptable": [
+              "Straks ga ik boodschappen doen"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Straks ga ik boodschappen doen"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l06-speak-2",
+          "prompt": "Variatie: zeg het plan van Eva na",
+          "content": {
+            "targetNl": "Morgen ga ik mijn familie bezoeken.",
+            "acceptable": [
+              "Morgen ga ik mijn familie bezoeken",
+              "morgen ga ik mijn familie bezoeken",
+              "Ik ga morgen mijn familie bezoeken",
+              "ik ga morgen mijn familie bezoeken"
+            ],
+            "maxRecordingSeconds": 32
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Morgen ga ik mijn familie bezoeken"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Rustig: *morgen* … *familie*."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l06-depth-v2",
+          "prompt": "Plannen — vandaag / vanavond (6×)",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "vanavond",
+              "straks",
+              "morgen"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "listening",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l06-dv2-1",
+              "question": "Welke zin gaat over *later vandaag*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Vanavond ga ik uit.",
+                "Gisteren ging ik uit.",
+                "Morgen ga ik uit."
+              ],
+              "correctAnswer": "Vanavond ga ik uit."
+            },
+            {
+              "id": "m01-l06-dv2-2",
+              "question": "___ ga ik sporten.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Straks",
+                "Gisteren",
+                "Ooit"
+              ],
+              "correctAnswer": "Straks"
+            },
+            {
+              "id": "m01-l06-dv2-3",
+              "question": "Wat is *vandaag*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "de dag waar nu is",
+                "alleen morgen",
+                "alleen gisteren"
+              ],
+              "correctAnswer": "de dag waar nu is"
+            },
+            {
+              "id": "m01-l06-dv2-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "werk",
+                "Ik",
+                "vandaag",
+                "thuis"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            },
+            {
+              "id": "m01-l06-dv2-5",
+              "question": "Tot ___.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "morgen",
+                "gisteren",
+                "nooit"
+              ],
+              "correctAnswer": "morgen"
+            },
+            {
+              "id": "m01-l06-dv2-6",
+              "question": "Welke vraag hoort bij plannen?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je vanavond?",
+                "Wat is je naam?",
+                "Waar is het toilet?"
+              ],
+              "correctAnswer": "Wat doe je vanavond?"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l06-recap",
+          "prompt": "Check",
+          "content": {
+            "lemmas": [
+              "vanavond",
+              "straks",
+              "morgen"
+            ],
+            "tasks": [
+              {
+                "kind": "listen_mcq",
+                "question": "Eva zegt:",
+                "snippetNl": "Ik ga morgen mijn familie bezoeken.",
+                "options": [
+                  "Morgen.",
+                  "Vandaag.",
+                  "Nu."
+                ],
+                "correctAnswer": "Morgen."
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ ga ik sporten.",
+                "options": [
+                  "Straks",
+                  "Morgen",
+                  "Gisteren"
+                ],
+                "correctAnswer": "Straks"
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "thuis",
+                  "Vanavond",
+                  "ben",
+                  "ik"
+                ],
+                "correctAnswer": "Vanavond ben ik thuis"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *Straks ga ik boodschappen doen.*",
+                "targetNl": "Straks ga ik boodschappen doen.",
+                "mockPass": true
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Jasper zegt over de volgorde:",
+                "snippetNl": "Straks ga ik sporten. Daarna koffie met een collega.",
+                "options": [
+                  "Eerst sporten, daarna koffie.",
+                  "Eerst koffie, daarna sporten.",
+                  "Alleen slapen."
+                ],
+                "correctAnswer": "Eerst sporten, daarna koffie."
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l06-listening-variation-plans-vt-lemma-vanavond",
+        "rev-a2-m01-l06-listening-variation-plans-vt-lemma-straks",
+        "rev-a2-m01-l06-listening-variation-plans-vt-lemma-morgen",
+        "rev-a2-m01-l06-listening-variation-plans-vt-lemma-boodschappen",
+        "rev-a2-m01-l06-listening-variation-plans-vt-lemma-koffie",
+        "rev-a2-m01-l06-listening-variation-plans-gt-a2.1-time-phrases",
+        "rev-a2-m01-l06-listening-variation-plans-gt-a2.1-present-tense",
+        "rev-a2-m01-l06-listening-variation-plans-ph-vanavond-ben-ik-thuis",
+        "rev-a2-m01-l06-listening-variation-plans-ph-straks-ga-ik-boodschappen-doen",
+        "rev-a2-m01-l06-listening-variation-plans-ph-morgen-werk-ik-op-kantoor"
+      ],
+      "mistakeFocus": [
+        "listening",
+        "vocab"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "variation",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l07-grammar-zijn-hebben",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Grammar & patterns · Zijn / hebben · short lines",
+      "lessonType": "pattern",
+      "order": 6,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-zijn-hebben",
+        "a2.1-present-tense"
+      ],
+      "vocabTargets": [
+        "lemma-moe",
+        "lemma-druk",
+        "lemma-thuis",
+        "lemma-vriend",
+        "lemma-familie"
+      ],
+      "canDoStatements": [
+        "I can use *ik ben* vs *ik heb* in a simple line about state or possession.",
+        "I can avoid mixing *hebben* with adjectives like *moe*."
+      ],
+      "steps": [
+        {
+          "id": "m01-l07-gc",
+          "prompt": "Kern",
+          "content": {
+            "title": "Zijn = state; hebben = possession/time",
+            "summary": "**Ik ben moe.** **Ik heb tijd.** Niet: *Ik heb moe.*",
+            "examples": [
+              {
+                "nl": "Ik ben druk vandaag.",
+                "en": "I'm busy today."
+              },
+              {
+                "nl": "Ik heb een vraag.",
+                "en": "I have a question."
+              }
+            ]
+          },
+          "feedbackConfig": {
+            "hint": "Let op *ben* + bijvoeglijk naamwoord."
+          },
+          "metadata": {},
+          "type": "grammar_card"
+        },
+        {
+          "id": "m01-l07-notice",
+          "prompt": "Tik — *ben* of *heb*?",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Ik ben moe.",
+                "en": "I'm tired.",
+                "focus": "ben"
+              },
+              {
+                "nl": "Ik heb tijd.",
+                "en": "I have time.",
+                "focus": "heb"
+              },
+              {
+                "nl": "Ik ben druk vandaag.",
+                "en": "I'm busy today.",
+                "focus": "ben"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l07-drill",
+          "prompt": "Zijn / hebben — drill (7×)",
+          "content": {
+            "lemmas": [
+              "ben",
+              "heb",
+              "moe",
+              "tijd"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l07-d1",
+              "question": "Je bent moe. Wat zeg je?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben moe.",
+                "Ik heb moe.",
+                "Ik ga moe."
+              ],
+              "correctAnswer": "Ik ben moe."
+            },
+            {
+              "id": "m01-l07-d2",
+              "question": "Je hebt een vraag. Wat zeg je?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik heb een vraag.",
+                "Ik ben een vraag.",
+                "Ik ga een vraag."
+              ],
+              "correctAnswer": "Ik heb een vraag."
+            },
+            {
+              "id": "m01-l07-d3",
+              "question": "Ik ___ tijd vanavond.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "heb",
+                "ben",
+                "ga"
+              ],
+              "correctAnswer": "heb"
+            },
+            {
+              "id": "m01-l07-d4",
+              "question": "Ik ___ moe.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ben",
+                "heb",
+                "ga"
+              ],
+              "correctAnswer": "ben"
+            },
+            {
+              "id": "m01-l07-d5",
+              "question": "Welke zin is fout?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik heb moe.",
+                "Ik heb tijd.",
+                "Ik heb een vriend."
+              ],
+              "correctAnswer": "Ik heb moe."
+            },
+            {
+              "id": "m01-l07-d6",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "druk",
+                "Ik",
+                "ben",
+                "vandaag"
+              ],
+              "correctAnswer": "Ik ben vandaag druk"
+            },
+            {
+              "id": "m01-l07-d7",
+              "question": "Mijn zus ___ een kat.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "heeft",
+                "is",
+                "ben"
+              ],
+              "correctAnswer": "heeft"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l07-mcq",
+          "prompt": "Kies de goede zin",
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l07-mcq-ex",
+              "question": "Je bent moe. Wat zeg je?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben moe.",
+                "Ik heb moe.",
+                "Ik ben niet moe."
+              ],
+              "correctAnswer": "Ik ben moe."
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l07-fill-1",
+          "prompt": "Vul in",
+          "feedbackConfig": {},
+          "exercises": [
+            {
+              "id": "m01-l07-fill-1-ex",
+              "question": "Ik ___ tijd vanavond.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "heb",
+                "ben",
+                "ga"
+              ],
+              "correctAnswer": "heb"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l07-fill-2",
+          "prompt": "Vul in",
+          "feedbackConfig": {
+            "hint": "Derde persoon enkelvoud."
+          },
+          "exercises": [
+            {
+              "id": "m01-l07-fill-2-ex",
+              "question": "Mijn familie ___ groot.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "is",
+                "heb",
+                "ben"
+              ],
+              "correctAnswer": "is"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l07-ro",
+          "prompt": "Maak de zin",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l07-ro-ex",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "druk",
+                "Ik",
+                "ben",
+                "vandaag"
+              ],
+              "correctAnswer": "Ik ben vandaag druk"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l07-spk",
+          "prompt": "Zeg één zin: moe, maar wel tijd.",
+          "content": {
+            "targetNl": "Ik ben moe, maar ik heb tijd.",
+            "acceptable": [
+              "Ik ben moe, maar ik heb tijd.",
+              "Ik ben moe maar ik heb tijd"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Ik ben moe, maar ik heb tijd."
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Gebruik *ben* bij *moe* en *heb* bij *tijd*."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l07-spk-2",
+          "prompt": "Micro-beurt: alleen *hebben*",
+          "content": {
+            "targetNl": "Ik heb tijd.",
+            "acceptable": [
+              "Ik heb tijd",
+              "ik heb tijd"
+            ],
+            "maxRecordingSeconds": 22
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Ik heb tijd"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Niet *ik ben tijd* — bij *tijd* (bezit) gebruik je *heb*."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l07-depth-v2",
+          "prompt": "Zijn / hebben / gaan — extra (6×)",
+          "content": {
+            "lemmas": [
+              "ben",
+              "heb",
+              "ga",
+              "is"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l07-dv2-1",
+              "question": "Welke zin is over *toestand*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben moe.",
+                "Ik ga moe.",
+                "Ik heb moe."
+              ],
+              "correctAnswer": "Ik ben moe."
+            },
+            {
+              "id": "m01-l07-dv2-2",
+              "question": "Ik ___ tijd.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "heb",
+                "ben",
+                "ga"
+              ],
+              "correctAnswer": "heb"
+            },
+            {
+              "id": "m01-l07-dv2-3",
+              "question": "Welke zin is over *plan*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga naar huis.",
+                "Ik ben naar huis.",
+                "Ik heb naar huis."
+              ],
+              "correctAnswer": "Ik ga naar huis."
+            },
+            {
+              "id": "m01-l07-dv2-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "tijd",
+                "Ik",
+                "heb",
+                "geen"
+              ],
+              "correctAnswer": "Ik heb geen tijd"
+            },
+            {
+              "id": "m01-l07-dv2-5",
+              "question": "Het ___ druk. (het-weer)",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "is",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "is"
+            },
+            {
+              "id": "m01-l07-dv2-6",
+              "question": "Welke vraag hoort bij *hoe je je voelt*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hoe gaat het?",
+                "Waar ga je?",
+                "Wat heb je?"
+              ],
+              "correctAnswer": "Hoe gaat het?"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l07-recap",
+          "prompt": "Check",
+          "content": {
+            "lemmas": [
+              "ben",
+              "heb"
+            ],
+            "tasks": [
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik ___ moe.",
+                "options": [
+                  "ben",
+                  "heb",
+                  "ga"
+                ],
+                "correctAnswer": "ben"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *I have time.*",
+                "targetNl": "Ik heb tijd.",
+                "mockPass": true
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "tijd",
+                  "Ik",
+                  "heb"
+                ],
+                "correctAnswer": "Ik heb tijd"
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Wij ___ een afspraak.",
+                "options": [
+                  "hebben",
+                  "zijn",
+                  "gaan"
+                ],
+                "correctAnswer": "hebben"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke zin gaat over *bezit / beschikking*?",
+                "snippetNl": "Ik heb tijd.",
+                "options": [
+                  "Ik heb iets.",
+                  "Ik ben moe.",
+                  "Ik ga naar huis."
+                ],
+                "correctAnswer": "Ik heb iets."
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *Het is druk vandaag.*",
+                "targetNl": "Het is druk vandaag.",
+                "mockPass": true
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-moe",
+        "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-druk",
+        "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-thuis",
+        "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-vriend",
+        "rev-a2-m01-l07-grammar-zijn-hebben-vt-lemma-familie",
+        "rev-a2-m01-l07-grammar-zijn-hebben-gt-a2.1-zijn-hebben",
+        "rev-a2-m01-l07-grammar-zijn-hebben-gt-a2.1-present-tense",
+        "rev-a2-m01-l07-grammar-zijn-hebben-ph-ik-ben-moe",
+        "rev-a2-m01-l07-grammar-zijn-hebben-ph-ik-heb-tijd",
+        "rev-a2-m01-l07-grammar-zijn-hebben-ph-ik-ben-druk-vandaag"
+      ],
+      "mistakeFocus": [
+        "grammar",
+        "vocab"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "pattern_2",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l08-writing-short-update",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Writing · Simple routine messages · today & tomorrow",
+      "lessonType": "writing",
+      "order": 7,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-present-tense",
+        "a2.1-time-phrases"
+      ],
+      "vocabTargets": [
+        "lemma-vandaag",
+        "lemma-nu",
+        "lemma-werken",
+        "lemma-thuis",
+        "lemma-leuk"
+      ],
+      "canDoStatements": [
+        "I can build a 4–6 word Dutch line about my day (with support).",
+        "I can self-check word order on a short line."
+      ],
+      "steps": [
+        {
+          "id": "m01-l08-model",
+          "prompt": "Modelzin",
+          "content": {
+            "title": "Een korte update",
+            "summary": "Combineer tijd + ik + werkwoord.",
+            "examples": [
+              {
+                "nl": "Vandaag werk ik thuis.",
+                "en": "Today I work from home."
+              },
+              {
+                "nl": "Nu ga ik koffie halen.",
+                "en": "Now I'm going to get coffee."
+              }
+            ]
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "grammar_card"
+        },
+        {
+          "id": "m01-l08-write-1",
+          "prompt": "Typ je update",
+          "content": {
+            "prompt": "Schrijf in 4–8 woorden: vandaag + werk + thuis of kantoor.",
+            "acceptable": [
+              "Ik werk vandaag thuis",
+              "ik werk vandaag thuis",
+              "Vandaag werk ik thuis",
+              "vandaag werk ik thuis",
+              "Ik werk thuis vandaag",
+              "ik werk thuis vandaag",
+              "Vandaag werk ik op kantoor",
+              "vandaag werk ik op kantoor"
+            ],
+            "modelNl": "Ik werk vandaag thuis.",
+            "minChars": 10
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "spelling",
+              "word-order"
+            ]
+          },
+          "metadata": {},
+          "type": "writing"
+        },
+        {
+          "id": "m01-l08-write-2",
+          "prompt": "Herschrijf iets vriendelijker",
+          "content": {
+            "prompt": "Maak vriendelijk: begin met *Hoi!* en zeg dat je nu druk bent.",
+            "acceptable": [
+              "Hoi ik ben nu druk",
+              "Hoi, ik ben nu druk",
+              "Hoi ik ben druk nu",
+              "Hoi, ik ben druk"
+            ],
+            "modelNl": "Hoi! Ik ben nu druk.",
+            "minChars": 8
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "metadata": {},
+          "type": "writing"
+        },
+        {
+          "id": "m01-l08-ro",
+          "prompt": "Bouw je update",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l08-ro-ex",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "thuis",
+                "Ik",
+                "vandaag",
+                "werk"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l08-fill",
+          "prompt": "Vul het werkwoord",
+          "feedbackConfig": {},
+          "exercises": [
+            {
+              "id": "m01-l08-fill-ex",
+              "question": "Nu ___ ik naar de supermarkt.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ga",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "ga"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l08-loop",
+          "prompt": "Korte lijntjes (4×)",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "nu",
+              "ga"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l08-l1",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "thuis",
+                "Ik",
+                "vandaag",
+                "werk"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            },
+            {
+              "id": "m01-l08-l2",
+              "question": "Nu ___ ik koffie halen.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ga",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "ga"
+            },
+            {
+              "id": "m01-l08-l3",
+              "question": "Betere app-regel?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga nu lunchen.",
+                "Nu ga ik lunchen.",
+                "Beide kunnen in chat."
+              ],
+              "correctAnswer": "Beide kunnen in chat."
+            },
+            {
+              "id": "m01-l08-l4",
+              "question": "___ ben ik vrij.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Morgen",
+                "Nu",
+                "Vandaag"
+              ],
+              "correctAnswer": "Morgen"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l08-speak",
+          "prompt": "Zeg je update hardop (zoals een app-berichtje)",
+          "content": {
+            "targetNl": "Vandaag ben ik druk, maar het gaat goed.",
+            "acceptable": [
+              "Vandaag ben ik druk maar het gaat goed"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Vandaag ben ik druk maar het gaat goed"
+          },
+          "feedbackConfig": {
+            "pronunciationTips": "Natuurlijke pauzes zijn oké."
+          },
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l08-depth-v2",
+          "prompt": "Schrijven — micro-herhaling (10×)",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "nu",
+              "morgen",
+              "thuis"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l08-dv2-1",
+              "question": "Welke app-regel is meest natuurlijk?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik werk vandaag thuis.",
+                "Ik vandaag werk thuis.",
+                "Werk ik thuis vandaag fout."
+              ],
+              "correctAnswer": "Ik werk vandaag thuis."
+            },
+            {
+              "id": "m01-l08-dv2-2",
+              "question": "Nu ___ ik koffie halen.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ga",
+                "ben",
+                "heb"
+              ],
+              "correctAnswer": "ga"
+            },
+            {
+              "id": "m01-l08-dv2-3",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "ben",
+                "Ik",
+                "morgen",
+                "vrij"
+              ],
+              "correctAnswer": "Ik ben morgen vrij"
+            },
+            {
+              "id": "m01-l08-dv2-4",
+              "question": "Welke zin is vriendelijk open?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hoi! Ik ben nu druk.",
+                "Dag meneer de koning.",
+                "Ik ben een tafel."
+              ],
+              "correctAnswer": "Hoi! Ik ben nu druk."
+            },
+            {
+              "id": "m01-l08-dv2-5",
+              "question": "___ werk ik thuis.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Vandaag",
+                "Gisteren",
+                "Nooit"
+              ],
+              "correctAnswer": "Vandaag"
+            },
+            {
+              "id": "m01-l08-dv2-6",
+              "question": "Wat betekent *straks* hier?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "later",
+                "gisteren",
+                "nooit"
+              ],
+              "correctAnswer": "later"
+            },
+            {
+              "id": "m01-l08-dv2-7",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "thuis",
+                "Ik",
+                "werk",
+                "vandaag"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            },
+            {
+              "id": "m01-l08-dv2-8",
+              "question": "___ ben ik vrij.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Morgen",
+                "Gisteren",
+                "Nooit"
+              ],
+              "correctAnswer": "Morgen"
+            },
+            {
+              "id": "m01-l08-dv2-9",
+              "question": "Welke zin hoort bij een kort appje?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben zo terug.",
+                "Geachte heer.",
+                "Met vriendelijke groet, de tafel."
+              ],
+              "correctAnswer": "Ik ben zo terug."
+            },
+            {
+              "id": "m01-l08-dv2-10",
+              "question": "Ik ___ even pauze.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "neem",
+                "ben",
+                "ga"
+              ],
+              "correctAnswer": "neem"
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l08-recap",
+          "prompt": "Laatste check",
+          "content": {
+            "lemmas": [
+              "vandaag",
+              "nu"
+            ],
+            "tasks": [
+              {
+                "kind": "speak",
+                "prompt": "Zeg je geschreven lijn hardop (of het model):",
+                "targetNl": "Ik werk vandaag thuis.",
+                "mockPass": true
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "koffie",
+                  "Ik",
+                  "nu",
+                  "ga",
+                  "halen"
+                ],
+                "correctAnswer": "Ik ga nu koffie halen"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke zin klinkt als update?",
+                "snippetNl": "Vandaag werk ik thuis.",
+                "options": [
+                  "Korte status.",
+                  "Formele brief.",
+                  "Lange speech."
+                ],
+                "correctAnswer": "Korte status."
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ ga ik naar de supermarkt.",
+                "options": [
+                  "Straks",
+                  "Gisteren",
+                  "Ooit"
+                ],
+                "correctAnswer": "Straks"
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Hoi! Ik ___ nu druk.",
+                "options": [
+                  "ben",
+                  "heb",
+                  "ga"
+                ],
+                "correctAnswer": "ben"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l08-writing-short-update-vt-lemma-vandaag",
+        "rev-a2-m01-l08-writing-short-update-vt-lemma-nu",
+        "rev-a2-m01-l08-writing-short-update-vt-lemma-werken",
+        "rev-a2-m01-l08-writing-short-update-vt-lemma-thuis",
+        "rev-a2-m01-l08-writing-short-update-vt-lemma-leuk",
+        "rev-a2-m01-l08-writing-short-update-gt-a2.1-present-tense",
+        "rev-a2-m01-l08-writing-short-update-gt-a2.1-time-phrases"
+      ],
+      "mistakeFocus": [
+        "word-order",
+        "spelling",
+        "register"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "writing_proxy",
+        "note": "Uses fill/reorder/speak; full typing UI is future.",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l09-task-chat-scaffolded",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Task · Friendly check-in · scaffolded choices",
+      "lessonType": "task",
+      "order": 8,
+      "cefrLevel": "A2",
+      "durationEstimate": 15,
+      "grammarTargets": [
+        "a2.1-present-tense",
+        "a2.1-questions-basics"
+      ],
+      "vocabTargets": [
+        "lemma-hoe",
+        "lemma-wat",
+        "lemma-vandaag",
+        "lemma-leuk",
+        "lemma-straks"
+      ],
+      "canDoStatements": [
+        "I can choose an appropriate reply in a short chat.",
+        "I can ask one follow-up question."
+      ],
+      "steps": [
+        {
+          "id": "m01-l09-preview",
+          "prompt": "Even activeren — 4 woorden",
+          "content": {
+            "previewItems": [
+              {
+                "id": "m01-l09-pv-hoe",
+                "word": "hoe",
+                "lemma": "hoe",
+                "translationEn": "how",
+                "emoji": "❓"
+              },
+              {
+                "id": "m01-l09-pv-wat",
+                "word": "wat",
+                "lemma": "wat",
+                "translationEn": "what",
+                "emoji": "💬"
+              },
+              {
+                "id": "m01-l09-pv-vandaag",
+                "word": "vandaag",
+                "lemma": "vandaag",
+                "translationEn": "today",
+                "emoji": "📅"
+              },
+              {
+                "id": "m01-l09-pv-straks",
+                "word": "straks",
+                "lemma": "straks",
+                "translationEn": "in a bit / later",
+                "emoji": "⏱️"
+              }
+            ]
+          },
+          "interactionConfig": {
+            "requireAllPreviewPlayed": true
+          },
+          "metadata": {},
+          "type": "preview"
+        },
+        {
+          "id": "m01-l09-listen",
+          "prompt": "Context",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Mila",
+                "nl": "Hoi! Hoe gaat het?",
+                "en": "Hi! How are you?"
+              },
+              {
+                "speaker": "You",
+                "nl": "Goed! En met jou?",
+                "en": "Good! And you?"
+              },
+              {
+                "speaker": "Mila",
+                "nl": "Ook goed. Wat doe je vandaag?",
+                "en": "Also good. What are you doing today?"
+              }
+            ],
+            "hideTranscriptUntilPlayed": true
+          },
+          "feedbackConfig": {
+            "hint": "",
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l09-l1",
+              "question": "Wat is de toon van het gesprek?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Vriendelijk informeel",
+                "Juridisch",
+                "Zeer boos"
+              ],
+              "correctAnswer": "Vriendelijk informeel"
+            },
+            {
+              "id": "m01-l09-l2",
+              "question": "Hoe begint Mila?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hoi! Hoe gaat het?",
+                "Dag meneer.",
+                "Tot ziens."
+              ],
+              "correctAnswer": "Hoi! Hoe gaat het?"
+            },
+            {
+              "id": "m01-l09-listen-ex",
+              "question": "Wat vraagt Mila als tweede vraag?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Hoe gaat het?",
+                "Wat doe je vandaag?",
+                "Waar woon je?"
+              ],
+              "correctAnswer": "Wat doe je vandaag?"
+            },
+            {
+              "id": "m01-l09-l4",
+              "question": "Waar gaat dit mini-gesprek vooral over?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Even checken hoe het gaat + plannen voor vandaag",
+                "Een sollicitatie op kantoor",
+                "Een doktersbezoek"
+              ],
+              "correctAnswer": "Even checken hoe het gaat + plannen voor vandaag"
+            }
+          ],
+          "metadata": {},
+          "type": "listening"
+        },
+        {
+          "id": "m01-l09-mcq-reply",
+          "prompt": "Kies een natuurlijke reactie",
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l09-mcq-reply-ex",
+              "question": "Mila: “Wat doe je vandaag?”",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga straks sporten.",
+                "Ik ben vandaag.",
+                "Wat is vandaag?"
+              ],
+              "correctAnswer": "Ik ga straks sporten."
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l09-scaffold",
+          "prompt": "Mini-chat: kies de volgende zin (4×)",
+          "content": {
+            "lemmas": [
+              "hoe",
+              "wat",
+              "straks"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l09-s1",
+              "question": "Antwoord op *Hoe gaat het?*",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goed! En met jou?",
+                "Tot ziens.",
+                "Dag meneer."
+              ],
+              "correctAnswer": "Goed! En met jou?"
+            },
+            {
+              "id": "m01-l09-s2",
+              "question": "Na *Wat doe je vandaag?* — natuurlijk antwoord:",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga straks sporten.",
+                "Ik ben vandaag.",
+                "Wat is vandaag?"
+              ],
+              "correctAnswer": "Ik ga straks sporten."
+            },
+            {
+              "id": "m01-l09-s3",
+              "question": "Vervolgvraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "En jij?",
+                "Tot ziens.",
+                "Dag."
+              ],
+              "correctAnswer": "En jij?"
+            },
+            {
+              "id": "m01-l09-s4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "het?",
+                "Hoe",
+                "gaat"
+              ],
+              "correctAnswer": "Hoe gaat het?"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l09-mcq-followup",
+          "prompt": "Wat hoort hier níet?",
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l09-mcq-followup-ex",
+              "question": "Jullie praten nog over vandaag. Wat klinkt vreemd midden in dit chatje?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "En jij?",
+                "Tot ziens.",
+                "Goedemorgen!"
+              ],
+              "correctAnswer": "Goedemorgen!"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l09-speak",
+          "prompt": "Speel het mini-gesprek na",
+          "content": {
+            "targetNl": "Hoi! Hoe gaat het? Goed! Wat doe je vandaag?",
+            "acceptable": [
+              "Hoi hoe gaat het"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Hoi hoe gaat het"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l09-speak-2",
+          "prompt": "Herhaal: korte beurt (alleen jij)",
+          "content": {
+            "targetNl": "Goed! Wat doe je vandaag?",
+            "acceptable": [
+              "Goed wat doe je vandaag",
+              "goed wat doe je vandaag"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Goed wat doe je vandaag"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l09-depth-v2",
+          "prompt": "Chat — volgende beurt (10×)",
+          "content": {
+            "lemmas": [
+              "hoe",
+              "wat",
+              "straks",
+              "goed"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "register",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l09-dv2-1",
+              "question": "Welke reactie past bij *Hoe gaat het?*",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goed! En met jou?",
+                "Tot ziens.",
+                "Dag meneer."
+              ],
+              "correctAnswer": "Goed! En met jou?"
+            },
+            {
+              "id": "m01-l09-dv2-2",
+              "question": "Natuurlijk antwoord op *Wat doe je vandaag?*",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga straks sporten.",
+                "Ik ben vandaag.",
+                "Wat is vandaag?"
+              ],
+              "correctAnswer": "Ik ga straks sporten."
+            },
+            {
+              "id": "m01-l09-dv2-3",
+              "question": "___ gaat het?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            },
+            {
+              "id": "m01-l09-dv2-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "doe",
+                "je",
+                "Wat",
+                "vandaag",
+                "?"
+              ],
+              "correctAnswer": "Wat doe je vandaag?"
+            },
+            {
+              "id": "m01-l09-dv2-5",
+              "question": "Wat is *vandaag*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "de dag waar nu is",
+                "alleen morgen",
+                "alleen gisteren"
+              ],
+              "correctAnswer": "de dag waar nu is"
+            },
+            {
+              "id": "m01-l09-dv2-6",
+              "question": "Welke zin sluit een kort chatje af?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Tot straks!",
+                "Goedemorgen!",
+                "Hoe gaat het?"
+              ],
+              "correctAnswer": "Tot straks!"
+            },
+            {
+              "id": "m01-l09-dv2-7",
+              "question": "Welke zin vraagt om een reactie?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "En jij?",
+                "Tot ziens.",
+                "Dag."
+              ],
+              "correctAnswer": "En jij?"
+            },
+            {
+              "id": "m01-l09-dv2-8",
+              "question": "___ doe je vanavond?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Wat",
+                "Hoe",
+                "Waar"
+              ],
+              "correctAnswer": "Wat"
+            },
+            {
+              "id": "m01-l09-dv2-9",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "je",
+                "met",
+                "Hoe",
+                "gaat",
+                "het",
+                "?"
+              ],
+              "correctAnswer": "Hoe gaat het met je?"
+            },
+            {
+              "id": "m01-l09-dv2-10",
+              "question": "Welke zin is te formeel voor een app aan een vriend?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Geachte heer, ik groet u.",
+                "Hoi! Hoe is het?",
+                "Hey, alles goed?"
+              ],
+              "correctAnswer": "Geachte heer, ik groet u."
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l09-recap",
+          "prompt": "Klaar",
+          "content": {
+            "lemmas": [
+              "hoe",
+              "wat"
+            ],
+            "tasks": [
+              {
+                "kind": "fill_blank",
+                "sentence": "___ gaat het?",
+                "options": [
+                  "Hoe",
+                  "Wat",
+                  "Waar"
+                ],
+                "correctAnswer": "Hoe"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Mila vraagt:",
+                "snippetNl": "Wat doe je vandaag?",
+                "options": [
+                  "Naar plannen.",
+                  "Naar een naam.",
+                  "Naar het weer."
+                ],
+                "correctAnswer": "Naar plannen."
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "je",
+                  "Wat",
+                  "vandaag",
+                  "doe",
+                  "?"
+                ],
+                "correctAnswer": "Wat doe je vandaag?"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg je antwoord op *Wat doe je vandaag?* (1 zin):",
+                "targetNl": "Ik ga straks sporten.",
+                "mockPass": true
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke zin hoort bij informeel chatten?",
+                "snippetNl": "Hoi! Hoe gaat het?",
+                "options": [
+                  "Informeel.",
+                  "Zeer formeel.",
+                  "Juridisch."
+                ],
+                "correctAnswer": "Informeel."
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik ga ___ sporten.",
+                "options": [
+                  "straks",
+                  "gisteren",
+                  "ooit"
+                ],
+                "correctAnswer": "straks"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-hoe",
+        "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-wat",
+        "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-vandaag",
+        "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-leuk",
+        "rev-a2-m01-l09-task-chat-scaffolded-vt-lemma-straks",
+        "rev-a2-m01-l09-task-chat-scaffolded-gt-a2.1-present-tense",
+        "rev-a2-m01-l09-task-chat-scaffolded-gt-a2.1-questions-basics"
+      ],
+      "mistakeFocus": [
+        "register",
+        "vocab"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "task_scaffolded",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l10-task-mini-dialogue",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Task · Daily planning chat · short exchange",
+      "lessonType": "task",
+      "order": 9,
+      "cefrLevel": "A2",
+      "durationEstimate": 14,
+      "grammarTargets": [
+        "a2.1-present-tense",
+        "a2.1-time-phrases"
+      ],
+      "vocabTargets": [
+        "lemma-weekend",
+        "lemma-morgen",
+        "lemma-vanavond",
+        "lemma-werken",
+        "lemma-familie"
+      ],
+      "canDoStatements": [
+        "I can handle a 3-turn chat about weekend plans with minimal prompts.",
+        "I can close politely."
+      ],
+      "steps": [
+        {
+          "id": "m01-l10-discovery",
+          "prompt": "Handige brokken",
+          "content": {
+            "phrases": [
+              {
+                "nl": "Wat doe je dit weekend?",
+                "en": "What are you doing this weekend?"
+              },
+              {
+                "nl": "Ik ga mijn familie bezoeken.",
+                "en": "I'm going to visit my family."
+              },
+              {
+                "nl": "Fijn weekend!",
+                "en": "Have a nice weekend!"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "discovery"
+        },
+        {
+          "id": "m01-l10-listen",
+          "prompt": "Luister — weekend",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Omar",
+                "nl": "Wat doe je dit weekend?",
+                "en": "What are you doing this weekend?"
+              },
+              {
+                "speaker": "Sara",
+                "nl": "Vanavond werk ik. Morgen ga ik naar mijn familie.",
+                "en": "Tonight I'm working. Tomorrow I'm going to my family."
+              },
+              {
+                "speaker": "Omar",
+                "nl": "Leuk! Fijn weekend.",
+                "en": "Nice! Have a nice weekend."
+              }
+            ],
+            "hideTranscriptUntilPlayed": true
+          },
+          "feedbackConfig": {
+            "hint": "Luister nog een keer.",
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l10-l1",
+              "question": "Wat vraagt Omar eerst?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je dit weekend?",
+                "Hoe gaat het?",
+                "Waar woon je?"
+              ],
+              "correctAnswer": "Wat doe je dit weekend?"
+            },
+            {
+              "id": "m01-l10-l2",
+              "question": "Wat doet Sara vanavond?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ze werkt",
+                "Ze gaat naar familie",
+                "Ze gaat sporten"
+              ],
+              "correctAnswer": "Ze werkt"
+            },
+            {
+              "id": "m01-l10-listen-ex",
+              "question": "Wat doet Sara morgen?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ze werkt.",
+                "Ze gaat naar familie.",
+                "Ze gaat sporten."
+              ],
+              "correctAnswer": "Ze gaat naar familie."
+            },
+            {
+              "id": "m01-l10-l4",
+              "question": "Hoe eindigt het gesprek?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Met een vriendelijke afsluiting (Fijn weekend!)",
+                "Met ruzie",
+                "Met een formele brief"
+              ],
+              "correctAnswer": "Met een vriendelijke afsluiting (Fijn weekend!)"
+            }
+          ],
+          "metadata": {},
+          "type": "listening"
+        },
+        {
+          "id": "m01-l10-ro",
+          "prompt": "Maak de vraag",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l10-ro-ex",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "weekend",
+                "je",
+                "Wat",
+                "doe",
+                "dit",
+                "?"
+              ],
+              "correctAnswer": "Wat doe je dit weekend?"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l10-task-loop",
+          "prompt": "Weekend — fix & bouw (5×)",
+          "content": {
+            "lemmas": [
+              "weekend",
+              "familie",
+              "morgen",
+              "vanavond"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "word-order",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l10-p1",
+              "question": "Betere vraag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je dit weekend?",
+                "Weekend wat doe je?",
+                "Doe je weekend wat?"
+              ],
+              "correctAnswer": "Wat doe je dit weekend?"
+            },
+            {
+              "id": "m01-l10-p2",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "familie",
+                "naar",
+                "mijn",
+                "ga",
+                "Morgen",
+                "ik"
+              ],
+              "correctAnswer": "Morgen ga ik naar mijn familie"
+            },
+            {
+              "id": "m01-l10-p3",
+              "question": "___ werk ik. (avond van vandaag)",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Vanavond",
+                "Morgen",
+                "Straks"
+              ],
+              "correctAnswer": "Vanavond"
+            },
+            {
+              "id": "m01-l10-p4",
+              "question": "Welke afsluiting past op vrijdag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Fijn weekend!",
+                "Goedemorgen!",
+                "Tot morgenochtend!"
+              ],
+              "correctAnswer": "Fijn weekend!"
+            },
+            {
+              "id": "m01-l10-p5",
+              "question": "Welke zin gebruikt *gaan + naar* goed?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ga naar mijn familie.",
+                "Ik ga mijn familie.",
+                "Ik naar ga familie."
+              ],
+              "correctAnswer": "Ik ga naar mijn familie."
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l10-speak",
+          "prompt": "Jouw antwoord",
+          "content": {
+            "targetNl": "Morgen ga ik naar mijn familie.",
+            "acceptable": [
+              "Morgen ga ik naar mijn familie"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Morgen ga ik naar mijn familie"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l10-speak-2",
+          "prompt": "Variatie: stel de vraag zelf",
+          "content": {
+            "targetNl": "Wat doe jij dit weekend?",
+            "acceptable": [
+              "Wat doe jij dit weekend",
+              "wat doe jij dit weekend"
+            ],
+            "maxRecordingSeconds": 26
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Wat doe jij dit weekend"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l10-mcq-close",
+          "prompt": "Sluit af",
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l10-mcq-close-ex",
+              "question": "Welke afsluiting past bij een collega op vrijdag?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Fijn weekend!",
+                "Tot straks!",
+                "Goedemorgen!"
+              ],
+              "correctAnswer": "Fijn weekend!"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l10-depth-v2",
+          "prompt": "Weekend — mini-drill (6×)",
+          "content": {
+            "lemmas": [
+              "weekend",
+              "familie",
+              "vanavond",
+              "morgen"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "listening",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l10-dv2-1",
+              "question": "Welke vraag hoort bij weekend?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je dit weekend?",
+                "Wat is je adres?",
+                "Hoe lang is je haar?"
+              ],
+              "correctAnswer": "Wat doe je dit weekend?"
+            },
+            {
+              "id": "m01-l10-dv2-2",
+              "question": "Vanavond ___ ik.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "werk",
+                "werken",
+                "werkt"
+              ],
+              "correctAnswer": "werk"
+            },
+            {
+              "id": "m01-l10-dv2-3",
+              "question": "Welke zin is beleefd afsluiten?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Fijn weekend!",
+                "Tot gisteren!",
+                "Ik ben een tafel."
+              ],
+              "correctAnswer": "Fijn weekend!"
+            },
+            {
+              "id": "m01-l10-dv2-4",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "Ik",
+                "ga",
+                "morgen",
+                "werken"
+              ],
+              "correctAnswer": "Ik ga morgen werken"
+            },
+            {
+              "id": "m01-l10-dv2-5",
+              "question": "___ weekend!",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Fijn",
+                "Slecht",
+                "Oud"
+              ],
+              "correctAnswer": "Fijn"
+            },
+            {
+              "id": "m01-l10-dv2-6",
+              "question": "Welke zin gaat over *later vandaag*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Vanavond werk ik.",
+                "Gisteren werk ik.",
+                "Ik werk altijd."
+              ],
+              "correctAnswer": "Vanavond werk ik."
+            }
+          ],
+          "metadata": {
+            "depthLayer": "m01-v2"
+          },
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l10-recap",
+          "prompt": "Check",
+          "content": {
+            "lemmas": [
+              "weekend",
+              "familie"
+            ],
+            "tasks": [
+              {
+                "kind": "listen_mcq",
+                "question": "Sara zegt:",
+                "snippetNl": "Morgen ga ik naar mijn familie.",
+                "options": [
+                  "Morgen.",
+                  "Vandaag.",
+                  "Gisteren."
+                ],
+                "correctAnswer": "Morgen."
+              },
+              {
+                "kind": "speak",
+                "prompt": "Zeg: *Fijn weekend!*",
+                "targetNl": "Fijn weekend!",
+                "mockPass": true
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ ga ik naar mijn familie.",
+                "options": [
+                  "Morgen",
+                  "Gisteren",
+                  "Nu"
+                ],
+                "correctAnswer": "Morgen"
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "weekend",
+                  "je",
+                  "Wat",
+                  "doe",
+                  "dit",
+                  "?"
+                ],
+                "correctAnswer": "Wat doe je dit weekend?"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Sara zegt over vanavond:",
+                "snippetNl": "Vanavond werk ik.",
+                "options": [
+                  "Ze werkt vanavond.",
+                  "Ze gaat slapen.",
+                  "Ze is op vakantie."
+                ],
+                "correctAnswer": "Ze werkt vanavond."
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "ik",
+                  "Vanavond",
+                  "werk"
+                ],
+                "correctAnswer": "Vanavond werk ik"
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-weekend",
+        "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-morgen",
+        "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-vanavond",
+        "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-werken",
+        "rev-a2-m01-l10-task-mini-dialogue-vt-lemma-familie",
+        "rev-a2-m01-l10-task-mini-dialogue-gt-a2.1-present-tense",
+        "rev-a2-m01-l10-task-mini-dialogue-gt-a2.1-time-phrases",
+        "rev-a2-m01-l10-task-mini-dialogue-ph-wat-doe-je-dit-weekend",
+        "rev-a2-m01-l10-task-mini-dialogue-ph-ik-ga-mijn-familie-bezoeken",
+        "rev-a2-m01-l10-task-mini-dialogue-ph-fijn-weekend"
+      ],
+      "mistakeFocus": [
+        "vocab",
+        "register"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "task_full",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "28-38"
+        }
+      }
+    },
+    {
+      "id": "a2-m01-l11-mixed-review",
+      "moduleId": "a2-m01-people-daily",
+      "title": "Review · People & daily rhythm · mixed recap",
+      "lessonType": "review",
+      "order": 10,
+      "cefrLevel": "A2",
+      "durationEstimate": 16,
+      "grammarTargets": [
+        "a2.1-present-tense",
+        "a2.1-zijn-hebben",
+        "a2.1-questions-basics",
+        "a2.1-time-phrases"
+      ],
+      "vocabTargets": [
+        "lemma-vandaag",
+        "lemma-hoe",
+        "lemma-gaan",
+        "lemma-werken",
+        "lemma-thuis",
+        "lemma-straks",
+        "lemma-morgen"
+      ],
+      "canDoStatements": [
+        "I can mix greetings, questions, and time phrases in short bursts.",
+        "I can self-check common daily patterns."
+      ],
+      "steps": [
+        {
+          "id": "m01-l11-preview",
+          "prompt": "Snelle herhaling",
+          "content": {
+            "previewItems": [
+              {
+                "id": "p1",
+                "word": "Hoe",
+                "lemma": "hoe",
+                "translationEn": "how",
+                "emoji": "❓"
+              },
+              {
+                "id": "p2",
+                "word": "vandaag",
+                "lemma": "vandaag",
+                "translationEn": "today",
+                "emoji": "📅"
+              },
+              {
+                "id": "p3",
+                "word": "straks",
+                "lemma": "straks",
+                "translationEn": "later",
+                "emoji": "⏱️"
+              }
+            ]
+          },
+          "interactionConfig": {
+            "requireAllPreviewPlayed": true
+          },
+          "metadata": {},
+          "type": "preview"
+        },
+        {
+          "id": "m01-l11-listen-review",
+          "prompt": "Luister — snelle context",
+          "content": {
+            "dialogue": [
+              {
+                "speaker": "Alex",
+                "nl": "Hoi! Hoe gaat het?",
+                "en": "Hi! How are you?"
+              },
+              {
+                "speaker": "Bo",
+                "nl": "Goed! Wat doe je straks?",
+                "en": "Good! What are you doing later?"
+              },
+              {
+                "speaker": "Alex",
+                "nl": "Ik ga naar huis. Tot morgen!",
+                "en": "I'm going home. See you tomorrow!"
+              }
+            ],
+            "hideTranscriptUntilPlayed": true
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "listening"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l11-lr0",
+              "question": "Eerst globaal: wat is dit mini-gesprek?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Een korte, vriendelijke check-in + afscheid",
+                "Een sollicitatiegesprek",
+                "Een doktersbezoek"
+              ],
+              "correctAnswer": "Een korte, vriendelijke check-in + afscheid"
+            },
+            {
+              "id": "m01-l11-lr1",
+              "question": "Wat vraagt Bo?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je straks?",
+                "Hoe gaat het?",
+                "Waar woon je?"
+              ],
+              "correctAnswer": "Wat doe je straks?"
+            },
+            {
+              "id": "m01-l11-lr2",
+              "question": "Wat gaat Alex doen?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Naar huis",
+                "Sporten",
+                "Studeren"
+              ],
+              "correctAnswer": "Naar huis"
+            },
+            {
+              "id": "m01-l11-lr3",
+              "question": "Hoe sluit Alex af?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Tot morgen!",
+                "Goedemorgen!",
+                "Tot gisteren!"
+              ],
+              "correctAnswer": "Tot morgen!"
+            }
+          ],
+          "metadata": {},
+          "type": "listening"
+        },
+        {
+          "id": "m01-l11-mega-loop",
+          "prompt": "Gemengd — even alles (12×)",
+          "content": {
+            "lemmas": [
+              "hoe",
+              "wat",
+              "vandaag",
+              "straks",
+              "ben",
+              "ga"
+            ]
+          },
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {
+            "errorTags": [
+              "grammar",
+              "vocab"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l11-m1",
+              "question": "Welke groet past om 18:00?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goedenavond!",
+                "Goedemorgen!",
+                "Goedenacht!"
+              ],
+              "correctAnswer": "Goedenavond!"
+            },
+            {
+              "id": "m01-l11-m2",
+              "question": "___ gaat het?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            },
+            {
+              "id": "m01-l11-m3",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "thuis",
+                "Ik",
+                "werk",
+                "vandaag"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            },
+            {
+              "id": "m01-l11-m4",
+              "question": "Ik ___ moe.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "ben",
+                "heb",
+                "ga"
+              ],
+              "correctAnswer": "ben"
+            },
+            {
+              "id": "m01-l11-m5",
+              "question": "Tijdwoord: later vandaag",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "straks",
+                "morgen",
+                "ooit"
+              ],
+              "correctAnswer": "straks"
+            },
+            {
+              "id": "m01-l11-m6",
+              "question": "Welke vraag klopt?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je vandaag?",
+                "Wat je doe vandaag?",
+                "Doe wat je vandaag?"
+              ],
+              "correctAnswer": "Wat doe je vandaag?"
+            },
+            {
+              "id": "m01-l11-m7",
+              "question": "___ ga ik naar huis.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Straks",
+                "Gisteren",
+                "Nooit"
+              ],
+              "correctAnswer": "Straks"
+            },
+            {
+              "id": "m01-l11-m8",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "je",
+                "met",
+                "Hoe",
+                "gaat",
+                "het",
+                "?"
+              ],
+              "correctAnswer": "Hoe gaat het met je?"
+            },
+            {
+              "id": "m01-l11-m9",
+              "question": "Welke zin is een korte status?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Ik ben moe.",
+                "Ik ben een tafel.",
+                "Ik ben een adres."
+              ],
+              "correctAnswer": "Ik ben moe."
+            },
+            {
+              "id": "m01-l11-m10",
+              "question": "___ ga je naar huis?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Straks",
+                "Gisteren",
+                "Nooit"
+              ],
+              "correctAnswer": "Straks"
+            },
+            {
+              "id": "m01-l11-m11",
+              "question": "Welke vraag hoort bij *plannen*?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Wat doe je straks?",
+                "Wat is je naam?",
+                "Waar is het toilet?"
+              ],
+              "correctAnswer": "Wat doe je straks?"
+            },
+            {
+              "id": "m01-l11-m12",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "werk",
+                "Ik",
+                "vandaag",
+                "thuis"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            }
+          ],
+          "metadata": {},
+          "type": "practice_loop"
+        },
+        {
+          "id": "m01-l11-mcq-1",
+          "prompt": "Groet kiezen",
+          "feedbackConfig": {
+            "errorTags": [
+              "register"
+            ]
+          },
+          "exercises": [
+            {
+              "id": "m01-l11-mcq-1-ex",
+              "question": "Je ziet een buur om 18:00. Wat zeg je?",
+              "difficulty": "A2_mid",
+              "metadata": {},
+              "type": "multiple_choice",
+              "options": [
+                "Goedemorgen!",
+                "Goedenavond!",
+                "Tot morgen!"
+              ],
+              "correctAnswer": "Goedenavond!"
+            }
+          ],
+          "metadata": {},
+          "type": "mcq"
+        },
+        {
+          "id": "m01-l11-fill",
+          "prompt": "Vul in",
+          "feedbackConfig": {},
+          "exercises": [
+            {
+              "id": "m01-l11-fill-ex",
+              "question": "___ gaat het met je familie?",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "fill_blank",
+              "options": [
+                "Hoe",
+                "Wat",
+                "Waar"
+              ],
+              "correctAnswer": "Hoe"
+            }
+          ],
+          "metadata": {},
+          "type": "fill_blank"
+        },
+        {
+          "id": "m01-l11-ro",
+          "prompt": "Zin",
+          "interactionConfig": {
+            "delimiter": " "
+          },
+          "feedbackConfig": {},
+          "exercises": [
+            {
+              "id": "m01-l11-ro-ex",
+              "question": "Zet in de juiste volgorde.",
+              "difficulty": "A2_low",
+              "metadata": {},
+              "type": "reorder",
+              "options": [
+                "vandaag",
+                "thuis",
+                "Ik",
+                "werk"
+              ],
+              "correctAnswer": "Ik werk vandaag thuis"
+            }
+          ],
+          "metadata": {},
+          "type": "reorder"
+        },
+        {
+          "id": "m01-l11-speak",
+          "prompt": "Zeg hardop",
+          "content": {
+            "targetNl": "Straks ga ik naar huis.",
+            "acceptable": [
+              "Straks ga ik naar huis"
+            ],
+            "maxRecordingSeconds": 28
+          },
+          "interactionConfig": {
+            "requiresMicrophone": false,
+            "mockTranscript": "Straks ga ik naar huis"
+          },
+          "feedbackConfig": {},
+          "metadata": {},
+          "type": "speaking"
+        },
+        {
+          "id": "m01-l11-recap",
+          "prompt": "Laatste ronde",
+          "content": {
+            "lemmas": [
+              "dagelijks"
+            ],
+            "tasks": [
+              {
+                "kind": "listen_mcq",
+                "question": "Welk antwoord hoort bij *Hoe gaat het?*",
+                "snippetNl": "Goed, dank je!",
+                "options": [
+                  "Goed, dank je!",
+                  "Ik ga werken.",
+                  "Tot straks!"
+                ],
+                "correctAnswer": "Goed, dank je!"
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "Ik ___ moe.",
+                "options": [
+                  "ben",
+                  "heb",
+                  "ga"
+                ],
+                "correctAnswer": "ben"
+              },
+              {
+                "kind": "reorder",
+                "tokens": [
+                  "je",
+                  "Wat",
+                  "vandaag",
+                  "doe",
+                  "?"
+                ],
+                "correctAnswer": "Wat doe je vandaag?"
+              },
+              {
+                "kind": "speak",
+                "prompt": "Sluit vriendelijk af: see you tomorrow",
+                "targetNl": "Tot morgen!",
+                "mockPass": true
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke zin is een plan?",
+                "snippetNl": "Straks ga ik naar huis.",
+                "options": [
+                  "Straks.",
+                  "Gisteren.",
+                  "Nooit."
+                ],
+                "correctAnswer": "Straks."
+              },
+              {
+                "kind": "fill_blank",
+                "sentence": "___ gaat het met je werk?",
+                "options": [
+                  "Hoe",
+                  "Wat",
+                  "Waar"
+                ],
+                "correctAnswer": "Hoe"
+              },
+              {
+                "kind": "listen_mcq",
+                "question": "Welke zin is een groet?",
+                "snippetNl": "Hoi! Hoe gaat het?",
+                "options": [
+                  "Een groet.",
+                  "Een adres.",
+                  "Een weerbericht."
+                ],
+                "correctAnswer": "Een groet."
+              }
+            ]
+          },
+          "metadata": {},
+          "type": "recap"
+        }
+      ],
+      "reviewItemRefs": [
+        "rev-a2-m01-l11-mixed-review-vt-lemma-vandaag",
+        "rev-a2-m01-l11-mixed-review-vt-lemma-hoe",
+        "rev-a2-m01-l11-mixed-review-vt-lemma-gaan",
+        "rev-a2-m01-l11-mixed-review-vt-lemma-werken",
+        "rev-a2-m01-l11-mixed-review-vt-lemma-thuis",
+        "rev-a2-m01-l11-mixed-review-vt-lemma-straks",
+        "rev-a2-m01-l11-mixed-review-vt-lemma-morgen",
+        "rev-a2-m01-l11-mixed-review-gt-a2.1-present-tense",
+        "rev-a2-m01-l11-mixed-review-gt-a2.1-zijn-hebben",
+        "rev-a2-m01-l11-mixed-review-gt-a2.1-questions-basics",
+        "rev-a2-m01-l11-mixed-review-gt-a2.1-time-phrases"
+      ],
+      "mistakeFocus": [
+        "word-order",
+        "vocab",
+        "grammar"
+      ],
+      "metadata": {
+        "stage6": true,
+        "archetype": "review_mixed",
+        "lessonDepth": {
+          "m01": "v2",
+          "targetMicroInteractions": "32-40"
+        }
+      }
+    }
+  ],
+  "grammarTargets": [
+    {
+      "id": "a2.1-present-tense",
+      "name": "Present tense & word order",
+      "description": "Simple statements: subject — verb — rest. Questions: finite verb first.",
+      "examples": [
+        {
+          "nl": "Ik ga vandaag werken.",
+          "en": "I'm going to work today."
+        },
+        {
+          "nl": "Wat doe je vandaag?",
+          "en": "What are you doing today?"
+        },
+        {
+          "nl": "Hoe gaat het?",
+          "en": "How are you?"
+        }
+      ],
+      "cefrLevel": "A2",
+      "rules": {
+        "statement": "Subject + finite verb + …",
+        "question": "Finite verb + subject + …"
+      },
+      "metadata": {
+        "module": "a2-m01"
+      }
+    },
+    {
+      "id": "a2.1-zijn-hebben",
+      "name": "Zijn & hebben (present)",
+      "description": "High-frequency copula and possession in short lines about routines and state.",
+      "examples": [
+        {
+          "nl": "Ik ben moe.",
+          "en": "I'm tired."
+        },
+        {
+          "nl": "Ik heb tijd.",
+          "en": "I have time."
+        },
+        {
+          "nl": "Het is druk vandaag.",
+          "en": "It's busy today."
+        }
+      ],
+      "cefrLevel": "A2",
+      "rules": {
+        "note": "ben/bent/is — heb/hebt/hebben"
+      },
+      "metadata": {
+        "module": "a2-m01"
+      }
+    },
+    {
+      "id": "a2.1-questions-basics",
+      "name": "WH-questions & yes/no",
+      "description": "Wat / wie / waar / hoe / wanneer + verb-second in main clauses.",
+      "examples": [
+        {
+          "nl": "Waar woon je?",
+          "en": "Where do you live?"
+        },
+        {
+          "nl": "Wie is dat?",
+          "en": "Who is that?"
+        },
+        {
+          "nl": "Ga je mee?",
+          "en": "Are you coming along?"
+        }
+      ],
+      "cefrLevel": "A2",
+      "rules": {},
+      "metadata": {
+        "module": "a2-m01"
+      }
+    },
+    {
+      "id": "a2.1-time-phrases",
+      "name": "Time phrases",
+      "description": "vandaag, morgen, straks, vanavond, in de ochtend — placement in the clause.",
+      "examples": [
+        {
+          "nl": "Straks ga ik sporten.",
+          "en": "Later I'm going to exercise."
+        },
+        {
+          "nl": "Vanavond ben ik thuis.",
+          "en": "Tonight I'm home."
+        },
+        {
+          "nl": "Morgen werk ik thuis.",
+          "en": "Tomorrow I work from home."
+        }
+      ],
+      "cefrLevel": "A2",
+      "rules": {},
+      "metadata": {
+        "module": "a2-m01"
+      }
+    }
+  ],
+  "vocabTargets": [
+    {
+      "id": "lemma-vriend",
+      "word": "vriend",
+      "lemma": "vriend",
+      "translation": "friend",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Dit is mijn vriend.",
+        "en": "This is my friend."
+      },
+      "tags": [
+        "people",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-vandaag",
+      "word": "vandaag",
+      "lemma": "vandaag",
+      "translation": "today",
+      "partOfSpeech": "adverb",
+      "example": {
+        "nl": "Wat doe je vandaag?",
+        "en": "What are you doing today?"
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-werken",
+      "word": "werken",
+      "lemma": "werken",
+      "translation": "to work",
+      "partOfSpeech": "verb",
+      "example": {
+        "nl": "Ik ga werken.",
+        "en": "I'm going to work."
+      },
+      "tags": [
+        "work",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-gaan",
+      "word": "gaan",
+      "lemma": "gaan",
+      "translation": "to go",
+      "partOfSpeech": "verb",
+      "example": {
+        "nl": "Ik ga naar huis.",
+        "en": "I'm going home."
+      },
+      "tags": [
+        "motion",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-hoe",
+      "word": "hoe",
+      "lemma": "hoe",
+      "translation": "how",
+      "partOfSpeech": "pronoun",
+      "example": {
+        "nl": "Hoe gaat het?",
+        "en": "How are you?"
+      },
+      "tags": [
+        "chat",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-ochtend",
+      "word": "ochtend",
+      "lemma": "ochtend",
+      "translation": "morning",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Goedemorgen!",
+        "en": "Good morning!"
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-avond",
+      "word": "avond",
+      "lemma": "avond",
+      "translation": "evening",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Goedenavond.",
+        "en": "Good evening."
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-straks",
+      "word": "straks",
+      "lemma": "straks",
+      "translation": "later; in a bit",
+      "partOfSpeech": "adverb",
+      "example": {
+        "nl": "Tot straks!",
+        "en": "See you in a bit!"
+      },
+      "tags": [
+        "chat",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-morgen",
+      "word": "morgen",
+      "lemma": "morgen",
+      "translation": "tomorrow",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Tot morgen!",
+        "en": "See you tomorrow!"
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-naam",
+      "word": "naam",
+      "lemma": "naam",
+      "translation": "name",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Mijn naam is Sam.",
+        "en": "My name is Sam."
+      },
+      "tags": [
+        "people",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-thuis",
+      "word": "thuis",
+      "lemma": "thuis",
+      "translation": "at home",
+      "partOfSpeech": "adverb",
+      "example": {
+        "nl": "Ik ben thuis.",
+        "en": "I'm home."
+      },
+      "tags": [
+        "daily",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-studeren",
+      "word": "studeren",
+      "lemma": "studeren",
+      "translation": "to study",
+      "partOfSpeech": "verb",
+      "example": {
+        "nl": "Ik studeer Nederlands.",
+        "en": "I study Dutch."
+      },
+      "tags": [
+        "work",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-moe",
+      "word": "moe",
+      "lemma": "moe",
+      "translation": "tired",
+      "partOfSpeech": "adjective",
+      "example": {
+        "nl": "Ik ben moe.",
+        "en": "I'm tired."
+      },
+      "tags": [
+        "state",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-druk",
+      "word": "druk",
+      "lemma": "druk",
+      "translation": "busy",
+      "partOfSpeech": "adjective",
+      "example": {
+        "nl": "Het is druk.",
+        "en": "It's busy."
+      },
+      "tags": [
+        "state",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-collega",
+      "word": "collega",
+      "lemma": "collega",
+      "translation": "colleague",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Dit is mijn collega.",
+        "en": "This is my colleague."
+      },
+      "tags": [
+        "work",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-familie",
+      "word": "familie",
+      "lemma": "familie",
+      "translation": "family",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Hoe gaat het met je familie?",
+        "en": "How is your family?"
+      },
+      "tags": [
+        "people",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-vanavond",
+      "word": "vanavond",
+      "lemma": "vanavond",
+      "translation": "this evening; tonight",
+      "partOfSpeech": "adverb",
+      "example": {
+        "nl": "Wat doe je vanavond?",
+        "en": "What are you doing tonight?"
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-weekend",
+      "word": "weekend",
+      "lemma": "weekend",
+      "translation": "weekend",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Fijn weekend!",
+        "en": "Have a nice weekend!"
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-nu",
+      "word": "nu",
+      "lemma": "nu",
+      "translation": "now",
+      "partOfSpeech": "adverb",
+      "example": {
+        "nl": "Ik ga nu weg.",
+        "en": "I'm leaving now."
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-wat",
+      "word": "wat",
+      "lemma": "wat",
+      "translation": "what",
+      "partOfSpeech": "pronoun",
+      "example": {
+        "nl": "Wat doe je?",
+        "en": "What are you doing?"
+      },
+      "tags": [
+        "chat",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-waar",
+      "word": "waar",
+      "lemma": "waar",
+      "translation": "where",
+      "partOfSpeech": "pronoun",
+      "example": {
+        "nl": "Waar woon je?",
+        "en": "Where do you live?"
+      },
+      "tags": [
+        "chat",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-wanneer",
+      "word": "wanneer",
+      "lemma": "wanneer",
+      "translation": "when",
+      "partOfSpeech": "pronoun",
+      "example": {
+        "nl": "Wanneer ben je vrij?",
+        "en": "When are you free?"
+      },
+      "tags": [
+        "time",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-leuk",
+      "word": "leuk",
+      "lemma": "leuk",
+      "translation": "nice; fun",
+      "partOfSpeech": "adjective",
+      "example": {
+        "nl": "Leuk om je te zien.",
+        "en": "Nice to see you."
+      },
+      "tags": [
+        "chat",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-eten",
+      "word": "eten",
+      "lemma": "eten",
+      "translation": "to eat; food",
+      "partOfSpeech": "verb",
+      "example": {
+        "nl": "Ik ga eten.",
+        "en": "I'm going to eat."
+      },
+      "tags": [
+        "daily",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-slapen",
+      "word": "slapen",
+      "lemma": "slapen",
+      "translation": "to sleep",
+      "partOfSpeech": "verb",
+      "example": {
+        "nl": "Ik ga slapen.",
+        "en": "I'm going to sleep."
+      },
+      "tags": [
+        "daily",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-koffie",
+      "word": "koffie",
+      "lemma": "koffie",
+      "translation": "coffee",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Koffie?",
+        "en": "Coffee?"
+      },
+      "tags": [
+        "daily",
+        "A2.1"
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "lemma-boodschappen",
+      "word": "boodschappen",
+      "lemma": "boodschappen",
+      "translation": "groceries; errands",
+      "partOfSpeech": "noun",
+      "example": {
+        "nl": "Ik ga boodschappen doen.",
+        "en": "I'm going grocery shopping."
+      },
+      "tags": [
+        "daily",
+        "A2.1"
+      ],
+      "metadata": {}
+    }
+  ],
+  "learningGoals": [
+    "Handle short friendly chats about today and tonight",
+    "Introduce yourself lightly and ask simple follow-up questions",
+    "Use present tense, zijn/hebben, and basic WH-questions in short lines",
+    "Close conversations with natural phrases (straks, morgen, weekend)",
+    "Build confidence for mobile, high-density practice sessions"
+  ],
+  "metadata": {
+    "contentFormatVersion": 1,
+    "spine": "a2-m01",
+    "stage6ReferenceModule": true,
+    "generatedAt": "2026-03-25T18:59:30.981Z"
+  }
+}

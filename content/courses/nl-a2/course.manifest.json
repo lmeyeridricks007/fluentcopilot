@@ -1,0 +1,11 @@
+{
+  "id": "course-nl-a2",
+  "title": "Dutch A2",
+  "language": "nl",
+  "cefrLevel": "A2",
+  "description": "Structured Dutch A2 path — Stage 5 content pipeline (sample shell).",
+  "metadata": {
+    "contentFormatVersion": 1
+  },
+  "modulePaths": ["../../modules/a2-m01-people-daily/module.json"]
+}

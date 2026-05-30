@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* FluentCopilot brand tokens — keep in sync with tailwind.config.js */
+    --fc-brand-from: #7c3aed;
+    --fc-brand-to: #6366f1;
+    --fc-brand-soft: rgba(124, 58, 237, 0.10);
+    --fc-surface: #f7f7f4;
+    --fc-surface-elevated: #ffffff;
+    --fc-surface-subtle: #fafaf7;
+    --fc-ink: #0f172a;
+    --fc-ink-muted: #475569;
+    --fc-sidebar-width: 248px;
+  }
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-surface text-ink-primary font-sans text-body min-h-screen;
+    font-feature-settings: 'cv11', 'ss01', 'ss03';
+  }
+  /* Touch targets minimum 44px where applicable */
+  button:not([class*="min-h"]):not([class*="min-w"]),
+  [role="button"]:not([class*="min-h"]):not([class*="min-w"]) {
+    @apply min-h-touch inline-flex items-center justify-center;
+  }
+  /* Focus visible for a11y */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary-500;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  /** User "Calmer motion" (device prefs) — mirrors reduced-motion for transitions/animations */
+  html[data-fc-motion='reduced'] *,
+  html[data-fc-motion='reduced'] *::before,
+  html[data-fc-motion='reduced'] *::after {
+    animation-duration: 0.02ms !important;
+    transition-duration: 0.06s !important;
+  }
+}
+
+@layer components {
+  /** Brand mark — the violet "diamond" logo used in the sidebar/header. */
+  .fc-brand-mark {
+    @apply relative inline-flex h-9 w-9 items-center justify-center rounded-[10px] text-white shadow-[0_6px_18px_-6px_rgba(124,58,237,0.55)];
+    background-image: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+  }
+  .fc-brand-mark::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    border-radius: 9px;
+    background-image: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0) 55%);
+    pointer-events: none;
+  }
+
+  /** Primary CTA — vivid violet gradient, fully rounded. */
+  .fc-cta-primary {
+    @apply inline-flex min-h-touch items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-semibold text-white shadow-hero transition-[transform,box-shadow,opacity] duration-200 ease-out active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+    background-image: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  }
+  .fc-cta-primary:hover {
+    box-shadow: 0 22px 56px -22px rgba(124, 58, 237, 0.55), 0 8px 18px -10px rgba(15, 23, 42, 0.12);
+    filter: brightness(1.04);
+  }
+
+  /** Soft surface card used across the dashboard (rounded-2xl, soft shadow). */
+  .fc-card {
+    @apply rounded-card bg-surface-elevated shadow-card ring-1 ring-slate-900/[0.04];
+  }
+
+  /** Eyebrow label — small, uppercase, tracked. */
+  .fc-eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500;
+  }
+}
+
+@layer utilities {
+  @keyframes review-shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+  }
+  .animate-review-shake {
+    animation: review-shake 0.42s ease-in-out;
+  }
+  @keyframes review-pop {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+  }
+  .animate-review-pop {
+    animation: review-pop 0.35s ease-out;
+  }
+
+  /** Logged-in Home: subtle entrance — respects prefers-reduced-motion via base layer */
+  @keyframes fc-home-rise {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 8px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .fc-home-rise {
+    animation: fc-home-rise 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  /** One-shot ring when returning Home after completing Today's Move */
+  @keyframes fc-todays-move-pulse {
+    0% {
+      box-shadow:
+        0 0 0 0 rgba(124, 58, 237, 0.45),
+        0 20px 52px -14px rgba(15, 23, 42, 0.32);
+    }
+    55% {
+      box-shadow:
+        0 0 0 12px rgba(124, 58, 237, 0),
+        0 20px 52px -14px rgba(15, 23, 42, 0.28);
+    }
+    100% {
+      box-shadow:
+        0 0 0 0 rgba(124, 58, 237, 0),
+        0 20px 52px -14px rgba(15, 23, 42, 0.32);
+    }
+  }
+  .fc-todays-move-home-pulse {
+    animation: fc-todays-move-pulse 0.85s cubic-bezier(0.22, 1, 0.36, 1) 1;
+    border-radius: 1.25rem;
+  }
+}

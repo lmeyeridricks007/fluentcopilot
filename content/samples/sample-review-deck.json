@@ -1,0 +1,63 @@
+[
+  {
+    "id": "rev-demo-lemma-bon",
+    "sourceLessonId": "a2-m02-l04",
+    "type": "vocab",
+    "prompt": "Choose the Dutch word for “receipt”.",
+    "expectedAnswer": "bon",
+    "variants": ["de bon"],
+    "difficulty": "A2_low",
+    "tags": ["shopping"],
+    "metadata": { "lemma": "bon", "moduleId": "a2-m02" }
+  },
+  {
+    "id": "rev-demo-phrase-wil-graag",
+    "sourceLessonId": "a2-m02-l04",
+    "type": "phrase",
+    "prompt": "Complete: Ik wil ____ een koffie.",
+    "expectedAnswer": "graag",
+    "difficulty": "A2_mid",
+    "tags": ["politeness"],
+    "metadata": { "moduleId": "a2-m02" }
+  },
+  {
+    "id": "rev-demo-grammar-modal",
+    "sourceLessonId": "a2-m02-l05",
+    "type": "grammar",
+    "prompt": "Pick the best polite request.",
+    "expectedAnswer": "Mag ik het menu?",
+    "difficulty": "A2_mid",
+    "tags": ["modals"],
+    "metadata": { "grammarLabel": "Polite requests (mag/kan)", "moduleId": "a2-m02" }
+  },
+  {
+    "id": "rev-demo-listening",
+    "sourceLessonId": "a2-m03-l01",
+    "type": "listening",
+    "prompt": "You hear: “Twee koffie, alstublieft.” What did they order?",
+    "expectedAnswer": "twee koffie",
+    "difficulty": "A2_low",
+    "tags": ["cafe"],
+    "metadata": { "moduleId": "a2-m03" }
+  },
+  {
+    "id": "rev-demo-speak",
+    "sourceLessonId": "a2-m03-l02",
+    "type": "speaking",
+    "prompt": "Say aloud: “Ik neem een thee met melk.”",
+    "expectedAnswer": "Ik neem een thee met melk.",
+    "difficulty": "A2_mid",
+    "tags": ["speaking"],
+    "metadata": { "moduleId": "a2-m03" }
+  },
+  {
+    "id": "rev-demo-vocab-trein",
+    "sourceLessonId": "a2-m01-l02",
+    "type": "vocab",
+    "prompt": "Translate to Dutch: train",
+    "expectedAnswer": "trein",
+    "difficulty": "A2_low",
+    "tags": ["travel"],
+    "metadata": { "lemma": "trein", "moduleId": "a2-m01" }
+  }
+]

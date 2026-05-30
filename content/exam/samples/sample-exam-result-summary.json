@@ -1,0 +1,65 @@
+{
+  "id": "summary-sess-exam-a2-mix-001",
+  "examSessionId": "sess-exam-a2-mix-001",
+  "userId": "user_demo_01",
+  "examType": "mixed",
+  "examModuleId": "mod-a2-mixed-training-01",
+  "exerciseCount": 2,
+  "totalScore": 43.5,
+  "maxScore": 55,
+  "pass": true,
+  "categoryBreakdown": [
+    {
+      "categoryKey": "task_execution",
+      "label": "Taakuitvoering",
+      "averageScore": 4.25,
+      "maxScore": 5,
+      "weight": 0.35
+    },
+    {
+      "categoryKey": "grammar",
+      "label": "Grammatica",
+      "averageScore": 3.5,
+      "maxScore": 5,
+      "weight": 0.25
+    }
+  ],
+  "strengths": [
+    "Je beantwoordt de kern van beide opdrachten.",
+    "Beleefd register in het schrijfbericht."
+  ],
+  "weaknesses": [
+    "Kleine grammaticale fouten in vragende vorm.",
+    "Uitspraak kan vloeiender met langere antwoorden."
+  ],
+  "readinessSignal": {
+    "band": "approaching",
+    "headline": "Goed op weg voor A2-taaltaken",
+    "detail": "Blijf oefenen met spreekduur en precisie in grammatica."
+  },
+  "reviewItemsGenerated": [
+    {
+      "suggestedReviewItemId": "rev-exam-aux-verb-01",
+      "reviewItemType": "grammar",
+      "prompt": "Kies de goede vorm: ___ je de muziek zachter zetten? (Kun / Kunnen)",
+      "expectedAnswer": "Kun",
+      "tags": ["exam", "grammar", "question-form"]
+    }
+  ],
+  "suggestedNextSteps": [
+    {
+      "id": "nba-01",
+      "kind": "exam_exercise",
+      "targetId": "ex-a2-speak-daily-01",
+      "label": "Volgende spreekopdracht",
+      "rationale": "Meer lengte en detail in het antwoord."
+    },
+    {
+      "id": "nba-02",
+      "kind": "review_session",
+      "targetId": "daily",
+      "label": "Dagelijkse review",
+      "rationale": "Versterk grammatica met korte drills."
+    }
+  ]
+}

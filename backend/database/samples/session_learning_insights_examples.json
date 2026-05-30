@@ -1,0 +1,159 @@
+{
+  "live_speak_example": {
+    "schemaVersion": 2,
+    "sessionId": "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
+    "userId": "11111111-2222-4333-8444-555555555555",
+    "sessionType": "speak_live",
+    "scenarioId": "22222222-3333-4444-9555-666666666666",
+    "extractedAt": "2026-04-21T14:00:00.000Z",
+    "weakWords": [
+      {
+        "normalizedKey": "het spoor",
+        "displayText": "het spoor",
+        "category": "grammar",
+        "source": "live_feedback_item",
+        "severity": 2,
+        "severityScore": 2,
+        "confidence": 0.58,
+        "evidenceRefs": ["turn:t1", "feedback_item"],
+        "supportingText": "Article choice in context."
+      }
+    ],
+    "weakPatterns": [
+      {
+        "patternId": "grammar_missing_or_weak_preposition",
+        "label": "prepositions: missing naar",
+        "explanation": "Use 'naar het station' when direction is implied.",
+        "source": "live_transcript_coaching",
+        "severity": 2,
+        "severityScore": 2,
+        "confidence": 0.61,
+        "evidenceRefs": ["turn:t1", "transcript_issue"],
+        "supportingText": null
+      }
+    ],
+    "pronunciationIssues": [
+      {
+        "targetKey": "spoor:stress",
+        "issueType": "stress",
+        "source": "live_word_assessment",
+        "severity": 2,
+        "severityScore": 2,
+        "confidence": 0.71,
+        "evidenceRefs": ["turn:t1", "word_assessment"],
+        "supportingText": "Second syllable stress."
+      }
+    ],
+    "hesitationIssues": [
+      {
+        "patternId": "hes_long_pause",
+        "label": "Long pauses",
+        "severityScore": 1.2,
+        "confidence": 0.42,
+        "firstSeenAt": "2026-04-21T14:00:00.000Z",
+        "lastSeenAt": "2026-04-21T14:00:00.000Z",
+        "occurrences": 3,
+        "scenarioIds": ["22222222-3333-4444-9555-666666666666"],
+        "evidenceRefs": ["aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee:hes_long_pause"],
+        "recoveryScore": 0.3,
+        "source": "live_audio_timing_aggregate",
+        "supportingText": "Aggregated pause-like segments across turns."
+      }
+    ],
+    "scenarioPerformance": {
+      "scenarioId": "22222222-3333-4444-9555-666666666666",
+      "scenarioSlug": "train-station",
+      "attempts": 1,
+      "rollingScore": 76,
+      "recentScore": 76,
+      "confidence": 0.55,
+      "strongSubskills": ["Openings"],
+      "weakSubskills": ["Prepositions"],
+      "lastAttemptAt": "2026-04-21T14:00:00.000Z"
+    },
+    "strengths": [
+      {
+        "label": "Clear question intonation on first turn",
+        "source": "live_transcript_coaching_strength",
+        "severity": 2,
+        "severityScore": 2,
+        "confidence": 0.68,
+        "evidenceRefs": ["turn:t0", "transcript_strength"],
+        "supportingText": null
+      }
+    ],
+    "confidenceSummary": "live:audioTurns=4;transcriptTurns=4;azurePA=3|strengths=1"
+  },
+  "text_chat_example": {
+    "schemaVersion": 2,
+    "sessionId": "bbbbbbbb-cccc-dddd-eeee-ffffffffffff",
+    "userId": "11111111-2222-4333-8444-555555555555",
+    "sessionType": "text_conversation",
+    "scenarioId": "33333333-4444-5555-a666-777777777777",
+    "extractedAt": "2026-04-21T14:05:00.000Z",
+    "weakWords": [],
+    "weakPatterns": [],
+    "pronunciationIssues": [],
+    "hesitationIssues": [],
+    "scenarioPerformance": {
+      "scenarioId": "33333333-4444-5555-a666-777777777777",
+      "scenarioSlug": "phone-call",
+      "attempts": 1,
+      "rollingScore": null,
+      "recentScore": null,
+      "confidence": 0.4,
+      "strongSubskills": ["Polite close"],
+      "weakSubskills": ["Articles"],
+      "lastAttemptAt": "2026-04-21T14:05:00.000Z"
+    },
+    "strengths": [
+      {
+        "label": "Polite close",
+        "source": "text_summary_what_went_well",
+        "severity": 2,
+        "severityScore": 2,
+        "confidence": 0.33,
+        "evidenceRefs": ["thread:bbbbbbbb-cccc-dddd-eeee-ffffffffffff", "summary_well"],
+        "supportingText": null
+      }
+    ],
+    "confidenceSummary": "text:transcript_feedback_only|feedbackRows=0|correctedPhrases=0"
+  },
+  "read_aloud_example": {
+    "schemaVersion": 2,
+    "sessionId": "cccccccc-dddd-eeee-ffff-000000000001",
+    "userId": "11111111-2222-4333-8444-555555555555",
+    "sessionType": "read_aloud",
+    "scenarioId": null,
+    "extractedAt": "2026-04-21T14:10:00.000Z",
+    "weakWords": [
+      {
+        "normalizedKey": "gezelligheid",
+        "displayText": "gezelligheid",
+        "category": "read_aloud_weak_word",
+        "source": "read_aloud_weak_word_list",
+        "severity": 1,
+        "severityScore": 1,
+        "confidence": 0.72,
+        "evidenceRefs": ["session:cccccccc-dddd-eeee-ffff-000000000001", "weak_word_list"],
+        "supportingText": null
+      }
+    ],
+    "weakPatterns": [],
+    "pronunciationIssues": [],
+    "hesitationIssues": [],
+    "scenarioPerformance": null,
+    "strengths": [
+      {
+        "label": "Strong sentence flow on the second paragraph",
+        "source": "read_aloud_coaching_summary",
+        "severity": 2,
+        "severityScore": 2,
+        "confidence": 0.62,
+        "evidenceRefs": ["session:cccccccc-dddd-eeee-ffff-000000000001", "coaching_summary"],
+        "supportingText": null
+      }
+    ],
+    "confidenceSummary": "read_aloud:segmented_timed_llm;weakSegments=2|strengths=1"
+  }
+}

@@ -1,0 +1,1976 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-vt-lemma-gemeente",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “municipality”.",
+      "expectedAnswer": "gemeente",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gemeente",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "gemeente"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-vt-lemma-afspraak-m8",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-vt-lemma-balie",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “counter / desk”.",
+      "expectedAnswer": "balie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-balie",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "balie"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-vt-lemma-formulier",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “form”.",
+      "expectedAnswer": "formulier",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-formulier",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "formulier"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-vt-lemma-inschrijven",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to register”.",
+      "expectedAnswer": "inschrijven",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-inschrijven",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "inschrijven"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-gt-a2.2-admin-appointments",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Appointments & registration”?",
+      "expectedAnswer": "Ik moet me inschrijven in de gemeente.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-appointments",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Appointments & registration"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-ph-ik-wil-graag-een-afspraak-maken",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'd like to make an appointment.).",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik wil graag een afspraak maken."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-ph-ik-moet-me-inschrijven",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have to register.).",
+      "expectedAnswer": "Ik moet me inschrijven.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik moet me inschrijven."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-ph-heeft-u-bij-u",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Do you have … with you? (formal)).",
+      "expectedAnswer": "Heeft u … bij u?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Heeft u … bij u?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l01-listening-gemeente-catch-situation-ph-u-krijgt-een-bevestiging",
+      "sourceLessonId": "a2-m08-l01-listening-gemeente-catch-situation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: You'll get a confirmation.).",
+      "expectedAnswer": "U krijgt een bevestiging.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "U krijgt een bevestiging."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-vt-lemma-document",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “document”.",
+      "expectedAnswer": "document",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-document",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "document"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-vt-lemma-paspoort-m8",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “passport”.",
+      "expectedAnswer": "paspoort",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-paspoort-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "paspoort"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-vt-lemma-kopie",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “copy”.",
+      "expectedAnswer": "kopie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kopie",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "kopie"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-vt-lemma-brief-m8",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “letter”.",
+      "expectedAnswer": "brief",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-brief-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "brief"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-vt-lemma-meennemen",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to bring along”.",
+      "expectedAnswer": "meenemen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meennemen",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "meenemen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-gt-a2.2-admin-documents",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Documents you bring”?",
+      "expectedAnswer": "Welke documenten heb ik nodig?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-documents",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Documents you bring"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-gt-a2.2-admin-appointments",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Appointments & registration”?",
+      "expectedAnswer": "Ik moet me inschrijven in de gemeente.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-appointments",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Appointments & registration"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-ph-neem-mee",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Bring … with you.).",
+      "expectedAnswer": "Neem … mee.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Neem … mee."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-ph-zonder-kunnen-we-niet-helpen",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Without … we cannot help.).",
+      "expectedAnswer": "Zonder … kunnen we niet helpen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Zonder … kunnen we niet helpen."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-ph-uw-afspraak-is-op",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Your appointment is on …).",
+      "expectedAnswer": "Uw afspraak is op …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Uw afspraak is op …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l02-listen-read-appointments-documents-ph-is-nodig",
+      "sourceLessonId": "a2-m08-l02-listen-read-appointments-documents",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Is … needed?).",
+      "expectedAnswer": "Is … nodig?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Is … nodig?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-vt-lemma-kunnen-m8",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “can / to be able”.",
+      "expectedAnswer": "kunnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kunnen-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "kunnen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-vt-lemma-moeten-m8",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “must / to have to”.",
+      "expectedAnswer": "moeten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-moeten-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-vt-lemma-alstublieft-m8",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “please (formal)”.",
+      "expectedAnswer": "alstublieft",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-alstublieft-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "alstublieft"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-vt-lemma-mag-ik",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “may I”.",
+      "expectedAnswer": "mogen",
+      "variants": [
+        "mag ik"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mag-ik",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "mogen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-vt-lemma-uitleggen",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to explain”.",
+      "expectedAnswer": "uitleggen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-uitleggen",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "uitleggen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-gt-a2.2-admin-modals",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in admin talk”?",
+      "expectedAnswer": "U moet dit formulier invullen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-modals",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Moeten / kunnen in admin talk"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-ph-kunt-u",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can you …? (formal)).",
+      "expectedAnswer": "Kunt u …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Kunt u …?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-ph-wilt-u",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Would you …? (formal)).",
+      "expectedAnswer": "Wilt u …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Wilt u …?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-ph-mag-ik",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: May I …?).",
+      "expectedAnswer": "Mag ik …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Mag ik …?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l03-grammar-formal-requests-ph-moet-ik",
+      "sourceLessonId": "a2-m08-l03-grammar-formal-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Do I have to …?).",
+      "expectedAnswer": "Moet ik …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Moet ik …?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-vt-lemma-adres-m8",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “address”.",
+      "expectedAnswer": "adres",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-adres-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "adres"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-vt-lemma-postcode-m8",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “postcode”.",
+      "expectedAnswer": "postcode",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-postcode-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "postcode"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-vt-lemma-geboortedatum",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “date of birth”.",
+      "expectedAnswer": "geboortedatum",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-geboortedatum",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "geboortedatum"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-vt-lemma-nationaliteit",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nationality”.",
+      "expectedAnswer": "nationaliteit",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nationaliteit",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "nationaliteit"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-vt-lemma-handtekening",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “signature”.",
+      "expectedAnswer": "handtekening",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-handtekening",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "handtekening"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-gt-a2.2-admin-personal-details",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving personal details”?",
+      "expectedAnswer": "Mijn geboortedatum is 12 mei 1990.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-personal-details",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Giving personal details"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-ph-mijn-naam-is",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: My name is …).",
+      "expectedAnswer": "Mijn naam is …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Mijn naam is …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-ph-mijn-geboortedatum-is",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: My date of birth is …).",
+      "expectedAnswer": "Mijn geboortedatum is …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Mijn geboortedatum is …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-ph-ik-woon-aan",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I live at …).",
+      "expectedAnswer": "Ik woon aan …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik woon aan …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l04-practice-personal-details-admin-ph-ik-heb-de-nationaliteit",
+      "sourceLessonId": "a2-m08-l04-practice-personal-details-admin",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have … nationality.).",
+      "expectedAnswer": "Ik heb de … nationaliteit.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik heb de … nationaliteit."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-vt-lemma-begrijpen-m8",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to understand”.",
+      "expectedAnswer": "begrijpen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-begrijpen-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "begrijpen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-vt-lemma-herhalen-m8",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to repeat”.",
+      "expectedAnswer": "herhalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-herhalen-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "herhalen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-vt-lemma-adres-m8",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “address”.",
+      "expectedAnswer": "adres",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-adres-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "adres"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-vt-lemma-geboortedatum",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “date of birth”.",
+      "expectedAnswer": "geboortedatum",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-geboortedatum",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "geboortedatum"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-vt-lemma-nationaliteit",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “nationality”.",
+      "expectedAnswer": "nationaliteit",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nationaliteit",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "nationaliteit"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-gt-a2.2-admin-personal-details",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving personal details”?",
+      "expectedAnswer": "Mijn geboortedatum is 12 mei 1990.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-personal-details",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Giving personal details"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-ph-kunt-u-dat-herhalen",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you repeat that?).",
+      "expectedAnswer": "Kunt u dat herhalen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Kunt u dat herhalen?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-ph-ik-begrijp-het-niet",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I don't understand.).",
+      "expectedAnswer": "Ik begrijp het niet.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik begrijp het niet."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-ph-een-moment-alstublieft",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: One moment, please.).",
+      "expectedAnswer": "Een moment, alstublieft.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Een moment, alstublieft."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l05-speaking-give-details-clearly-ph-klopt-dat-zo",
+      "sourceLessonId": "a2-m08-l05-speaking-give-details-clearly",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Is that correct?).",
+      "expectedAnswer": "Klopt dat zo?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Klopt dat zo?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-vt-lemma-wachten-m8",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to wait”.",
+      "expectedAnswer": "wachten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wachten-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "wachten"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-vt-lemma-nummer-m8",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “number (ticket)”.",
+      "expectedAnswer": "nummer",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nummer-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "nummer"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-vt-lemma-invullen",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to fill in”.",
+      "expectedAnswer": "invullen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-invullen",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "invullen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-vt-lemma-balie",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “counter / desk”.",
+      "expectedAnswer": "balie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-balie",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "balie"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-vt-lemma-duurt",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to take (time)”.",
+      "expectedAnswer": "duren",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-duurt",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "duren"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-gt-a2.2-admin-instructions",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Understanding simple instructions”?",
+      "expectedAnswer": "U kunt daar gaan zitten; het duurt ongeveer tien minuten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-instructions",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Understanding simple instructions"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-gt-a2.2-admin-modals",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in admin talk”?",
+      "expectedAnswer": "U moet dit formulier invullen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-modals",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Moeten / kunnen in admin talk"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-ph-neem-een-nummer",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Take a number.).",
+      "expectedAnswer": "Neem een nummer.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Neem een nummer."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-ph-u-kunt-hier-wachten",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: You can wait here.).",
+      "expectedAnswer": "U kunt hier wachten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "U kunt hier wachten."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-ph-het-duurt-ongeveer",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: It takes about …).",
+      "expectedAnswer": "Het duurt ongeveer …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Het duurt ongeveer …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l06-listening-instructions-processes-ph-ga-naar-balie",
+      "sourceLessonId": "a2-m08-l06-listening-instructions-processes",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Go to counter …).",
+      "expectedAnswer": "Ga naar balie …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ga naar balie …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-vt-lemma-moeten-m8",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “must / to have to”.",
+      "expectedAnswer": "moeten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-moeten-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "moeten"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-vt-lemma-kunnen-m8",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “can / to be able”.",
+      "expectedAnswer": "kunnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kunnen-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "kunnen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-vt-lemma-invullen",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to fill in”.",
+      "expectedAnswer": "invullen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-invullen",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "invullen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-vt-lemma-meennemen",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to bring along”.",
+      "expectedAnswer": "meenemen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-meennemen",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "meenemen"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-vt-lemma-wachten-m8",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to wait”.",
+      "expectedAnswer": "wachten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wachten-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "wachten"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-gt-a2.2-admin-modals",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in admin talk”?",
+      "expectedAnswer": "U moet dit formulier invullen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-modals",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Moeten / kunnen in admin talk"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-gt-a2.2-admin-instructions",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Understanding simple instructions”?",
+      "expectedAnswer": "U kunt daar gaan zitten; het duurt ongeveer tien minuten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-instructions",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Understanding simple instructions"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-ph-u-moet",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: You must …).",
+      "expectedAnswer": "U moet …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "U moet …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-ph-u-kunt",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: You can …).",
+      "expectedAnswer": "U kunt …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "U kunt …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-ph-mag-ik",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: May I …?).",
+      "expectedAnswer": "Mag ik …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Mag ik …?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l07-grammar-modals-admin-context-ph-ik-moet-want",
+      "sourceLessonId": "a2-m08-l07-grammar-modals-admin-context",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I have to … because …).",
+      "expectedAnswer": "Ik moet … want …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik moet … want …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-vt-lemma-afspraak-m8",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-vt-lemma-gemeente",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “municipality”.",
+      "expectedAnswer": "gemeente",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gemeente",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "gemeente"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-vt-lemma-brief-m8",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “letter”.",
+      "expectedAnswer": "brief",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-brief-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "brief"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-vt-lemma-alstublieft-m8",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “please (formal)”.",
+      "expectedAnswer": "alstublieft",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-alstublieft-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "alstublieft"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-vt-lemma-met-vriendelijke-groet",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “kind regards (closing)”.",
+      "expectedAnswer": "groet",
+      "variants": [
+        "Met vriendelijke groet"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-met-vriendelijke-groet",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "groet"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-gt-a2.2-admin-appointments",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Appointments & registration”?",
+      "expectedAnswer": "Ik moet me inschrijven in de gemeente.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-appointments",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Appointments & registration"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-ph-geachte",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Dear …,).",
+      "expectedAnswer": "Geachte …,",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Geachte …,"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-ph-ik-wil-graag",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I would like …).",
+      "expectedAnswer": "Ik wil graag …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik wil graag …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-ph-kunt-u",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you …?).",
+      "expectedAnswer": "Kunt u …?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Kunt u …?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l08-writing-formal-messages-forms-ph-met-vriendelijke-groet",
+      "sourceLessonId": "a2-m08-l08-writing-formal-messages-forms",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Kind regards,).",
+      "expectedAnswer": "Met vriendelijke groet,",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Met vriendelijke groet,"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-vt-lemma-afspraak-m8",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-vt-lemma-gemeente",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “municipality”.",
+      "expectedAnswer": "gemeente",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gemeente",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "gemeente"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-vt-lemma-inschrijven",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to register”.",
+      "expectedAnswer": "inschrijven",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-inschrijven",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "inschrijven"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-vt-lemma-paspoort-m8",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “passport”.",
+      "expectedAnswer": "paspoort",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-paspoort-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "paspoort"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-vt-lemma-document",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “document”.",
+      "expectedAnswer": "document",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-document",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "document"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-gt-a2.2-admin-appointments",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Appointments & registration”?",
+      "expectedAnswer": "Ik moet me inschrijven in de gemeente.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-appointments",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Appointments & registration"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-ph-ik-wil-graag-een-afspraak-maken-voor",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I'd like to make an appointment for …).",
+      "expectedAnswer": "Ik wil graag een afspraak maken voor …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Ik wil graag een afspraak maken voor …"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-ph-wanneer-heeft-u-tijd",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: When do you have time?).",
+      "expectedAnswer": "Wanneer heeft u tijd?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Wanneer heeft u tijd?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-ph-kunt-u-dat-bevestigen",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you confirm that?).",
+      "expectedAnswer": "Kunt u dat bevestigen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Kunt u dat bevestigen?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l09-task-make-appointment-guided-ph-wat-moet-ik-meenemen",
+      "sourceLessonId": "a2-m08-l09-task-make-appointment-guided",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What do I have to bring?).",
+      "expectedAnswer": "Wat moet ik meenemen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Wat moet ik meenemen?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-vt-lemma-balie",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “counter / desk”.",
+      "expectedAnswer": "balie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-balie",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "balie"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-vt-lemma-identiteitsbewijs",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “ID card”.",
+      "expectedAnswer": "identiteitsbewijs",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-identiteitsbewijs",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "identiteitsbewijs"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-vt-lemma-handtekening",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “signature”.",
+      "expectedAnswer": "handtekening",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-handtekening",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "handtekening"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-vt-lemma-formulier",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “form”.",
+      "expectedAnswer": "formulier",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-formulier",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "formulier"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-vt-lemma-wachten-m8",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to wait”.",
+      "expectedAnswer": "wachten",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wachten-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "wachten"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-gt-a2.2-admin-personal-details",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Giving personal details”?",
+      "expectedAnswer": "Mijn geboortedatum is 12 mei 1990.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-personal-details",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Giving personal details"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-gt-a2.2-admin-instructions",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Understanding simple instructions”?",
+      "expectedAnswer": "U kunt daar gaan zitten; het duurt ongeveer tien minuten.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-instructions",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Understanding simple instructions"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-ph-gaat-u-even-zitten",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Could you sit for a moment?).",
+      "expectedAnswer": "Gaat u even zitten?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Gaat u even zitten?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-ph-dank-u-voor-uw-geduld",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Thank you for your patience.).",
+      "expectedAnswer": "Dank u voor uw geduld.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Dank u voor uw geduld."
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-ph-wat-is-de-volgende-stap",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: What's the next step?).",
+      "expectedAnswer": "Wat is de volgende stap?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Wat is de volgende stap?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l10-task-attend-appointment-simulation-ph-heeft-u-verder-nog-vragen",
+      "sourceLessonId": "a2-m08-l10-task-attend-appointment-simulation",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Do you have any other questions?).",
+      "expectedAnswer": "Heeft u verder nog vragen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "moduleId": "a2-m08-government-administration",
+        "phraseNl": "Heeft u verder nog vragen?"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-vt-lemma-gemeente",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “municipality”.",
+      "expectedAnswer": "gemeente",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-gemeente",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "gemeente"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-vt-lemma-afspraak-m8",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “appointment”.",
+      "expectedAnswer": "afspraak",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-afspraak-m8",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "afspraak"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-vt-lemma-formulier",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “form”.",
+      "expectedAnswer": "formulier",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-formulier",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "formulier"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-vt-lemma-inschrijven",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to register”.",
+      "expectedAnswer": "inschrijven",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-inschrijven",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "inschrijven"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-vt-lemma-document",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “document”.",
+      "expectedAnswer": "document",
+      "difficulty": "A2_mid",
+      "tags": [
+        "vocab",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-document",
+        "moduleId": "a2-m08-government-administration",
+        "lemma": "document"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-gt-a2.2-admin-formal-u",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Formal tone at the desk (u)”?",
+      "expectedAnswer": "Ik wil graag een afspraak maken.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-formal-u",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Formal tone at the desk (u)"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-gt-a2.2-admin-modals",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Moeten / kunnen in admin talk”?",
+      "expectedAnswer": "U moet dit formulier invullen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-modals",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Moeten / kunnen in admin talk"
+      }
+    },
+    {
+      "id": "rev-a2-m08-l11-review-government-administration-gt-a2.2-admin-documents",
+      "sourceLessonId": "a2-m08-l11-review-government-administration",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Documents you bring”?",
+      "expectedAnswer": "Welke documenten heb ik nodig?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m08-government-administration"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.2-admin-documents",
+        "moduleId": "a2-m08-government-administration",
+        "grammarLabel": "Documents you bring"
+      }
+    }
+  ]
+}

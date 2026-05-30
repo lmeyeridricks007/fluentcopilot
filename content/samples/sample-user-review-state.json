@@ -1,0 +1,102 @@
+{
+  "userId": "local-demo-user",
+  "srsItems": [
+    {
+      "id": "srs-local-demo-user-rev-demo-lemma-bon",
+      "userId": "local-demo-user",
+      "reviewItemId": "rev-demo-lemma-bon",
+      "easeFactor": 2.5,
+      "interval": 0,
+      "repetitions": 0,
+      "dueDate": "2000-01-01T00:00:00.000Z",
+      "lastScore": 2,
+      "lapses": 1,
+      "state": "relearning",
+      "performanceHistory": [],
+      "metadata": { "moduleId": "a2-m02" }
+    },
+    {
+      "id": "srs-local-demo-user-rev-demo-phrase-wil-graag",
+      "userId": "local-demo-user",
+      "reviewItemId": "rev-demo-phrase-wil-graag",
+      "easeFactor": 2.36,
+      "interval": 1,
+      "repetitions": 1,
+      "dueDate": "2000-01-01T00:00:00.000Z",
+      "lastScore": 3,
+      "lapses": 0,
+      "state": "learning",
+      "performanceHistory": [],
+      "metadata": { "moduleId": "a2-m02" }
+    },
+    {
+      "id": "srs-local-demo-user-rev-demo-grammar-modal",
+      "userId": "local-demo-user",
+      "reviewItemId": "rev-demo-grammar-modal",
+      "easeFactor": 2.5,
+      "interval": 0,
+      "repetitions": 0,
+      "dueDate": "2000-01-01T00:00:00.000Z",
+      "performanceHistory": [],
+      "metadata": { "moduleId": "a2-m02" }
+    },
+    {
+      "id": "srs-local-demo-user-rev-demo-listening",
+      "userId": "local-demo-user",
+      "reviewItemId": "rev-demo-listening",
+      "easeFactor": 2.5,
+      "interval": 0,
+      "repetitions": 0,
+      "dueDate": "2000-01-01T00:00:00.000Z",
+      "performanceHistory": [],
+      "metadata": { "moduleId": "a2-m03" }
+    },
+    {
+      "id": "srs-local-demo-user-rev-demo-speak",
+      "userId": "local-demo-user",
+      "reviewItemId": "rev-demo-speak",
+      "easeFactor": 2.5,
+      "interval": 0,
+      "repetitions": 0,
+      "dueDate": "2000-01-01T00:00:00.000Z",
+      "performanceHistory": [],
+      "metadata": { "moduleId": "a2-m03" }
+    },
+    {
+      "id": "srs-local-demo-user-rev-demo-vocab-trein",
+      "userId": "local-demo-user",
+      "reviewItemId": "rev-demo-vocab-trein",
+      "easeFactor": 2.5,
+      "interval": 0,
+      "repetitions": 0,
+      "dueDate": "2000-01-01T00:00:00.000Z",
+      "performanceHistory": [],
+      "metadata": { "moduleId": "a2-m01" }
+    }
+  ],
+  "mistakeEvents": [
+    {
+      "id": "mistake-demo-1",
+      "userId": "local-demo-user",
+      "lessonId": "review-session",
+      "stepId": "card-demo",
+      "itemId": "rev-demo-lemma-bon",
+      "errorType": "vocab",
+      "userAnswer": "bonnetje",
+      "correctAnswer": "bon",
+      "timestamp": "2000-01-02T12:00:00.000Z",
+      "severity": 2,
+      "reviewItemId": "rev-demo-lemma-bon",
+      "metadata": { "mistakeTags": ["vocab_confusion"], "category": "vocab_confusion" }
+    }
+  ],
+  "mastery": {
+    "userId": "local-demo-user",
+    "vocabMasteryMap": { "bon": 0.35, "trein": 0.55 },
+    "grammarMasteryMap": { "Polite requests (mag/kan)": 0.4 },
+    "skillLevels": { "listening": 2, "speaking": 2, "writing": 2, "reading": 3 },
+    "streak": 3,
+    "lastActive": "2000-01-02T12:00:00.000Z",
+    "metadata": {}
+  }
+}

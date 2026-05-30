@@ -1,0 +1,40 @@
+{
+  "id": "rubric-a2-writing-standard-v1",
+  "version": "1.0.0",
+  "examType": "writing",
+  "title": "A2 schrijven — standaard rubric",
+  "description": "Illustratieve rubric voor productontwikkeling; geen officiële DUO-norm.",
+  "totalMaxPoints": 25,
+  "categories": [
+    {
+      "categoryKey": "task_execution",
+      "label": "Taakuitvoering",
+      "weight": 0.3,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "grammar",
+      "label": "Grammatica",
+      "weight": 0.25,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "spelling",
+      "label": "Spelling",
+      "weight": 0.15,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "clarity",
+      "label": "Helderheid",
+      "weight": 0.15,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "vocabulary",
+      "label": "Woordenschat",
+      "weight": 0.15,
+      "maxPoints": 5
+    }
+  ]
+}

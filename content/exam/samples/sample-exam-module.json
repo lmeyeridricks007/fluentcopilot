@@ -1,0 +1,24 @@
+{
+  "id": "mod-a2-mixed-training-01",
+  "title": "A2 — Spreken en schrijven (training)",
+  "examType": "mixed",
+  "level": "A2",
+  "description": "Eén trainingsronde met een spreek- en een schrijftaak; gericht op inburgering / A2.",
+  "modesSupported": ["training", "simulation"],
+  "exerciseRefs": [
+    "ex-a2-speak-preference-01",
+    "ex-a2-write-message-01"
+  ],
+  "sections": [
+    {
+      "id": "sec-speak",
+      "title": "Spreken",
+      "exerciseIds": ["ex-a2-speak-preference-01"]
+    },
+    {
+      "id": "sec-write",
+      "title": "Schrijven",
+      "exerciseIds": ["ex-a2-write-message-01"]
+    }
+  ]
+}

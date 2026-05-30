@@ -1,0 +1,23 @@
+{
+  "id": "sess-exam-a2-mix-001",
+  "userId": "user_demo_01",
+  "examModuleId": "mod-a2-mixed-training-01",
+  "examType": "mixed",
+  "mode": "training",
+  "exerciseRefs": [
+    "ex-a2-speak-preference-01",
+    "ex-a2-write-message-01"
+  ],
+  "attemptRefs": [
+    "att-speak-001",
+    "att-write-001"
+  ],
+  "startedAt": "2026-03-26T14:00:00.000Z",
+  "endedAt": "2026-03-26T14:15:00.000Z",
+  "sessionConstraints": {
+    "aidsDisallowed": false
+  },
+  "completionState": "completed",
+  "resultSummaryId": "summary-sess-exam-a2-mix-001",
+  "currentExerciseIndex": 2
+}

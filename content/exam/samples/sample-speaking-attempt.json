@@ -1,0 +1,137 @@
+{
+  "id": "att-speak-001",
+  "userId": "user_demo_01",
+  "examSessionId": "sess-exam-a2-mix-001",
+  "examExerciseId": "ex-a2-speak-preference-01",
+  "examType": "speaking",
+  "mode": "training",
+  "startedAt": "2026-03-26T14:00:00.000Z",
+  "submittedAt": "2026-03-26T14:01:12.000Z",
+  "rawResponse": {
+    "kind": "audio_with_transcript",
+    "audioRef": "blob:exam/user_demo_01/att-speak-001.webm",
+    "transcript": "Ik ga meestal met de bus naar werk. Soms fiets ik. Ik ga het liefst met de fiets omdat het gezonder is."
+  },
+  "normalizedResponse": {
+    "audioRef": "blob:exam/user_demo_01/att-speak-001.webm",
+    "transcript": "Ik ga meestal met de bus naar werk. Soms fiets ik. Ik ga het liefst met de fiets omdat het gezonder is."
+  },
+  "modality": "audio_and_transcript",
+  "supportUsed": {
+    "hintCount": 1,
+    "phraseBankOpened": false,
+    "translationRevealed": false
+  },
+  "speakingPayload": {
+    "audioRef": "blob:exam/user_demo_01/att-speak-001.webm",
+    "transcript": "Ik ga meestal met de bus naar werk. Soms fiets ik. Ik ga het liefst met de fiets omdat het gezonder is.",
+    "transcriptConfidence": 0.86,
+    "transcriptLocale": "nl-NL",
+    "speechMetrics": {
+      "durationMs": 14800,
+      "wordsPerMinute": 95,
+      "pauseCount": 2,
+      "hesitationFlag": false
+    },
+    "rerecordCount": 1
+  },
+  "scoringResult": {
+    "id": "score-att-speak-001",
+    "examAttemptId": "att-speak-001",
+    "examExerciseId": "ex-a2-speak-preference-01",
+    "examType": "speaking",
+    "rubricDefinitionId": "rubric-a2-speaking-standard-v1",
+    "rubricVersion": "1.0.0",
+    "rubricScores": [
+      {
+        "categoryKey": "task_execution",
+        "label": "Taakuitvoering",
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate",
+        "evidence": "Twee vervoersmiddelen genoemd; voorkeur met reden."
+      },
+      {
+        "categoryKey": "vocabulary",
+        "label": "Woordenschat",
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate",
+        "evidence": "Relevante woorden: bus, fiets, werk."
+      },
+      {
+        "categoryKey": "grammar",
+        "label": "Grammatica",
+        "score": 3.5,
+        "maxScore": 5,
+        "levelKey": "developing",
+        "evidence": "Kleine fouten mogelijk; zinnen begrijpelijk."
+      },
+      {
+        "categoryKey": "fluency",
+        "label": "Vloeiendheid",
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate",
+        "evidence": "Redelijke doorloop, korte pauzes."
+      },
+      {
+        "categoryKey": "clarity",
+        "label": "Duidelijkheid",
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate",
+        "evidence": "Antwoord is goed te volgen."
+      },
+      {
+        "categoryKey": "pronunciation",
+        "label": "Uitspraak",
+        "score": 3.5,
+        "maxScore": 5,
+        "levelKey": "developing",
+        "evidence": "Over het algemeen verstaanbaar."
+      }
+    ],
+    "exerciseExecutionScore": 23.5,
+    "totalScore": 23.5,
+    "maxScore": 30,
+    "pass": true,
+    "confidence": 0.78,
+    "evaluatorVersion": "eval-a2-speaking-rules-v1",
+    "summaryComment": "Voldoet aan de kern van de opdracht; blijf oefenen met vloeiendere koppelingen tussen zinnen.",
+    "speakingRubricScores": {
+      "task_execution": {
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate",
+        "evidence": "Twee vervoersmiddelen genoemd; voorkeur met reden."
+      },
+      "vocabulary": {
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate"
+      },
+      "grammar": {
+        "score": 3.5,
+        "maxScore": 5,
+        "levelKey": "developing"
+      },
+      "fluency": {
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate"
+      },
+      "clarity": {
+        "score": 4,
+        "maxScore": 5,
+        "levelKey": "adequate"
+      },
+      "pronunciation": {
+        "score": 3.5,
+        "maxScore": 5,
+        "levelKey": "developing"
+      }
+    }
+  },
+  "feedbackBlockId": "fb-att-speak-001"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "00000000-0000-4000-8000-000000000001",
+  "userId": "00000000-0000-4000-8000-000000000099",
+  "scenarioId": "cafe",
+  "category": "food",
+  "level": "A2",
+  "drillIds": ["cafe-gist-1", "cafe-detail-1", "weak-route-1"],
+  "createdAt": "2026-04-21T12:00:00.000Z",
+  "completedAt": "2026-04-21T12:06:00.000Z",
+  "status": "completed",
+  "trackId": "pack-cafe-burst",
+  "clientSessionKey": "ls_client_optional_idempotency_key"
+}

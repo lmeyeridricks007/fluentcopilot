@@ -1,0 +1,40 @@
+{
+  "id": "a2-u07",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.3",
+  "title": "Late A2 — Admin & services",
+  "summary": "Handle gemeente, bank, and post situations with simple scripted Dutch.",
+  "objectives_can_do": [
+    "Ask what documents you need for a simple gemeente appointment",
+    "Understand basic instructions at a service desk (nummer trekken, wachten)",
+    "Request a duplicate card or change of address in simple phrases",
+    "Read short official letters or emails with familiar vocabulary",
+    "Make a short phone script for identification and purpose",
+    "Ask someone to repeat or speak more slowly in Dutch"
+  ],
+  "integration_scripts_summary": "Gemeente desk and DigiD vocabulary; ID appointment flow.",
+  "grammar_focus": [
+    "conditional polite forms (Ik zou graag … willen)",
+    "passive-like bureaucratic phrases (wordt verwerkt) — recognition",
+    "relative clauses with die/dat (very short)",
+    "numbers and dates in official contexts"
+  ],
+  "vocabulary_domains": [
+    "gemeente",
+    "ID",
+    "bank",
+    "post",
+    "appointments"
+  ],
+  "lesson_ids": [
+    "a2-u07-l01",
+    "a2-u07-l02",
+    "a2-u07-l03",
+    "a2-u07-l04",
+    "a2-u07-l05",
+    "a2-u07-l06",
+    "a2-u07-l07",
+    "a2-u07-l08"
+  ]
+}

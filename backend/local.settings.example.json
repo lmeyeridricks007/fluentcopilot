@@ -1,0 +1,43 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+
+    "APP_PROFILE": "LocalMock",
+
+    "SQL_CONNECTION_STRING": "Server=localhost,1433;Database=FluentCopilot;User Id=sa;Password=Your_password123;Encrypt=true;TrustServerCertificate=true",
+
+    "AI_PROVIDER": "",
+    "OPENAI_API_KEY": "",
+    "OPENAI_MODEL": "gpt-4o-mini",
+    "OPENAI_BASE_URL": "",
+    "OPENAI_ORG": "",
+    "OPENAI_PROJECT": "",
+
+    "AI_REQUEST_TIMEOUT_MS": "120000",
+    "AI_MAX_RETRIES": "2",
+    "AI_LOG_VERBOSE": "false",
+
+    "AZURE_OPENAI_ENDPOINT": "https://YOUR_RESOURCE.openai.azure.com/",
+    "AZURE_OPENAI_API_KEY": "",
+    "AZURE_OPENAI_API_VERSION": "2024-08-01-preview",
+    "AZURE_OPENAI_DEPLOYMENT_CHAT": "gpt-4o-mini",
+    "AZURE_OPENAI_DEPLOYMENT": "",
+
+    "AZURE_CONTENT_SAFETY_ENDPOINT": "https://YOUR_REGION.api.cognitive.microsoft.com/",
+    "AZURE_CONTENT_SAFETY_KEY": "",
+    "AZURE_CONTENT_SAFETY_API_VERSION": "2023-10-01",
+
+    "AZURE_STORAGE_CONNECTION_STRING": "UseDevelopmentStorage=true",
+    "AZURE_STORAGE_CONTAINER_ARTIFACTS": "fc-artifacts",
+
+    "SERVICE_BUS_CONNECTION_STRING": "Endpoint=sb://localhost/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=FAKEKEY",
+    "SERVICE_BUS_TOPIC_EVENTS": "fc-app-events",
+
+    "APPLICATIONINSIGHTS_CONNECTION_STRING": ""
+  },
+  "Host": {
+    "CORS": "http://localhost:3000,http://127.0.0.1:3000"
+  }
+}

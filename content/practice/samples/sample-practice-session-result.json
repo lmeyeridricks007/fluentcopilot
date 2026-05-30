@@ -1,0 +1,155 @@
+{
+  "id": "psr-demo-cafe-001",
+  "userId": "user_demo_01",
+  "activityKind": "scenario_conversation",
+  "scenarioId": "practice-scenario-cafe-a2",
+  "mode": "guided",
+  "startTime": "2025-03-26T14:00:00.000Z",
+  "endTime": "2025-03-26T14:04:30.000Z",
+  "turnResults": [
+    {
+      "id": "ptr-001",
+      "planTurnId": "turn-barista-open",
+      "speakerType": "ai",
+      "transcript": "Goedemiddag! Wat mag het zijn?",
+      "startedAt": "2025-03-26T14:00:05.000Z",
+      "endedAt": "2025-03-26T14:00:05.000Z",
+      "metadata": {}
+    },
+    {
+      "id": "ptr-002",
+      "planTurnId": "turn-user-order-guided",
+      "speakerType": "user",
+      "transcript": "Mag ik een koffie, alstublieft?",
+      "selectedReplyId": "opt-koffie",
+      "intentMatched": true,
+      "startedAt": "2025-03-26T14:00:20.000Z",
+      "endedAt": "2025-03-26T14:00:22.000Z",
+      "metadata": {}
+    },
+    {
+      "id": "ptr-003",
+      "speakerType": "ai",
+      "transcript": "Natuurlijk. Met melk?",
+      "startedAt": "2025-03-26T14:00:23.000Z",
+      "endedAt": "2025-03-26T14:00:24.000Z",
+      "metadata": {}
+    },
+    {
+      "id": "ptr-004",
+      "speakerType": "user",
+      "transcript": "Ja, graag.",
+      "intentMatched": true,
+      "startedAt": "2025-03-26T14:00:35.000Z",
+      "endedAt": "2025-03-26T14:00:36.000Z",
+      "metadata": {}
+    }
+  ],
+  "scoringResult": {
+    "overallScore": 0.82,
+    "subScores": {
+      "task": 0.9,
+      "language": 0.75
+    },
+    "fluencyScore": 0.78,
+    "accuracyScore": 0.85,
+    "completionScore": 0.9,
+    "supportUsageScore": 0.95,
+    "confidenceEstimate": "developing",
+    "skillSignals": [
+      {
+        "skillId": "skill-polite-request",
+        "score": 0.88,
+        "weight": 1
+      },
+      {
+        "skillId": "skill-service-listening",
+        "score": 0.72,
+        "weight": 0.8
+      }
+    ],
+    "weaknessSignals": [
+      {
+        "tag": "short_reply_variety",
+        "severity": 2,
+        "evidence": "Could add 'met melk' without prompting next time."
+      }
+    ],
+    "strengths": ["Clear polite modal use", "Appropriate service register"],
+    "metadata": {}
+  },
+  "practiceFeedback": {
+    "summary": "You ordered confidently and answered the follow-up well. Nice use of 'Mag ik … alstublieft?'.",
+    "whatWentWell": ["Polite request form", "Short appropriate answer to 'Met melk?'"],
+    "whatToImprove": ["Try saying the milk preference in one short phrase without waiting for the barista."],
+    "suggestedPhrases": ["Een koffie met melk, alstublieft.", "Nee, zwart, alstublieft."],
+    "corrections": [],
+    "nextPracticeSuggestions": [
+      {
+        "kind": "scenario",
+        "targetId": "practice-scenario-supermarket-a2",
+        "rationale": "Reuse polite requests in a new setting."
+      },
+      {
+        "kind": "review",
+        "targetId": "a2-m02-review-queue",
+        "rationale": "Strengthen food vocabulary from your module."
+      }
+    ],
+    "relatedReviewItems": ["rev-lemma-koffie", "rev-phrase-mag-ik"],
+    "confidenceMessage": "You're developing solid café-ordering confidence — one more guided run, then try semi-guided.",
+    "metadata": {}
+  },
+  "extractedReviewItemIds": ["rev-lemma-koffie"],
+  "draftReviewItems": [
+    {
+      "id": "rev-practice-generated-melk-001",
+      "sourceLessonId": "a2-m02-food-shopping",
+      "type": "phrase",
+      "prompt": "How do you say: 'With milk, please' (at the counter)?",
+      "expectedAnswer": "Met melk, alstublieft.",
+      "variants": ["Met melk alstublieft."],
+      "difficulty": "A2_mid",
+      "tags": ["practice_extract", "food_drink"],
+      "metadata": { "origin": "practice_session", "sessionId": "psr-demo-cafe-001" }
+    }
+  ],
+  "mistakeSignals": [],
+  "abilityProgress": [
+    {
+      "abilityId": "ability-order-food-drink",
+      "previousProficiency": "weak",
+      "newProficiency": "developing",
+      "evidenceSummary": "Completed guided café objectives with high task score.",
+      "metadata": {}
+    }
+  ],
+  "confidenceChanges": [
+    {
+      "subject": {
+        "kind": "ability",
+        "id": "ability-order-food-drink"
+      },
+      "confidenceLevel": "developing",
+      "trend": "up",
+      "sourceSignals": { "overallScore": 0.82, "sessionCount": 3 },
+      "lastUpdated": "2025-03-26T14:04:30.000Z",
+      "metadata": {}
+    }
+  ],
+  "xpAwarded": [
+    {
+      "amount": 20,
+      "reason": "practice_session_complete",
+      "ref": "psr-demo-cafe-001"
+    }
+  ],
+  "streakImpact": {
+    "qualified": true,
+    "reason": "min_turns_met"
+  },
+  "metadata": {
+    "clientVersion": "1.0.0",
+    "orchestrator": "mock"
+  }
+}

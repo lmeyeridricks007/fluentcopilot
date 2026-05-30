@@ -1,0 +1,40 @@
+{
+  "id": "a2-u02",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.1",
+  "title": "Early A2 — Food & shopping",
+  "summary": "Shop for food, ask about products, pay, and express preferences and dietary needs.",
+  "objectives_can_do": [
+    "Ask for items and quantities in a supermarket, market, or bakery",
+    "Understand prices, offers, and simple labels on packaging",
+    "Say what you like or avoid (allergies, vegetarian) in simple sentences",
+    "Handle basic checkout phrases and payment methods",
+    "Read a short shopping list or recipe instruction at A2 level",
+    "Make a simple complaint or request (e.g. wrong product) politely"
+  ],
+  "integration_scripts_summary": "Albert Heijn-style checkout, dietary phrases, paying by card.",
+  "grammar_focus": [
+    "modal verbs: willen, kunnen, mogen (polite requests)",
+    "measure words and containers (een kilo, een pak, een fles)",
+    "comparatives (goedkoper, lekkerder) in short opinions",
+    "imperatives for shopping (Geeft u mij …, Mag ik …)"
+  ],
+  "vocabulary_domains": [
+    "groceries",
+    "quantities",
+    "tastes",
+    "payments",
+    "diet"
+  ],
+  "lesson_ids": [
+    "a2-u02-l01",
+    "a2-u02-l02",
+    "a2-u02-l03",
+    "a2-u02-l04",
+    "a2-u02-l05",
+    "a2-u02-l06",
+    "a2-u02-l07",
+    "a2-u02-l08"
+  ]
+}

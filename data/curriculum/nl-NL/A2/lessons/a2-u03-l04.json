@@ -1,0 +1,289 @@
+{
+  "id": "a2-u03-l04",
+  "unit_id": "a2-u03",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "D",
+    "primary_skills": [
+      "listening"
+    ]
+  },
+  "catalog": {
+    "title": "Listening · Details you only hear if you wait",
+    "description": "Details you only hear if you wait · A2 listening in “Housing & neighbourhood”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Home & neighbourhood",
+    "type": "listening",
+    "durationMinutes": 24,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can follow a longer listening clip about housing & neighbourhood, catching details, numbers, and speaker intentions",
+    "can_do_outcomes": [
+      "Give simple directions inside a flat or small building",
+      "Express likes/dislikes about living area and facilities",
+      "Track details in a longer clip using the transcript."
+    ],
+    "grammar_primary": "a2.1-possessives",
+    "grammar_primary_label": "Possessives (mijn, jouw, onze)",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "huisregels",
+      "afvalscheiding",
+      "parkeerplaats",
+      "huur",
+      "borg",
+      "sleutel",
+      "buren",
+      "lift",
+      "kelder",
+      "dak"
+    ],
+    "grammar_points": [
+      {
+        "point": "prepositions of place (naast, boven, achter, tussen)",
+        "examples_nl": [
+          "Er zijn twee fietsenstallingen bij het flatgebouw.",
+          "Er is een kleine lek in de badkamer."
+        ],
+        "examples_en": [
+          "There are two bike sheds by the block.",
+          "There is a small leak in the bathroom."
+        ]
+      },
+      {
+        "point": "er + locative (er is, er zijn)",
+        "examples_nl": [
+          "Jouw sleutel ligt op de keukentafel.",
+          "Onze huur is inclusief servicekosten."
+        ],
+        "examples_en": [
+          "Your key is on the kitchen table.",
+          "Our rent includes service charges."
+        ]
+      },
+      {
+        "point": "possessive pronouns (mijn, jouw, zijn/haar, ons)",
+        "examples_nl": [
+          "Ik bel de verhuurder over het plafond.",
+          "De buren wonen boven ons appartement."
+        ],
+        "examples_en": [
+          "I'm calling the landlord about the ceiling.",
+          "The neighbours live above our flat."
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about housing & neighbourhood in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 9,
+    "practice_minutes": 9,
+    "check_minutes": 4,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Follow a longer listening clip about housing & neighbourhood, catching details, numbers, and speaker intentions\n\n**Grammar thread today:** Possessives (mijn, jouw, onze) — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **Housing & neighbourhood**.\n\nWords you might use today:\n• **huisregels**\n• **afvalscheiding**\n• **parkeerplaats**\n• **huur**\n• **borg**\n• **sleutel**\n• **buren**\n• **lift**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren belde ik de verhuurder over een klein probleem. Daarna deed ik boodschappen in de buurt en ruimde ik de keuken op.",
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "huisregels",
+          "huur"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Listen & read",
+        "activity": "**Listening focus**\n\nPlay the audio twice if you can (slow speed first is fine).\n\n**Transcript** (read along on the second listen):\n\nBuurman: Hallo, ik woon boven u. Ik hoorde water in de badkamer.\nBuurvrouw: O nee! Ik bel direct de verhuurder. Hebt u een foto van het plafond?\nBuurman: Ja, ik stuur ze via de app. Misschien is de afvoer verstopt.\nBuurvrouw: Bedankt voor het seintje. Ik ben vandaag thuis tot vijf uur.\n\n**While you listen:** underline in your mind who wants what and any numbers you hear.",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "illustration": {
+          "src": "/curriculum/nl-NL/A2/illustrations/listening-focus.svg",
+          "alt": "Headphones icon suggesting focused listening before reading the transcript",
+          "width": 320,
+          "height": 100
+        },
+        "skill_focus": "listening",
+        "listening_level": "slow"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Today's grammar — possessives**\n\n**Rule:** *mijn, jouw, zijn, haar, ons/onze, jullie* agree in a natural way with the following noun (*onze huur*).\n\n**Patterns:**\n• *Onze buren zijn rustig.* · *Jouw paspoort ligt in de la.*\n\n**Produce:**\n1. Two true sentences: *mijn …* and *onze / jullie …*.\n2. Ask whose object it is: *Wiens … is dit?* (or *Van wie is …?*).\n\n**Pronunciation (listen + repeat)**\n**Pronunciation — final -n:** *eten, gaan* — don’t swallow the *-n* completely in careful speech.\n\n**Language focus — patterns you can reuse**\n\n**prepositions of place (naast, boven, achter, tussen)**\n• NL: Er zijn twee fietsenstallingen bij het flatgebouw. / Er is een kleine lek in de badkamer.\n• EN: There are two bike sheds by the block. / There is a small leak in the bathroom.\n\n**er + locative (er is, er zijn)**\n• NL: Jouw sleutel ligt op de keukentafel. / Onze huur is inclusief servicekosten.\n• EN: Your key is on the kitchen table. / Our rent includes service charges.\n\n**possessive pronouns (mijn, jouw, zijn/haar, ons)**\n• NL: Ik bel de verhuurder over het plafond. / De buren wonen boven ons appartement.\n• EN: I'm calling the landlord about the ceiling. / The neighbours live above our flat.\n\n**Try this:** pick one Dutch sentence above and change only the time or the person (ik → wij / vandaag → morgen), **or** do the “Produce” task from the grammar box above.\n",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "huisregels",
+          "huur"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Before listening:** guess three words you might hear (write them).\n\n**2 — Gist:** is this about work, family, travel, or shopping?\n\n**3 — Numbers:** write every number or time you hear in the script.\n\n**4 — Who:** who takes which action (choose: A / B / both)?\n\n**5 — Polite or informal:** find one **u**-sentence and one **je/jij**-sentence.\n\n**6 — Paraphrase:** in English, one sentence — what do they want?\n\n**7 — Shadowing:** read one speaker's lines aloud with the transcript.\n\n**8 — New chunk:** pick one phrase to use in your own week.\n\n**Script reminder:**\nBuurman: Hallo, ik woon boven u. Ik hoorde water in de badkamer.\nBuurvrouw: O nee! Ik bel direct de verhuurder. Hebt u een foto van het plafond?\nBuurman: Ja, ik stuur ze via de app. Misschien is de afvoer verstopt.\nBuurvrouw: Bedankt voor het seintje. Ik ben vandaag thuis tot vijf uur.\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *Buurman: Hallo, ik woon boven u. Ik hoorde water in de badkamer.*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *Buurman: Hallo, ik woon boven u. Ik hoorde water in de badkamer.*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **huisregels** and fits *Possessives (mijn, jouw, onze)*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Phrase bank (use freely)**\n• huisregels\n• afvalscheiding\n• parkeerplaats\n• huur\n• borg\n• sleutel\n• buren\n• lift\n• kelder\n• dak\n\n**Your task:** Write or say **4–6 short sentences** in Dutch about this unit theme.\nRules: include **at least one question** and one connector (**en**, **maar**, or **want**).\n\n**Example starter (you can change it):**\nVandaag … Ik wil … **want** … **En jij?**",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "mixed",
+        "recycle_lemmas": [
+          "huisregels",
+          "huur"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "word_order"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "modal_choice"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "word_order",
+                "polite_register"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "verb_position",
+                "article"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **huisregels**.",
+              "exampleAnswer": "Example: *Ik wil graag huisregels met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Writing · Requests that do not sound rude** — we keep building **Housing & neighbourhood** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\n**Balkon rules** and shared laundry slots sound boring until you need them. The word *buren* covers everyone from best friends to people you only nod to.\n\n**Phrases — landlord & neighbours**\n\n| Dutch | English |\n|-------|--------|\n| *Ik wil een storing melden.* | I want to report a fault. |\n| *Kunt u kijken naar het plafond?* | Could you look at the ceiling? |\n| *Tot welke tijd is het stil in het portiek?* | Until what time is it quiet in the stairwell? |\n\n**Mini dialogue**\n\n**Buur:** Goedemorgen, ik hoorde water in de badkamer.\n**Jij:** O nee, ik bel de verhuurder en stuur u een foto.\n**Buur:** Dank je, ik ben tot vijf uur thuis.\n\n**Say or write:** One polite line to report a small problem at home.\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **huisregels** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": null,
+    "listening_asset_id": "a2_listen_03_04",
+    "notes": "Slow audio assumed for lines marked *slow* in builder CMS."
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  },
+  "content_outline": {
+    "listening_script_nl": "Buurman: Hallo, ik woon boven u. Ik hoorde water in de badkamer.\nBuurvrouw: O nee! Ik bel direct de verhuurder. Hebt u een foto van het plafond?\nBuurman: Ja, ik stuur ze via de app. Misschien is de afvoer verstopt.\nBuurvrouw: Bedankt voor het seintje. Ik ben vandaag thuis tot vijf uur."
+  }
+}

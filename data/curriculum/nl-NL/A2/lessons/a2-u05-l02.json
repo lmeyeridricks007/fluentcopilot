@@ -1,0 +1,280 @@
+{
+  "id": "a2-u05-l02",
+  "unit_id": "a2-u05",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "A",
+    "primary_skills": [
+      "listening",
+      "reading"
+    ]
+  },
+  "catalog": {
+    "title": "Listen & read · Ears and eyes on realistic turns",
+    "description": "Ears and eyes on realistic turns · A2 listen & read in “Health & body”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Health",
+    "type": "dialogue",
+    "durationMinutes": 21,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can understand short input about health & body, notice useful chunks, and answer gist/detail questions",
+    "can_do_outcomes": [
+      "Make a short appointment request with a huisartsenpraktijk",
+      "Ask for over-the-counter medicine with basic constraints",
+      "Follow a short exchange in this theme and reuse one chunk."
+    ],
+    "grammar_primary": "a2.2-perfectum-short",
+    "grammar_primary_label": "Perfectum (hebben/zijn + voltooid deelwoord)",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "hoofdpijn",
+      "keel",
+      "neus",
+      "verkouden",
+      "apotheek",
+      "recept",
+      "paracetamol",
+      "rust",
+      "afspraak",
+      "huisarts",
+      "spoed",
+      "koorts"
+    ],
+    "grammar_points": [
+      {
+        "point": "reflexive verbs (zich voelen, zich wassen)",
+        "examples_nl": [
+          "Je wast je handen voor het eten.",
+          "Ik voel me vandaag niet zo goed."
+        ],
+        "examples_en": [
+          "You wash your hands before eating.",
+          "I don't feel so well today."
+        ]
+      },
+      {
+        "point": "modal zullen for soft advice (Je zult moeten …) — recognition",
+        "examples_nl": [
+          "Ik ben naar de huisartsenpraktijk gebeld.",
+          "Gisteren had ik koorts en een zere keel."
+        ],
+        "examples_en": [
+          "I called the GP practice.",
+          "Yesterday I had a fever and a sore throat."
+        ]
+      },
+      {
+        "point": "past tense recognition (ik had pijn) for narratives",
+        "examples_nl": [
+          "Ik heb vandaag al drie liter water gedronken.",
+          "De assistent vraagt of ik paracetamol verdraag."
+        ],
+        "examples_en": [
+          "I've already drunk three litres of water today.",
+          "The assistant asks if I tolerate paracetamol."
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about health & body in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 7,
+    "practice_minutes": 9,
+    "check_minutes": 3,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Understand short input about health & body, notice useful chunks, and answer gist/detail questions\n\n**Grammar thread today:** Perfectum (hebben/zijn + voltooid deelwoord) — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **Health & body**.\n\nWords you might use today:\n• **hoofdpijn**\n• **keel**\n• **neus**\n• **verkouden**\n• **apotheek**\n• **recept**\n• **paracetamol**\n• **rust**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren voelde ik me niet zo goed en bleef ik thuis. Ik dronk veel thee en rustte 's middags even. 's Avonds ging het al wat beter.",
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "hoofdpijn",
+          "verkouden"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Listen & read",
+        "activity": "**Listen & read** this short conversation. Read twice: first for gist, then for details.\n\n**Assistent:** Huisartsenpost, goedenavond.\n\n**Beller:** Mijn kind heeft koorts en wil niet eten.\n\n**Assistent:** Hoe oud is uw kind en sinds wanneer?\n\n**Beller:** Zes jaar, sinds vanmiddag. 38,5 graden.\n\n**Assistent:** Bel uw eigen huisarts morgenochtend. Bij ademnood of bewusteloosheid: bel 112.\n\n**Gist check:** Who are the people, and what is the situation?\n**Detail check:** Note one time phrase or place you recognise.",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Today's grammar — perfectum (short)**\n\n**Rule:** *hebben/zijn + voltooid deelwoord* for completed experiences: *Ik **heb** gewerkt*, *Ik **ben** gekomen*.\n\n**Patterns:**\n• *Gisteren heb ik boodschappen gedaan.* · *Ben je op tijd gekomen?*\n\n**Produce:**\n1. One sentence: what you did yesterday (*gisteren heb ik …*).\n2. One question with *heb je …* or *ben je …*.\n\n**Pronunciation (listen + repeat)**\n**Pronunciation — final -n:** *eten, gaan* — don’t swallow the *-n* completely in careful speech.\n\n**Language focus — patterns you can reuse**\n\n**reflexive verbs (zich voelen, zich wassen)**\n• NL: Je wast je handen voor het eten. / Ik voel me vandaag niet zo goed.\n• EN: You wash your hands before eating. / I don't feel so well today.\n\n**modal zullen for soft advice (Je zult moeten …) — recognition**\n• NL: Ik ben naar de huisartsenpraktijk gebeld. / Gisteren had ik koorts en een zere keel.\n• EN: I called the GP practice. / Yesterday I had a fever and a sore throat.\n\n**past tense recognition (ik had pijn) for narratives**\n• NL: Ik heb vandaag al drie liter water gedronken. / De assistent vraagt of ik paracetamol verdraag.\n• EN: I've already drunk three litres of water today. / The assistant asks if I tolerate paracetamol.\n\n**Try this:** pick one Dutch sentence above and change only the time or the person (ik → wij / vandaag → morgen), **or** do the “Produce” task from the grammar box above.\n",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "hoofdpijn",
+          "verkouden"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Match** (say the pairs out loud)\n• **hoofdpijn** ↔ a word you connect with daily life\n• **keel** ↔ a place or thing from this unit\n\n**2 — Gap-fill**\nComplete: Ik _____ om acht uur. *(opstaan → stem: Ik **sta** … **op**)*\n\n**3 — Mini dialogue**\n**A:** Hoe laat ben je klaar? **B:** Om half zes, denk ik.\n\n**4 — Find the odd one**\nWhich word fits *least* with this unit: **neus**, **broodje**, **trein**? Why?\n\n**5 — True / false**\nSay **waar** or **niet waar**: \"In Dutch, the verb often moves when you ask a yes/no question.\"\n\n**6 — Your sentence**\nWrite one true sentence about yourself using **hoofdpijn** or **keel**.\n\n**7 — Transform**\nMake this informal line a bit more formal: \"Kun je me helpen?\" → start with **Kunt u …**\n\n**8 — Quick translation check**\n\"Je wast je handen voor het eten.\" — what does it mean in English (your own words)?\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *Assistent: Huisartsenpost, goedenavond.*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *Assistent: Huisartsenpost, goedenavond.*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **hoofdpijn** and fits *Perfectum (hebben/zijn + voltooid deelwoord)*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Phrase bank (use freely)**\n• hoofdpijn\n• keel\n• neus\n• verkouden\n• apotheek\n• recept\n• paracetamol\n• rust\n• afspraak\n• huisarts\n• spoed\n• koorts\n\n**Your task:** Write or say **4–6 short sentences** in Dutch about this unit theme.\nRules: include **at least one question** and one connector (**en**, **maar**, or **want**).\n\n**Example starter (you can change it):**\nVandaag … Ik wil … **want** … **En jij?**",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "mixed",
+        "recycle_lemmas": [
+          "hoofdpijn",
+          "verkouden"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "verb_position"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "article"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "word_order"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "modal_choice"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **hoofdpijn**.",
+              "exampleAnswer": "Example: *Ik wil graag hoofdpijn met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Patterns & drills · Quick-fire patterns on the bus** — we keep building **Health & body** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\n**Apotheek** staff explain *hoe vaak* and *met eten* patiently; repeating back dosage (*drie keer per dag*) shows you understood.\n\n**Phrases — GP & pharmacy**\n\n| Dutch | English |\n|-------|--------|\n| *Ik wil graag een afspraak maken.* | I'd like to make an appointment. |\n| *Ik ben verkouden sinds maandag.* | I've had a cold since Monday. |\n| *Hoe vaak moet ik deze pillen innemen?* | How often should I take these pills? |\n\n**Mini dialogue**\n\n**Assistent:** Huisartsenpraktijk Noord, goedemiddag.\n**Patiënt:** Goedemiddag, ik heb last van mijn keel en lichte koorts.\n**Assistent:** Dokter kan u om 16:10 zien. Neem uw zorgpas mee.\n\n**Say or write:** Name one symptom + duration in Dutch.\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **hoofdpijn** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": "a2-u05_l02_dlg",
+    "listening_asset_id": null,
+    "notes": "Slow audio assumed for lines marked *slow* in builder CMS."
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  }
+}

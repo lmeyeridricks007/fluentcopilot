@@ -1,0 +1,8 @@
+{
+  "features/speak-live/live/useLiveSpeakStt.ts -> microsoft-cognitiveservices-speech-sdk": {
+    "id": "features/speak-live/live/useLiveSpeakStt.ts -> microsoft-cognitiveservices-speech-sdk",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_microsoft-cognitiveservices-speech-sdk_distrib_lib_microsoft_-b66d34.js"
+    ]
+  }
+}

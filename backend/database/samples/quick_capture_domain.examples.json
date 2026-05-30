@@ -1,0 +1,125 @@
+{
+  "captureItemExample": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "userId": "internal-user-uuid",
+    "type": "voice_note",
+    "status": "ready_for_practice",
+    "createdAt": "2026-04-22T10:15:00.000Z",
+    "updatedAt": "2026-04-22T10:16:30.000Z",
+    "captureDate": "2026-04-22",
+    "rawText": "uh ik wilde vragen welk perron naar utrecht",
+    "cleanedText": "Ik wilde vragen welk perron naar Utrecht.",
+    "title": "At Amersfoort",
+    "description": "Announcement was fast; I asked the NS counter.",
+    "sourceSignals": ["heard", "tried_to_say"],
+    "placeId": null,
+    "placeLabel": "Amersfoort Centraal",
+    "scenarioTags": ["train-station", "public-transport"],
+    "skillTags": ["asking_questions", "vocabulary"],
+    "difficultyFeelings": ["froze", "unsure"],
+    "metadata": {
+      "clientBuild": "web",
+      "locale": "nl-NL"
+    },
+    "media": [
+      {
+        "kind": "audio",
+        "url": "https://storage.example/captures/clip-001.webm",
+        "mimeType": "audio/webm",
+        "durationMs": 12400,
+        "transcriptionText": "Ik wilde vragen welk perron naar Utrecht."
+      }
+    ],
+    "enrichment": {
+      "languageDetected": "nl",
+      "likelyMeaning": "Asking which platform for Utrecht train",
+      "englishGloss": "Which platform to Utrecht?",
+      "normalizedDutch": "Welk perron naar Utrecht?",
+      "likelyScenario": "train-station",
+      "likelyPlaceType": "station",
+      "likelySkillImpacts": ["follow_up_questions", "repair_clarification"],
+      "vocabularyCandidates": ["perron", "Utrecht"],
+      "phraseCandidates": ["Welk perron?", "Naar Utrecht?"],
+      "confidence": 0.82,
+      "llmNotes": ["Learner hesitated; good candidate for phrase_rep."],
+      "needsReview": false
+    },
+    "practiceRefs": ["pack-uuid-1"],
+    "archivedAt": null
+  },
+  "placeItemExample": {
+    "id": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+    "userId": "internal-user-uuid",
+    "label": "Albert Heijn near work",
+    "category": "supermarket",
+    "createdAt": "2026-04-20T08:00:00.000Z",
+    "lastUsedAt": "2026-04-22T09:00:00.000Z",
+    "scenarioTags": ["supermarket-shop", "food"]
+  },
+  "dailyCaptureBundleExample": {
+    "id": "b0eebc99-9c0b-4ef8-bb6d-6bb9bd380a11",
+    "userId": "internal-user-uuid",
+    "date": "2026-04-22",
+    "captureIds": ["3fa85f64-5717-4562-b3fc-2c963f66afa6", "a1b2c3d4-e5f6-7890-abcd-ef1234567890"],
+    "themeClusters": [
+      {
+        "id": "cluster-1",
+        "title": "Under pressure at the station",
+        "summary": "Voice note + pasted sign text about platforms and delays.",
+        "scenarioTags": ["train-station"],
+        "relatedCaptureIds": ["3fa85f64-5717-4562-b3fc-2c963f66afa6"],
+        "priorityScore": 0.91
+      }
+    ],
+    "generatedPracticePackIds": ["pack-uuid-1"]
+  },
+  "personalizedPracticePackExample": {
+    "id": "pack-uuid-1",
+    "userId": "internal-user-uuid",
+    "date": "2026-04-22",
+    "sourceCaptureIds": ["3fa85f64-5717-4562-b3fc-2c963f66afa6"],
+    "clusterIds": ["cluster-1"],
+    "title": "From your day",
+    "subtitle": "Real Dutch you saved today — short, focused reps.",
+    "estimatedMinutes": 8,
+    "level": "A2",
+    "items": [
+      {
+        "id": "item-1",
+        "type": "phrase_rep",
+        "prompt": "Repeat until it feels automatic.",
+        "config": {
+          "targetPhrase": "Welk perron naar Utrecht?",
+          "reps": 3
+        },
+        "sourceCaptureIds": ["3fa85f64-5717-4562-b3fc-2c963f66afa6"],
+        "skillTargets": ["asking_questions", "vocabulary"]
+      },
+      {
+        "id": "item-2",
+        "type": "mini_scenario",
+        "prompt": "Open Speak Live on the train-station scene.",
+        "config": {
+          "scenarioSlug": "train-station",
+          "level": "A2"
+        },
+        "sourceCaptureIds": ["3fa85f64-5717-4562-b3fc-2c963f66afa6"],
+        "skillTargets": ["fluency"]
+      },
+      {
+        "id": "item-3",
+        "type": "coach_debrief",
+        "prompt": "Optional: 3-minute Language Coach debrief.",
+        "config": {
+          "focus": "confidence_after_freeze"
+        },
+        "sourceCaptureIds": ["3fa85f64-5717-4562-b3fc-2c963f66afa6"],
+        "skillTargets": ["confidence"]
+      }
+    ],
+    "xpPotential": 22,
+    "status": "ready",
+    "createdAt": "2026-04-22T18:00:00.000Z",
+    "completedAt": null
+  }
+}

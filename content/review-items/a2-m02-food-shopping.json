@@ -1,0 +1,1834 @@
+{
+  "reviewItems": [
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-vt-lemma-supermarkt",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “supermarket”.",
+      "expectedAnswer": "supermarkt",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-supermarkt",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "supermarkt"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-vt-lemma-mandje",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “basket”.",
+      "expectedAnswer": "mandje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mandje",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "mandje"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-vt-lemma-kassa",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “checkout”.",
+      "expectedAnswer": "kassa",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kassa",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kassa"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-vt-lemma-aanbieding",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “offer; deal”.",
+      "expectedAnswer": "aanbieding",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-aanbieding",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "aanbieding"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-vt-lemma-vers",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “fresh”.",
+      "expectedAnswer": "vers",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-vers",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "vers"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-ph-neemt-u-een-mandje",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Will you take a basket?).",
+      "expectedAnswer": "Neemt u een mandje?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Neemt u een mandje?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-ph-vandaag-is-de-kaas-in-de-aanbieding",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Today the cheese is on offer.).",
+      "expectedAnswer": "Vandaag is de kaas in de aanbieding.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Vandaag is de kaas in de aanbieding."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-ph-bij-de-bakkerijhoek",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: At the bakery corner.).",
+      "expectedAnswer": "Bij de bakkerijhoek.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Bij de bakkerijhoek."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l01-listening-supermarket-gist-ph-waar-vind-ik-de-melk",
+      "sourceLessonId": "a2-m02-l01-listening-supermarket-gist",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Where do I find the milk?).",
+      "expectedAnswer": "Waar vind ik de melk?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Waar vind ik de melk?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-vt-lemma-prijs",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “price”.",
+      "expectedAnswer": "prijs",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-prijs",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "prijs"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-vt-lemma-euro",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “euro”.",
+      "expectedAnswer": "euro",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-euro",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "euro"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-vt-lemma-kilo",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “kilo”.",
+      "expectedAnswer": "kilo",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kilo",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kilo"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-vt-lemma-kaas",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “cheese”.",
+      "expectedAnswer": "kaas",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kaas",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kaas"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-vt-lemma-hoeveel",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how much”.",
+      "expectedAnswer": "hoeveel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoeveel",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "hoeveel"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions for price & availability”?",
+      "expectedAnswer": "Hoeveel kost deze kaas?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Questions for price & availability"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-ph-hoeveel-kost-dit",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: How much does this cost?).",
+      "expectedAnswer": "Hoeveel kost dit?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Hoeveel kost dit?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-ph-ik-wil-graag",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I would like …).",
+      "expectedAnswer": "Ik wil graag …",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Ik wil graag …"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l02-listen-read-prices-products-ph-nog-iets-anders",
+      "sourceLessonId": "a2-m02-l02-listen-read-prices-products",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Anything else?).",
+      "expectedAnswer": "Nog iets anders?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Nog iets anders?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-vt-lemma-mag",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “may (permission)”.",
+      "expectedAnswer": "mogen",
+      "variants": [
+        "mag"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mag",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "mogen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-vt-lemma-kan",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “can”.",
+      "expectedAnswer": "kunnen",
+      "variants": [
+        "kan"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kan",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kunnen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-vt-lemma-wil",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “want”.",
+      "expectedAnswer": "willen",
+      "variants": [
+        "wil"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wil",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "willen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-vt-lemma-alstublieft",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “please; here you go”.",
+      "expectedAnswer": "alstublieft",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-alstublieft",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "alstublieft"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-vt-lemma-graag",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “gladly; would like”.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-graag",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "graag"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-gt-a2.1-modals-requests",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for polite requests (mag / kan / wil)”?",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-modals-requests",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Modals for polite requests (mag / kan / wil)"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-ph-mag-ik-een-bon",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: May I have a receipt?).",
+      "expectedAnswer": "Mag ik een bon?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Mag ik een bon?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-ph-kan-ik-pinnen",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Can I pay by card?).",
+      "expectedAnswer": "Kan ik pinnen?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Kan ik pinnen?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l03-grammar-modals-polite-requests-ph-ik-wil-graag-melk",
+      "sourceLessonId": "a2-m02-l03-grammar-modals-polite-requests",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I would like milk.).",
+      "expectedAnswer": "Ik wil graag melk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Ik wil graag melk."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-vt-lemma-kilo",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “kilo”.",
+      "expectedAnswer": "kilo",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kilo",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kilo"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-vt-lemma-broodje",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “roll; sandwich”.",
+      "expectedAnswer": "broodje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-broodje",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "broodje"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-vt-lemma-appels",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “apples”.",
+      "expectedAnswer": "appel",
+      "variants": [
+        "appels"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-appels",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "appel"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-vt-lemma-melk",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “milk”.",
+      "expectedAnswer": "melk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-melk",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "melk"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-vt-lemma-tasje",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “bag”.",
+      "expectedAnswer": "tasje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-tasje",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "tasje"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-gt-a2.1-quantities-measures",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Quantities & measures”?",
+      "expectedAnswer": "Een kilo bananen, alstublieft.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-quantities-measures",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Quantities & measures"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-ph-een-kilo-bananen",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: A kilo of bananas.).",
+      "expectedAnswer": "Een kilo bananen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Een kilo bananen."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-ph-twee-broodjes-met-kaas",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Two rolls with cheese.).",
+      "expectedAnswer": "Twee broodjes met kaas.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Twee broodjes met kaas."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l04-practice-quantities-numbers-ph-een-pak-melk",
+      "sourceLessonId": "a2-m02-l04-practice-quantities-numbers",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: A carton of milk.).",
+      "expectedAnswer": "Een pak melk.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Een pak melk."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-vt-lemma-wil",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “want”.",
+      "expectedAnswer": "willen",
+      "variants": [
+        "wil"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wil",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "willen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-vt-lemma-graag",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “gladly; would like”.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-graag",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "graag"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-vt-lemma-brood",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “bread”.",
+      "expectedAnswer": "brood",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-brood",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "brood"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-vt-lemma-melk",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “milk”.",
+      "expectedAnswer": "melk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-melk",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "melk"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-vt-lemma-kaas",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “cheese”.",
+      "expectedAnswer": "kaas",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kaas",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kaas"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-gt-a2.1-modals-requests",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for polite requests (mag / kan / wil)”?",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-modals-requests",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Modals for polite requests (mag / kan / wil)"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l05-speaking-ask-for-items-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l05-speaking-ask-for-items",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-vt-lemma-bakker",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “baker; bakery”.",
+      "expectedAnswer": "bakker",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bakker",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "bakker"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-vt-lemma-markt",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “market”.",
+      "expectedAnswer": "markt",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-markt",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "markt"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-vt-lemma-cafe",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “café”.",
+      "expectedAnswer": "café",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-cafe",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "café"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-vt-lemma-broodje",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “roll; sandwich”.",
+      "expectedAnswer": "broodje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-broodje",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "broodje"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-vt-lemma-koffie",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “coffee”.",
+      "expectedAnswer": "koffie",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-koffie",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "koffie"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions for price & availability”?",
+      "expectedAnswer": "Hoeveel kost deze kaas?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Questions for price & availability"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-ph-twee-broodjes-graag",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Two rolls, please.).",
+      "expectedAnswer": "Twee broodjes, graag.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Twee broodjes, graag."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-ph-een-kilo-op-de-markt",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: A kilo … at the market.).",
+      "expectedAnswer": "Een kilo … op de markt.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Een kilo … op de markt."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l06-listening-bakery-market-cafe-ph-koffie-om-mee-te-nemen",
+      "sourceLessonId": "a2-m02-l06-listening-bakery-market-cafe",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: Coffee to go.).",
+      "expectedAnswer": "Koffie om mee te nemen.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Koffie om mee te nemen."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-vt-lemma-kopen",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to buy”.",
+      "expectedAnswer": "kopen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kopen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kopen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-vt-lemma-betalen",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to pay”.",
+      "expectedAnswer": "betalen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-betalen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "betalen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-vt-lemma-nemen",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to take”.",
+      "expectedAnswer": "nemen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nemen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "nemen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-vt-lemma-nodig",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “needed”.",
+      "expectedAnswer": "nodig",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nodig",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "nodig"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-vt-lemma-brengen",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to bring”.",
+      "expectedAnswer": "brengen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-brengen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "brengen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-ph-ik-koop-groente",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I buy vegetables.).",
+      "expectedAnswer": "Ik koop groente.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Ik koop groente."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-ph-ik-betaal-contant",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I pay cash.).",
+      "expectedAnswer": "Ik betaal contant.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Ik betaal contant."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l07-grammar-present-shopping-verbs-ph-ik-heb-suiker-nodig",
+      "sourceLessonId": "a2-m02-l07-grammar-present-shopping-verbs",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: I need sugar.).",
+      "expectedAnswer": "Ik heb suiker nodig.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Ik heb suiker nodig."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-vt-lemma-boodschappen",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “groceries”.",
+      "expectedAnswer": "boodschappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boodschappen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "boodschappen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-vt-lemma-nodig",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “needed”.",
+      "expectedAnswer": "nodig",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-nodig",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "nodig"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-vt-lemma-brengen",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to bring”.",
+      "expectedAnswer": "brengen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-brengen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "brengen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-vt-lemma-melk",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “milk”.",
+      "expectedAnswer": "melk",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-melk",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "melk"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-vt-lemma-brood",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “bread”.",
+      "expectedAnswer": "brood",
+      "difficulty": "A2_mid",
+      "tags": [
+        "food",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-brood",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "brood"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l08-writing-short-shopping-messages-gt-a2.1-modals-requests",
+      "sourceLessonId": "a2-m02-l08-writing-short-shopping-messages",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for polite requests (mag / kan / wil)”?",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-modals-requests",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Modals for polite requests (mag / kan / wil)"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-vt-lemma-mandje",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “basket”.",
+      "expectedAnswer": "mandje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mandje",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "mandje"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-vt-lemma-kassa",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “checkout”.",
+      "expectedAnswer": "kassa",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kassa",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kassa"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-vt-lemma-bon",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “receipt”.",
+      "expectedAnswer": "bon",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-bon",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "bon"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-vt-lemma-pinnen",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to pay by card”.",
+      "expectedAnswer": "pinnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-pinnen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "pinnen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-vt-lemma-tasje",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “bag”.",
+      "expectedAnswer": "tasje",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-tasje",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "tasje"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-gt-a2.1-modals-requests",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for polite requests (mag / kan / wil)”?",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-modals-requests",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Modals for polite requests (mag / kan / wil)"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l09-task-buy-three-items-gt-a2.1-quantities-measures",
+      "sourceLessonId": "a2-m02-l09-task-buy-three-items",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Quantities & measures”?",
+      "expectedAnswer": "Een kilo bananen, alstublieft.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-quantities-measures",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Quantities & measures"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-vt-lemma-hoeveel",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how much”.",
+      "expectedAnswer": "hoeveel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoeveel",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "hoeveel"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-vt-lemma-contant",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “cash”.",
+      "expectedAnswer": "contant",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-contant",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "contant"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-vt-lemma-kassa",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “checkout”.",
+      "expectedAnswer": "kassa",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kassa",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kassa"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-vt-lemma-alstublieft",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “please; here you go”.",
+      "expectedAnswer": "alstublieft",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-alstublieft",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "alstublieft"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-vt-lemma-graag",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “gladly; would like”.",
+      "expectedAnswer": "graag",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-graag",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "graag"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-gt-a2.1-modals-requests",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for polite requests (mag / kan / wil)”?",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-modals-requests",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Modals for polite requests (mag / kan / wil)"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions for price & availability”?",
+      "expectedAnswer": "Hoeveel kost deze kaas?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Questions for price & availability"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-ph-hoeveel-kost-dit",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: How much does this cost?).",
+      "expectedAnswer": "Hoeveel kost dit?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Hoeveel kost dit?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-ph-mag-ik-een-bon",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: May I have a receipt?).",
+      "expectedAnswer": "Mag ik een bon?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Mag ik een bon?"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l10-task-shop-dialogue-full-ph-dat-is-alles",
+      "sourceLessonId": "a2-m02-l10-task-shop-dialogue-full",
+      "type": "phrase",
+      "prompt": "Say in Dutch (meaning: That is all.).",
+      "expectedAnswer": "Dat is alles.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "phrase",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "moduleId": "a2-m02-food-shopping",
+        "phraseNl": "Dat is alles."
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-boodschappen",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “groceries”.",
+      "expectedAnswer": "boodschappen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-boodschappen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "boodschappen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-kassa",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “checkout”.",
+      "expectedAnswer": "kassa",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kassa",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kassa"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-hoeveel",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “how much”.",
+      "expectedAnswer": "hoeveel",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-hoeveel",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "hoeveel"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-mag",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “may (permission)”.",
+      "expectedAnswer": "mogen",
+      "variants": [
+        "mag"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-mag",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "mogen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-wil",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “want”.",
+      "expectedAnswer": "willen",
+      "variants": [
+        "wil"
+      ],
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-wil",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "willen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-kilo",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “kilo”.",
+      "expectedAnswer": "kilo",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-kilo",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "kilo"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-vt-lemma-pinnen",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "vocab",
+      "prompt": "Recall the Dutch word for “to pay by card”.",
+      "expectedAnswer": "pinnen",
+      "difficulty": "A2_mid",
+      "tags": [
+        "shopping",
+        "A2.1",
+        "vocab",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "vocabTargetId": "lemma-pinnen",
+        "moduleId": "a2-m02-food-shopping",
+        "lemma": "pinnen"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-gt-a2.1-modals-requests",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Modals for polite requests (mag / kan / wil)”?",
+      "expectedAnswer": "Mag ik een bon, alstublieft?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-modals-requests",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Modals for polite requests (mag / kan / wil)"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-gt-a2.1-present-tense",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Present tense in shopping lines”?",
+      "expectedAnswer": "Ik koop brood bij de bakker.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-present-tense",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Present tense in shopping lines"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-gt-a2.1-questions-basics",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Questions for price & availability”?",
+      "expectedAnswer": "Hoeveel kost deze kaas?",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-questions-basics",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Questions for price & availability"
+      }
+    },
+    {
+      "id": "rev-a2-m02-l11-review-food-shopping-mixed-gt-a2.1-quantities-measures",
+      "sourceLessonId": "a2-m02-l11-review-food-shopping-mixed",
+      "type": "grammar",
+      "prompt": "Which option best fits the pattern: “Quantities & measures”?",
+      "expectedAnswer": "Een kilo bananen, alstublieft.",
+      "difficulty": "A2_mid",
+      "tags": [
+        "grammar",
+        "a2-m02-food-shopping"
+      ],
+      "metadata": {
+        "grammarTargetId": "a2.1-quantities-measures",
+        "moduleId": "a2-m02-food-shopping",
+        "grammarLabel": "Quantities & measures"
+      }
+    }
+  ]
+}

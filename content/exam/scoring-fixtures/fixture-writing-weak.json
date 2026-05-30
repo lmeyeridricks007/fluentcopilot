@@ -1,0 +1,28 @@
+{
+  "_comment": "Writing — wrong genre / no task fulfilment → execution 0 → gate.",
+  "mode": "training",
+  "responseText": "Hallo ik ben Sam ik hou van pizza.",
+  "aiPayload": {
+    "scores": {
+      "execution": 0,
+      "grammar": 1,
+      "spelling": 2,
+      "clearness": 1,
+      "vocabulary": 1
+    },
+    "rationales": {
+      "execution": "No neighbor message; unrelated self-intro.",
+      "grammar": "Should not apply once execution is 0 — gated by engine."
+    },
+    "certainty": 0.62
+  },
+  "expected": {
+    "rawTotal": 0,
+    "maxTotal": 10,
+    "normalizedPercent": 0,
+    "pass": false,
+    "exerciseOutcomeBand": "fail",
+    "readinessLabel": "needs_work",
+    "executionGatingApplied": true
+  }
+}

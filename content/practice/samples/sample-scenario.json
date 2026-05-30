@@ -1,0 +1,184 @@
+{
+  "id": "practice-scenario-cafe-a2",
+  "title": "At the café",
+  "category": "food_drink",
+  "cefrLevel": "A2",
+  "moduleRefs": ["a2-m02-food-shopping"],
+  "summary": "Order a drink politely, respond to a follow-up, and close the interaction.",
+  "context": "You are at a Dutch café counter. The barista speaks Dutch. Keep it short and polite (u-form in service).",
+  "difficulty": "A2_mid",
+  "supportedModes": ["guided", "semi_guided", "free"],
+  "access": {
+    "premiumRequirement": "free_ok",
+    "usageLimitKey": "scenarios_per_week"
+  },
+  "personas": [
+    {
+      "id": "persona-cafe-barista",
+      "roleName": "Barista",
+      "scenarioCategory": "food_drink",
+      "tone": "warm_friendly",
+      "speakingStyle": "Short, clear sentences; offers one upsell.",
+      "difficultyLevel": "A2",
+      "languageConstraints": ["Dutch only unless learner asks for English help", "Max ~12 words per utterance", "Polite u-form"],
+      "behaviorRules": ["Stay in role", "Do not give long grammar explanations"],
+      "greetingStyle": "Welkom! Wat mag het zijn?",
+      "followUpStyle": "Offers melk/suiker or 'meenemen?' once.",
+      "metadata": {}
+    }
+  ],
+  "expectedSkills": [
+    {
+      "id": "skill-polite-request",
+      "name": "Polite requests",
+      "category": "pragmatics",
+      "description": "Use mag/kan/wil + infinitive appropriately in service context.",
+      "measurementHints": ["modal_choice", "please_phrase_present"],
+      "relatedAbilities": ["ability-order-food-drink"],
+      "metadata": {}
+    },
+    {
+      "id": "skill-service-listening",
+      "name": "Service listening gist",
+      "category": "listening",
+      "description": "Catch price and one follow-up question from barista.",
+      "measurementHints": ["price_recognition", "yes_no_reply"],
+      "relatedAbilities": ["ability-order-food-drink"],
+      "metadata": {}
+    }
+  ],
+  "objectives": [
+    {
+      "id": "obj-cafe-order",
+      "title": "Place an order",
+      "objectiveType": "transactional",
+      "description": "Order one drink using a polite request.",
+      "successCriteria": ["Uses polite modal or 'graag'", "Names item"],
+      "keyPhrases": ["Mag ik een koffie, alstublieft?", "Ik wil graag een thee."],
+      "relatedAbilities": ["ability-order-food-drink"],
+      "relatedExpectedSkills": ["skill-polite-request"],
+      "metadata": {}
+    },
+    {
+      "id": "obj-cafe-close",
+      "title": "Close politely",
+      "objectiveType": "social_ritual",
+      "description": "Thank and end the exchange.",
+      "successCriteria": ["Says thanks or bedankt"],
+      "relatedAbilities": ["ability-order-food-drink"],
+      "relatedExpectedSkills": ["skill-polite-request"],
+      "metadata": {}
+    }
+  ],
+  "scenarioStages": [
+    {
+      "id": "stage-cafe-greeting",
+      "title": "Greeting",
+      "order": 0,
+      "modeCompatibility": ["guided", "semi_guided", "free"],
+      "goal": "Start the interaction and hear the offer question.",
+      "hintAvailability": "on_request",
+      "expectedOutcome": "Learner understands the barista is ready to take an order.",
+      "successCriteria": ["Barista greeting acknowledged or order started"],
+      "difficulty": "A2_low",
+      "turnPlan": [
+        {
+          "id": "turn-barista-open",
+          "speakerType": "ai",
+          "turnType": "opening",
+          "promptText": "Goedemiddag! Wat mag het zijn?",
+          "modeFilter": ["guided", "semi_guided", "free"],
+          "scoringHooks": {
+            "objectiveIdsHit": []
+          },
+          "metadata": {}
+        },
+        {
+          "id": "turn-user-order-guided",
+          "speakerType": "user",
+          "turnType": "reply_expected",
+          "expectedUserIntent": "order_drink_polite",
+          "modeFilter": ["guided"],
+          "suggestedReplies": [
+            {
+              "id": "opt-koffie",
+              "textNl": "Mag ik een koffie, alstublieft?",
+              "translationEn": "May I have a coffee, please?",
+              "isModel": true,
+              "metadata": {}
+            },
+            {
+              "id": "opt-thee",
+              "textNl": "Ik wil graag een thee.",
+              "translationEn": "I would like a tea, please.",
+              "isModel": false,
+              "metadata": {}
+            }
+          ],
+          "supportToolsAvailable": ["hint", "phrase_bank"],
+          "scoringHooks": {
+            "objectiveIdsHit": ["obj-cafe-order"],
+            "skillWeightById": { "skill-polite-request": 1 },
+            "hintAllowed": true,
+            "maxPoints": 1
+          },
+          "metadata": {}
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "stage-cafe-followup",
+      "title": "Follow-up",
+      "order": 1,
+      "modeCompatibility": ["guided", "semi_guided", "free"],
+      "goal": "Answer a simple follow-up (e.g. milk, takeaway).",
+      "hintAvailability": "after_error",
+      "expectedOutcome": "Learner responds appropriately with short Dutch.",
+      "successCriteria": ["Appropriate ja/nee or short phrase"],
+      "difficulty": "A2_mid",
+      "turnPlan": [
+        {
+          "id": "turn-barista-followup",
+          "speakerType": "ai",
+          "turnType": "prompt",
+          "promptText": "Met melk?",
+          "scoringHooks": {},
+          "metadata": {}
+        },
+        {
+          "id": "turn-user-followup",
+          "speakerType": "user",
+          "turnType": "reply_expected",
+          "expectedUserIntent": "answer_yes_no_milk",
+          "modeFilter": ["semi_guided", "free"],
+          "supportToolsAvailable": ["simplify"],
+          "scoringHooks": {
+            "skillWeightById": { "skill-service-listening": 0.5 },
+            "hintAllowed": true
+          },
+          "metadata": {}
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "id": "stage-cafe-close",
+      "title": "Close",
+      "order": 2,
+      "modeCompatibility": ["guided", "semi_guided", "free"],
+      "goal": "Thank and finish.",
+      "hintAvailability": "none",
+      "expectedOutcome": "Polite closing.",
+      "successCriteria": ["Thanks given"],
+      "difficulty": "A2_low",
+      "metadata": {}
+    }
+  ],
+  "vocabTargets": ["lemma-koffie-m02", "lemma-thee-m02"],
+  "grammarTargets": ["a2.1-modals-requests"],
+  "metadata": {
+    "contentVersion": 1,
+    "locale": "nl-NL"
+  }
+}

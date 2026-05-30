@@ -1,0 +1,179 @@
+{
+  "scenarioId": "directions_getting_somewhere",
+  "version": 1,
+  "progressTotal": 3,
+  "intro": {
+    "headline": "Directions / getting somewhere",
+    "setting": "You're in the Netherlands and need to get somewhere nearby.",
+    "yourRole": "You're asking a local or staff for help.",
+    "situation": "Ask clearly, follow short directions, and confirm the route before you go."
+  },
+  "goals": [
+    "Ask how to get somewhere (destination + polite opener)",
+    "Follow or echo one directional phrase",
+    "Confirm the route in your own words"
+  ],
+  "phrases": [
+    { "id": "p-waar", "nl": "Waar is het station?", "en": "Where is the station?" },
+    { "id": "p-hoe", "nl": "Hoe kom ik bij het centrum?", "en": "How do I get to the city centre?" },
+    { "id": "p-herhaal", "nl": "Kunt u dat herhalen?", "en": "Could you repeat that?" },
+    { "id": "p-dus", "nl": "Dus eerst rechtdoor en dan links?", "en": "So straight on first, then left?" }
+  ],
+  "hintsByTurnId": {
+    "t_ask": "Use Waar is … / Hoe kom ik bij … + destination.",
+    "t_dir": "Short echo: Rechtdoor / links / rechts + optional Dank u.",
+    "t_check": "Dus … + sequence, or Klopt dat? to check.",
+    "t_close": "Short Tot ziens / fijne dag."
+  },
+  "startTurnId": "t_ask",
+  "turns": [
+    {
+      "id": "t_ask",
+      "aiMessage": "Goedemiddag, kan ik u helpen?",
+      "freedomTier": "full_support",
+      "suggestedReplies": [
+        {
+          "id": "r_station",
+          "nl": "Excuseer, waar is het station, alstublieft?",
+          "en": "Excuse me, where is the station, please?",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_centrum",
+          "nl": "Hoe kom ik bij het centrum?",
+          "en": "How do I get to the city centre?",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Ask for directions…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_station": "t_dir",
+        "r_centrum": "t_dir"
+      },
+      "nextFallbackId": "t_dir"
+    },
+    {
+      "id": "t_dir",
+      "aiMessage": "Loop rechtdoor tot het stoplicht, dan links. Het station is aan uw rechterhand.",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_ok",
+          "nl": "Dus rechtdoor, bij het stoplicht links. Dank u wel.",
+          "en": "So straight on, at the lights left. Thank you.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_repeat",
+          "nl": "Kunt u dat nog een keer zeggen?",
+          "en": "Could you say that again?",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Echo directions or ask to repeat…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_ok": "t_check",
+        "r_repeat": "t_dir_repeat"
+      },
+      "nextFallbackId": "t_check"
+    },
+    {
+      "id": "t_dir_repeat",
+      "aiMessage": "Natuurlijk: rechtdoor, bij het stoplicht links.",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_thanks",
+          "nl": "Prima, dank u wel.",
+          "en": "Great, thank you.",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Thank or confirm…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_thanks": "t_check"
+      },
+      "nextFallbackId": "t_check"
+    },
+    {
+      "id": "t_check",
+      "aiMessage": "Klopt dat zo voor u?",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_yes",
+          "nl": "Ja, dat klopt. Dank u wel.",
+          "en": "Yes, that's right. Thank you.",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_double",
+          "nl": "Dus het station is na het stoplicht aan de rechterkant?",
+          "en": "So the station is on the right after the lights?",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Confirm or check one detail…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_yes": "t_close",
+        "r_double": "t_close"
+      },
+      "nextFallbackId": "t_close"
+    },
+    {
+      "id": "t_close",
+      "aiMessage": "Prima. Succes en prettige dag verder!",
+      "freedomTier": "light",
+      "suggestedReplies": [
+        {
+          "id": "r_bye",
+          "nl": "Dank u, tot ziens!",
+          "en": "Thanks, goodbye!",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Short goodbye…",
+      "acceptAnyCustomText": true,
+      "terminalAfterUser": true,
+      "endOutcome": "success"
+    }
+  ],
+  "evaluation": {
+    "successTitle": "You asked, listened, and confirmed like a local",
+    "partialTitle": "Good flow — sharpen one confirmation phrase",
+    "needsPracticeTitle": "Directions Dutch needs another short rep",
+    "wentWellBullets": [
+      "You named a clear destination",
+      "You echoed directions in short Dutch",
+      "You checked uncertainty politely"
+    ],
+    "improveBullets": [
+      "Try Dus eerst … dan … to lock in sequence",
+      "Use Kunt u dat herhalen? when audio or pace is unclear",
+      "Add alstublieft for a natural opener in busy places"
+    ],
+    "betterPhrases": [
+      { "nl": "Waar is de dichtstbijzijnde apotheek?", "en": "Where is the nearest pharmacy?" },
+      { "nl": "Bij het stoplicht rechts, klopt dat?", "en": "Right at the traffic lights, is that correct?" }
+    ],
+    "nextActions": [
+      { "label": "Repeat this scenario", "href": "/app/practice/scenario/directions_getting_somewhere", "variant": "primary" },
+      { "label": "Speak Live · Directions", "href": "/app/talk/live/run?scenarioId=directions_getting_somewhere&level=A2", "variant": "secondary" },
+      { "label": "Browse scenarios", "href": "/app/practice/scenarios", "variant": "ghost" }
+    ]
+  },
+  "metadata": {
+    "contentType": "guided_scenario",
+    "locale": "nl-NL",
+    "instructionLocale": "en"
+  }
+}

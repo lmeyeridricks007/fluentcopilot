@@ -1,0 +1,685 @@
+from .common import (
+    LM,
+    MID,
+    discovery_step,
+    fb,
+    listening_step,
+    mcq,
+    pl,
+    preview_step,
+    recap_step,
+    ro_tokens,
+    rt_fb,
+    rt_listen_mcq,
+    rt_ro,
+    rt_speak,
+    scenario_chat_step,
+    speak_step,
+)
+
+
+def lesson_l09() -> dict:
+    lid = "a2-m07-l09-task-ticket-route-guided"
+    return {
+        "id": lid,
+        "moduleId": MID,
+        "title": "Real-life task · Buy a ticket or ask for a route (guided)",
+        "lessonType": "task",
+        "order": 8,
+        "cefrLevel": "A2",
+        "durationEstimate": 15,
+        "grammarTargets": ["a2.2-transport-questions", "a2.2-moeten-kunnen-transport"],
+        "vocabTargets": ["lemma-kaartje", "lemma-retour", "lemma-enkele-reis", "lemma-ticketautomaat", "lemma-station"],
+        "canDoStatements": [
+            "I can complete a short guided ticket desk flow: destination, ticket type, price check, thanks.",
+        ],
+        "mistakeFocus": ["practical-phrases", "question-forms"],
+        "metadata": LM,
+        "steps": [
+            preview_step(
+                "m07-l09-preview",
+                "Warm-up — 5 woorden",
+                [
+                    ("enkele reis", "reis", "single ticket", "🎫"),
+                    ("retour", "retour", "return", "↩️"),
+                    ("2e klas", "klas", "2nd class", "💺"),
+                    ("pin", "pinnen", "pay by card", "💳"),
+                    ("saldo", "saldo", "balance (card)", "💶"),
+                ],
+            ),
+            listening_step(
+                "m07-l09-listen",
+                "Model — balie",
+                [
+                    (
+                        "Jij",
+                        "Goedemiddag. Ik wil graag een kaartje naar Haarlem, enkele reis.",
+                        "Good afternoon. I'd like a ticket to Haarlem, single.",
+                    ),
+                    (
+                        "Medewerker",
+                        "Prima. Tweede klas?",
+                        "Fine. Second class?",
+                    ),
+                    (
+                        "Jij",
+                        "Ja, tweede klas graag. Kan ik pinnen?",
+                        "Yes, second class please. Can I pay by card?",
+                    ),
+                    (
+                        "Medewerker",
+                        "Ja, dat kan. Het is 5,20 euro. Hier is uw kaartje.",
+                        "Yes, you can. It's 5.20 euros. Here is your ticket.",
+                    ),
+                    (
+                        "Jij",
+                        "Dank u wel. Moet ik nog ergens inchecken?",
+                        "Thank you. Do I still have to check in somewhere?",
+                    ),
+                    (
+                        "Medewerker",
+                        "Ja, check in bij de poortjes voor je instapt.",
+                        "Yes, check in at the gates before you board.",
+                    ),
+                ],
+                [
+                    ("Waar wil je naartoe?", ["Haarlem", "Hawaii", "Hamburg"], "Haarlem"),
+                    ("Welk type kaartje?", ["Enkele reis", "Retour naar de maan", "Gratis pizza"], "Enkele reis"),
+                    ("Hoe wil je betalen?", ["Pinnen", "Met appels", "Niet betalen"], "Pinnen"),
+                    ("Hoeveel kost het?", ["5,20 euro", "520 euro", "Gratis"], "5,20 euro"),
+                    ("Wat moet je nog doen voor je instapt?", ["Inchecken bij poortjes", "Zwemmen", "Slapen"], "Inchecken bij poortjes"),
+                ],
+            ),
+            scenario_chat_step(
+                "m07-l09-chat",
+                "Mini-sim — jij kiest antwoorden",
+                [
+                    (
+                        "Medewerker",
+                        "Goedenavond. Waar wilt u naartoe?",
+                        "Good evening. Where do you want to go?",
+                    ),
+                    (
+                        "Jij (kies)",
+                        "Ik wil graag een kaartje naar Utrecht Centraal.",
+                        "I'd like a ticket to Utrecht Central.",
+                    ),
+                    (
+                        "Medewerker",
+                        "Enkele reis of retour?",
+                        "Single or return?",
+                    ),
+                    (
+                        "Jij (kies)",
+                        "Een retour, graag. Tweede klas.",
+                        "A return, please. Second class.",
+                    ),
+                    (
+                        "Medewerker",
+                        "Dat is 26 euro. Wilt u pinnen?",
+                        "That's 26 euros. Would you like to pay by card?",
+                    ),
+                    (
+                        "Jij (kies)",
+                        "Ja, graag. Dank u wel.",
+                        "Yes, please. Thank you.",
+                    ),
+                    (
+                        "Medewerker",
+                        "Uw kaartje is vandaag geldig. Vergeet niet in te checken bij de poortjes.",
+                        "Your ticket is valid today. Don't forget to check in at the gates.",
+                    ),
+                    (
+                        "Jij (kies)",
+                        "Oké. Waar zijn de perrons?",
+                        "Okay. Where are the platforms?",
+                    ),
+                    (
+                        "Medewerker",
+                        "Volg de borden ‘Perrons’. Die vindt u rechts, na de roltrap.",
+                        "Follow the ‘Platforms’ signs. You'll find them on the right, after the escalator.",
+                    ),
+                ],
+                [
+                    ("Wat is je bestemming in de sim?", ["Utrecht Centraal", "Utrecht Lunetten", "Utrecht Overvecht"], "Utrecht Centraal"),
+                    ("Wat koop je?", ["Retour, tweede klas", "Alleen tweede klas zonder bestemming", "Een kaartje voor de bus in Duitsland"], "Retour, tweede klas"),
+                    ("Hoe betaal je?", ["Pinnen", "Alleen met briefjes van 500 euro", "Niet"], "Pinnen"),
+                    ("Wat zeg je om beleefd te sluiten (eerste keer)?", ["Dank u wel", "Tot nooit", "Geef geld nu"], "Dank u wel"),
+                    ("Wat moet je met je kaartje vóór je instapt?", ["Inchecken bij de poortjes", "Het kaartje weggooien", "Niets, alleen tonen aan de conducteur"], "Inchecken bij de poortjes"),
+                    ("Waar vind je de perrons volgens de medewerker?", ["Borden ‘Perrons’, rechts na de roltrap", "Links bij de fietsenstalling zonder borden", "Alleen via de taxistandplaats"], "Borden ‘Perrons’, rechts na de roltrap"),
+                ],
+            ),
+            discovery_step(
+                "m07-l09-discovery",
+                "Vaste formules balie",
+                [
+                    ("Ik wil graag een kaartje naar …", "I'd like a ticket to …", "wens"),
+                    ("Enkele reis / retour", "Single / return", "type"),
+                    ("Kan ik pinnen?", "Can I pay by card?", "betalen"),
+                    ("Dank u wel.", "Thank you.", "afsluiten"),
+                ],
+            ),
+            pl(
+                "m07-l09-pl1",
+                "Practice — 6×",
+                ["kaartje", "retour", "pinnen"],
+                [
+                    mcq(
+                        "m07-l09-a1",
+                        "Natuurlijke openingszin",
+                        ["Goedemiddag, ik wil graag een kaartje naar Leiden.", "Goedemiddag, ik wil graag een kaartje naar Mars.", "Kaartje wil ik goedemiddag."],
+                        "Goedemiddag, ik wil graag een kaartje naar Leiden.",
+                    ),
+                    fb("m07-l09-a2", "___ reis = alleen heen, niet terug. (single)", ["Enkele", "Dubbele", "Gratis"], "Enkele"),
+                    ro_tokens("m07-l09-r1", ["klas?", "tweede", "Wilt", "u"], "Wilt u tweede klas?"),
+                    mcq(
+                        "m07-l09-a3",
+                        "Vraag over betalen",
+                        ["Kan ik contant betalen?", "Kan ik met sneeuw betalen?", "Contant kan ik betalen vraag?"],
+                        "Kan ik contant betalen?",
+                    ),
+                    mcq(
+                        "m07-l09-a4",
+                        "Als je het bedrag niet hoort",
+                        ["Hoeveel is het?", "Hoeveel is je schoenmaat?", "Het is hoeveel vraag?"],
+                        "Hoeveel is het?",
+                    ),
+                    mcq(
+                        "m07-l09-a5",
+                        "OV-chipkaart saldo",
+                        ["Ik wil saldo op mijn OV-chipkaart.", "Ik wil saldo op mijn broodje.", "Saldo chipkaart wil ik nooit."],
+                        "Ik wil saldo op mijn OV-chipkaart.",
+                    ),
+                    mcq(
+                        "m07-l09-a6",
+                        "Na het kopen",
+                        ["Waar is de ingang naar de perrons?", "Waar is de ingang naar de oceaan?", "Ingang perrons waar is?"],
+                        "Waar is de ingang naar de perrons?",
+                    ),
+                ],
+                depth=True,
+            ),
+            pl(
+                "m07-l09-pl2",
+                "Variatie — 6×",
+                ["inchecken", "uitchecken", "poortjes"],
+                [
+                    mcq(
+                        "m07-l09-b1",
+                        "Wat doe je bij de poortjes?",
+                        ["Eerst inchecken, later uitchecken", "Eerst slapen", "Niets, altijd"],
+                        "Eerst inchecken, later uitchecken",
+                    ),
+                    fb("m07-l09-b2", "___ u dat op een bonnetje? (want printed)", ["Wilt", "Eet", "Zwem"], "Wilt"),
+                    ro_tokens("m07-l09-r2", ["graag.", "tweede", "Een", "retour,", "klas"], "Een retour, tweede klas, graag."),
+                    mcq(
+                        "m07-l09-b3",
+                        "Als je twijfelt over de trein",
+                        ["Vertrekt deze trein naar Amsterdam?", "Vertrekt deze trein naar de maan?", "Trein deze Amsterdam vertrekt?"],
+                        "Vertrekt deze trein naar Amsterdam?",
+                    ),
+                    mcq(
+                        "m07-l09-b4",
+                        "Beleefd bij fout",
+                        ["Sorry, ik versta het niet goed.", "Sorry, ik eet het niet goed.", "Versta sorry ik niet."],
+                        "Sorry, ik versta het niet goed.",
+                    ),
+                    mcq(
+                        "m07-l09-b5",
+                        "‘Mag ik …?’ op balie",
+                        ["Mag ik ook een retour voor morgen?", "Mag ik ook een retour voor dinosaurus?", "Retour mag ik morgen?"],
+                        "Mag ik ook een retour voor morgen?",
+                    ),
+                    mcq(
+                        "m07-l09-b6",
+                        "Praktische check",
+                        ["Moet ik reserveren voor deze trein?", "Moet ik reserveren voor deze pizza?", "Reserveren moet trein?"],
+                        "Moet ik reserveren voor deze trein?",
+                    ),
+                ],
+                depth=True,
+            ),
+            speak_step(
+                "m07-l09-sp1",
+                "Jouw zin",
+                "Ik wil graag een enkele reis naar Rotterdam, tweede klas.",
+                [
+                    "Ik wil graag een enkele reis naar Rotterdam tweede klas",
+                    "Ik wil graag een enkele reis naar Rotterdam, tweede klas.",
+                ],
+                "Ik wil graag een enkele reis naar Rotterdam tweede klas",
+            ),
+            speak_step(
+                "m07-l09-sp2",
+                "Jouw zin",
+                "Kan ik pinnen? Hoeveel is het?",
+                ["Kan ik pinnen hoeveel is het", "Kan ik pinnen? Hoeveel is het?"],
+                "Kan ik pinnen hoeveel is het",
+            ),
+            speak_step(
+                "m07-l09-sp3",
+                "Afsluiten",
+                "Dank u wel, fijne dag nog.",
+                ["Dank u wel fijne dag nog", "Dank u wel, fijne dag nog."],
+                "Dank u wel fijne dag nog",
+            ),
+            speak_step(
+                "m07-l09-sp4",
+                "Check route",
+                "Waar is de ingang naar de treinen?",
+                ["Waar is de ingang naar de treinen", "waar is de ingang naar de treinen"],
+                "Waar is de ingang naar de treinen",
+            ),
+            recap_step(
+                "m07-l09-recap",
+                "Recap",
+                ["kaartje", "retour", "pinnen"],
+                [
+                    rt_fb("Ik wil graag een ___ naar Den Bosch. (ticket)", ["kaartje", "brood", "huis"], "kaartje"),
+                    rt_ro(["reis,", "Een", "enkele", "graag."], "Een enkele reis, graag."),
+                    rt_speak("Zeg: *Kan ik pinnen?*", "Kan ik pinnen?"),
+                    rt_listen_mcq(
+                        "Snippet:",
+                        "Check in bij de poortjes voor je instapt.",
+                        ["Inchecken voor instappen", "Uitchecken voor slapen", "Geen OV vandaag"],
+                        "Inchecken voor instappen",
+                    ),
+                    rt_fb("___ u wel! (thanks)", ["Dank", "Eet", "Ren"], "Dank"),
+                    rt_speak("Zeg: *Hoeveel is het?*", "Hoeveel is het?"),
+                    rt_speak("Zeg: *Tweede klas, graag.*", "Tweede klas, graag."),
+                ],
+            ),
+        ],
+    }
+
+
+def lesson_l10() -> dict:
+    lid = "a2-m07-l10-task-station-tram-interaction"
+    return {
+        "id": lid,
+        "moduleId": MID,
+        "title": "Real-life task · Handle a short station or tram interaction",
+        "lessonType": "task",
+        "order": 9,
+        "cefrLevel": "A2",
+        "durationEstimate": 15,
+        "grammarTargets": ["a2.2-announcements-chunks", "a2.2-directions-core"],
+        "vocabTargets": ["lemma-perron", "lemma-vertraging", "lemma-uitstappen", "lemma-volgende-halte", "lemma-helpen-m7"],
+        "canDoStatements": [
+            "I can handle a short chain: find platform, confirm delay, ask to repeat, thank — without freezing.",
+        ],
+        "mistakeFocus": ["listening-gist", "follow-up-questions"],
+        "metadata": LM,
+        "steps": [
+            preview_step(
+                "m07-l10-preview",
+                "Warm-up — 4 woorden",
+                [
+                    ("omroep", "omroep", "announcement", "📢"),
+                    ("bord", "bord", "sign / board", "📋"),
+                    ("verkeerde", "verkeerd", "wrong", "❌"),
+                    ("juiste", "juist", "right / correct", "✅"),
+                ],
+            ),
+            scenario_chat_step(
+                "m07-l10-chat-a",
+                "Sim A — op het perron",
+                [
+                    (
+                        "Reiziger",
+                        "Excuseer, ik zoek de trein naar Eindhoven. Is dit het juiste perron?",
+                        "Excuse me, I'm looking for the train to Eindhoven. Is this the right platform?",
+                    ),
+                    (
+                        "Jij (kies)",
+                        "Ik denk het wel. Er staat ‘Eindhoven’ op het bord, maar er is vijf minuten vertraging.",
+                        "I think so. It says ‘Eindhoven’ on the board, but there's a five-minute delay.",
+                    ),
+                    (
+                        "Reiziger",
+                        "Oké. Moet ik hier eerst inchecken?",
+                        "Okay. Do I have to check in here first?",
+                    ),
+                    (
+                        "Jij (kies)",
+                        "Ja, bij de poortjes achter ons. Daarna naar spoor 6.",
+                        "Yes, at the gates behind us. Then to track 6.",
+                    ),
+                ],
+                [
+                    ("Waar gaat de trein naartoe in de sim?", ["Eindhoven", "Eindhoven Arena", "Emmen"], "Eindhoven"),
+                    ("Wat zeg je over de tijd?", ["Er is vertraging", "Er is pizza", "Geen trein"], "Er is vertraging"),
+                    ("Wat moet de reiziger doen?", ["Inchecken bij poortjes", "Koffie zonder kaartje", "Naar huis"], "Inchecken bij poortjes"),
+                    ("Welk spoor noem je?", ["Spoor 6", "Spoor 600", "Geen spoor"], "Spoor 6"),
+                ],
+            ),
+            listening_step(
+                "m07-l10-listen",
+                "Input — in de tram (kort)",
+                [
+                    (
+                        "Passagier",
+                        "Sorry, is dit de tram naar het ziekenhuis?",
+                        "Sorry, is this the tram to the hospital?",
+                    ),
+                    (
+                        "Jij",
+                        "Ja, richting ziekenhuis. Je moet nog drie haltes.",
+                        "Yes, towards the hospital. You still have three stops.",
+                    ),
+                    (
+                        "Passagier",
+                        "Moet ik uit de voorkant of achterkant uitstappen?",
+                        "Do I have to get off at the front or the back?",
+                    ),
+                    (
+                        "Jij",
+                        "Bij deze tram mag je bij beide deuren uitstappen.",
+                        "On this tram you may get off at both doors.",
+                    ),
+                ],
+                [
+                    ("Waar wil de passagier naartoe?", ["Ziekenhuis", "Zwembad", "Museum"], "Ziekenhuis"),
+                    ("Hoeveel haltes nog?", ["Drie", "Dertig", "Geen"], "Drie"),
+                    ("Wat vraagt de passagier over deuren?", ["Voorkant of achterkant", "Kleur van de tram", "Snelheid van pizza"], "Voorkant of achterkant"),
+                    ("Wat zeg jij over uitstappen?", ["Beide deuren mogen", "Alleen via het dak", "Niet uitstappen"], "Beide deuren mogen"),
+                ],
+            ),
+            discovery_step(
+                "m07-l10-discovery",
+                "Volgende stap in gesprek",
+                [
+                    ("Is dit de juiste tram/trein?", "Is this the right tram/train?", "check"),
+                    ("Er is vertraging.", "There's a delay.", "tijd"),
+                    ("U moet inchecken.", "You have to check in.", "OV"),
+                    ("Bij welke deur uitstappen?", "Which door to get off?", "deur"),
+                ],
+            ),
+            pl(
+                "m07-l10-pl1",
+                "Practice — 6×",
+                ["perron", "bord", "vertraging"],
+                [
+                    mcq(
+                        "m07-l10-a1",
+                        "Juiste check vóór instappen",
+                        ["Klopt de eindbestemming op het bord?", "Klopt de pizza op het bord?", "Bord bestemming klopt nooit?"],
+                        "Klopt de eindbestemming op het bord?",
+                    ),
+                    fb("m07-l10-a2", "Ik zoek ___ 4. (platform)", ["perron", "brood", "kat"], "perron"),
+                    ro_tokens("m07-l10-r1", ["juiste", "dit", "Is", "trein?", "de"], "Is dit de juiste trein?"),
+                    mcq(
+                        "m07-l10-a3",
+                        "Als je twijfelt",
+                        ["Kunt u bevestigen of dit spoor 3 is?", "Kunt u bevestigen of dit een broodje is?", "Bevestigen spoor 3 is dit?"],
+                        "Kunt u bevestigen of dit spoor 3 is?",
+                    ),
+                    mcq(
+                        "m07-l10-a4",
+                        "Tram: richting",
+                        ["Richting centrum, klopt dat?", "Richting maan, klopt dat?", "Centrum richting klopt?"],
+                        "Richting centrum, klopt dat?",
+                    ),
+                    mcq(
+                        "m07-l10-a5",
+                        "Veiligheidssnuisterij",
+                        ["Let op je tas bij drukte.", "Laat je tas altijd op het spoor.", "Tas drukte let nooit op."],
+                        "Let op je tas bij drukte.",
+                    ),
+                    mcq(
+                        "m07-l10-a6",
+                        "Als de omroep onduidelijk is",
+                        ["Sorry, wat was de laatste halte?", "Sorry, wat was de laatste pizza?", "Laatste halte wat was?"],
+                        "Sorry, wat was de laatste halte?",
+                    ),
+                ],
+                depth=True,
+            ),
+            pl(
+                "m07-l10-pl2",
+                "Variatie — 6×",
+                ["uitstappen", "overstappen", "helpen"],
+                [
+                    mcq(
+                        "m07-l10-b1",
+                        "Helpen op het station",
+                        ["Kunt u mij naar de juiste uitgang wijzen?", "Kunt u mij naar de juiste pizza wijzen?", "Wijzen uitgang juiste mij?"],
+                        "Kunt u mij naar de juiste uitgang wijzen?",
+                    ),
+                    fb("m07-l10-b2", "De trein rijdt niet: er is een ___. (technical problem)", ["storing", "feest", "taart"], "storing"),
+                    ro_tokens("m07-l10-r2", ["uitstappen?", "Moet", "ik", "hier"], "Moet ik hier uitstappen?"),
+                    mcq(
+                        "m07-l10-b3",
+                        "Als je de verkeerde tram hebt",
+                        ["Ik stap uit bij de volgende halte.", "Ik stap uit op het dak.", "Uitstap volgende halte ik."],
+                        "Ik stap uit bij de volgende halte.",
+                    ),
+                    mcq(
+                        "m07-l10-b4",
+                        "Bevestigen",
+                        ["Dus ik moet hier overstappen op bus 21?", "Dus ik moet hier overstappen op pizza 21?", "Overstappen bus 21 hier moet ik?"],
+                        "Dus ik moet hier overstappen op bus 21?",
+                    ),
+                    mcq(
+                        "m07-l10-b5",
+                        "Dank + door",
+                        ["Dank je, dan ga ik naar spoor 9.", "Dank je, dan ga ik naar spoor 999.", "Dank spoor 9 ga ik."],
+                        "Dank je, dan ga ik naar spoor 9.",
+                    ),
+                    mcq(
+                        "m07-l10-b6",
+                        "Als je haast hebt",
+                        ["Ik moet snel naar het perron, de trein vertrekt zo.", "Ik moet snel naar het perron, de trein is een broodje.", "Snel perron moet ik trein zo."],
+                        "Ik moet snel naar het perron, de trein vertrekt zo.",
+                    ),
+                ],
+                depth=True,
+            ),
+            speak_step(
+                "m07-l10-sp1",
+                "Jouw beurt",
+                "Excuseer, is dit het juiste perron voor de trein naar Utrecht?",
+                [
+                    "Excuseer is dit het juiste perron voor de trein naar Utrecht",
+                    "Excuseer, is dit het juiste perron voor de trein naar Utrecht?",
+                ],
+                "Excuseer is dit het juiste perron voor de trein naar Utrecht",
+            ),
+            speak_step(
+                "m07-l10-sp2",
+                "Follow-up",
+                "Er is een kleine vertraging, maar de trein komt wel.",
+                [
+                    "Er is een kleine vertraging maar de trein komt wel",
+                    "Er is een kleine vertraging, maar de trein komt wel.",
+                ],
+                "Er is een kleine vertraging maar de trein komt wel",
+            ),
+            speak_step(
+                "m07-l10-sp3",
+                "Inchecken",
+                "Vergeet niet in te checken bij de poortjes.",
+                [
+                    "Vergeet niet in te checken bij de poortjes",
+                    "vergeet niet in te checken bij de poortjes",
+                ],
+                "Vergeet niet in te checken bij de poortjes",
+            ),
+            speak_step(
+                "m07-l10-sp4",
+                "Tram",
+                "Is dit de tram richting het ziekenhuis?",
+                ["Is dit de tram richting het ziekenhuis", "is dit de tram richting het ziekenhuis"],
+                "Is dit de tram richting het ziekenhuis",
+            ),
+            recap_step(
+                "m07-l10-recap",
+                "Recap",
+                ["perron", "vertraging", "inchecken"],
+                [
+                    rt_fb("___ dit de juiste trein naar Nijmegen? (is)", ["Is", "Weet", "Hoor"], "Is"),
+                    rt_listen_mcq(
+                        "Snippet:",
+                        "Ja, bij de poortjes achter ons.",
+                        ["Waar inchecken", "Waar pizza", "Waar slapen"],
+                        "Waar inchecken",
+                    ),
+                    rt_ro(["vertraging.", "minuten", "drie", "Er", "is"], "Er is drie minuten vertraging."),
+                    rt_speak("Zeg: *Moet ik hier uitstappen?*", "Moet ik hier uitstappen?"),
+                    rt_fb("Kunt u dat ___, alstublieft? (repeat)", ["herhalen", "bakken", "zingen"], "herhalen"),
+                    rt_speak("Zeg: *Dank u wel voor uw hulp.*", "Dank u wel voor uw hulp."),
+                    rt_speak("Zeg: *Waar is de uitgang?*", "Waar is de uitgang?"),
+                ],
+            ),
+        ],
+    }
+
+
+def lesson_l11() -> dict:
+    lid = "a2-m07-l11-review-transport-getting-around"
+    return {
+        "id": lid,
+        "moduleId": MID,
+        "title": "Review · Transport & getting around",
+        "lessonType": "review",
+        "order": 10,
+        "cefrLevel": "A2",
+        "durationEstimate": 16,
+        "grammarTargets": ["a2.2-transport-questions", "a2.2-directions-core", "a2.2-announcements-chunks"],
+        "vocabTargets": ["lemma-station", "lemma-tram", "lemma-vertraging", "lemma-overstappen", "lemma-rechtdoor"],
+        "canDoStatements": ["I can mix listening, directions, modals, and short production from this module in one go."],
+        "mistakeFocus": ["mixed-retrieval", "direction-words"],
+        "metadata": LM,
+        "steps": [
+            preview_step(
+                "m07-l11-preview",
+                "Warm-up — 5 woorden",
+                [
+                    ("route", "route", "route", "🗺️"),
+                    ("OV", "OV", "public transport", "🚌"),
+                    ("poortje", "poortje", "gate (OV)", "🚧"),
+                    ("uitchecken", "uitchecken", "check out", "📤"),
+                    ("inchecken", "inchecken", "check in", "📥"),
+                ],
+            ),
+            listening_step(
+                "m07-l11-listen",
+                "Mix — station + straat",
+                [
+                    (
+                        "Omroeper",
+                        "De sprinter naar Almere Oostvaarders vertrekt van spoor 12. Let op: er is een minuut vertraging.",
+                        "The sprinter to Almere Oostvaarders departs from platform 12. Note: there's a one-minute delay.",
+                    ),
+                    (
+                        "Voorbijganger",
+                        "Als je het station uitgaat: ga links, dan zie je de fietsenstalling.",
+                        "If you leave the station: go left, then you'll see the bike parking.",
+                    ),
+                    (
+                        "Jij (denk mee)",
+                        "Dank je! En waar is de dichtstbijzijnde tramhalte?",
+                        "Thanks! And where's the nearest tram stop?",
+                    ),
+                    (
+                        "Voorbijganger",
+                        "Rechtdoor, bij het plein. Tram 13 richting centrum.",
+                        "Straight ahead, at the square. Tram 13 towards the centre.",
+                    ),
+                ],
+                [
+                    ("Van welk spoor vertrekt de sprinter?", ["Spoor 12", "Spoor 2", "Spoor 22"], "Spoor 12"),
+                    ("Is er veel vertraging?", ["Een minuut", "Een uur", "Geen sprinter"], "Een minuut"),
+                    ("Welke kant bij verlaten station?", ["Links", "Rechts", "Omhoog"], "Links"),
+                    ("Wat zie je na links?", ["Fietsenstalling", "Zwembad", "Luchthaven"], "Fietsenstalling"),
+                    ("Welke tram noemt de voorbijganger?", ["Tram 13", "Tram 31", "Bus 13"], "Tram 13"),
+                ],
+            ),
+            pl(
+                "m07-l11-pl1",
+                "Mixed loop — 12×",
+                ["station", "tram", "vertraging", "perron", "uitstappen", "rechtdoor"],
+                [
+                    mcq("m07-l11-m1", "Waar is het station?", ["Waar is het station?", "Waar station is het?", "Station waar?"], "Waar is het station?"),
+                    fb("m07-l11-m2", "Hoe kom ik ___ het museum? (to)", ["bij", "op", "in"], "bij"),
+                    ro_tokens("m07-l11-m3", ["de", "trein?", "Welk", "spoor", "vertrekt", "Van"], "Van welk spoor vertrekt de trein?"),
+                    mcq("m07-l11-m4", "Vertraging", ["De bus heeft vertraging.", "De bus heeft honger.", "Bus vertraging heeft de."], "De bus heeft vertraging."),
+                    mcq("m07-l11-m5", "Uitstappen", ["Moet ik hier uitstappen?", "Moet ik hier slapen?", "Uitstappen hier moet ik?"], "Moet ik hier uitstappen?"),
+                    mcq("m07-l11-m6", "Richting", ["Ga rechtdoor tot het plein.", "Ga rechtdoor tot de pizza.", "Rechtdoor ga plein tot."], "Ga rechtdoor tot het plein."),
+                    fb("m07-l11-m7", "Stap uit bij de ___ halte. (next)", ["volgende", "laatste", "eerste"], "volgende"),
+                    mcq("m07-l11-m8", "Overstappen", ["We moeten in Zwolle overstappen.", "We moeten in Zwolle slapen.", "Overstappen Zwolle moeten we."], "We moeten in Zwolle overstappen."),
+                    mcq("m07-l11-m9", "Herhalen", ["Kunt u dat herhalen?", "Kunt u dat vergeten?", "Herhaal u nooit dat."], "Kunt u dat herhalen?"),
+                    mcq("m07-l11-m10", "Kaartje", ["Ik wil een kaartje naar Groningen.", "Ik wil een kaartje naar de zon.", "Kaartje wil ik Groningen."], "Ik wil een kaartje naar Groningen."),
+                    ro_tokens("m07-l11-m11", ["inchecken?", "moet", "Waar", "ik"], "Waar moet ik inchecken?"),
+                    mcq("m07-l11-m12", "Omleiding", ["Door een omleiding rijdt de tram een andere route.", "Door een omleiding is de tram een broodje.", "Omleiding tram route andere."], "Door een omleiding rijdt de tram een andere route."),
+                ],
+                depth=True,
+            ),
+            pl(
+                "m07-l11-pl2",
+                "Speaking prep — 6×",
+                ["helpen", "verdwaald", "ingang"],
+                [
+                    mcq("m07-l11-s1", "Als je verdwaald bent", ["Sorry, ik ben verdwaald.", "Sorry, ik ben een trein.", "Verdwaald ben sorry ik."], "Sorry, ik ben verdwaald."),
+                    fb("m07-l11-s2", "___ is de dichtstbijzijnde halte? (question word)", ["Waar", "Wie", "Welke"], "Waar"),
+                    ro_tokens("m07-l11-s3", ["bij", "de", "ingang.", "Ik", "wacht"], "Ik wacht bij de ingang."),
+                    mcq("m07-l11-s4", "Beleefd", ["Dank u wel voor uw hulp.", "Dank u wel voor uw pizza.", "Dank hulp u wel."], "Dank u wel voor uw hulp."),
+                    mcq("m07-l11-s5", "Juiste tram", ["Is dit de tram richting centrum?", "Is dit de tram richting maan?", "Tram dit centrum richting?"], "Is dit de tram richting centrum?"),
+                    mcq("m07-l11-s6", "Kort bericht", ["Ik ben onderweg, er is vertraging.", "Ik ben onderweg, er is pizza.", "Onderweg ben ik vertraging er."], "Ik ben onderweg, er is vertraging."),
+                ],
+                depth=True,
+            ),
+            speak_step(
+                "m07-l11-sp1",
+                "Output — mix",
+                "Hoe kom ik bij het station? Moet ik hier overstappen?",
+                [
+                    "Hoe kom ik bij het station moet ik hier overstappen",
+                    "Hoe kom ik bij het station? Moet ik hier overstappen?",
+                ],
+                "Hoe kom ik bij het station moet ik hier overstappen",
+            ),
+            speak_step(
+                "m07-l11-sp2",
+                "Output — richting",
+                "Ga rechtdoor, sla links bij de brug, dan zie je de halte.",
+                [
+                    "Ga rechtdoor sla links bij de brug dan zie je de halte",
+                    "Ga rechtdoor, sla links bij de brug, dan zie je de halte.",
+                ],
+                "Ga rechtdoor sla links bij de brug dan zie je de halte",
+            ),
+            speak_step(
+                "m07-l11-sp3",
+                "Output — balie",
+                "Goedemiddag, ik wil graag een retour naar Leiden, tweede klas. Kan ik pinnen?",
+                [
+                    "Goedemiddag ik wil graag een retour naar Leiden tweede klas kan ik pinnen",
+                    "Goedemiddag, ik wil graag een retour naar Leiden, tweede klas. Kan ik pinnen?",
+                ],
+                "Goedemiddag ik wil graag een retour naar Leiden tweede klas kan ik pinnen",
+            ),
+            recap_step(
+                "m07-l11-recap",
+                "Recap — lang",
+                ["transport", "route", "OV"],
+                [
+                    rt_fb("Van welk ___ vertrekt de trein? (platform)", ["spoor", "brood", "ei"], "spoor"),
+                    rt_ro(["vertraging.", "is", "Er", "tien", "minuten"], "Er is tien minuten vertraging."),
+                    rt_speak("Zeg: *Waar is de tramhalte?*", "Waar is de tramhalte?"),
+                    rt_listen_mcq(
+                        "Snippet:",
+                        "Tram 13 richting centrum.",
+                        ["Welke lijn + richting", "Welke pizza", "Bus naar maan"],
+                        "Welke lijn + richting",
+                    ),
+                    rt_fb("Moet ik hier ___? (get off)", ["uitstappen", "instappen", "slapen"], "uitstappen"),
+                    rt_speak("Zeg: *Kunt u dat herhalen?*", "Kunt u dat herhalen?"),
+                    rt_fb("Ik wil graag een enkele ___. (ticket)", ["reis", "pizza", "kat"], "reis"),
+                    rt_speak("Zeg: *Vergeet niet uit te checken.*", "Vergeet niet uit te checken."),
+                    rt_ro(["naar", "Ik", "een", "kaartje", "wil", "Rotterdam.", "graag"], "Ik wil graag een kaartje naar Rotterdam."),
+                    rt_speak("Zeg: *Stap uit bij de volgende halte.*", "Stap uit bij de volgende halte."),
+                ],
+            ),
+        ],
+    }

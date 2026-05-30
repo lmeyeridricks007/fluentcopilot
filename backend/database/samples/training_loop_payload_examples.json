@@ -1,0 +1,78 @@
+{
+  "description": "Example PayloadJson values per loopType for PersonalizedTrainingLoops — aligned with trainingLoopPayloadBuilders + Zod parsers.",
+  "examples": {
+    "weak_words": {
+      "words": ["kaartje", "overstappen", "perron"],
+      "exampleSentences": [
+        "Ik wil een kaartje naar Utrecht, en daarna moet ik overstappen.",
+        "Op welk perron vertrekt de trein naar Amsterdam?"
+      ],
+      "contextLines": [
+        "Ik wil een kaartje naar Utrecht, en daarna moet ik overstappen",
+        "Practice “kaartje” in isolation, then in a short line."
+      ],
+      "referenceAudioUrls": [],
+      "targetSkillIds": ["pronunciation", "pacing", "fluency"]
+    },
+    "retry_sentence": {
+      "learnerOriginal": "Ik wil een kaartje naar Amsterdam.",
+      "correctedVersion": "Ik wil graag een enkele reis naar Amsterdam.",
+      "explanationShort": "Sounds more natural with graag + enkele reis for a ticket.",
+      "referenceAudioUrl": null,
+      "compareAudioUrl": null,
+      "compareReplaySuggested": false
+    },
+    "mini_scenario": {
+      "scenarioId": "a1111111-1111-1111-1111-111111111111",
+      "scenarioVariant": "narrow_retry",
+      "objective": "Route mini-drill: one exchange to confirm platform, direction, or transfer—keep it short and clear.",
+      "openingPrompt": "Jump in with your first line — keep it simple and direct.",
+      "expectedSkillFocus": ["fluency", "reacting"],
+      "targetTurnCount": 4,
+      "supportingPhrase": "Excuseer, welk perron is voor de sprinter naar Schiphol?"
+    },
+    "read_aloud_fix": {
+      "passageText": "De trein vertrekt over vijf minuten van spoor vier. Wees alsjeblieft op tijd en let op je spullen.",
+      "focusLabel": "Rushed line endings — hold the last stressed syllable a beat before closing the phrase.",
+      "referenceAudioUrl": null,
+      "targetWords": ["trein", "spoor", "tijd"],
+      "targetSounds": ["pacing", "vowel_quality"],
+      "explanationShort": "Second pass: match printed line breaks and finish phrases before starting the next."
+    },
+    "structure_drill": {
+      "prompts": [
+        "Say one Dutch sentence that fixes: “Verb cluster at clause end”.",
+        "Try a second version — keep it short and natural. Second line: add one because clause (Dutch) that supports your opinion."
+      ],
+      "modelAnswers": [],
+      "targetPatternId": "verb_end_cluster_v1",
+      "patternLabel": "Verb cluster at clause end",
+      "skillFocus": ["fluency", "reacting", "pacing"]
+    },
+    "question_drill": {
+      "prompts": [
+        "Ask three ask-back questions in Dutch: one short reaction, then a follow-up that references what they said."
+      ],
+      "exampleQuestions": [
+        "Ah, interessant — waarom zeg je dat?",
+        "En wat gebeurde er daarna?",
+        "Hoe voelde dat voor jou?"
+      ],
+      "targetQuestionType": "follow_up",
+      "scenarioContext": "language_coach · thread recap"
+    },
+    "storytelling_drill": {
+      "prompt": "Tell what happened next in 3 short Dutch sentences (past time).",
+      "expectedSteps": ["Set the scene", "Say what changed", "End with a feeling or result"],
+      "modelStory": "",
+      "targetSkillFocus": ["keeping_flow", "fluency"]
+    },
+    "pronunciation_drill": {
+      "words": ["ui", "nauw", "schreeuw"],
+      "soundFocus": "diphthong_ui",
+      "tips": ["Round lips for “ui”, then relax into the off-glide—keep it short."],
+      "referenceAudioUrls": [],
+      "targetSkillIds": ["pronunciation", "fluency"]
+    }
+  }
+}

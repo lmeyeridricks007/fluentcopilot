@@ -1,0 +1,40 @@
+{
+  "id": "a2-u04",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.2",
+  "title": "Mid A2 — Transport & city",
+  "summary": "Use public transport, ask for directions, and deal with delays and appointments in town.",
+  "objectives_can_do": [
+    "Buy or check-in for train, bus, tram, or metro travel in the Netherlands",
+    "Ask for and understand simple directions and changes",
+    "Explain you are late or early and reschedule in short messages",
+    "Read departure boards and simple travel apps with support",
+    "Describe a city trip or commute in a few connected sentences",
+    "Handle a simple ticket or gate problem with help phrases"
+  ],
+  "integration_scripts_summary": "OV desk, delays, and simple rescheduling phrases.",
+  "grammar_focus": [
+    "motion verbs + preposition (naar, met, van … naar …)",
+    "connectors: eerst, daarna, totdat (simple sequences)",
+    "future with gaan + infinitive for plans",
+    "time clauses with als, wanneer (basic)"
+  ],
+  "vocabulary_domains": [
+    "OV",
+    "tickets",
+    "directions",
+    "delays",
+    "appointments"
+  ],
+  "lesson_ids": [
+    "a2-u04-l01",
+    "a2-u04-l02",
+    "a2-u04-l03",
+    "a2-u04-l04",
+    "a2-u04-l05",
+    "a2-u04-l06",
+    "a2-u04-l07",
+    "a2-u04-l08"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "userId": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+  "sourceSessionId": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+  "threadId": "7c9e6679-7425-40de-944b-e07fc1f90ae7",
+  "sourceType": "scenario",
+  "sourceScenarioId": "a1111111-1111-1111-1111-111111111111",
+  "loopSlot": 0,
+  "loopType": "retry_sentence",
+  "title": "Retry this sentence",
+  "subtitle": "Compare, then say it out loud.",
+  "reason": "This line is the fastest win from your last speaking turn.",
+  "targetSkills": ["fluency", "reacting"],
+  "targetWeaknessKeys": ["hallo"],
+  "estimatedMinutes": 1,
+  "difficulty": "moderate",
+  "payload": {
+    "learnerOriginal": "Ik wil een kaartje naar Amsterdam.",
+    "correctedVersion": "Ik wil graag een enkele reis naar Amsterdam.",
+    "explanationShort": "Sounds more natural with graag + enkele reis for a ticket.",
+    "referenceAudioUrl": null,
+    "compareAudioUrl": null,
+    "compareReplaySuggested": false
+  },
+  "createdAt": "2026-04-21T12:00:00.000Z",
+  "updatedAt": "2026-04-21T12:00:00.000Z",
+  "expiresAt": "2026-04-28T12:00:00.000Z",
+  "status": "active",
+  "confidence": "high",
+  "priorityScore": 88,
+  "dedupeKey": "retry_sentence:hallo:ik wil een kaartje naar amsterdam."
+}

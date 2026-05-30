@@ -1,0 +1,297 @@
+{
+  "id": "a2-u01-l04",
+  "unit_id": "a2-u01",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "D",
+    "primary_skills": [
+      "listening"
+    ]
+  },
+  "catalog": {
+    "title": "Listening · Natural speed: you have the script",
+    "description": "Natural speed: you have the script · A2 listening in “People & daily rhythm”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Daily life & people",
+    "type": "listening",
+    "durationMinutes": 24,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can follow a longer listening clip about people & daily rhythm, catching details, numbers, and speaker intentions",
+    "can_do_outcomes": [
+      "Follow a listening clip about people and habits with script support",
+      "Note at least one time expression and who it refers to",
+      "Paraphrase the situation in one English sentence"
+    ],
+    "grammar_primary": "a2.1-present-tense",
+    "grammar_primary_label": "Present tense (regular + zijn/hebben/gaan)",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "ontbijt",
+      "pendelen",
+      "agenda",
+      "kennismaken",
+      "collega",
+      "familie",
+      "rooster",
+      "weekend",
+      "afspraak",
+      "punctual"
+    ],
+    "grammar_points": [
+      {
+        "point": "present tense (weak verbs, common irregulars: zijn, hebben, gaan)",
+        "examples_nl": [
+          "We hebben vanavond een afspraak bij vrienden.",
+          "Ik werk vier dagen op kantoor.",
+          "Ik praat vandaag over ontbijt."
+        ],
+        "examples_en": [
+          "We have an appointment with friends tonight.",
+          "I work four days in the office.",
+          "Today I'm talking about ontbijt."
+        ]
+      },
+      {
+        "point": "word order in main clauses and yes/no questions",
+        "examples_nl": [
+          "Hoe laat sta jij meestal op?",
+          "Ga je morgen naar je cursus?"
+        ],
+        "examples_en": [
+          "What time do you usually get up?",
+          "Are you going to your class tomorrow?"
+        ]
+      },
+      {
+        "point": "separable verbs in present (opstaan, meenemen)",
+        "examples_nl": [
+          "Zet je de wekker vroeg voor je rooster?",
+          "Ik ruim de keuken op na het eten."
+        ],
+        "examples_en": [
+          "Do you set the alarm early for your schedule?",
+          "I tidy the kitchen after dinner."
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about people & daily rhythm in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 9,
+    "practice_minutes": 9,
+    "check_minutes": 4,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Follow a longer listening clip about people & daily rhythm, catching details, numbers, and speaker intentions\n\n**Grammar thread today:** Present tense (regular + zijn/hebben/gaan) — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **People & daily rhythm**.\n\nWords you might use today:\n• **ontbijt**\n• **pendelen**\n• **agenda**\n• **kennismaken**\n• **collega**\n• **familie**\n• **rooster**\n• **weekend**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren werkte ik tot vijf uur. Daarna fietste ik naar huis en kookte ik een eenvoudige maaltijd. 's Avonds las ik nog even en ging ik op tijd naar bed.",
+        "illustration": {
+          "src": "/curriculum/nl-NL/A2/illustrations/u01-day-rhythm.svg",
+          "alt": "Diagram of a day: morning (coffee), afternoon (work or study), evening (rest)",
+          "width": 400,
+          "height": 120
+        },
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "ontbijt",
+          "kennismaken"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Listen & read",
+        "activity": "**Listening focus**\n\nPlay the audio twice if you can (slow speed first is fine).\n\n**Transcript** (read along on the second listen):\n\nSpreker 1: Hoi, ik ben Lisa. Ik woon hier sinds februari.\nSpreker 2: Leuk! Ik heet Omar. Werk je in de buurt?\nSpreker 1: Ja, ik werk vier dagen op kantoor. Vrijdag werk ik thuis.\nSpreker 2: Ah, handig. Wat doe je meestal 's avonds?\nSpreker 1: Ik kook, en daarna wandelen met de hond. En jij?\nSpreker 2: Ik sport op dinsdag en donderdag. In het weekend slaap ik graag uit.\n\n**While you listen:** underline in your mind who wants what and any numbers you hear.",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "illustration": {
+          "src": "/curriculum/nl-NL/A2/illustrations/listening-focus.svg",
+          "alt": "Headphones icon suggesting focused listening before reading the transcript",
+          "width": 320,
+          "height": 100
+        },
+        "skill_focus": "listening",
+        "listening_level": "slow"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Today's grammar — present tense (A2 core)**\n\n**Rule (English):** Dutch present often looks like English *I work / we have*, but irregulars (*zijn, hebben, gaan*) and *jij* forms need attention.\n\n**Patterns to copy (Dutch):**\n• *Ik werk vandaag thuis.* · *Wij hebben een afspraak.* · *Ga je mee naar de supermarkt?*\n\n**Produce (do now):**\n1. Change *Ik werk* → *Wij werken* with the same time phrase.\n2. Ask one yes/no question with the verb first: *Heb je …?* or *Ga je …?*\n\n**Pronunciation (listen + repeat)**\n**Pronunciation — stress:** stress content words: *Ik wil een afspraak maken* (not every syllable equal).\n\n**Language focus — patterns you can reuse**\n\n**present tense (weak verbs, common irregulars: zijn, hebben, gaan)**\n• NL: We hebben vanavond een afspraak bij vrienden. / Ik werk vier dagen op kantoor.\n• EN: We have an appointment with friends tonight. / I work four days in the office.\n\n**word order in main clauses and yes/no questions**\n• NL: Hoe laat sta jij meestal op? / Ga je morgen naar je cursus?\n• EN: What time do you usually get up? / Are you going to your class tomorrow?\n\n**separable verbs in present (opstaan, meenemen)**\n• NL: Zet je de wekker vroeg voor je rooster? / Ik ruim de keuken op na het eten.\n• EN: Do you set the alarm early for your schedule? / I tidy the kitchen after dinner.\n\n**Try this:** pick one Dutch sentence above and change only the time or the person (ik → wij / vandaag → morgen), **or** do the “Produce” task from the grammar box above.\n",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "ontbijt",
+          "kennismaken"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Before listening:** guess three words you might hear (write them).\n\n**2 — Gist:** is this about work, family, travel, or shopping?\n\n**3 — Numbers:** write every number or time you hear in the script.\n\n**4 — Who:** who takes which action (choose: A / B / both)?\n\n**5 — Polite or informal:** find one **u**-sentence and one **je/jij**-sentence.\n\n**6 — Paraphrase:** in English, one sentence — what do they want?\n\n**7 — Shadowing:** read one speaker's lines aloud with the transcript.\n\n**8 — New chunk:** pick one phrase to use in your own week.\n\n**Script reminder:**\nSpreker 1: Hoi, ik ben Lisa. Ik woon hier sinds februari.\nSpreker 2: Leuk! Ik heet Omar. Werk je in de buurt?\nSpreker 1: Ja, ik werk vier dagen op kantoor. Vrijdag werk ik thuis.\nSpreker 2: Ah, handig. Wat doe je meestal 's avonds?\nSpreker 1: Ik kook, en daarna wandelen met de hond. En jij?\nSpreker 2: Ik sport op dinsdag en donderdag. In het weekend slaap ik graag uit.\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *Spreker 1: Hoi, ik ben Lisa. Ik woon hier sinds februari.*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *Spreker 1: Hoi, ik ben Lisa. Ik woon hier sinds februari.*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **ontbijt** and fits *Present tense (regular + zijn/hebben/gaan)*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Phrase bank (use freely)**\n• ontbijt\n• pendelen\n• agenda\n• kennismaken\n• collega\n• familie\n• rooster\n• weekend\n• afspraak\n• punctual\n\n**Your task:** Write or say **4–6 short sentences** in Dutch about this unit theme.\nRules: include **at least one question** and one connector (**en**, **maar**, or **want**).\n\n**Example starter (you can change it):**\nVandaag … Ik wil … **want** … **En jij?**",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "mixed",
+        "recycle_lemmas": [
+          "ontbijt",
+          "kennismaken"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "word_order"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "modal_choice"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "word_order",
+                "polite_register"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "verb_position",
+                "article"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **ontbijt**.",
+              "exampleAnswer": "Example: *Ik wil graag ontbijt met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Writing · Tone down drama; tone up clarity** — we keep building **People & daily rhythm** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\n**Punctuality** for trains and classes is valued, but social time can be looser. *Ongeveer*, *rond*, and *een beetje later* help you sound natural when plans are soft.\n\n**Phrases to steal (Dutch → English)**\n\n| Dutch | English |\n|-------|--------|\n| *Ben je vanavond thuis?* | Are you home tonight? |\n| *Zullen we een afspraak maken?* | Shall we set a time? |\n| *Sorry, ik ben een beetje te laat.* | Sorry, I'm a little late. |\n\n**Mini dialogue**\n\n**A:** Hé, heb je zin om zaterdag koffie te drinken?\n**B:** Ja, leuk! Hoe laat ongeveer?\n**A:** Rond elf uur bij het station?\n**B:** Prima, ik stuur je morgen een appje.\n\n**Say or write:** Invite someone for coffee using *Zullen we …* or *Heb je zin om …*.\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **ontbijt** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": null,
+    "listening_asset_id": "a2_listen_01_04",
+    "notes": "Slow audio assumed for lines marked *slow* in builder CMS."
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  },
+  "content_outline": {
+    "listening_script_nl": "Spreker 1: Hoi, ik ben Lisa. Ik woon hier sinds februari.\nSpreker 2: Leuk! Ik heet Omar. Werk je in de buurt?\nSpreker 1: Ja, ik werk vier dagen op kantoor. Vrijdag werk ik thuis.\nSpreker 2: Ah, handig. Wat doe je meestal 's avonds?\nSpreker 1: Ik kook, en daarna wandelen met de hond. En jij?\nSpreker 2: Ik sport op dinsdag en donderdag. In het weekend slaap ik graag uit."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "a2-u08",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "a2_band": "A2.3",
+  "title": "Late A2 — Social & leisure",
+  "summary": "Invite friends, talk about hobbies, and share simple opinions about films, sport, and free time.",
+  "objectives_can_do": [
+    "Invite, accept, or decline invitations with reasons",
+    "Talk about hobbies and weekend plans in connected sentences",
+    "Give simple likes/dislikes about music, sport, or TV",
+    "Ask follow-up questions in informal chat (En jij?)",
+    "Understand short event posters or social media posts",
+    "Suggest a time and place for meeting friends"
+  ],
+  "integration_scripts_summary": "Invitations, preferences, and casual plans with friends.",
+  "grammar_focus": [
+    "want, omdat for reasons (simple clauses)",
+    "graag, liever for preferences",
+    "diminutives in informal speech (biertje, filmpje) — recognition/production",
+    "tag questions and fillers (toch?, hè?) — careful use"
+  ],
+  "vocabulary_domains": [
+    "hobbies",
+    "events",
+    "opinions",
+    "friends",
+    "media"
+  ],
+  "lesson_ids": [
+    "a2-u08-l01",
+    "a2-u08-l02",
+    "a2-u08-l03",
+    "a2-u08-l04",
+    "a2-u08-l05",
+    "a2-u08-l06",
+    "a2-u08-l07",
+    "a2-u08-l08"
+  ]
+}

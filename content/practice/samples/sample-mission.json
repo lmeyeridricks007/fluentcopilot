@@ -1,0 +1,34 @@
+{
+  "id": "mission-daily-guided-01",
+  "title": "Daily: one guided scenario",
+  "missionType": "complete_mode",
+  "timeScope": "daily",
+  "objective": "Complete one guided practice scenario to build conversation habits.",
+  "requirements": [
+    {
+      "activityKind": "scenario_conversation",
+      "targetCount": 1,
+      "conversationModes": ["guided"],
+      "metadata": {}
+    }
+  ],
+  "rewards": {
+    "xp": 25,
+    "countsForStreak": true,
+    "metadata": {}
+  },
+  "eligibilityRules": {
+    "requiresPremium": false,
+    "minCefrLevel": "A2",
+    "metadata": {}
+  },
+  "progressModel": {
+    "current": 0,
+    "target": 1,
+    "unitLabel": "sessions",
+    "metadata": {}
+  },
+  "metadata": {
+    "campaign": "practice_habit_v1"
+  }
+}

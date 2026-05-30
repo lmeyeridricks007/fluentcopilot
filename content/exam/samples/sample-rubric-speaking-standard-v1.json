@@ -1,0 +1,52 @@
+{
+  "id": "rubric-a2-speaking-standard-v1",
+  "version": "1.0.0",
+  "examType": "speaking",
+  "title": "A2 spreken — standaard rubric",
+  "description": "Illustratieve rubric voor productontwikkeling; geen officiële DUO-norm.",
+  "totalMaxPoints": 30,
+  "categories": [
+    {
+      "categoryKey": "task_execution",
+      "label": "Taakuitvoering",
+      "weight": 0.25,
+      "maxPoints": 5,
+      "levels": [
+        { "levelKey": "insufficient", "label": "Onvoldoende", "points": 1 },
+        { "levelKey": "developing", "label": "In ontwikkeling", "points": 3 },
+        { "levelKey": "adequate", "label": "Voldoende", "points": 4 },
+        { "levelKey": "strong", "label": "Sterk", "points": 5 }
+      ]
+    },
+    {
+      "categoryKey": "vocabulary",
+      "label": "Woordenschat",
+      "weight": 0.15,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "grammar",
+      "label": "Grammatica",
+      "weight": 0.2,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "fluency",
+      "label": "Vloeiendheid",
+      "weight": 0.15,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "clarity",
+      "label": "Duidelijkheid",
+      "weight": 0.15,
+      "maxPoints": 5
+    },
+    {
+      "categoryKey": "pronunciation",
+      "label": "Uitspraak",
+      "weight": 0.1,
+      "maxPoints": 5
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "scenarioId": "train",
+  "version": 1,
+  "progressTotal": 5,
+  "intro": {
+    "headline": "Train station",
+    "setting": "You're at the service desk at a Dutch station.",
+    "yourRole": "You're a traveller.",
+    "situation": "Ask for the right platform, double-check a detail, and thank the staff."
+  },
+  "goals": [
+    "Ask where your train leaves from",
+    "Confirm one detail (time or platform)",
+    "Close with a short thank-you"
+  ],
+  "phrases": [
+    { "id": "p-waar", "nl": "Waar gaat de trein naar … vandaan?", "en": "Where does the train to … leave from?" },
+    { "id": "p-perron", "nl": "Welk perron is het?", "en": "Which platform is it?" },
+    { "id": "p-klopt", "nl": "Klopt het dat …?", "en": "Is it correct that …?" },
+    { "id": "p-dank", "nl": "Dank u wel voor uw hulp.", "en": "Thank you for your help." },
+    { "id": "p-vertrek", "nl": "Hoe laat vertrekt de trein?", "en": "What time does the train depart?" }
+  ],
+  "hintsByTurnId": {
+    "t_platform": "City name + naar: de trein naar Utrecht",
+    "t_confirm": "Klopt het dat … + time or platform number",
+    "t_delay": "Short reaction + dank u is fine."
+  },
+  "startTurnId": "t_platform",
+  "turns": [
+    {
+      "id": "t_platform",
+      "aiMessage": "Goedemiddag, waarmee kan ik u helpen?",
+      "freedomTier": "full_support",
+      "suggestedReplies": [
+        {
+          "id": "r_utrecht",
+          "nl": "Ik wil naar Utrecht. Waar vertrekt die trein?",
+          "en": "I want to go to Utrecht. Where does that train leave from?",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_amsterdam",
+          "nl": "Waar gaat de sprinter naar Amsterdam Centraal vandaan?",
+          "en": "Where does the sprinter to Amsterdam Centraal leave from?",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_simple",
+          "nl": "Welk perron is voor Utrecht?",
+          "en": "Which platform is for Utrecht?",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Ask about your train…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_utrecht": "t_answer",
+        "r_amsterdam": "t_answer",
+        "r_simple": "t_answer"
+      },
+      "nextFallbackId": "t_answer"
+    },
+    {
+      "id": "t_answer",
+      "aiMessage": "Dat is perron 4b, vertrek 14:12. Nog iets?",
+      "freedomTier": "reduced",
+      "suggestedReplies": [
+        {
+          "id": "r_confirm",
+          "nl": "Klopt het dat de trein op tijd is?",
+          "en": "Is it correct that the train is on time?",
+          "branchQuality": "strong"
+        },
+        {
+          "id": "r_ok",
+          "nl": "Nee, dat is alles. Dank u wel.",
+          "en": "No, that's all. Thank you.",
+          "branchQuality": "ok"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Confirm or thank…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_confirm": "t_delay",
+        "r_ok": "t_wrap"
+      },
+      "nextFallbackId": "t_wrap"
+    },
+    {
+      "id": "t_delay",
+      "aiMessage": "Op dit moment wel — houd de reisplanner in de gaten voor updates.",
+      "freedomTier": "light",
+      "suggestedReplies": [
+        {
+          "id": "r_thanks",
+          "nl": "Prima, dank u wel voor de informatie.",
+          "en": "Fine, thank you for the information.",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "React briefly…",
+      "acceptAnyCustomText": true,
+      "nextByReplyId": {
+        "r_thanks": "t_wrap"
+      },
+      "nextFallbackId": "t_wrap"
+    },
+    {
+      "id": "t_wrap",
+      "aiMessage": "Graag gedaan. Goede reis!",
+      "freedomTier": "open",
+      "suggestedReplies": [
+        {
+          "id": "r_bye",
+          "nl": "Dank u, tot ziens!",
+          "en": "Thanks, goodbye!",
+          "branchQuality": "strong"
+        }
+      ],
+      "allowCustomText": true,
+      "customInputPlaceholder": "Close politely…",
+      "acceptAnyCustomText": true,
+      "terminalAfterUser": true,
+      "endOutcome": "success"
+    }
+  ],
+  "evaluation": {
+    "successTitle": "You navigated the desk conversation well",
+    "partialTitle": "Almost there — tighten one or two questions",
+    "needsPracticeTitle": "Station Dutch needs another rep",
+    "wentWellBullets": [
+      "You asked for the right place to wait",
+      "You checked a useful detail",
+      "You sounded polite and calm"
+    ],
+    "improveBullets": [
+      "Use de trein naar + city for clarity",
+      "Add alstublieft in busy stations if you want extra politeness",
+      "Repeat the platform number back: dus perron 4b?"
+    ],
+    "betterPhrases": [
+      { "nl": "Mag ik nog een retourtje naar …?", "en": "May I also have a return ticket to …?" },
+      { "nl": "Is er een vertraging?", "en": "Is there a delay?" }
+    ],
+    "nextActions": [
+      { "label": "Repeat scenario", "href": "/app/practice/scenario/train", "variant": "primary" },
+      { "label": "Café ordering", "href": "/app/practice/scenario/cafe", "variant": "secondary" },
+      { "label": "Scenario library", "href": "/app/practice/scenarios", "variant": "ghost" }
+    ]
+  },
+  "metadata": {
+    "contentType": "guided_scenario",
+    "locale": "nl-NL",
+    "instructionLocale": "en"
+  }
+}

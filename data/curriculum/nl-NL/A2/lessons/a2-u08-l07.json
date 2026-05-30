@@ -1,0 +1,282 @@
+{
+  "id": "a2-u08-l07",
+  "unit_id": "a2-u08",
+  "cefr_level": "A2",
+  "locale": "nl-NL",
+  "metadata": {
+    "archetype": "H",
+    "primary_skills": [
+      "culture",
+      "reading"
+    ]
+  },
+  "catalog": {
+    "title": "Culture & context · Compare without judging—useful prep",
+    "description": "Compare without judging—useful prep · A2 culture & context in “Social & leisure”: Dutch you can use the same week, guided steps, and a short check at the end.",
+    "topic": "Leisure & opinions",
+    "type": "quiz",
+    "durationMinutes": 20,
+    "isPremium": false
+  },
+  "pedagogy": {
+    "objective": "By the end of this lesson, you can connect language about social & leisure to situated Netherlands context and apply it in a short task",
+    "can_do_outcomes": [
+      "Invite, accept, or decline invitations with reasons",
+      "Give simple likes/dislikes about music, sport, or TV",
+      "Link cultural context to memorisable Dutch phrases."
+    ],
+    "grammar_primary": "a2.3-subordinate-want-omdat",
+    "grammar_primary_label": "Reason clauses: want / omdat + word order",
+    "prior_lesson_ids": [],
+    "target_vocabulary_lemmas": [
+      "festival",
+      "vriendengroep",
+      "chatgroep",
+      "voorstel",
+      "afspraak",
+      "gezellig",
+      "uitnodigen",
+      "afzeggen",
+      "sporten",
+      "koor"
+    ],
+    "grammar_points": [
+      {
+        "point": "want, omdat for reasons (simple clauses)",
+        "examples_nl": [
+          "Ik ga mee naar de film, want ik heb zin.",
+          "We blijven thuis, omdat het regent.",
+          "Ik praat vandaag over festival."
+        ],
+        "examples_en": [
+          "I'm coming to the film because I feel like it.",
+          "We're staying home because it's raining.",
+          "Today I'm talking about festival."
+        ]
+      },
+      {
+        "point": "graag, liever for preferences",
+        "examples_nl": [
+          "Ik ga liever met de fiets naar het station.",
+          "We drinken graag koffie op het terras."
+        ],
+        "examples_en": [
+          "I'd rather cycle to the station.",
+          "We like having coffee on the terrace."
+        ]
+      },
+      {
+        "point": "diminutives in informal speech (biertje, filmpje) — recognition/production",
+        "examples_nl": [
+          "Zullen we zaterdag om half zeven afspreken?",
+          "Ik nodig je uit voor een borrel."
+        ],
+        "examples_en": [
+          "Shall we meet Saturday at half past six?",
+          "I'm inviting you for drinks."
+        ]
+      }
+    ],
+    "micro_outcomes": [
+      "I can recognise key words about social & leisure in short Dutch texts or audio.",
+      "I can copy at least one useful chunk into a sentence about myself.",
+      "I can finish most guided tasks in the lesson without peeking at translations on the second try.",
+      "I can pass the quick self-check at the end of the lesson.",
+      "I know what to revise tomorrow in two minutes or less."
+    ]
+  },
+  "lesson_plan": {
+    "warm_up_minutes": 2,
+    "presentation_minutes": 6,
+    "practice_minutes": 8,
+    "check_minutes": 4,
+    "steps": [
+      {
+        "step": 1,
+        "learner_title": "Your goal",
+        "activity": "Welcome! This lesson is built in small steps so you always know where you are.\n\n**What you'll be able to do:** Connect language about social & leisure to situated Netherlands context and apply it in a short task\n\n**Grammar thread today:** Reason clauses: want / omdat + word order — you'll get explanations, examples, and production tasks in **Language focus** and **Guided practice**.\n\nTake your time — you can repeat any step. Try to say at least one Dutch sentence out loud today.",
+        "teacher_notes": "Keep under ~1 min; reassure anxious learners.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 2,
+        "learner_title": "Warm-up",
+        "activity": "Let's wake up vocabulary about **Social & leisure**.\n\nWords you might use today:\n• **festival**\n• **vriendengroep**\n• **chatgroep**\n• **voorstel**\n• **afspraak**\n• **gezellig**\n• **uitnodigen**\n• **afzeggen**\n\n**Your turn (1–2 short sentences, Dutch or mixed):**\n**Wat deed je gisteren?** — *What did you do yesterday?*\n\nIf you only know a few words, that's fine — start there.",
+        "teacher_notes": "Accept partial Dutch; encourage gestures.",
+        "visual_ascii": null,
+        "example_response": "Gisteren keek ik een serie en las ik een artikel online. Later belde ik mijn zus en we spraken over het weekend.",
+        "skill_focus": "speaking",
+        "recycle_lemmas": [
+          "festival",
+          "voorstel"
+        ]
+      },
+      {
+        "step": 3,
+        "learner_title": "Situation",
+        "activity": "**Culture snapshot — the Netherlands**\n\nSplitting the bill (iedereen betaalt voor zich) is common among friends; birthdays are often celebrated with coffee and cake at work.\n\n**Mini text (Dutch):**\nIn veel appartementen staat een huisregel: na 22:00 rust op de gang. Buren lossen kleine problemen vaak eerst met een kort gesprek.\n\n*In many flats there is a rule: quiet in the corridor after 22:00. Neighbours often solve small issues with a short chat first.*",
+        "teacher_notes": "Optional slow audio for D/A.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 4,
+        "learner_title": "Language focus",
+        "activity": "**Pronunciation (listen + repeat)**\n**Pronunciation — v / f:** *vandaag, vier* — light *v*, not English *w*.\n\n**Useful phrases for talking about customs**\n\n• **In Nederland …** — In the Netherlands …\n• **Bij ons …** — Where I'm from …\n• **Mag ik vragen …?** — May I ask …?\n\n**Context:** Splitting the bill (iedereen betaalt voor zich) is common among friends; birthdays are often celebrated with coffee and cake at work.\n\n**Say or write:** one respectful question you could ask a Dutch friend about a tradition.",
+        "teacher_notes": "Max 2–3 patterns at A2.",
+        "visual_ascii": null,
+        "skill_focus": "grammar",
+        "recycle_lemmas": [
+          "festival",
+          "voorstel"
+        ]
+      },
+      {
+        "step": 5,
+        "learner_title": "Guided practice",
+        "activity": "**1 — Match:** Koningsdag — orange / Sinterklaas — December gifts / kerst — family meal (discuss).\n\n**2 — Institution:** where do you register an address? *(hint: **gemeente**)*\n\n**3 — Sort:** \"Direct can still be polite\" — **waar / niet waar**?\n\n**4 — Gist:** what is **rust** on a building notice about?\n\n**5 — Reflect:** one difference between your country and NL (English ok).\n\n**6 — Gap-fill:** In Nederland fietsen veel mensen, _____ het is plat.\n\n**7 — Scenario:** friend cancels last minute — what do many Dutch people appreciate?\n\n**8 — Your question in Dutch:** **Mag ik vragen hoe …?** finish it.\n\n**Culture reminder:** Splitting the bill (iedereen betaalt voor zich) is common among friends; birthdays are often celebrated with coffee and cake at work.\n---\n\n**All four skills — finish this lesson with these four micro-tasks**\n\n🎧 **Listening:** Use TTS on this Dutch line (slow, then closer to natural): *Ik ga mee naar de film, want ik heb zin.*\n\n📖 **Reading:** Read silently, then say the **main idea in one English sentence**: *Ik ga mee naar de film, want ik heb zin.*\n\n✍️ **Writing:** Write **one new Dutch sentence** that uses **festival** and fits *Reason clauses: want / omdat + word order*.\n\n🗣️ **Speaking:** Read your new sentence **aloud twice** — exaggerate stress the first time, normal the second.\n\n*(If this lesson was already heavy on one skill, treat that skill as “extra reps” — the point is you always touch all four.)*\n",
+        "teacher_notes": "Mix modalities; at least 6 tasks — all concrete above.",
+        "visual_ascii": null,
+        "skill_focus": "mixed"
+      },
+      {
+        "step": 6,
+        "learner_title": "Your turn — freer practice",
+        "activity": "**Phrase bank (use freely)**\n• festival\n• vriendengroep\n• chatgroep\n• voorstel\n• afspraak\n• gezellig\n• uitnodigen\n• afzeggen\n• sporten\n• koor\n\n**Your task:** Write or say **4–6 short sentences** in Dutch about this unit theme.\nRules: include **at least one question** and one connector (**en**, **maar**, or **want**).\n\n**Example starter (you can change it):**\nVandaag … Ik wil … **want** … **En jij?**",
+        "teacher_notes": "Encourage intelligibility over perfection.",
+        "visual_ascii": null,
+        "skill_focus": "mixed",
+        "recycle_lemmas": [
+          "festival",
+          "voorstel"
+        ]
+      },
+      {
+        "step": 7,
+        "learner_title": "Check your learning",
+        "activity": "**Quick self-check**\n\nTry each question, then tap **Check answer**. The correct answer stays hidden until you submit.\n\n**Tip:** Say Dutch options out loud if that helps.\n\n**Afterwards:** If three or more felt easy, open **Quiz** for a short recap. If not, go back to **Guided practice** once more.",
+        "teacher_notes": "Rendered with interactive UI when interaction is present.",
+        "visual_ascii": null,
+        "interaction": {
+          "kind": "self_check_quiz",
+          "items": [
+            {
+              "id": "q1",
+              "type": "multiple_choice",
+              "prompt": "Pick the best reply when someone says **Hoe gaat het?**",
+              "options": [
+                {
+                  "id": "a",
+                  "label": "Tot ziens"
+                },
+                {
+                  "id": "b",
+                  "label": "Goed, dank je!"
+                },
+                {
+                  "id": "c",
+                  "label": "Graag gedaan"
+                }
+              ],
+              "correctOptionId": "b",
+              "feedbackCorrect": "Nice — this is a natural, friendly reply.",
+              "feedbackIncorrect": "**Tot ziens** is goodbye; **Graag gedaan** fits after *dank je*. After *Hoe gaat het?* people often say how they feel, e.g. **Goed, dank je!**",
+              "common_error_tags": [
+                "verb_position",
+                "article"
+              ]
+            },
+            {
+              "id": "q2",
+              "type": "gap_fill",
+              "prompt": "Complete: **Ik ___ Nederlands sinds januari.**",
+              "hint": "Present tense of *leren* (to learn), 1st person singular.",
+              "acceptableAnswers": [
+                "leer",
+                "ik leer"
+              ],
+              "answerDisplay": "leer",
+              "feedbackCorrect": "Yes — *Ik leer Nederlands sinds januari.*",
+              "feedbackIncorrect": "The present of *leren* (ik-form) is **leer**.",
+              "common_error_tags": [
+                "modal_choice",
+                "word_order"
+              ]
+            },
+            {
+              "id": "q3",
+              "type": "multiple_choice",
+              "prompt": "Which opening sounds **more formal** when you talk to a stranger or in a shop?",
+              "options": [
+                {
+                  "id": "kun",
+                  "label": "Kun je me helpen?"
+                },
+                {
+                  "id": "kunt",
+                  "label": "Kunt u me helpen?"
+                }
+              ],
+              "correctOptionId": "kunt",
+              "feedbackCorrect": "Right — **u** + verb form (*Kunt u…*) is the usual polite pattern.",
+              "feedbackIncorrect": "**Kunt u** with *u* is more formal; **Kun je** is fine with friends.",
+              "common_error_tags": [
+                "polite_register"
+              ]
+            },
+            {
+              "id": "q4",
+              "type": "true_false",
+              "prompt": "In Dutch, yes/no questions often put the **verb before the subject** (e.g. *Ga je mee?*).",
+              "correct": true,
+              "feedbackCorrect": "Correct — verb-first order is typical for yes/no questions.",
+              "feedbackIncorrect": "This is **true**: many yes/no questions start with the verb.",
+              "common_error_tags": [
+                "verb_position"
+              ]
+            },
+            {
+              "id": "q5",
+              "type": "reflect",
+              "prompt": "Say or write **one new sentence** using **festival**.",
+              "exampleAnswer": "Example: *Ik wil graag festival met mijn nieuwe buren.* (adjust to your situation.)"
+            }
+          ]
+        },
+        "skill_focus": "review"
+      },
+      {
+        "step": 8,
+        "learner_title": "Before you go",
+        "activity": "**Nice work.**\n\nNext in this unit: **Real-life task · A task you could send today** — we keep building **Social & leisure** with a new focus.\n\n**2-minute revision:** skim the phrase bank from step 6 once more.\n\nWhen you're ready, open **Quiz** for a compact recap — or **Flashcards** for the lemmas.\n\n**Dutch culture insight**\n\nSports clubs (*vereniging*) and **vrijwilligerswerk** structure social life outside cities. *Lid worden* sometimes means intro evenings and modest fees.\n\n**Phrases — invites & Dutch directness**\n\n| Dutch | English |\n|-------|--------|\n| *Zin om zaterdag iets te drinken?* | Fancy a drink on Saturday? |\n| *Eerlijk gezegd, ik heb geen zin.* | Honestly, I don't feel like it. |\n| *Geen probleem, tot een andere keer.* | No problem, another time. |\n\n**Mini dialogue**\n\n**A:** Film om 20:00 — ga je mee?\n**B:** Liever niet vanavond, ik ben moe. Volgende week wel?\n**A:** Top, dan plannen we woensdag.\n\n**Say or write:** Decline one invite politely with a short reason.\n\n*Optional reflection:* In one English sentence, what feels similar or different where you live?",
+        "teacher_notes": "Link to next lesson id in CMS when wired.",
+        "visual_ascii": null,
+        "skill_focus": "review"
+      }
+    ]
+  },
+  "assessment": {
+    "quiz_ideas": [
+      "Self-check: choose the best reply to \"Hoe gaat het?\" (see step 7 in the lesson).",
+      "Gap-fill idea: write a sentence with **festival** in the present tense.",
+      "True/false: in Dutch yes/no questions the verb often comes before the subject.",
+      "Say one new polite request starting with **Kunt u …** or **Mag ik …**.",
+      "Paraphrase one Dutch line from the lesson input in your own English."
+    ],
+    "success_criteria": "You can complete the step-7 self-check comfortably and produce at least one clear Dutch sentence about the lesson theme (spoken or written)."
+  },
+  "content_refs": {
+    "dialogue_scenario_code": null,
+    "listening_asset_id": null,
+    "notes": null
+  },
+  "provenance": {
+    "author": "curriculum_agent",
+    "last_updated": "2026-03-25",
+    "sources_consulted": [
+      "docs/curriculum/a2-multimodal-curriculum-design.md",
+      "CEFR A2 illustrative descriptors"
+    ]
+  }
+}

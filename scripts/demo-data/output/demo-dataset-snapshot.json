@@ -1,0 +1,106 @@
+{
+  "scenario": "happy-path",
+  "generatedAt": "2026-03-14T15:24:06.037Z",
+  "lessons": 15,
+  "recommended": 5,
+  "scenarios": 6,
+  "progress": {
+    "xp": 420,
+    "streak": 5,
+    "lessonsCompleted": 12,
+    "dailyGoal": 3,
+    "dailyGoalMinutes": 10,
+    "weeklyMinutes": 85
+  },
+  "lessonProgress": [
+    {
+      "lessonId": "1",
+      "status": "completed",
+      "lastStepIndex": 4,
+      "score": 86,
+      "completedAt": "2026-03-14T15:24:06.037Z",
+      "updatedAt": "2026-03-14T15:24:06.037Z"
+    },
+    {
+      "lessonId": "2",
+      "status": "completed",
+      "lastStepIndex": 4,
+      "score": 72,
+      "completedAt": "2026-03-14T15:24:06.037Z",
+      "updatedAt": "2026-03-14T15:24:06.037Z"
+    },
+    {
+      "lessonId": "3",
+      "status": "completed",
+      "lastStepIndex": 4,
+      "score": 71,
+      "completedAt": "2026-03-12T15:24:06.037Z",
+      "updatedAt": "2026-03-12T15:24:06.037Z"
+    },
+    {
+      "lessonId": "4",
+      "status": "completed",
+      "lastStepIndex": 4,
+      "score": 88,
+      "completedAt": "2026-03-11T15:24:06.037Z",
+      "updatedAt": "2026-03-11T15:24:06.037Z"
+    },
+    {
+      "lessonId": "6",
+      "status": "completed",
+      "lastStepIndex": 4,
+      "score": 83,
+      "completedAt": "2026-03-10T15:24:06.037Z",
+      "updatedAt": "2026-03-10T15:24:06.037Z"
+    },
+    {
+      "lessonId": "8",
+      "status": "in_progress",
+      "lastStepIndex": 2,
+      "updatedAt": "2026-03-14T15:24:06.037Z"
+    }
+  ],
+  "usage": {
+    "lessonsCompletedCount": 2,
+    "scenariosCompletedCount": 1,
+    "periodKey": "2026-03-14"
+  },
+  "lessonsSample": [
+    {
+      "id": "1",
+      "title": "Greetings & introductions",
+      "description": "Learn basic Dutch greetings and how to introduce yourself.",
+      "level": "A1",
+      "topic": "Basics",
+      "type": "vocabulary",
+      "durationMinutes": 10,
+      "isPremium": false,
+      "completed": true,
+      "progress": 100
+    },
+    {
+      "id": "2",
+      "title": "At the café",
+      "description": "Order coffee and have a short conversation.",
+      "level": "A1",
+      "topic": "Food & drink",
+      "type": "dialogue",
+      "durationMinutes": 15,
+      "isPremium": false,
+      "completed": true,
+      "progress": 100
+    },
+    {
+      "id": "3",
+      "title": "Present tense verbs",
+      "description": "Regular verbs in the present tense.",
+      "level": "A1",
+      "topic": "Grammar",
+      "type": "grammar",
+      "durationMinutes": 12,
+      "isPremium": false,
+      "completed": true,
+      "progress": 100
+    }
+  ]
+}

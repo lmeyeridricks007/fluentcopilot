@@ -1,0 +1,49 @@
+{
+  "sessionId": "00000000-0000-4000-8000-000000000001",
+  "userId": "00000000-0000-4000-8000-000000000099",
+  "level": "A2",
+  "scenarioId": "cafe",
+  "topSummary": "You stayed with the Dutch that mattered in this burst.",
+  "dimensionScores": {
+    "gist": 82,
+    "detailAccuracy": 76,
+    "fastSpeech": 74,
+    "naturalReply": 79,
+    "responseReadiness": 78
+  },
+  "weakAreas": [
+    {
+      "key": "detail_under_pressure",
+      "label": "Details under time pressure",
+      "hint": "Times, platforms, and quantities like to hide in polite bundles — replay slower once, then answer."
+    }
+  ],
+  "missedDetails": [
+    {
+      "facet": "detail",
+      "coachLine": "Clip \"cafe-detail-1\": lock one concrete anchor (quantity:2 · black)"
+    }
+  ],
+  "recommendedNext": [
+    {
+      "kind": "track",
+      "title": "Another burst in the same lane",
+      "subtitle": "Keep variety while the scenario is warm.",
+      "targetId": "pack-cafe-burst"
+    },
+    {
+      "kind": "speak_live",
+      "title": "Speak Live in the same situation",
+      "subtitle": "Listening warms the ear before you answer out loud.",
+      "targetId": "cafe"
+    }
+  ],
+  "relatedPracticeLoops": [
+    {
+      "loopId": null,
+      "title": "Personalized loop (when available)",
+      "reason": "Loops generated from your sessions can target the same weakness keys."
+    }
+  ],
+  "createdAt": "2026-04-21T12:06:00.000Z"
+}

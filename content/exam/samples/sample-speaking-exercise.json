@@ -1,0 +1,31 @@
+{
+  "id": "ex-a2-speak-preference-01",
+  "title": "Voorkeur: vervoer",
+  "promptDutch": "Hoe kom je meestal naar je werk of school? Noem twee manieren en zeg welke je liever gebruikt.",
+  "promptEnglishOptional": "How do you usually get to work or school? Name two ways and say which you prefer.",
+  "instructions": "Spreek duidelijk in het Nederlands. Gebruik volledige zinnen.",
+  "bulletRequirements": [
+    "Noem minstens twee vervoersmiddelen",
+    "Geef een voorkeur met een korte reden"
+  ],
+  "modesAllowed": ["training", "simulation"],
+  "hintsAllowedInContent": true,
+  "hints": [
+    "Denk aan: de fiets, het openbaar vervoer, de auto.",
+    "Structuur: 'Ik ga vaak met ... maar ik ga het liefst met ... omdat ...'."
+  ],
+  "trainingSupport": {
+    "coachNotesMarkdown": "A2: korte, duidelijke zinnen zijn voldoende. Perfectie is niet nodig."
+  },
+  "scoringRubricId": "rubric-a2-speaking-standard-v1",
+  "modelAnswerId": "model-ex-a2-speak-preference-01",
+  "tags": ["a2", "speaking", "preference", "transport"],
+  "timeLimitSecondsPrep": 30,
+  "timeLimitSecondsResponse": 60,
+  "examType": "speaking",
+  "speakingSpec": {
+    "subtype": "preference_question",
+    "preparationTimeSeconds": 30,
+    "maxResponseSeconds": 60
+  }
+}

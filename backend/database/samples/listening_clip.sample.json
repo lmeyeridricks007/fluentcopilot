@@ -1,0 +1,23 @@
+{
+  "id": "cafe-gist-1",
+  "scenarioId": "cafe",
+  "category": "food",
+  "level": "A2",
+  "drillType": "gist",
+  "speakerProfile": {
+    "voiceToken": null,
+    "speechRateHint": 0.9,
+    "register": "customer",
+    "speakerLabels": null
+  },
+  "transcript": "Goedemiddag. Twee koffie graag, en mag ik ook een stuk appeltaart?",
+  "normalizedTranscript": null,
+  "targetMeaning": "Ordering drinks and a slice of pie politely.",
+  "keyDetails": ["twee koffie", "appeltaart"],
+  "responseExpectation": null,
+  "audioUrl": null,
+  "slowerAudioUrl": null,
+  "metadata": {
+    "optionLabels": ["Ordering food and drink", "Complaining", "Directions", "Large group booking"]
+  }
+}

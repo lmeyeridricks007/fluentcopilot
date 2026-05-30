@@ -1,0 +1,31 @@
+{
+  "_comment": "Writing — polite neighbor message meets prompt.",
+  "mode": "training",
+  "responseText": "Beste buur,\n\nIk hoor vaak harde muziek in de avond en dan kan ik niet goed slapen. Zou je de muziek na 22.00 uur wat zachter willen zetten? Alvast bedankt.\n\nMet vriendelijke groet,\nSam",
+  "aiPayload": {
+    "scores": {
+      "execution": 3,
+      "grammar": 2,
+      "spelling": 2,
+      "clearness": 1,
+      "vocabulary": 2
+    },
+    "rationales": {
+      "execution": "Problem, polite request, and closing present; appropriate length.",
+      "grammar": "Good A2 control; correct question form with 'zou je ... willen'.",
+      "spelling": "Minor or no distracting errors.",
+      "clearness": "Logical paragraphing.",
+      "vocabulary": "Suitable for the situation."
+    },
+    "certainty": 0.84
+  },
+  "expected": {
+    "rawTotal": 10,
+    "maxTotal": 10,
+    "normalizedPercent": 100,
+    "pass": true,
+    "exerciseOutcomeBand": "pass",
+    "readinessLabel": "strong",
+    "executionGatingApplied": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "description": "Example outputs from personalizedPracticePackBuilder (shape matches UserDayPracticePacks.StepsJson array items).",
+  "examples": [
+    {
+      "mode": "quick_rep",
+      "estimatedMinutes": 3,
+      "title": "Quick rep — from your day",
+      "captureIds": ["capture-word-1", "capture-phrase-2"],
+      "stepsSummary": [
+        "short_recap — Today, in short + 1–2 bullets from theme clusters",
+        "theme_anchor — one cluster title + summary",
+        "word_rep — pronunciation-focused rep",
+        "phrase_rep — natural-use rep",
+        "strongest_next — one concrete next action"
+      ]
+    },
+    {
+      "mode": "standard",
+      "estimatedMinutes": 5,
+      "title": "From your day",
+      "captureIds": ["w1", "p1", "photo1", "place1"],
+      "stepsSummary": [
+        "short_recap",
+        "theme_anchor (cluster A)",
+        "theme_anchor (cluster B)",
+        "word_rep",
+        "read_aloud",
+        "phrase_rep",
+        "mini_scenario (place-weighted)",
+        "strongest_next"
+      ]
+    },
+    {
+      "mode": "deeper_debrief",
+      "estimatedMinutes": 9,
+      "title": "Daily debrief — from your day",
+      "captureIds": ["struggle1", "voice1", "phrase1"],
+      "stepsSummary": [
+        "short_recap",
+        "up to 3 theme_anchor steps",
+        "correction_rep + mini_scenario + coach_debrief from log_struggle",
+        "listening_burst + phrase_rep + coach_debrief from voice_note",
+        "read_aloud / listening_burst from longer paste or photo_text",
+        "strongest_next"
+      ]
+    }
+  ],
+  "captureTypeToRepKinds": {
+    "save_word": ["word_rep", "listening_burst (deeper only)"],
+    "save_phrase": ["phrase_rep", "read_aloud (when text is long enough)"],
+    "paste_text": ["phrase_rep", "read_aloud"],
+    "photo_text": ["read_aloud", "listening_burst (deeper)"],
+    "add_place": ["phrase_rep (opener)", "mini_scenario (scenario boost)"],
+    "log_struggle": ["correction_rep", "mini_scenario (standard+)", "coach_debrief (deeper)"],
+    "voice_note": ["listening_burst", "phrase_rep", "coach_debrief (mode-dependent)"]
+  }
+}
