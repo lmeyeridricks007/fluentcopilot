@@ -390,6 +390,7 @@ const TtsChunkBodySchema = z.object({
   text: z.string().min(1).max(1200),
   threadId: z.string().max(200).optional(),
   chunkIndex: z.number().int().min(0).max(20),
+  language: z.string().max(12).optional(),
 })
 
 const WordGlossBodySchema = z.object({
@@ -410,6 +411,7 @@ app.http('speakLiveTtsChunk', {
       text: body.text,
       threadId: body.threadId,
       chunkIndex: body.chunkIndex,
+      language: speakLiveTtsLanguageFromRequest(body.language),
     })
   }),
 })

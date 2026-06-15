@@ -179,11 +179,11 @@ Suggested naming:
 Resource group: rg-language-tutor-dev
 Location: westeurope
 Function App: func-language-tutor-dev
-Storage account: stlanguagetutordev
+Storage account: rglanguagetutordev933b
 SQL server: sql-language-tutor-dev
 SQL database: LanguageTutor
 Service Bus namespace: sb-language-tutor-dev
-Application Insights: ai-language-tutor-dev
+Application Insights: func-language-tutor-dev
 ```
 
 Storage account names must be globally unique, lowercase, and 3-24 characters.
@@ -212,13 +212,13 @@ Set common shell variables:
 export AZ_SUBSCRIPTION_ID="YOUR_SUBSCRIPTION_ID"
 export AZ_LOCATION="westeurope"
 export AZ_RESOURCE_GROUP="rg-language-tutor-dev"
-export AZ_STORAGE_ACCOUNT="stlanguagetutordev"
+export AZ_STORAGE_ACCOUNT="rglanguagetutordev933b"
 export AZ_FUNCTION_APP="func-language-tutor-dev"
 export AZ_SQL_SERVER="sql-language-tutor-dev"
 export AZ_SQL_DB="LanguageTutor"
-export AZ_SQL_ADMIN="sqladminuser"
+export AZ_SQL_ADMIN="sqladmin"
 export AZ_SERVICEBUS_NAMESPACE="sb-language-tutor-dev"
-export AZ_APP_INSIGHTS="ai-language-tutor-dev"
+export AZ_APP_INSIGHTS="func-language-tutor-dev"
 
 az account set --subscription "$AZ_SUBSCRIPTION_ID"
 az group create --name "$AZ_RESOURCE_GROUP" --location "$AZ_LOCATION"
@@ -233,7 +233,7 @@ Portal steps:
 1. In Azure Portal, search for "Storage accounts".
 2. Select "Create".
 3. On "Basics", choose the target subscription and resource group, for example `rg-language-tutor-dev`.
-4. Enter a globally unique storage account name, for example `stlanguagetutordev`.
+4. Enter a globally unique storage account name, for example `rglanguagetutordev933b`.
 5. Select the same region as the Function App.
 6. Set "Performance" to `Standard`.
 7. Set "Redundancy" to `Locally-redundant storage (LRS)` for dev. For production, choose the redundancy level required by your availability policy.
@@ -353,7 +353,7 @@ Portal steps:
 6. Set "Server name" to a globally unique value, for example `sql-language-tutor-dev`.
 7. Set "Location" to the same Azure region.
 8. Set "Authentication method" to `Use SQL authentication` for the simplest dev setup.
-9. Enter an admin login, for example `sqladminuser`.
+9. Enter an admin login, for example `sqladmin`.
 10. Enter and store a strong password.
 11. Select "OK" to create the server definition.
 12. Under "Compute + storage", select "Configure database".
@@ -586,10 +586,10 @@ Azure AI Vision portal steps:
 
 This repo uses version-controlled SQL scripts under `backend/database/`.
 
-Baseline:
+Clean Azure SQL bootstrap:
 
 ```text
-backend/database/schema/001_initial_schema.sql
+backend/database/azure_clean_create_and_seed.sql
 ```
 
 Seeds:
@@ -607,7 +607,7 @@ Migrations:
 backend/database/migrations/*.sql
 ```
 
-Apply schema and seeds to Azure SQL:
+Apply schema, seeds, and all forward migrations to a clean Azure SQL database:
 
 ```bash
 export SQL_SERVER_FQDN="${AZ_SQL_SERVER}.database.windows.net"
@@ -617,35 +617,13 @@ sqlcmd -S "$SQL_SERVER_FQDN,1433" \
   -U "$AZ_SQL_ADMIN" \
   -P "$AZ_SQL_PASSWORD" \
   -N -C \
-  -i backend/database/schema/001_initial_schema.sql
-
-sqlcmd -S "$SQL_SERVER_FQDN,1433" -d "$AZ_SQL_DB" -U "$AZ_SQL_ADMIN" -P "$AZ_SQL_PASSWORD" -N -C -i backend/database/seed/001_seed_reference_data.sql
-sqlcmd -S "$SQL_SERVER_FQDN,1433" -d "$AZ_SQL_DB" -U "$AZ_SQL_ADMIN" -P "$AZ_SQL_PASSWORD" -N -C -i backend/database/seed/002_seed_mock_scenarios.sql
-sqlcmd -S "$SQL_SERVER_FQDN,1433" -d "$AZ_SQL_DB" -U "$AZ_SQL_ADMIN" -P "$AZ_SQL_PASSWORD" -N -C -i backend/database/seed/003_seed_personas.sql
-```
-
-Apply forward migrations in numeric order. Example:
-
-```bash
-for file in backend/database/migrations/[0-9][0-9][0-9]_*.sql; do
-  case "$file" in
-    *_rollback.sql) continue ;;
-  esac
-
-  echo "Applying $file"
-  sqlcmd -S "$SQL_SERVER_FQDN,1433" \
-    -d "$AZ_SQL_DB" \
-    -U "$AZ_SQL_ADMIN" \
-    -P "$AZ_SQL_PASSWORD" \
-    -N -C \
-    -i "$file"
-done
+  -i backend/database/azure_clean_create_and_seed.sql
 ```
 
 Important migration rules:
 
 1. Run rollback scripts only when intentionally rolling back.
-2. Run migrations once per environment unless the SQL is explicitly idempotent.
+2. Use `backend/database/azure_clean_create_and_seed.sql` for clean environments; for existing environments, apply only new forward migrations in numeric order.
 3. Back up production before schema changes.
 4. Track applied migrations in release notes until the project has a formal migration history table.
 
@@ -681,13 +659,13 @@ Minimum backend app settings:
 ```text
 APP_PROFILE=CloudDev
 FUNCTIONS_WORKER_RUNTIME=node
-SQL_CONNECTION_STRING=Server=tcp:YOUR_SQL_SERVER.database.windows.net,1433;Database=LanguageTutor;User ID=...;Password=...;Encrypt=True;TrustServerCertificate=False;
+SQL_CONNECTION_STRING=Server=tcp:sql-language-tutor-dev.database.windows.net,1433;Database=LanguageTutor;User ID=sqladmin;Password=...;Encrypt=True;TrustServerCertificate=False;
 AI_PROVIDER=openai
 OPENAI_API_KEY=YOUR_OPENAI_KEY
 OPENAI_MODEL=gpt-4o-mini
-AZURE_STORAGE_CONNECTION_STRING=YOUR_STORAGE_CONNECTION_STRING
+AZURE_STORAGE_CONNECTION_STRING=YOUR_RGLANGUAGETUTORDEV933B_CONNECTION_STRING
 AZURE_STORAGE_CONTAINER_ARTIFACTS=fc-artifacts
-SERVICE_BUS_CONNECTION_STRING=YOUR_SERVICE_BUS_CONNECTION_STRING
+SERVICE_BUS_CONNECTION_STRING=Endpoint=sb://sb-language-tutor-dev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=...
 SERVICE_BUS_TOPIC_EVENTS=fc-app-events
 APPLICATIONINSIGHTS_CONNECTION_STRING=YOUR_APPLICATION_INSIGHTS_CONNECTION_STRING
 CORS_ALLOWED_ORIGINS=https://YOUR_VERCEL_DOMAIN.vercel.app
@@ -805,12 +783,25 @@ npm run backend:build
 Publish from `backend/`:
 
 ```bash
+# recommended — from repo root
+npm run backend:deploy
+
+# or
+./scripts/deploy-backend.sh
+```
+
+Manual equivalent:
+
+```bash
 cd backend
 npm install
 npm run build
-func azure functionapp publish "$AZ_FUNCTION_APP"
-cd ..
+npm prune --production
+func azure functionapp publish func-language-tutor-dev
+npm install   # restore devDependencies locally
 ```
+
+Flex Consumption does not run Oryx `npm install` on deploy, so the package must include prebuilt `dist/` and production `node_modules`. Deploy from macOS bundles macOS-native optional binaries; if pronunciation assessment fails with ffmpeg errors after deploy, install the Linux ffmpeg package on the Function App (Kudu: `npm install @ffmpeg-installer/linux-x64@4.1.0 --no-save --force` in `/home/site/wwwroot`) or deploy from a Linux CI runner.
 
 `backend/.funcignore` excludes source, local settings, database scripts, and local build artifacts that should not be published.
 
@@ -866,7 +857,7 @@ Node.js Version: 20.x
 Set these in Vercel Project Settings > Environment Variables:
 
 ```text
-NEXT_PUBLIC_API_BASE_URL=https://YOUR_FUNCTION_APP.azurewebsites.net
+NEXT_PUBLIC_API_BASE_URL=https://func-language-tutor-dev-cqd6fkgdb2hmcnah.westeurope-01.azurewebsites.net
 NEXT_PUBLIC_FEATURE1_CHAT_SOURCE=backend
 ```
 

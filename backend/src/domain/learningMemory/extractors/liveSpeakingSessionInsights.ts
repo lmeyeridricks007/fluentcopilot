@@ -337,21 +337,29 @@ export function extractLiveSpeakingSessionInsightChunk(params: {
     }
 
     for (const ww of t.wrongWordDetections ?? []) {
+      const observed = ww.observedToken?.trim()
+      const suggested = ww.suggestedCorrection?.trim()
+      const practiceWord = suggested || observed
+      if (!practiceWord) continue
+      const supporting =
+        observed && suggested && observed.toLowerCase() !== suggested.toLowerCase()
+          ? `You said “${observed}” — practice “${suggested}”. ${ww.whyItMatters ?? ''}`.trim()
+          : ww.whyItMatters
       pushWeakWord(
         weakWords,
-        ww.observedToken,
-        `wrong_word:${ww.classification}`,
+        practiceWord,
+        suggested ? 'word_choice_correction' : `wrong_word:${ww.classification}`,
         'live_wrong_word_detection',
         { label: ww.severity, unclear: Boolean(ww.uncertainHearing) },
         tcConf * (ww.uncertainHearing ? 0.45 : 0.62),
         [turnRef, 'wrong_word'],
-        ww.whyItMatters,
+        supporting,
       )
-      if (ww.suggestedCorrection?.trim()) {
+      if (suggested) {
         pushPattern(
           weakPatterns,
           `Word choice: ${ww.classification}`,
-          `Better: ${ww.suggestedCorrection.trim()}`.slice(0, 240),
+          `Better: ${suggested}`.slice(0, 240),
           'live_wrong_word_detection',
           { label: ww.severity },
           tcConf * 0.55,
@@ -538,7 +546,10 @@ export function extractLiveSpeakingSessionInsightChunk(params: {
       }
     }
     for (const g of sig.vocabularyGaps.slice(0, 14)) {
-      const token = (g.split('→')[0] ?? g).trim()
+      const arrowParts = g.includes('→') ? g.split('→') : g.includes('->') ? g.split('->') : null
+      const observed = arrowParts?.[0]?.trim() ?? ''
+      const suggested = arrowParts && arrowParts.length >= 2 ? arrowParts.slice(1).join('→').trim() : ''
+      const token = (suggested || observed || g).trim()
       if (token.length >= 2) {
         pushWeakWord(
           weakWords,
@@ -548,7 +559,7 @@ export function extractLiveSpeakingSessionInsightChunk(params: {
           { label: 'medium' },
           mConf * 0.85,
           ['merged', 'vocab_gap'],
-          g.length > token.length + 2 ? g.slice(0, 220) : null,
+          observed && suggested ? `You said “${observed}” — practice “${suggested}”.` : g.slice(0, 220),
         )
       }
     }

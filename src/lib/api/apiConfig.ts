@@ -7,10 +7,11 @@ const trim = (v: string | undefined) => v?.trim() ?? ''
 
 /**
  * Azure Functions host origin, without trailing slash.
- * Example: http://localhost:7071
+ * Example: https://func-language-tutor-dev-cqd6fkgdb2hmcnah.westeurope-01.azurewebsites.net
  *
  * HTTP clients append `/api/...` themselves. If the env value mistakenly includes `/api`
- * (e.g. `http://localhost:7071/api`), strip it so requests do not become `/api/api/...` (404).
+ * (e.g. `https://func-language-tutor-dev-cqd6fkgdb2hmcnah.westeurope-01.azurewebsites.net/api`),
+ * strip it so requests do not become `/api/api/...` (404).
  */
 export function getApiBaseUrl(): string {
   const raw = trim(process.env.NEXT_PUBLIC_API_BASE_URL)

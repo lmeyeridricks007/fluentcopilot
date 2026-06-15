@@ -1,8 +1,11 @@
 import * as sdk from 'microsoft-cognitiveservices-speech-sdk'
 import { execFile } from 'child_process'
-import { writeFile, readFile, unlink } from 'fs/promises'
+import { existsSync } from 'fs'
+import ffmpegStatic from 'ffmpeg-static'
+import { createRequire } from 'module'
+import { chmod, copyFile, writeFile, readFile, unlink } from 'fs/promises'
 import { tmpdir } from 'os'
-import { join } from 'path'
+import { dirname, join } from 'path'
 import { randomUUID } from 'crypto'
 import type {
   NormalizedPronunciationAssessment,
@@ -21,6 +24,25 @@ import {
 // azureStreamFormatForMime no longer needed — we convert to WAV PCM via ffmpeg
 
 const AZURE_PA_DEFAULT_RECOGNIZE_TIMEOUT_MS = 15_000
+let ffmpegExecutablePath: string | null = null
+const requireFromHere = createRequire(__filename)
+
+function resolveBundledFfmpeg(): string | null {
+  if (process.platform === 'linux' && process.arch === 'x64') {
+    try {
+      const pkg = requireFromHere.resolve('@ffmpeg-installer/linux-x64/package.json')
+      const linuxBinary = join(dirname(pkg), 'ffmpeg')
+      if (existsSync(linuxBinary)) return linuxBinary
+    } catch {
+      /* Optional deploy artifact — do not fall through to ffmpeg-static on Linux. */
+    }
+    console.warn(
+      '[PA] Linux ffmpeg missing — install @ffmpeg-installer/linux-x64 before deploy (see scripts/deploy-backend.sh).',
+    )
+    return null
+  }
+  return ffmpegStatic || null
+}
 
 function azurePaRecognizeTimeoutMs(): number {
   const raw = process.env.AZURE_PA_RECOGNIZE_TIMEOUT_MS
@@ -39,6 +61,18 @@ async function ensureWavPcm(audio: Buffer, mimeType: string): Promise<Buffer> {
   const isAlreadyWav = mimeType.includes('wav') || mimeType.includes('pcm') || mimeType.includes('l16')
   if (isAlreadyWav) return audio
 
+  let ffmpegBinary = 'ffmpeg'
+  const bundledFfmpeg = resolveBundledFfmpeg()
+  if (bundledFfmpeg) {
+    if (!ffmpegExecutablePath) {
+      const target = join(tmpdir(), 'fluentcopilot-ffmpeg')
+      await copyFile(bundledFfmpeg, target)
+      await chmod(target, 0o755)
+      ffmpegExecutablePath = target
+    }
+    ffmpegBinary = ffmpegExecutablePath
+  }
+
   const id = randomUUID().slice(0, 8)
   const ext = mimeType.includes('webm') ? 'webm' : mimeType.includes('ogg') ? 'ogg' : mimeType.includes('mpeg') ? 'mp3' : 'bin'
   const inPath = join(tmpdir(), `pa-in-${id}.${ext}`)
@@ -48,7 +82,7 @@ async function ensureWavPcm(audio: Buffer, mimeType: string): Promise<Buffer> {
     await writeFile(inPath, audio)
     await new Promise<void>((resolve, reject) => {
       execFile(
-        'ffmpeg',
+        ffmpegBinary,
         ['-y', '-i', inPath, '-ar', '16000', '-ac', '1', '-sample_fmt', 's16', '-f', 'wav', outPath],
         /** Read-aloud / long clips: multi-minute WebM decode can exceed the old 10s cap. */
         { timeout: 120_000 },
@@ -357,7 +391,11 @@ export class AzurePronunciationAssessmentService implements IPronunciationAssess
         providerRawResult: undefined,
       }
     } finally {
-      recognizer.close()
+      try {
+        recognizer.close()
+      } catch {
+        /* The Speech SDK can dispose the recognizer from timeout/cancel paths before cleanup. */
+      }
     }
   }
 }

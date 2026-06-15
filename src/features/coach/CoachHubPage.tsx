@@ -28,6 +28,7 @@ import { useFeature1ConversationStore } from '@/features/feature1-chat/store/con
 import { playAppSound } from '@/lib/interaction/appSounds'
 import { CoachDailyRecapCard } from '@/features/coach/CoachDailyRecapCard'
 import { CoachReminderCard } from '@/features/coach/CoachReminderCard'
+import type { ConversationThread } from '@/features/feature1-chat/types'
 
 type CoachTab = 'today' | 'review' | 'progress'
 
@@ -36,6 +37,8 @@ const TABS: { id: CoachTab; label: string; description: string }[] = [
   { id: 'review', label: 'Review', description: 'Queues & fixes' },
   { id: 'progress', label: 'Progress', description: 'Abilities & momentum' },
 ]
+
+const EMPTY_TRAIN_THREADS: ConversationThread[] = []
 
 export function CoachHubPage() {
   const router = useRouter()
@@ -90,7 +93,7 @@ export function CoachHubPage() {
   const userId = useAuthStore((s) => s.user?.id ?? LOCAL_ANONYMOUS_LEARNER_ID)
   const libraryWords = usePersonalLibraryStore((s) => s.words)
   const libraryPhrases = usePersonalLibraryStore((s) => s.phrases)
-  const trainThreads = useFeature1ConversationStore((s) => s.byUserId[userId]?.threads ?? [])
+  const trainThreads = useFeature1ConversationStore((s) => s.byUserId[userId]?.threads ?? EMPTY_TRAIN_THREADS)
 
   const microWins = useMemo(
     () =>

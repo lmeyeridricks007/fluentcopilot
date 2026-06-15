@@ -39,6 +39,10 @@ import { detectScenarioContentTheme } from './sessionAdapters/liveScenarioLoopAd
 import type { SessionLoopAdapterHints } from './sessionAdapters/sessionLoopAdapterTypes'
 import { resolveSessionLoopAdapterHints } from './sessionAdapters/resolveSessionLoopAdapterHints'
 import { DISMISSED_LOOP_TYPE_PENALTY_DAYS } from './trainingLoopLifecycleConstants'
+import {
+  buildWrongWordCorrectionMap,
+  resolveWordPracticeTargets,
+} from './weakWordPracticeTargets'
 
 export type LoopGenerationInput = {
   userId: string
@@ -238,6 +242,25 @@ function pickPrimaryRecommendedAction(evaluation: LiveSessionEvaluation | null):
   return prim[0] ?? actions[0] ?? null
 }
 
+function weakWordsPayloadFromSessionWords(params: {
+  topWords: string[]
+  evaluation: LiveSessionEvaluation | null | undefined
+  exampleSentences: string[]
+  targetSkillIds: string[]
+  referenceAudioUrls?: string[]
+}) {
+  const correctionMap = buildWrongWordCorrectionMap(params.evaluation)
+  const resolved = resolveWordPracticeTargets(params.topWords, correctionMap)
+  const practiceHints = resolved.map((r) => r.practiceHint ?? '')
+  return buildWeakWordsPayload({
+    words: resolved.map((r) => r.word),
+    exampleSentences: params.exampleSentences,
+    practiceHints: practiceHints.some((h) => h.length > 0) ? practiceHints : undefined,
+    referenceAudioUrls: params.referenceAudioUrls,
+    targetSkillIds: params.targetSkillIds,
+  })
+}
+
 export function buildLoopGenerationContext(input: LoopGenerationInput): LoopGenerationContext {
   const source = resolveTrainingLoopSourceType({
     sessionType: input.sessionType,
@@ -246,7 +269,11 @@ export function buildLoopGenerationContext(input: LoopGenerationInput): LoopGene
   const easyBias = profileOverload(input.profile, input.insights)
   const stretchOk = profileStretchOk(input.profile, input.insights)
   const weakWordsSorted = [...input.insights.weakWords].sort((a, b) => b.severityScore - a.severityScore)
-  const topWords = weakWordsSorted.slice(0, 5).map((w) => w.displayText).filter(Boolean)
+  const correctionMap = buildWrongWordCorrectionMap(input.speakLiveEvaluation)
+  const topWords = resolveWordPracticeTargets(
+    weakWordsSorted.slice(0, 5).map((w) => w.displayText).filter(Boolean),
+    correctionMap,
+  ).map((r) => r.word)
   const wKeys = weaknessKeysFromWords(topWords)
   const sp = input.profile.userSkillProfile
   const topWeakestSkill = (sp?.weakestSkills?.[0] as SkillId | undefined) ?? null
@@ -658,8 +685,9 @@ function buildQuickCaptureRawCandidates(ctx: LoopGenerationContext): TrainingLoo
   ).trim()
 
   if (topWords.length >= 1 && allow.has('weak_words')) {
-    const payload = buildWeakWordsPayload({
-      words: topWords.slice(0, 6),
+    const payload = weakWordsPayloadFromSessionWords({
+      topWords: topWords.slice(0, 6),
+      evaluation: input.speakLiveEvaluation,
       exampleSentences: weakWordsSorted
         .map((w) => w.supportingText ?? '')
         .filter((s) => s.trim().length > 4)
@@ -901,8 +929,9 @@ function buildRawCandidates(ctx: LoopGenerationContext): TrainingLoopCandidate[]
   }
 
   if (topWords.length >= 2 && allow.has('weak_words')) {
-    const payload = buildWeakWordsPayload({
-      words: topWords.slice(0, 5),
+    const payload = weakWordsPayloadFromSessionWords({
+      topWords: topWords.slice(0, 5),
+      evaluation: input.speakLiveEvaluation,
       exampleSentences: weakWordsSorted
         .slice(0, 3)
         .map((w) => w.supportingText ?? '')

@@ -81,11 +81,12 @@ export async function generateTtsForClause(input: {
   text: string
   threadId?: string
   chunkIndex: number
+  language?: string
 }): Promise<GenerateSpeechResult & { chunkIndex: number }> {
   const result = await generateSpeakLiveAssistantSpeech({
     text: input.text,
     threadId: input.threadId,
-    language: 'nl',
+    language: input.language ?? 'nl',
   })
   return { ...result, chunkIndex: input.chunkIndex }
 }

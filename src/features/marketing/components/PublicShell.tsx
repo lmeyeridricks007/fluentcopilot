@@ -19,6 +19,7 @@ const NAV = [
   { href: '/', label: 'Home' },
   { href: '/features', label: 'Features' },
   { href: '/exam-prep', label: 'Exam prep' },
+  { href: '/netherlands/housing', label: 'Move' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/beta', label: 'Early access' },
 ] as const
@@ -163,6 +164,9 @@ export function PublicShell({ children }: { children: ReactNode }) {
                 </Link>
                 <Link href="/exam-prep" className="block text-ink-secondary hover:text-primary-900">
                   Exam prep
+                </Link>
+                <Link href="/netherlands/housing" className="block text-ink-secondary hover:text-primary-900">
+                  Housing
                 </Link>
                 <Link href="/pricing" className="block text-ink-secondary hover:text-primary-900">
                   Pricing

@@ -7,6 +7,9 @@ import * as userRepo from '../../repositories/userRepository'
 import type { TrainingLoopCompletionResult } from '../../domain/trainingLoops/trainingLoopCompletionResultModels'
 import * as trainingLoopPersistence from './trainingLoopPersistenceService'
 import { completeTrainingLoop } from './trainingLoopOrchestrator'
+import * as liveEvalRepo from '../../repositories/liveSessionEvaluationRepository'
+import type { LiveSessionEvaluation } from '../speak-live/liveVoiceEvaluationTypes'
+import { hydratePracticeWordLoopPayload } from '../../domain/trainingLoops/weakWordPracticeTargets'
 
 async function requirePool() {
   const pool = await getSqlPool()
@@ -61,6 +64,21 @@ export async function handleGetTrainingLoop(req: HttpRequest, ctx: InvocationCon
   const uid = await userRepo.ensureUser(pool, externalUserId)
   const loop = await trainingLoopPersistence.getTrainingLoopById(pool, uid, loopId)
   if (!loop) throw new ApiError(404, 'NOT_FOUND', 'Loop not found')
+  if (
+    loop.threadId &&
+    (loop.loopType === 'weak_words' || loop.loopType === 'pronunciation_drill')
+  ) {
+    const row = await liveEvalRepo.getEvaluationByThreadId(pool, loop.threadId)
+    if (row?.status === 'complete' && row.evaluationJson) {
+      try {
+        const evaluation = JSON.parse(row.evaluationJson) as LiveSessionEvaluation
+        const payload = hydratePracticeWordLoopPayload(loop.loopType, loop.payload, evaluation)
+        return { loop: { ...loop, payload } }
+      } catch {
+        /* keep stored payload */
+      }
+    }
+  }
   return { loop }
 }
 

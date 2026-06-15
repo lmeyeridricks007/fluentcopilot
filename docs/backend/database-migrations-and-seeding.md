@@ -12,6 +12,7 @@
 | Path | Role |
 |------|------|
 | `backend/database/schema/001_initial_schema.sql` | Tables, FKs, indexes, check constraints |
+| `backend/database/azure_clean_create_and_seed.sql` | One-command Azure SQL bootstrap for a clean database |
 | `backend/database/migrations/` | Incremental changes after baseline |
 | `backend/database/seed/001_seed_reference_data.sql` | Dev user (`local-demo-user`) |
 | `backend/database/seed/002_seed_mock_scenarios.sql` | `train-station` scenario |
@@ -24,26 +25,26 @@
 - `ScenarioDefinitions`, `PersonaDefinitions`
 - `ConversationThreads`, `ConversationMessages`, `FeedbackItems`, `SavedWords`
 
-## Deploy locally (sqlcmd example)
+## Azure SQL clean bootstrap
+
+The dev Azure database is `LanguageTutor` on `sql-language-tutor-dev.database.windows.net`.
+For a clean Azure SQL database, run the consolidated SQLCMD script from the repository root:
 
 ```bash
-# Create database once (SSMS / Azure Data Studio / sqlcmd)
-sqlcmd -S localhost,1433 -U sa -P "$SQL_SA_PASSWORD" -Q "CREATE DATABASE FluentCopilot"
-
-# Schema
-sqlcmd -S localhost,1433 -U sa -P "$SQL_SA_PASSWORD" -d FluentCopilot -i backend/database/schema/001_initial_schema.sql
-
-# Seeds in order
-sqlcmd ... -i backend/database/seed/001_seed_reference_data.sql
-sqlcmd ... -i backend/database/seed/002_seed_mock_scenarios.sql
-sqlcmd ... -i backend/database/seed/003_seed_personas.sql
+sqlcmd \
+  -S sql-language-tutor-dev.database.windows.net,1433 \
+  -d LanguageTutor \
+  -U sqladmin \
+  -P "$AZ_SQL_PASSWORD" \
+  -N -C \
+  -i backend/database/azure_clean_create_and_seed.sql
 ```
 
 ## Azure SQL (cloud)
 
 1. Create **Azure SQL Database** (server + DB) in EU region.
 2. Configure firewall / private endpoint per org policy.
-3. Run the same scripts against the cloud server (CI service principal or manual).
+3. Run `backend/database/azure_clean_create_and_seed.sql` once for a clean environment.
 4. Store connection string in **Key Vault**; reference from Function App settings as `SQL_CONNECTION_STRING`.
 
 ## DACPAC / SQL project (optional)

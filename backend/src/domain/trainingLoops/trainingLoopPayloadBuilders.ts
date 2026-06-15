@@ -71,17 +71,23 @@ export function buildWeakWordsPayload(params: {
   targetSkillIds: string[]
   exampleSentences?: string[]
   contextLines?: string[]
+  practiceHints?: string[]
   referenceAudioUrls?: string[]
 }): WeakWordsLoopPayload {
   const words = uniqWords(params.words, 8)
   const exampleSentences = uniqNonEmpty(params.exampleSentences ?? [], 4)
   const contextLines =
     params.contextLines?.length ? uniqNonEmpty(params.contextLines, 5) : defaultContextLines(words, exampleSentences)
+  const practiceHints = (params.practiceHints ?? [])
+    .map((h) => h.trim())
+    .filter(Boolean)
+    .slice(0, words.length)
   const referenceAudioUrls = (params.referenceAudioUrls ?? []).filter(Boolean).slice(0, 6)
   return {
     words,
     exampleSentences,
     contextLines,
+    practiceHints: practiceHints.length ? practiceHints : undefined,
     referenceAudioUrls,
     targetSkillIds: params.targetSkillIds.filter(Boolean),
   }

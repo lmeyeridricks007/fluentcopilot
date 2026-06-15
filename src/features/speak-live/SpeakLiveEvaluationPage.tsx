@@ -48,6 +48,8 @@ import {
   type WordCorrection,
 } from './evaluation/dutchWordGlossSupport'
 import { LanguageCoachDedicatedReport } from './evaluation/LanguageCoachDedicatedReport'
+import { SessionVoiceTeacherSummaryCard } from './evaluation/SessionVoiceTeacherSummaryCard'
+import type { SessionTeacherSummaryInput } from './evaluation/sessionTeacherVoiceSummary'
 import { LearningMemoryRibbon, learningMemoryRibbonHasContent } from './evaluation/LearningMemoryRibbon'
 import { ReportPracticeNowSection } from './evaluation/ReportPracticeNowSection'
 import { ReportQuickCapturePrompt } from '@/components/capture/ReportQuickCapturePrompt'
@@ -4241,6 +4243,25 @@ export function SpeakLiveEvaluationPage() {
     [derivedFocus, priorityTurn],
   )
 
+  const teacherSummaryInput = useMemo((): SessionTeacherSummaryInput | null => {
+    if (!report) return null
+    const completedCoreGoals = coreGoals.filter((g) => g.status === 'completed').length
+    const voiceHero =
+      sanitizeCoachText(report.keyTakeaway?.message)
+      || sanitizeCoachText(report.coachHeadline)
+      || ''
+    return {
+      scenarioTitle: report.scenarioName || report.scenarioTitle || 'your session',
+      wentWellBullets: wentWellBullets,
+      fixNextBullets: fixNextBullets,
+      heroLine: voiceHero || null,
+      practicePhrase: practiceModel.phrase.trim() || null,
+      completedCoreGoals,
+      totalCoreGoals: coreGoals.length,
+      turns,
+    }
+  }, [report, coreGoals, wentWellBullets, fixNextBullets, practiceModel.phrase, turns])
+
   const collapsedMainFixDedupePool = useMemo(
     () => [...fixNextBullets, practiceModel.phrase].filter(Boolean),
     [fixNextBullets, practiceModel.phrase],
@@ -4701,6 +4722,10 @@ export function SpeakLiveEvaluationPage() {
             </div>
           ) : null}
         </div>
+
+        {sessionId && teacherSummaryInput ? (
+          <SessionVoiceTeacherSummaryCard sessionId={sessionId} summaryInput={teacherSummaryInput} />
+        ) : null}
 
         {/* B — What went well */}
         <section className="space-y-4">

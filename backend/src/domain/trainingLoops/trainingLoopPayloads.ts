@@ -10,6 +10,8 @@ export type WeakWordsLoopPayload = {
   exampleSentences: string[]
   /** Short context lines for UI / skim (subset or paraphrase of evidence). */
   contextLines?: string[]
+  /** Parallel to `words` — e.g. You said “kortje” — practice “kaartje”. */
+  practiceHints?: string[]
   referenceAudioUrls: string[]
   targetSkillIds: string[]
 }
@@ -116,6 +118,7 @@ const weakWords = z.object({
   words: z.array(z.string()).default([]),
   exampleSentences: z.array(z.string()).default([]),
   contextLines: z.array(z.string()).optional(),
+  practiceHints: z.array(z.string()).optional(),
   referenceAudioUrls: z.array(z.string()).default([]),
   targetSkillIds: z.array(z.string()).default([]),
 })

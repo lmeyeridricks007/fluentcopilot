@@ -1,1 +1,13 @@
 node_modules
+
+# Local environment and secret-bearing settings
+.env.local
+.env*.local
+backend/local.settings.json
+
+# Generated build output and local service state
+.next/
+dist/
+backend/dist/
+azurite-data/
+azurite-debug.log

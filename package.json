@@ -6,7 +6,8 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
+    "dev:webpack": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -21,6 +22,7 @@
     "content:audit-module": "tsx --tsconfig tsconfig.json tools/audit-content.ts --module content/modules/a2-m01-people-daily/module.json",
     "review:simulate": "tsx --tsconfig tsconfig.json tools/simulate-review-session.ts",
     "backend:build": "npm run build --prefix backend",
+    "backend:deploy": "npm run deploy --prefix backend",
     "backend:start": "npm run start --prefix backend",
     "benchmark:scenario-report": "vitest run backend/src/services/speak-live/speakLiveScenarioReportBenchmark.test.ts",
     "benchmark:scenario-report:json": "BENCHMARK_SCENARIO_REPORT_JSON=1 vitest run backend/src/services/speak-live/speakLiveScenarioReportBenchmark.test.ts",

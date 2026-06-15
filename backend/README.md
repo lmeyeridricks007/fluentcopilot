@@ -2,23 +2,22 @@
 
 TypeScript Azure Functions (programming model v4) for **Feature 1: text conversation** and future surfaces.
 
-## Quick start
+## Azure dev setup
 
-1. Copy `local.settings.example.json` → `local.settings.json` and fill values.
-2. Deploy SQL schema + seeds (see `/docs/backend/backend-setup-azure-local-and-cloud.md`).
-3. Install Azure Functions Core Tools v4 (`npm i -g azure-functions-core-tools@4 --unsafe-perm true` or official installer).
-4. From this folder use **`npm start`** (not bare `func start` if you are unsure):
+1. Copy `local.settings.example.json` → `local.settings.json` only if you need to run Functions locally against Azure dev resources.
+2. Put real secret values in Azure Function App settings or the untracked `local.settings.json`; do not commit them.
+3. Bootstrap the clean Azure SQL database with `backend/database/azure_clean_create_and_seed.sql`.
+4. Deploy the backend to the Azure Function App:
 
 ```bash
-npm install
-npm start
+# from repo root
+npm run backend:deploy
+
+# or
+./scripts/deploy-backend.sh
 ```
 
-`npm start` forces `FUNCTIONS_WORKER_RUNTIME=node`. If you run `func start` interactively and pick **dotnet** by mistake, Core Tools writes `dotnet-isolated` into `local.settings.json` and you will see **0 functions** / **No HTTP routes** — set `FUNCTIONS_WORKER_RUNTIME` back to **`node`** in `local.settings.json`.
-
-**`Failed to decrypt settings`:** use `"IsEncrypted": false` when values are plain text. `IsEncrypted: true` requires values produced by `func settings add`, not hand-edited strings.
-
-Base URL: `http://localhost:7071/api/`
+Base URL: `https://func-language-tutor-dev-cqd6fkgdb2hmcnah.westeurope-01.azurewebsites.net/api/`
 
 ## Profiles
 

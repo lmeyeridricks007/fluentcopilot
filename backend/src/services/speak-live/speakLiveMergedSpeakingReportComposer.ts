@@ -160,7 +160,10 @@ function collectWeakWords(turns: TurnEvaluation[]): string[] {
     for (const w of t.focusWords ?? []) words.push(w)
     for (const w of t.audioCoaching?.evidence?.weakWords ?? []) words.push(w)
     for (const ww of t.wrongWordDetections ?? []) {
-      if (ww.observedToken?.trim()) words.push(ww.observedToken.trim())
+      const obs = ww.observedToken?.trim()
+      const sug = ww.suggestedCorrection?.trim()
+      if (sug) words.push(sug)
+      else if (obs) words.push(obs)
     }
   }
   return dedupeStrings(words, 40)

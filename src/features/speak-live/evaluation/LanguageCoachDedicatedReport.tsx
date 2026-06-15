@@ -33,6 +33,8 @@ import { CoachGuidanceEvidenceList, coachSnippetForDisplay } from './CoachGuidan
 import { LanguageCoachPhrasePracticeCard } from './LanguageCoachPhrasePracticeCard'
 import { prefetchDutchWordGlosses, type DutchWordGlossPrefetchSource, type WordCorrection } from './dutchWordGlossSupport'
 import { LearningMemoryRibbon, learningMemoryRibbonHasContent } from './LearningMemoryRibbon'
+import { SessionVoiceTeacherSummaryCard } from './SessionVoiceTeacherSummaryCard'
+import { buildLanguageCoachTeacherVoiceSummary } from './sessionTeacherVoiceSummary'
 import type { ReportLearningMemoryRibbon } from '@/lib/api/apiTypes'
 
 type AudioChip = { status: 'all' | 'partial' | 'none'; label: string } | null
@@ -737,6 +739,27 @@ export function LanguageCoachDedicatedReport(props: {
             </p>
           </div>
         </section>
+
+        {sessionId ? (
+          <SessionVoiceTeacherSummaryCard
+            sessionId={sessionId}
+            summaryInput={{
+              scenarioTitle: 'Language Coach',
+              wentWellBullets: debrief.strengths,
+              fixNextBullets: debrief.weakPatterns,
+              heroLine: debrief.conversationSummary,
+              practicePhrase: debrief.improvedPhrasingExamples[0]?.better ?? null,
+            }}
+            buildScript={(locale) =>
+              buildLanguageCoachTeacherVoiceSummary(locale, {
+                focusLabel: debrief.focusAreaLabel,
+                strengths: debrief.strengths,
+                weakPatterns: debrief.weakPatterns,
+                followUp: debrief.followUpSuggestions[0] ?? null,
+              })
+            }
+          />
+        ) : null}
 
         <ReportSection
           title="Conversation snapshot"

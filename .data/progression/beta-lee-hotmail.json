@@ -3,11 +3,11 @@
   "userId": "beta-lee-hotmail",
   "userProgress": {
     "userId": "beta-lee-hotmail",
-    "totalXP": 80,
-    "weeklyXP": 80,
-    "currentStreak": 1,
-    "longestStreak": 1,
-    "lastActiveDate": "2026-05-30"
+    "totalXP": 239,
+    "weeklyXP": 239,
+    "currentStreak": 3,
+    "longestStreak": 3,
+    "lastActiveDate": "2026-06-15"
   },
   "dailyByDate": {
     "2026-05-30": {
@@ -15,6 +15,36 @@
       "date": "2026-05-30",
       "completedUnits": 2,
       "xpEarned": 80,
+      "streakCounted": true,
+      "activityTypes": [
+        "scenario"
+      ]
+    },
+    "2026-06-13": {
+      "userId": "beta-lee-hotmail",
+      "date": "2026-06-13",
+      "completedUnits": 1,
+      "xpEarned": 39,
+      "streakCounted": true,
+      "activityTypes": [
+        "scenario"
+      ]
+    },
+    "2026-06-14": {
+      "userId": "beta-lee-hotmail",
+      "date": "2026-06-14",
+      "completedUnits": 1,
+      "xpEarned": 38,
+      "streakCounted": true,
+      "activityTypes": [
+        "scenario"
+      ]
+    },
+    "2026-06-15": {
+      "userId": "beta-lee-hotmail",
+      "date": "2026-06-15",
+      "completedUnits": 2,
+      "xpEarned": 82,
       "streakCounted": true,
       "activityTypes": [
         "scenario"
@@ -48,6 +78,62 @@
       ],
       "xpAwarded": 41,
       "createdAt": "2026-05-30T14:57:02.363Z",
+      "meaningfulCompletion": true
+    },
+    {
+      "sessionId": "7B6CDCE2-4BA1-4A8E-B461-89ABA3FEA90C",
+      "userId": "beta-lee-hotmail",
+      "type": "scenario",
+      "durationSeconds": 58,
+      "completed": true,
+      "turns": 4,
+      "improvements": [
+        "Ticket details en natuurlijke afsluiting"
+      ],
+      "xpAwarded": 39,
+      "createdAt": "2026-06-13T17:42:15.535Z",
+      "meaningfulCompletion": true
+    },
+    {
+      "sessionId": "5C8AA7D8-8FDF-4687-BFC8-DF0E29034E90",
+      "userId": "beta-lee-hotmail",
+      "type": "scenario",
+      "durationSeconds": 37,
+      "completed": true,
+      "turns": 3,
+      "improvements": [
+        "Ticketvraag en bevestiging"
+      ],
+      "xpAwarded": 38,
+      "createdAt": "2026-06-14T11:18:59.708Z",
+      "meaningfulCompletion": true
+    },
+    {
+      "sessionId": "95FB9FF2-0F1E-4536-AD15-9E1AB3C7636F",
+      "userId": "beta-lee-hotmail",
+      "type": "scenario",
+      "durationSeconds": 64,
+      "completed": true,
+      "turns": 4,
+      "improvements": [
+        "Verbeteren van grammatica en duidelijkheid in vragen"
+      ],
+      "xpAwarded": 41,
+      "createdAt": "2026-06-15T07:41:15.239Z",
+      "meaningfulCompletion": true
+    },
+    {
+      "sessionId": "E3EB09FE-06A6-4B0B-9BD1-F426497FF169",
+      "userId": "beta-lee-hotmail",
+      "type": "scenario",
+      "durationSeconds": 69,
+      "completed": true,
+      "turns": 4,
+      "improvements": [
+        "Beleefde verzoeken en bevestigingen"
+      ],
+      "xpAwarded": 41,
+      "createdAt": "2026-06-15T07:59:42.709Z",
       "meaningfulCompletion": true
     }
   ]

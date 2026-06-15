@@ -9,6 +9,14 @@ import { conversationClient } from '@/lib/api/conversationClient'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import { APP_TALK_HUB, listeningTrainingLoopLaunchHref } from '@/lib/routing/appRoutes'
 import { playAppSound } from '@/lib/interaction/appSounds'
+import { TrainingLoopSpeakLine } from '@/features/training-loop/TrainingLoopSpeakLine'
+import {
+  firstSpeakPrompt,
+  pronunciationDrillLines,
+  readAloudFixPractice,
+  retrySentencePractice,
+  weakWordsLines,
+} from '@/features/training-loop/trainingLoopSpeakPayloads'
 
 const LISTENING_TRAINING_LOOP_TYPES = new Set<string>([
   'listening_burst',
@@ -18,24 +26,6 @@ const LISTENING_TRAINING_LOOP_TYPES = new Set<string>([
   'route_detail_drill',
   'number_time_drill',
 ])
-
-function payloadWords(loop: ApiPersonalizedTrainingLoop): string[] {
-  const p = loop.payload as { words?: string[] } | null
-  return Array.isArray(p?.words) ? p.words : []
-}
-
-function payloadSentences(loop: ApiPersonalizedTrainingLoop): {
-  learnerOriginal?: string
-  correctedVersion?: string
-  explanationShort?: string
-} {
-  const p = loop.payload as {
-    learnerOriginal?: string
-    correctedVersion?: string
-    explanationShort?: string
-  } | null
-  return p ?? {}
-}
 
 export function TrainingLoopDrillPage({ loopId }: { loopId: string }) {
   const router = useRouter()
@@ -110,8 +100,11 @@ export function TrainingLoopDrillPage({ loopId }: { loopId: string }) {
     )
   }
 
-  const words = payloadWords(loop)
-  const sent = payloadSentences(loop)
+  const weakWordRows = weakWordsLines(loop)
+  const pronunciationRows = pronunciationDrillLines(loop)
+  const retry = retrySentencePractice(loop)
+  const readAloud = readAloudFixPractice(loop)
+  const speakPrompt = firstSpeakPrompt(loop)
 
   return (
     <div className="mx-auto max-w-lg px-4 pb-24 pt-6">
@@ -131,50 +124,116 @@ export function TrainingLoopDrillPage({ loopId }: { loopId: string }) {
         <p className="mt-3 text-[13px] leading-relaxed text-slate-500">{loop.reason}</p>
       </header>
 
-      <section className="mt-6 rounded-2xl border border-slate-200/80 bg-white px-4 py-4 shadow-sm sm:px-5">
-        {loop.loopType === 'weak_words' || loop.loopType === 'pronunciation_drill' ? (
-          <ul className="space-y-2">
-            {words.map((w) => (
-              <li
-                key={w}
-                className="rounded-xl border border-slate-100 bg-slate-50/80 px-3 py-2.5 text-[16px] font-semibold text-slate-900"
-              >
-                {w}
-              </li>
-            ))}
-          </ul>
+      <section className="mt-6 space-y-3">
+        {loop.loopType === 'weak_words' ? (
+          <>
+            <p className="text-[13px] leading-relaxed text-slate-600 px-0.5">
+              Hear each word in Dutch, record yourself, then compare side by side.
+            </p>
+            <ul className="space-y-3 list-none p-0 m-0">
+              {weakWordRows.map((row, i) => (
+                <li key={`${row.text}-${i}`}>
+                  <TrainingLoopSpeakLine
+                    targetNl={row.text}
+                    referenceAudioUrl={row.referenceAudioUrl}
+                    practiceHint={row.practiceHint}
+                    rowLabel={weakWordRows.length > 1 ? `Word ${i + 1}` : undefined}
+                    maxRecordingSeconds={14}
+                  />
+                </li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+
+        {loop.loopType === 'pronunciation_drill' ? (
+          <>
+            <p className="text-[13px] leading-relaxed text-slate-600 px-0.5">
+              Isolate each sound — reference first, then your take.
+            </p>
+            <ul className="space-y-3 list-none p-0 m-0">
+              {pronunciationRows.map((row, i) => (
+                <li key={`${row.text}-${i}`}>
+                  <TrainingLoopSpeakLine
+                    targetNl={row.text}
+                    referenceAudioUrl={row.referenceAudioUrl}
+                    rowLabel={pronunciationRows.length > 1 ? `Word ${i + 1}` : undefined}
+                    maxRecordingSeconds={14}
+                  />
+                </li>
+              ))}
+            </ul>
+          </>
         ) : null}
 
         {loop.loopType === 'retry_sentence' ? (
-          <div className="space-y-3 text-[14px] leading-relaxed">
-            {sent.learnerOriginal ? (
-              <div>
+          <div className="space-y-3">
+            {retry.learnerOriginal ? (
+              <div className="rounded-xl border border-slate-200/80 bg-white px-3 py-3">
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">You said</p>
-                <p className="mt-1 rounded-xl border border-slate-100 bg-slate-50 px-3 py-2 text-slate-800">{sent.learnerOriginal}</p>
+                <p className="mt-1 text-[14px] text-slate-800">{retry.learnerOriginal}</p>
               </div>
             ) : null}
-            {sent.correctedVersion ? (
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">Smoother line</p>
-                <p className="mt-1 rounded-xl border border-emerald-100 bg-emerald-50/80 px-3 py-2 font-medium text-emerald-950">
-                  {sent.correctedVersion}
-                </p>
-              </div>
+            {retry.correctedVersion ? (
+              <TrainingLoopSpeakLine
+                targetNl={retry.correctedVersion}
+                referenceAudioUrl={retry.referenceAudioUrl}
+                sessionCompareAudioUrl={retry.compareAudioUrl}
+                rowLabel="Smoother line"
+                maxRecordingSeconds={28}
+              />
             ) : null}
-            {sent.explanationShort ? <p className="text-[13px] text-slate-600">{sent.explanationShort}</p> : null}
+            {retry.explanationShort ? (
+              <p className="text-[13px] text-slate-600 px-0.5">{retry.explanationShort}</p>
+            ) : null}
           </div>
         ) : null}
 
-        {['structure_drill', 'question_drill', 'storytelling_drill', 'mini_scenario', 'read_aloud_fix'].includes(loop.loopType) ? (
-          <div className="space-y-2 text-[14px] leading-relaxed text-slate-700">
-            <p className="flex items-start gap-2">
+        {loop.loopType === 'read_aloud_fix' ? (
+          readAloud.passageText ? (
+            <TrainingLoopSpeakLine
+              targetNl={readAloud.passageText}
+              referenceAudioUrl={readAloud.referenceAudioUrl}
+              rowLabel={readAloud.focusLabel ?? 'Passage'}
+              maxRecordingSeconds={45}
+            />
+          ) : readAloud.targetWords?.length ? (
+            <ul className="space-y-3 list-none p-0 m-0">
+              {readAloud.targetWords.map((w, i) => (
+                <li key={`${w}-${i}`}>
+                  <TrainingLoopSpeakLine
+                    targetNl={w}
+                    rowLabel={readAloud.targetWords!.length > 1 ? `Focus word ${i + 1}` : 'Focus word'}
+                    maxRecordingSeconds={14}
+                  />
+                </li>
+              ))}
+            </ul>
+          ) : null
+        ) : null}
+
+        {['structure_drill', 'question_drill', 'storytelling_drill', 'mini_scenario'].includes(loop.loopType) &&
+        speakPrompt ? (
+          <div className="space-y-3">
+            <p className="flex items-start gap-2 text-[14px] leading-relaxed text-slate-700 px-0.5">
+              <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-violet-600" aria-hidden />
+              <span>Work through this out loud — hear the model line, record, then compare.</span>
+            </p>
+            <TrainingLoopSpeakLine targetNl={speakPrompt} maxRecordingSeconds={35} />
+          </div>
+        ) : null}
+
+        {['structure_drill', 'question_drill', 'storytelling_drill', 'mini_scenario'].includes(loop.loopType) &&
+        !speakPrompt ? (
+          <div className="rounded-2xl border border-slate-200/80 bg-white px-4 py-4 shadow-sm sm:px-5">
+            <p className="flex items-start gap-2 text-[14px] leading-relaxed text-slate-700">
               <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-violet-600" aria-hidden />
               <span>
                 Work through this out loud — keep it short. When it feels solid, mark it done and we will fold the win
                 into your learning profile.
               </span>
             </p>
-            <pre className="max-h-48 overflow-auto whitespace-pre-wrap rounded-xl border border-slate-100 bg-slate-50/80 p-3 text-[13px] text-slate-800">
+            <pre className="mt-3 max-h-48 overflow-auto whitespace-pre-wrap rounded-xl border border-slate-100 bg-slate-50/80 p-3 text-[13px] text-slate-800">
               {JSON.stringify(loop.payload, null, 2)}
             </pre>
           </div>

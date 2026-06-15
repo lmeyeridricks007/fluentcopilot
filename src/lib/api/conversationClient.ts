@@ -352,6 +352,7 @@ export const conversationClient = {
     text: string
     threadId?: string
     chunkIndex: number
+    language?: string
   }): Promise<SpeakLiveTtsChunkResponse> {
     return requestJson('/speak-live/tts-chunk', {
       method: 'POST',

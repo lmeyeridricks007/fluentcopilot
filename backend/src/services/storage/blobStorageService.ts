@@ -123,7 +123,7 @@ export function assertConversationBinaryBlobStorageConfigured(): void {
     throw new ApiError(
       503,
       'DEPENDENCY_UNAVAILABLE',
-      'Azure Blob Storage is required for Speak Live audio. Set AZURE_STORAGE_CONNECTION_STRING (UseDevelopmentStorage=true for Azurite).',
+      'Azure Blob Storage is required for Speak Live audio. Set AZURE_STORAGE_CONNECTION_STRING to the Azure Storage account connection string.',
     )
   }
 }
