@@ -7,6 +7,8 @@ backend/local.settings.json
 
 # Generated build output and local service state
 .next/
+out/
+tsconfig.tsbuildinfo
 dist/
 backend/dist/
 azurite-data/
