@@ -1265,9 +1265,13 @@ export function SpeakLiveRunView() {
             return
           }
           if (err.status === 404) {
-            setSessionBootError(
-              `Speak Live API returned 404. Confirm the Functions host is running (e.g. npm start in backend/) and NEXT_PUBLIC_API_BASE_URL is the host only (${getApiBaseUrl() || 'http://localhost:7071'} — not …/api).`
-            )
+            const apiBase = getApiBaseUrl()
+            const hint = !apiBase
+              ? 'NEXT_PUBLIC_API_BASE_URL is missing from this build. Set it in Vercel → Environment Variables, then Redeploy (env vars are baked in at build time).'
+              : apiBase.includes('fluentcopilot.com') || apiBase.includes('vercel.app')
+                ? 'NEXT_PUBLIC_API_BASE_URL must point at Azure Functions, not your Vercel site. Use https://func-language-tutor-dev-cqd6fkgdb2hmcnah.westeurope-01.azurewebsites.net (no /api suffix), then Redeploy.'
+                : `Confirm Azure Functions is running and NEXT_PUBLIC_API_BASE_URL is the host only (${apiBase} — not …/api). After changing env vars in Vercel, Redeploy.`
+            setSessionBootError(`Speak Live API returned 404. ${hint}`)
             return
           }
           setSessionBootError(err.message || 'Could not start Speak Live session.')

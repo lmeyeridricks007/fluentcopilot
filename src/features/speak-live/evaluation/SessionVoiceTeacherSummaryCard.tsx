@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { clsx } from 'clsx'
 import { Loader2, Pause, Play, Volume2 } from 'lucide-react'
 import { conversationClient } from '@/lib/api/conversationClient'
+import { playHtmlAudio, unlockHtmlAudioPlayback } from '@/lib/audio/htmlAudioPlayback'
 import {
   buildSessionTeacherVoiceSummary,
   type SessionTeacherSummaryInput,
@@ -23,7 +24,7 @@ export function SessionVoiceTeacherSummaryCard(props: {
   const [locale, setLocale] = useState<TeacherSummaryLocale>('nl')
   const [phase, setPhase] = useState<'idle' | 'loading' | 'playing' | 'error'>('idle')
   const [error, setError] = useState<string | null>(null)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const stopPlaybackRef = useRef<(() => void) | null>(null)
   const cacheRef = useRef<Map<string, CachedAudio>>(new Map())
 
   const script = useMemo(() => {
@@ -32,13 +33,8 @@ export function SessionVoiceTeacherSummaryCard(props: {
   }, [buildScript, locale, summaryInput])
 
   const stopPlayback = useCallback(() => {
-    const el = audioRef.current
-    if (el) {
-      el.pause()
-      el.onended = null
-      el.onerror = null
-      audioRef.current = null
-    }
+    stopPlaybackRef.current?.()
+    stopPlaybackRef.current = null
     setPhase((p) => (p === 'playing' || p === 'loading' ? 'idle' : p))
   }, [])
 
@@ -67,19 +63,13 @@ export function SessionVoiceTeacherSummaryCard(props: {
     setPhase('loading')
     setError(null)
     try {
+      void unlockHtmlAudioPlayback()
       const url = await fetchAudio(script, locale)
-      const el = new Audio(url)
-      audioRef.current = el
-      el.onended = () => {
-        audioRef.current = null
-        setPhase('idle')
-      }
-      el.onerror = () => {
-        audioRef.current = null
-        setPhase('error')
-        setError(locale === 'nl' ? 'Audio kon niet worden afgespeeld.' : 'Could not play the summary audio.')
-      }
-      await el.play()
+      const handle = await playHtmlAudio(url, {
+        volume: 1,
+        onEnded: () => setPhase('idle'),
+      })
+      stopPlaybackRef.current = handle.stop
       setPhase('playing')
     } catch (e) {
       setPhase('error')

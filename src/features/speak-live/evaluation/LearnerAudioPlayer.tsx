@@ -1,7 +1,8 @@
 'use client'
 
-import { useCallback, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { Mic } from 'lucide-react'
+import { configureHtmlAudioElement, unlockHtmlAudioPlayback } from '@/lib/audio/htmlAudioPlayback'
 import type { AudioLoadStatus } from './evaluationUtils'
 
 export type LearnerAudioPlayerProps = {
@@ -24,12 +25,19 @@ export function LearnerAudioPlayer({
 }: LearnerAudioPlayerProps) {
   const ref = useRef<HTMLAudioElement>(null)
 
+  useEffect(() => {
+    const el = ref.current
+    if (el) configureHtmlAudioElement(el)
+  }, [src])
+
   const replay = useCallback(() => {
     const el = ref.current
     if (!el || !src) return
-    el.pause()
-    el.currentTime = 0
-    void el.play().catch(() => {})
+    void unlockHtmlAudioPlayback().finally(() => {
+      el.pause()
+      el.currentTime = 0
+      void el.play().catch(() => {})
+    })
   }, [src])
 
   return (
@@ -62,7 +70,15 @@ export function LearnerAudioPlayer({
 
       {status === 'ready' && src ? (
         <div className="space-y-2">
-          <audio ref={ref} key={src} controls className="w-full h-10 accent-violet-600" src={src} preload="metadata" />
+          <audio
+            ref={ref}
+            key={src}
+            controls
+            playsInline
+            className="w-full h-10 accent-violet-600"
+            src={src}
+            preload="metadata"
+          />
           <button
             type="button"
             onClick={replay}

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef } from 'react'
 import { conversationClient } from '@/lib/api/conversationClient'
+import { createHtmlAudio, unlockHtmlAudioPlayback } from '@/lib/audio/htmlAudioPlayback'
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 
 const SENTENCE_END_RE = /[.?!;]\s*/
@@ -141,12 +142,14 @@ export function useChunkedTtsPlayback(opts?: {
       tryPlayNext()
     }
 
-    const audio = new Audio(chunk.audioUrl)
+    const audio = createHtmlAudio(chunk.audioUrl)
     audio.preload = 'auto'
     audioRef.current = audio
     audio.onended = advanceAfterClip
     audio.onerror = advanceAfterClip
-    audio.play().catch(advanceAfterClip)
+    void unlockHtmlAudioPlayback().finally(() => {
+      audio.play().catch(advanceAfterClip)
+    })
   }, [maybeNotifyPlaybackEnd])
 
   const requestTtsForClause = useCallback(
@@ -233,10 +236,9 @@ export function useChunkedTtsPlayback(opts?: {
     }, 28_000)
   }, [requestTtsForClause, maybeNotifyPlaybackEnd, tryPlayNext])
 
-  /** Explicitly enable playback (e.g. after a user gesture or mute check). */
   const startPlayback = useCallback(() => {
     playbackEnabledRef.current = true
-    tryPlayNext()
+    void unlockHtmlAudioPlayback().finally(() => tryPlayNext())
   }, [tryPlayNext])
 
   const setMuted = useCallback(

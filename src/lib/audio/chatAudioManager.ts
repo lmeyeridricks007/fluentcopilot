@@ -12,6 +12,7 @@ import {
   speakWithBrowserTts,
   stopBrowserSpeech,
 } from '@/lib/audio/browserSpeechPlayback'
+import { createHtmlAudio, unlockHtmlAudioPlayback } from '@/lib/audio/htmlAudioPlayback'
 import type { AudioPlaybackSource, ChatAudioUiState } from '@/lib/audio/audioTypes'
 
 /** Must match Speak Live `/audio/tts` branch — Azure neural assistant or OpenAI at Speak Live speed. */
@@ -173,7 +174,7 @@ async function resolvePlayableUrl(
 function playMediaUrl(messageId: string, url: string, source: AudioPlaybackSource, playbackRate = 1) {
   cleanupMedia()
   stopBrowserSpeech()
-  const el = new Audio(url)
+  const el = createHtmlAudio(url)
   /** Align with Speak Live assistant `<audio>` — slightly softer than 1.0 so neural TTS is less harsh. */
   el.volume = 0.88
   el.playbackRate = playbackRate
@@ -199,11 +200,13 @@ function playMediaUrl(messageId: string, url: string, source: AudioPlaybackSourc
       cleanupMedia()
     }
   }
-  void el.play().catch(() => {
-    if (activeMessageId === messageId) {
-      publish(null, 'idle', null)
-      cleanupMedia()
-    }
+  void unlockHtmlAudioPlayback().finally(() => {
+    void el.play().catch(() => {
+      if (activeMessageId === messageId) {
+        publish(null, 'idle', null)
+        cleanupMedia()
+      }
+    })
   })
 }
 

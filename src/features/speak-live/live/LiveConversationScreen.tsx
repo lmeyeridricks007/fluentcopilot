@@ -9,6 +9,7 @@ import { conversationClient } from '@/lib/api/conversationClient'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import type { ApiLiveCoachTurnFeedback } from '@/lib/api/apiTypes'
 import { requestGenerateSpeech } from '@/lib/audio/audioClient'
+import { configureHtmlAudioElement, unlockHtmlAudioPlayback, toPlayableAudioSrc } from '@/lib/audio/htmlAudioPlayback'
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs, isSpeakLiveBrowserAzureSttEnabled } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
@@ -658,6 +659,11 @@ export function LiveConversationScreen({
   }, [turns])
 
   useEffect(() => {
+    const el = audioRef.current
+    if (el) configureHtmlAudioElement(el)
+  }, [])
+
+  useEffect(() => {
     return () => {
       assistantTtsAbortRef.current?.abort()
       assistantTtsAbortRef.current = null
@@ -706,7 +712,8 @@ export function LiveConversationScreen({
       setAssistantPlaybackFailed(false)
       setAssistantMediaPhase('idle')
       timelineRef.current?.mark('audioSourceAssigned')
-      a.src = url
+      const { src, revoke } = toPlayableAudioSrc(url)
+      a.src = src
       /** Slightly below 1.0 so neural TTS does not feel harsh on first play (especially after silence). */
       a.volume = muted ? 0 : 0.88
       a.oncanplay = () => { timelineRef.current?.mark('audioCanPlay') }
@@ -714,16 +721,21 @@ export function LiveConversationScreen({
       timelineRef.current?.mark('playCallFired')
       setStatus('speaking')
       a.onended = () => {
+        revoke?.()
         setStatus('idle')
       }
       a.onerror = () => {
+        revoke?.()
         /** Do not use `micError` here — that blocks the learner mic and reads as a capture failure. */
         setAssistantPlaybackFailed(true)
         setStatus('idle')
       }
-      void a.play().catch(() => {
-        setAssistantPlaybackFailed(true)
-        setStatus('idle')
+      void unlockHtmlAudioPlayback().finally(() => {
+        void a.play().catch(() => {
+          revoke?.()
+          setAssistantPlaybackFailed(true)
+          setStatus('idle')
+        })
       })
     },
     [muted, stopAssistantAudio]
@@ -1669,6 +1681,8 @@ export function LiveConversationScreen({
   const onMicPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (micMode !== 'hold') return
     if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
+    void unlockHtmlAudioPlayback()
+    chunkedTts.startPlayback()
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
       chunkedTts.abort()
