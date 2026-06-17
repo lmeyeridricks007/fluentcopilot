@@ -57,6 +57,8 @@ export function useChunkedTtsPlayback(opts?: {
   threadId?: string
   /** Autoplay first chunk as soon as TTS resolves (default true). */
   autoplay?: boolean
+  /** When set, plays each clip through the host's persistent `<audio>` (required for iOS). */
+  playClip?: (url: string) => Promise<void>
   onFirstChunkReady?: () => void
   onPlaybackStart?: () => void
   onPlaybackEnd?: () => void
@@ -140,6 +142,14 @@ export function useChunkedTtsPlayback(opts?: {
       playbackIndexRef.current++
       maybeNotifyPlaybackEnd()
       tryPlayNext()
+    }
+
+    const playClip = optsRef.current?.playClip
+    if (playClip && chunk.audioUrl) {
+      void playClip(chunk.audioUrl)
+        .then(advanceAfterClip)
+        .catch(advanceAfterClip)
+      return
     }
 
     const audio = createHtmlAudio(chunk.audioUrl)

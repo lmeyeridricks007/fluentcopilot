@@ -9,7 +9,7 @@ import { conversationClient } from '@/lib/api/conversationClient'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import type { ApiLiveCoachTurnFeedback } from '@/lib/api/apiTypes'
 import { requestGenerateSpeech } from '@/lib/audio/audioClient'
-import { configureHtmlAudioElement, unlockHtmlAudioPlayback, toPlayableAudioSrc } from '@/lib/audio/htmlAudioPlayback'
+import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } from '@/lib/audio/htmlAudioPlayback'
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs, isSpeakLiveBrowserAzureSttEnabled } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
@@ -546,6 +546,9 @@ export function LiveConversationScreen({
   const timelineRef = useRef<TurnTimeline | null>(null)
   const [lastTimeline, setLastTimeline] = useState<TurnTimelineSnapshot | null>(null)
   const assistantTtsAbortRef = useRef<AbortController | null>(null)
+  /** Opening greeting waits for mic tap on iOS — stored until `armAssistantAudio` runs. */
+  const pendingOpeningGreetingUrlRef = useRef<string | null>(null)
+  const openingGreetingPlayedRef = useRef(false)
   /** After LLM, schedule one text-paint sample for latency (matches `latestAssistantId`). */
   const textPaintTargetIdRef = useRef<string | null>(null)
   const useAzureRef = useRef(isSpeakLiveBrowserAzureSttEnabled())
@@ -555,8 +558,25 @@ export function LiveConversationScreen({
   /** While true, STT stability/silence timers must not finalize — pauses between sentences look like “done”. */
   const autoCommit = useTurnAutoCommit(DEFAULT_AUTO_COMMIT_CONFIG, holdingRef)
 
+  const playClipRef = useRef<(url: string) => Promise<void>>(async () => {
+    throw new Error('Audio player not ready')
+  })
+  const playAssistantUrlRef = useRef<
+    (
+      url: string,
+      opts?: {
+        onPlaybackMark?: () => void
+        onEnded?: () => void
+        onError?: () => void
+        sequentialChunk?: boolean
+      },
+    ) => void
+  >(() => {})
+
   const chunkedTts = useChunkedTtsPlayback({
     threadId,
+    autoplay: false,
+    playClip: (url) => playClipRef.current(url),
     onFirstChunkReady: () => {
       latencyTimerRef.current?.markFirstTtsChunkReady()
       timelineRef.current?.mark('firstTtsChunkReady')
@@ -628,6 +648,18 @@ export function LiveConversationScreen({
 
   statusRef.current = status
   mutedRef.current = muted
+
+  const armAssistantAudio = useCallback(() => {
+    chunkedTtsRef.current.startPlayback()
+    const a = audioRef.current
+    if (a) armHtmlAudioElement(a)
+    const pending = pendingOpeningGreetingUrlRef.current
+    if (pending && !openingGreetingPlayedRef.current && !mutedRef.current) {
+      openingGreetingPlayedRef.current = true
+      pendingOpeningGreetingUrlRef.current = null
+      playAssistantUrlRef.current(pending)
+    }
+  }, [])
 
   useEffect(() => {
     if (bootstrap?.messages?.length) {
@@ -705,12 +737,23 @@ export function LiveConversationScreen({
   }, [])
 
   const playAssistantUrl = useCallback(
-    (url: string, opts?: { onPlaybackMark?: () => void }) => {
+    (url: string, opts?: {
+      onPlaybackMark?: () => void
+      onEnded?: () => void
+      onError?: () => void
+      /** Chunked TTS: keep `speaking` status until the host signals playback end. */
+      sequentialChunk?: boolean
+    }) => {
       const a = audioRef.current
-      if (!a || !url.trim()) return
+      if (!a || !url.trim()) {
+        opts?.onError?.()
+        return
+      }
       stopAssistantAudio()
       setAssistantPlaybackFailed(false)
-      setAssistantMediaPhase('idle')
+      if (!opts?.sequentialChunk) {
+        setAssistantMediaPhase('idle')
+      }
       timelineRef.current?.mark('audioSourceAssigned')
       const { src, revoke } = toPlayableAudioSrc(url)
       a.src = src
@@ -719,29 +762,54 @@ export function LiveConversationScreen({
       a.oncanplay = () => { timelineRef.current?.mark('audioCanPlay') }
       opts?.onPlaybackMark?.()
       timelineRef.current?.mark('playCallFired')
-      setStatus('speaking')
+      if (!opts?.sequentialChunk) {
+        setStatus('speaking')
+      }
       a.onended = () => {
         revoke?.()
-        setStatus('idle')
+        if (!opts?.sequentialChunk) {
+          setStatus('idle')
+        }
+        opts?.onEnded?.()
       }
       a.onerror = () => {
         revoke?.()
-        /** Do not use `micError` here — that blocks the learner mic and reads as a capture failure. */
         setAssistantPlaybackFailed(true)
-        setStatus('idle')
-      }
-      void unlockHtmlAudioPlayback().finally(() => {
-        void a.play().catch(() => {
-          revoke?.()
-          setAssistantPlaybackFailed(true)
+        if (!opts?.sequentialChunk) {
           setStatus('idle')
-        })
+        }
+        opts?.onError?.()
+      }
+      void a.play().catch(() => {
+        revoke?.()
+        setAssistantPlaybackFailed(true)
+        if (!opts?.sequentialChunk) {
+          setStatus('idle')
+        }
+        opts?.onError?.()
       })
     },
     [muted, stopAssistantAudio]
   )
 
-  const playAssistantUrlRef = useRef(playAssistantUrl)
+  const playAssistantClipAsync = useCallback(
+    (url: string): Promise<void> =>
+      new Promise((resolve, reject) => {
+        if (mutedRef.current) {
+          resolve()
+          return
+        }
+        playAssistantUrl(url, {
+          sequentialChunk: true,
+          onEnded: () => resolve(),
+          onError: () => reject(new Error('Assistant audio playback failed')),
+        })
+      }),
+    [playAssistantUrl],
+  )
+
+  playClipRef.current = playAssistantClipAsync
+
   playAssistantUrlRef.current = playAssistantUrl
 
   useEffect(() => {
@@ -811,7 +879,7 @@ export function LiveConversationScreen({
           if (mutedRef.current) {
             setStatus('idle')
           } else {
-            playAssistantUrlRef.current(res.audioUrl)
+            pendingOpeningGreetingUrlRef.current = res.audioUrl
           }
         }
       } catch {
@@ -1681,8 +1749,7 @@ export function LiveConversationScreen({
   const onMicPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (micMode !== 'hold') return
     if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
-    void unlockHtmlAudioPlayback()
-    chunkedTts.startPlayback()
+    armAssistantAudio()
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
       chunkedTts.abort()
@@ -1711,6 +1778,7 @@ export function LiveConversationScreen({
       /* ignore */
     }
     autoCommit.markManualCommit()
+    armAssistantAudio()
     void (async () => {
       const bootDeadline = Date.now() + 10_000
       while (micBootRef.current && Date.now() < bootDeadline) {
@@ -1731,6 +1799,7 @@ export function LiveConversationScreen({
     }
     if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
     if (micError) return
+    armAssistantAudio()
     playAppSound('tap')
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
@@ -1747,6 +1816,7 @@ export function LiveConversationScreen({
       return
     }
     if (status === 'listening') {
+      armAssistantAudio()
       void commitListening()
     }
   }
@@ -1959,7 +2029,13 @@ export function LiveConversationScreen({
           : 'bg-[#fafaf7]',
       )}
     >
-      <audio ref={audioRef} className="hidden" preload="auto" playsInline />
+      <audio
+        ref={audioRef}
+        preload="auto"
+        playsInline
+        className="pointer-events-none fixed left-0 bottom-0 h-px w-px opacity-0"
+        aria-hidden
+      />
 
       <header
         className={clsx(
@@ -2652,7 +2728,11 @@ export function LiveConversationScreen({
             onTogglePause={togglePause}
             onToggleMute={() => {
               playAppSound('tap')
-              setMuted((m) => !m)
+              setMuted((m) => {
+                const next = !m
+                if (!next) armAssistantAudio()
+                return next
+              })
             }}
             onToggleSettings={() => setSettingsOpen((s) => !s)}
             onSetMicMode={(m) => {
@@ -2668,6 +2748,7 @@ export function LiveConversationScreen({
             replayDisabledReason="No voice for this reply."
             onReplayAssistant={() => {
               playAppSound('tap')
+              armAssistantAudio()
               replayLastAssistant()
             }}
             captionsOn={captionsOn}

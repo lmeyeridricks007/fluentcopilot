@@ -21,8 +21,29 @@ export function createHtmlAudio(src?: string): HTMLAudioElement {
 }
 
 /**
- * Call on the first user tap (e.g. mic press, play button) so later async TTS can play.
- * Safe to call multiple times.
+ * Prime a specific `<audio>` element during a user gesture (mic tap).
+ * iOS only allows later async `play()` on the same element that was unlocked.
+ */
+export function armHtmlAudioElement(el: HTMLAudioElement): void {
+  if (typeof window === 'undefined') return
+  configureHtmlAudioElement(el)
+  const { src, revoke } = toPlayableAudioSrc(SILENT_WAV)
+  el.volume = 0.001
+  el.src = src
+  void el
+    .play()
+    .then(() => {
+      el.pause()
+      el.currentTime = 0
+      revoke?.()
+    })
+    .catch(() => {
+      revoke?.()
+    })
+}
+
+/**
+ * Fallback unlock via a throwaway element (non–Speak Live surfaces).
  */
 export async function unlockHtmlAudioPlayback(): Promise<void> {
   if (typeof window === 'undefined' || iosUnlockAttempted) return
