@@ -1266,7 +1266,9 @@ function SentenceFeedbackPreview({
   const corrections = (turn.wrongWordDetections?.length ?? 0) > 0 ? wrongDetectionsToCorrections(turn.wrongWordDetections ?? []) : extractWordCorrections(turn)
   const better = pickDisplayCorrectedPhrase(transcript, corrections, [
     turn.naturalRewrite?.improved,
-    turn.languageEvaluation?.improvedVersion,
+    typeof turn.languageEvaluation?.improvedVersion === 'string'
+      ? turn.languageEvaluation.improvedVersion
+      : null,
     turn.sentenceGroundedReview?.nativePhrase,
     turn.referenceSentence,
   ]).trim()
