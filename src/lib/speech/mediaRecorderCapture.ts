@@ -27,6 +27,13 @@ export type StartMediaRecordingSessionOptions = {
    * Read-aloud passes a long ceiling so passages are not cut off at the default 60s Speak Live clip length.
    */
   maxDurationMs?: number
+  /**
+   * Optional pre-approved microphone stream. When supplied, the recorder will not call
+   * `getUserMedia` again, which avoids repeated permission prompts in live voice sessions.
+   */
+  stream?: MediaStream
+  /** Defaults to true for owned streams, false for caller-supplied streams. */
+  stopTracksOnStop?: boolean
 }
 
 /**
@@ -43,13 +50,16 @@ export async function startMediaRecordingSession(
       ? Math.min(Math.max(rawCap, 5_000), 300_000)
       : envMax
 
-  const stream = await navigator.mediaDevices.getUserMedia({
-    audio: {
-      echoCancellation: true,
-      noiseSuppression: true,
-      channelCount: 1,
-    },
-  })
+  const stream =
+    options?.stream ??
+    (await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: true,
+        noiseSuppression: true,
+        channelCount: 1,
+      },
+    }))
+  const stopTracksOnStop = options?.stopTracksOnStop ?? !options?.stream
 
   const mimeType = pickMimeType()
   const mr = new MediaRecorder(stream, { mimeType })
@@ -60,6 +70,7 @@ export async function startMediaRecordingSession(
   })
 
   const stopTracks = () => {
+    if (!stopTracksOnStop) return
     for (const t of stream.getTracks()) {
       try {
         t.stop()

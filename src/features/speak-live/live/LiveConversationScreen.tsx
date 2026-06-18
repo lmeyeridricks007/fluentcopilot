@@ -12,7 +12,7 @@ import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } fr
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs, isSpeakLiveBrowserAzureSttEnabled } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
-import { micErrorKind } from '../call/speakLiveSpeech'
+import { ensureMicStream, micErrorKind, stopMediaStream } from '../call/speakLiveSpeech'
 import { startMediaRecordingSession, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
 import { LiveLatestAssistantCard } from './LiveLatestAssistantCard'
 import { LanguageCoachTurnFeedbackCard } from './LanguageCoachTurnFeedbackCard'
@@ -558,6 +558,8 @@ export function LiveConversationScreen({
   const listenTickRef = useRef<number | null>(null)
   /** Same short-capture session as Talk dictation (`useStickyVoiceInput` → `startMediaRecordingSession`). */
   const mediaCapRef = useRef<ActiveMediaRecording | null>(null)
+  /** Keep the approved mic stream for this session so mobile browsers do not re-prompt every turn. */
+  const micStreamRef = useRef<MediaStream | null>(null)
   /**
    * When browser Azure STT is on, we still need a MediaRecorder clip for `learnerAudioBlobPath` (post-session evaluation).
    * Azure SDK uses the mic separately; a second `getUserMedia` often succeeds and runs in parallel.
@@ -687,13 +689,15 @@ export function LiveConversationScreen({
   /** True after the learner taps the mic — reset() must not clear this or TTS never plays on mobile. */
   const assistantPlaybackArmedRef = useRef(false)
 
-  const armAssistantAudio = useCallback(() => {
+  const armAssistantAudio = useCallback((opts?: { playPendingGreeting?: boolean }) => {
+    const playPendingGreeting = opts?.playPendingGreeting ?? true
     assistantPlaybackArmedRef.current = true
     chunkedTtsRef.current.startPlayback()
     const a = audioRef.current
     if (a) armHtmlAudioElement(a)
     const pending = pendingOpeningGreetingUrlRef.current
     if (
+      playPendingGreeting &&
       pending &&
       !openingGreetingPlayedRef.current &&
       !mutedRef.current &&
@@ -775,6 +779,7 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
+      stopMediaStream(micStreamRef)
       /** Read the latest audio element at unmount time on purpose — the ref may have changed
        *  since the effect was set up (e.g. multiple chunks played during the session). */
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1720,8 +1725,13 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
-      /** Start capture immediately so the blob covers the full hold (Azure SDK connect can lag hundreds of ms). */
-      const recordingPromise = startMediaRecordingSession({ requestDataBeforeStop: true })
+      /** Ask for mic access once, then reuse that stream for short capture clips during this session. */
+      const micStream = await ensureMicStream(micStreamRef)
+      const cap = await startMediaRecordingSession({
+        requestDataBeforeStop: true,
+        stream: micStream,
+        stopTracksOnStop: false,
+      })
       if (useAzureRef.current) {
         try {
           await startContinuous(
@@ -1748,16 +1758,10 @@ export function LiveConversationScreen({
           useAzureRef.current = false
         }
       }
-      try {
-        const cap = await recordingPromise
-        if (useAzureRef.current) {
-          evalCapRef.current = cap
-        } else {
-          mediaCapRef.current = cap
-        }
-      } catch {
-        evalCapRef.current = null
-        mediaCapRef.current = null
+      if (useAzureRef.current) {
+        evalCapRef.current = cap
+      } else {
+        mediaCapRef.current = cap
       }
       /** Arm before `micBoot` clears so a fast pointer-up never misses capture (see `onMicPointerUp`). */
       listenArmRef.current = true
@@ -1797,7 +1801,7 @@ export function LiveConversationScreen({
   const onMicPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (micMode !== 'hold') return
     if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
-    armAssistantAudio()
+    armAssistantAudio({ playPendingGreeting: false })
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
       chunkedTts.abort()
@@ -1826,7 +1830,7 @@ export function LiveConversationScreen({
       /* ignore */
     }
     autoCommit.markManualCommit()
-    armAssistantAudio()
+    armAssistantAudio({ playPendingGreeting: false })
     void (async () => {
       const bootDeadline = Date.now() + 10_000
       while (micBootRef.current && Date.now() < bootDeadline) {
@@ -1847,7 +1851,7 @@ export function LiveConversationScreen({
     }
     if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
     if (micError) return
-    armAssistantAudio()
+    armAssistantAudio({ playPendingGreeting: false })
     playAppSound('tap')
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
@@ -1864,7 +1868,7 @@ export function LiveConversationScreen({
       return
     }
     if (status === 'listening') {
-      armAssistantAudio()
+      armAssistantAudio({ playPendingGreeting: false })
       void commitListening()
     }
   }
@@ -1881,6 +1885,7 @@ export function LiveConversationScreen({
     mediaCapRef.current = null
     evalCapRef.current?.cancel()
     evalCapRef.current = null
+    stopMediaStream(micStreamRef)
     if (listenTickRef.current) {
       window.clearInterval(listenTickRef.current)
       listenTickRef.current = null
@@ -1906,6 +1911,7 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
+      stopMediaStream(micStreamRef)
       try {
         await onSaveAndExitLater()
       } catch {
@@ -1921,6 +1927,7 @@ export function LiveConversationScreen({
     mediaCapRef.current = null
     evalCapRef.current?.cancel()
     evalCapRef.current = null
+    stopMediaStream(micStreamRef)
     await onEndSessionEvaluate()
   }
 

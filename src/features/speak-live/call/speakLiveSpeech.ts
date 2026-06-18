@@ -50,7 +50,8 @@ export function speakAiLine(params: {
 }
 
 export async function ensureMicStream(streamRef: { current: MediaStream | null }): Promise<MediaStream> {
-  if (streamRef.current) return streamRef.current
+  if (streamRef.current?.getAudioTracks().some((track) => track.readyState === 'live')) return streamRef.current
+  streamRef.current = null
   if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
     throw new Error('NO_MEDIA')
   }
