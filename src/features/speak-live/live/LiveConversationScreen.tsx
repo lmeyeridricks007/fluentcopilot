@@ -203,6 +203,7 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
 }
 
 const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
+const ASSISTANT_PLAYBACK_VOLUME = 0.88
 
 /** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
 async function fetchSpeakLiveReplyAudio(
@@ -694,7 +695,10 @@ export function LiveConversationScreen({
     assistantPlaybackArmedRef.current = true
     chunkedTtsRef.current.startPlayback()
     const a = audioRef.current
-    if (a) armHtmlAudioElement(a)
+    if (a) {
+      a.volume = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
+      armHtmlAudioElement(a)
+    }
     const pending = pendingOpeningGreetingUrlRef.current
     if (
       playPendingGreeting &&
@@ -752,7 +756,10 @@ export function LiveConversationScreen({
       if (assistantPlaybackArmedRef.current) {
         chunkedTtsRef.current.startPlayback()
         const a = audioRef.current
-        if (a) armHtmlAudioElement(a)
+        if (a) {
+          a.volume = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
+          armHtmlAudioElement(a)
+        }
       }
     }, 400)
     const bail = window.setTimeout(() => {
@@ -831,7 +838,7 @@ export function LiveConversationScreen({
       const { src, revoke } = toPlayableAudioSrc(url)
       a.src = src
       /** Slightly below 1.0 so neural TTS does not feel harsh on first play (especially after silence). */
-      a.volume = muted ? 0 : 0.88
+      a.volume = muted ? 0 : ASSISTANT_PLAYBACK_VOLUME
       a.oncanplay = () => { timelineRef.current?.mark('audioCanPlay') }
       opts?.onPlaybackMark?.()
       timelineRef.current?.mark('playCallFired')
@@ -888,7 +895,7 @@ export function LiveConversationScreen({
   useEffect(() => {
     const a = audioRef.current
     if (a && a.src) {
-      a.volume = muted ? 0 : 0.88
+      a.volume = muted ? 0 : ASSISTANT_PLAYBACK_VOLUME
     }
     chunkedTts.setMuted(muted)
   }, [muted, chunkedTts])
@@ -1806,7 +1813,7 @@ export function LiveConversationScreen({
       assistantTtsAbortRef.current?.abort()
       chunkedTts.abort()
     }
-    if (micError) return
+    if (micError) setMicError(null)
     e.preventDefault()
     holdingRef.current = true
     try {
@@ -1850,7 +1857,7 @@ export function LiveConversationScreen({
       return
     }
     if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
-    if (micError) return
+    if (micError) setMicError(null)
     armAssistantAudio({ playPendingGreeting: false })
     playAppSound('tap')
     if (status === 'replying') {
@@ -1936,7 +1943,6 @@ export function LiveConversationScreen({
     status === 'thinking' ||
     status === 'transcribing' ||
     status === 'got_it' ||
-    Boolean(micError) ||
     !threadId ||
     bootstrap === null
 

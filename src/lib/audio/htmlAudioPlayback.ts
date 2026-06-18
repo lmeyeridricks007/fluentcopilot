@@ -27,6 +27,7 @@ export function createHtmlAudio(src?: string): HTMLAudioElement {
 export function armHtmlAudioElement(el: HTMLAudioElement): void {
   if (typeof window === 'undefined') return
   configureHtmlAudioElement(el)
+  const previousVolume = el.volume
   const { src, revoke } = toPlayableAudioSrc(SILENT_WAV)
   el.volume = 0.001
   el.src = src
@@ -35,9 +36,11 @@ export function armHtmlAudioElement(el: HTMLAudioElement): void {
     .then(() => {
       el.pause()
       el.currentTime = 0
+      el.volume = previousVolume
       revoke?.()
     })
     .catch(() => {
+      el.volume = previousVolume
       revoke?.()
     })
 }
