@@ -219,7 +219,8 @@ export function useChunkedTtsPlayback(opts?: {
   const flush = useCallback(() => {
     flushedRef.current = true
     const remaining = accumulatedRef.current.slice(processedUpToRef.current).trim()
-    if (remaining.length >= MIN_CLAUSE_CHARS) {
+    /** Tail may be shorter than mid-stream clause minimum — still speak the full reply. */
+    if (remaining.length > 0) {
       requestTtsForClause(remaining)
     }
     processedUpToRef.current = accumulatedRef.current.length
@@ -270,7 +271,7 @@ export function useChunkedTtsPlayback(opts?: {
     [tryPlayNext],
   )
 
-  const reset = useCallback(() => {
+  const reset = useCallback((opts?: { preservePlayback?: boolean }) => {
     clearFlushWatchdog()
     abortedRef.current = false
     flushedRef.current = false
@@ -283,7 +284,9 @@ export function useChunkedTtsPlayback(opts?: {
     firstChunkReadyFired.current = false
     playbackStartFired.current = false
     playbackEndNotifiedRef.current = false
-    playbackEnabledRef.current = autoplay
+    if (!opts?.preservePlayback) {
+      playbackEnabledRef.current = autoplay
+    }
     mutedRef.current = false
     if (audioRef.current) {
       audioRef.current.pause()

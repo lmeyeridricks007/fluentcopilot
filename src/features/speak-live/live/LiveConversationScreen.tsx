@@ -8,7 +8,6 @@ import { playAppSound } from '@/lib/interaction/appSounds'
 import { conversationClient } from '@/lib/api/conversationClient'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import type { ApiLiveCoachTurnFeedback } from '@/lib/api/apiTypes'
-import { requestGenerateSpeech } from '@/lib/audio/audioClient'
 import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } from '@/lib/audio/htmlAudioPlayback'
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs, isSpeakLiveBrowserAzureSttEnabled } from '@/lib/api/apiConfig'
@@ -201,6 +200,42 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
   if (status === 'speaking') return 'speaking'
   if (status === 'paused') return 'paused'
   return 'idle'
+}
+
+const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
+
+/** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
+async function fetchSpeakLiveReplyAudio(
+  text: string,
+  threadId: string,
+  signal?: AbortSignal,
+): Promise<string> {
+  if (signal?.aborted) throw new DOMException('Aborted', 'AbortError')
+  const cleaned = stripMarkdownForTts(text).slice(0, 1200).trim()
+  if (!cleaned) return ''
+
+  const task = conversationClient.speakLiveTtsChunk({
+    text: cleaned,
+    threadId,
+    chunkIndex: 0,
+    language: 'nl-NL',
+  })
+
+  const timeout = new Promise<never>((_, reject) => {
+    const id = window.setTimeout(() => reject(new Error('TTS request timed out')), SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS)
+    signal?.addEventListener(
+      'abort',
+      () => {
+        window.clearTimeout(id)
+        reject(new DOMException('Aborted', 'AbortError'))
+      },
+      { once: true },
+    )
+  })
+
+  const res = await Promise.race([task, timeout])
+  if (signal?.aborted) throw new DOMException('Aborted', 'AbortError')
+  return res.audioUrl?.trim() ?? ''
 }
 
 export function LiveConversationScreen({
@@ -649,12 +684,22 @@ export function LiveConversationScreen({
   statusRef.current = status
   mutedRef.current = muted
 
+  /** True after the learner taps the mic — reset() must not clear this or TTS never plays on mobile. */
+  const assistantPlaybackArmedRef = useRef(false)
+
   const armAssistantAudio = useCallback(() => {
+    assistantPlaybackArmedRef.current = true
     chunkedTtsRef.current.startPlayback()
     const a = audioRef.current
     if (a) armHtmlAudioElement(a)
     const pending = pendingOpeningGreetingUrlRef.current
-    if (pending && !openingGreetingPlayedRef.current && !mutedRef.current) {
+    if (
+      pending &&
+      !openingGreetingPlayedRef.current &&
+      !mutedRef.current &&
+      statusRef.current === 'idle' &&
+      !listenArmRef.current
+    ) {
       openingGreetingPlayedRef.current = true
       pendingOpeningGreetingUrlRef.current = null
       playAssistantUrlRef.current(pending)
@@ -694,6 +739,29 @@ export function LiveConversationScreen({
     const el = audioRef.current
     if (el) configureHtmlAudioElement(el)
   }, [])
+
+  /** Kick playback if TTS finished but audio never started (common after reset cleared the arm flag). */
+  useEffect(() => {
+    if (status !== 'replying') return undefined
+    const kick = window.setTimeout(() => {
+      if (statusRef.current !== 'replying') return
+      if (assistantPlaybackArmedRef.current) {
+        chunkedTtsRef.current.startPlayback()
+        const a = audioRef.current
+        if (a) armHtmlAudioElement(a)
+      }
+    }, 400)
+    const bail = window.setTimeout(() => {
+      if (statusRef.current !== 'replying' && statusRef.current !== 'speaking') return
+      setAssistantMediaPhase('idle')
+      setStatus('idle')
+      setSttWarning('Voice is taking longer than usual — read the reply above, or use Replay in the menu.')
+    }, 38_000)
+    return () => {
+      window.clearTimeout(kick)
+      window.clearTimeout(bail)
+    }
+  }, [status])
 
   useEffect(() => {
     return () => {
@@ -862,24 +930,22 @@ export function LiveConversationScreen({
     assistantTtsAbortRef.current = ac
     void (async () => {
       try {
-        const res = await requestGenerateSpeech(
-          {
-            text: stripMarkdownForTts(openingAssistant.text.trim()),
-            language: 'nl-NL',
-            threadId,
-            messageId: openingAssistant.id,
-            purpose: 'speak_live_assistant',
-          },
-          { signal: ac.signal }
-        )
+        const res = await fetchSpeakLiveReplyAudio(openingAssistant.text.trim(), threadId, ac.signal)
         if (ac.signal.aborted) return
-        setLastAssistantAudioUrl(res.audioUrl)
-        setLastAssistantTtsFailed(!res.audioUrl?.trim())
-        if (res.audioUrl?.trim()) {
+        setLastAssistantAudioUrl(res)
+        setLastAssistantTtsFailed(!res)
+        if (res) {
           if (mutedRef.current) {
             setStatus('idle')
+          } else if (
+            assistantPlaybackArmedRef.current &&
+            statusRef.current === 'idle' &&
+            !listenArmRef.current
+          ) {
+            openingGreetingPlayedRef.current = true
+            playAssistantUrlRef.current(res)
           } else {
-            pendingOpeningGreetingUrlRef.current = res.audioUrl
+            pendingOpeningGreetingUrlRef.current = res
           }
         }
       } catch {
@@ -930,7 +996,8 @@ export function LiveConversationScreen({
         const trimmedTx = params.transcript?.trim()
         if (trimmedTx) {
           setStatus('got_it')
-          chunkedTts.reset()
+          chunkedTts.reset({ preservePlayback: assistantPlaybackArmedRef.current })
+          chunkedTts.startPlayback()
           const tl = timelineRef.current
           const llmClock = Date.now()
           latency?.markLlmRequestStart()
@@ -974,6 +1041,7 @@ export function LiveConversationScreen({
           latency?.markLlmDone()
 
           chunkedTts.flush()
+          chunkedTts.startPlayback()
           chunkedTts.setMuted(mutedRef.current)
           latency?.setTtsChunkCount(chunkedTts.getChunkCount())
 
@@ -1059,22 +1127,12 @@ export function LiveConversationScreen({
               if (!latency?.ttsStartMs) latency?.markTtsStart()
               let audioUrl = ''
               try {
-                const tts = await requestGenerateSpeech(
-                  {
-                    text: stripMarkdownForTts(aText).slice(0, 1200),
-                    language: 'nl-NL',
-                    threadId,
-                    messageId: streamRes.assistantMessage.id,
-                    purpose: 'speak_live_assistant',
-                  },
-                  { signal: ac.signal }
-                )
+                audioUrl = await fetchSpeakLiveReplyAudio(aText, threadId, ac.signal)
                 if (ac.signal.aborted) {
                   if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
                   setAssistantMediaPhase('idle')
                   return
                 }
-                audioUrl = tts.audioUrl?.trim() ?? ''
               } catch (ttsErr) {
                 if (ac.signal.aborted) {
                   if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
@@ -1189,22 +1247,12 @@ export function LiveConversationScreen({
               latency?.markTtsStart()
               let audioUrl = ''
               try {
-                const tts = await requestGenerateSpeech(
-                  {
-                    text: stripMarkdownForTts(aText).slice(0, 1200),
-                    language: 'nl-NL',
-                    threadId,
-                    messageId: res.assistantMessageId,
-                    purpose: 'speak_live_assistant',
-                  },
-                  { signal: ac.signal }
-                )
+                audioUrl = await fetchSpeakLiveReplyAudio(aText, threadId, ac.signal)
                 if (ac.signal.aborted) {
                   if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
                   setAssistantMediaPhase('idle')
                   return
                 }
-                audioUrl = tts.audioUrl?.trim() ?? ''
               } catch (e) {
                 if (ac.signal.aborted) {
                   if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
