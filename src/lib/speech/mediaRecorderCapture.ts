@@ -2,6 +2,8 @@
 
 import { getMaxRecordingDurationMs } from '@/lib/api/apiConfig'
 
+const MEDIA_RECORDER_STOP_TIMEOUT_MS = 1800
+
 function pickMimeType(): string {
   const candidates = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4']
   for (const c of candidates) {
@@ -111,25 +113,47 @@ export async function startMediaRecordingSession(
       if (stopPromise) return stopPromise
       stopPromise = new Promise((resolve, reject) => {
         clearTimer()
-        if (mr.state === 'inactive') {
+        let settled = false
+        let stopTimeout: ReturnType<typeof setTimeout> | null = null
+        const settle = (kind: 'resolve' | 'reject', value: { blob: Blob; mimeType: string } | Error) => {
+          if (settled) return
+          settled = true
+          if (stopTimeout) {
+            clearTimeout(stopTimeout)
+            stopTimeout = null
+          }
           stopTracks()
+          if (kind === 'resolve') {
+            resolve(value as { blob: Blob; mimeType: string })
+          } else {
+            reject(value instanceof Error ? value : new Error('Could not stop recorder'))
+          }
+        }
+        if (mr.state === 'inactive') {
           // Max-duration timer or OS may have stopped the recorder already — still return audio if we have chunks.
           if (chunks.length > 0) {
-            window.setTimeout(() => resolve(assembleBlob()), 0)
+            window.setTimeout(() => settle('resolve', assembleBlob()), 0)
             return
           }
-          reject(new Error('Recording already stopped'))
+          settle('reject', new Error('Recording already stopped'))
           return
         }
         mr.addEventListener(
           'stop',
           () => {
-            stopTracks()
             // Let any queued `dataavailable` handlers run before assembling the blob (short holds + requestData).
-            window.setTimeout(() => resolve(assembleBlob()), 0)
+            window.setTimeout(() => settle('resolve', assembleBlob()), 0)
           },
           { once: true }
         )
+        stopTimeout = setTimeout(() => {
+          // Some mobile browsers occasionally miss `stop`; never leave the live turn pipeline stuck forever.
+          if (chunks.length > 0) {
+            settle('resolve', assembleBlob())
+          } else {
+            settle('reject', new Error('Recording stop timed out'))
+          }
+        }, MEDIA_RECORDER_STOP_TIMEOUT_MS)
         try {
           if (
             requestDataBeforeStop &&
@@ -144,8 +168,7 @@ export async function startMediaRecordingSession(
           }
           mr.stop()
         } catch (e) {
-          stopTracks()
-          reject(e instanceof Error ? e : new Error('Could not stop recorder'))
+          settle('reject', e instanceof Error ? e : new Error('Could not stop recorder'))
         }
       })
       return stopPromise

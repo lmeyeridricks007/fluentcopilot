@@ -2,7 +2,20 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { ChevronDown, ChevronLeft, CircleHelp, Copy, MoreHorizontal, PhoneOff, RotateCcw, Wifi, X } from 'lucide-react'
+import {
+  CheckCircle2,
+  ChevronDown,
+  ChevronLeft,
+  CircleHelp,
+  Copy,
+  Loader2,
+  Mic,
+  MoreHorizontal,
+  PhoneOff,
+  RotateCcw,
+  Wifi,
+  X,
+} from 'lucide-react'
 import { clsx } from 'clsx'
 import { playAppSound } from '@/lib/interaction/appSounds'
 import { conversationClient } from '@/lib/api/conversationClient'
@@ -10,7 +23,7 @@ import { ApiRequestError } from '@/lib/api/apiErrors'
 import type { ApiLiveCoachTurnFeedback } from '@/lib/api/apiTypes'
 import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } from '@/lib/audio/htmlAudioPlayback'
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
-import { getSpeakLiveAzureSegmentationSilenceMs, isSpeakLiveBrowserAzureSttEnabled } from '@/lib/api/apiConfig'
+import { getSpeakLiveAzureSegmentationSilenceMs } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
 import { ensureMicStream, micErrorKind, stopMediaStream } from '../call/speakLiveSpeech'
 import { startMediaRecordingSession, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
@@ -93,6 +106,7 @@ import type {
 import { messagesToLiveTurns } from './liveSpeakTypes'
 
 const CAPTIONS_PREF_KEY = 'fc-speak-live-captions-on'
+type MicPreflightStatus = 'idle' | 'checking' | 'ready' | 'error'
 
 /** Scenario strip height is intrinsic (slim banner layout). */
 const SPEAK_LIVE_VENUE_HERO_LAYOUT = 'w-full shrink-0'
@@ -203,7 +217,7 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
 }
 
 const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
-const ASSISTANT_PLAYBACK_VOLUME = 0.88
+const ASSISTANT_PLAYBACK_VOLUME = 1
 
 /** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
 async function fetchSpeakLiveReplyAudio(
@@ -516,6 +530,10 @@ export function LiveConversationScreen({
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [listenMs, setListenMs] = useState(0)
   const [micError, setMicError] = useState<'mic_denied' | 'audio_failed' | null>(null)
+  const [micPreflightStatus, setMicPreflightStatus] = useState<MicPreflightStatus>('idle')
+  const [micPreflightError, setMicPreflightError] = useState<string | null>(null)
+  const [micPreflightDeviceLabel, setMicPreflightDeviceLabel] = useState<string | null>(null)
+  const [sessionStarted, setSessionStarted] = useState(false)
   const [networkSlow, setNetworkSlow] = useState(false)
   const [endSheetOpen, setEndSheetOpen] = useState(false)
   const [phraseHelpOpen, setPhraseHelpOpen] = useState(false)
@@ -589,7 +607,12 @@ export function LiveConversationScreen({
   const openingGreetingPlayedRef = useRef(false)
   /** After LLM, schedule one text-paint sample for latency (matches `latestAssistantId`). */
   const textPaintTargetIdRef = useRef<string | null>(null)
-  const useAzureRef = useRef(isSpeakLiveBrowserAzureSttEnabled())
+  /**
+   * Reliability first for mobile live sessions: use MediaRecorder as the single mic consumer
+   * and send the captured clip to server STT. Running browser Azure STT beside MediaRecorder
+   * can leave later turns stuck on iOS/Safari because both paths compete for the microphone.
+   */
+  const useAzureRef = useRef(false)
 
   const { startContinuous, stopAndGetTranscript, closeRecognizer } = useLiveSpeakStt('nl-NL')
 
@@ -714,6 +737,41 @@ export function LiveConversationScreen({
     }
   }, [])
 
+  const checkMicrophone = useCallback(async () => {
+    playAppSound('tap')
+    setMicPreflightStatus('checking')
+    setMicPreflightError(null)
+    setMicError(null)
+    try {
+      const stream = await ensureMicStream(micStreamRef)
+      const liveTrack = stream.getAudioTracks().find((track) => track.readyState === 'live')
+      if (!liveTrack) {
+        throw new Error('NO_LIVE_AUDIO_TRACK')
+      }
+      setMicPreflightDeviceLabel(liveTrack.label?.trim() || 'Microphone ready')
+      setMicPreflightStatus('ready')
+    } catch (e) {
+      stopMediaStream(micStreamRef)
+      const kind = micErrorKind(e)
+      setMicError(kind)
+      setMicPreflightStatus('error')
+      setMicPreflightError(
+        kind === 'mic_denied'
+          ? 'Microphone access is blocked for this site. Allow it in your browser settings, then try again.'
+          : 'We could not find a working microphone. Check your browser permissions or connect a mic, then try again.'
+      )
+    }
+  }, [])
+
+  const startCheckedSession = useCallback(() => {
+    if (micPreflightStatus !== 'ready') return
+    playAppSound('tap')
+    setSessionStarted(true)
+    setMicPreflightError(null)
+    setMicError(null)
+    armAssistantAudio()
+  }, [armAssistantAudio, micPreflightStatus])
+
   useEffect(() => {
     if (bootstrap?.messages?.length) {
       setTurns(messagesToLiveTurns(bootstrap.messages))
@@ -837,7 +895,6 @@ export function LiveConversationScreen({
       timelineRef.current?.mark('audioSourceAssigned')
       const { src, revoke } = toPlayableAudioSrc(url)
       a.src = src
-      /** Slightly below 1.0 so neural TTS does not feel harsh on first play (especially after silence). */
       a.volume = muted ? 0 : ASSISTANT_PLAYBACK_VOLUME
       a.oncanplay = () => { timelineRef.current?.mark('audioCanPlay') }
       opts?.onPlaybackMark?.()
@@ -2098,6 +2155,82 @@ export function LiveConversationScreen({
         aria-hidden
       />
 
+      {!sessionStarted ? (
+        <main className="flex flex-1 items-center justify-center px-5 py-8">
+          <section className="w-full max-w-md rounded-[2rem] border border-white/80 bg-white/90 p-5 text-center shadow-[0_24px_70px_-34px_rgba(15,23,42,0.38)]">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-emerald-700 ring-1 ring-emerald-100">
+              {micPreflightStatus === 'ready' ? (
+                <CheckCircle2 className="h-8 w-8" aria-hidden />
+              ) : micPreflightStatus === 'checking' ? (
+                <Loader2 className="h-8 w-8 motion-safe:animate-spin" aria-hidden />
+              ) : (
+                <Mic className="h-8 w-8" aria-hidden />
+              )}
+            </div>
+            <p className="mt-5 text-[11px] font-extrabold uppercase tracking-[0.18em] text-emerald-700">
+              Voice setup
+            </p>
+            <h1 className="mt-2 text-[1.75rem] font-extrabold leading-tight tracking-tight text-[#0F172A]">
+              Check your mic first
+            </h1>
+            <p className="mx-auto mt-3 max-w-xs text-[14px] font-medium leading-relaxed text-[#64748B]">
+              We will confirm your microphone is connected before the coach starts, so every reply can be sent.
+            </p>
+
+            <div
+              className={clsx(
+                'mt-5 rounded-2xl border px-4 py-3 text-left',
+                micPreflightStatus === 'ready'
+                  ? 'border-emerald-200 bg-emerald-50 text-emerald-950'
+                  : micPreflightStatus === 'error'
+                    ? 'border-rose-200 bg-rose-50 text-rose-950'
+                    : 'border-slate-200 bg-slate-50 text-slate-700',
+              )}
+              role="status"
+            >
+              <p className="text-[13px] font-bold">
+                {micPreflightStatus === 'ready'
+                  ? 'Microphone ready'
+                  : micPreflightStatus === 'checking'
+                    ? 'Checking microphone…'
+                    : micPreflightStatus === 'error'
+                      ? 'Microphone not ready'
+                      : 'Microphone not checked yet'}
+              </p>
+              <p className="mt-1 text-[12px] font-medium leading-relaxed opacity-85">
+                {micPreflightStatus === 'ready'
+                  ? micPreflightDeviceLabel ?? 'Your browser confirmed a live microphone.'
+                  : micPreflightError ??
+                    'Tap Check microphone and allow access if your browser asks. We keep that permission for this session.'}
+              </p>
+            </div>
+
+            <div className="mt-5 grid gap-2">
+              <button
+                type="button"
+                onClick={() => void checkMicrophone()}
+                disabled={micPreflightStatus === 'checking'}
+                className="min-h-touch rounded-2xl border border-slate-200 bg-white px-4 py-3 text-[14px] font-extrabold text-[#0F172A] shadow-sm transition hover:bg-slate-50 disabled:opacity-50"
+              >
+                {micPreflightStatus === 'checking' ? 'Checking…' : micPreflightStatus === 'ready' ? 'Check again' : 'Check microphone'}
+              </button>
+              <button
+                type="button"
+                onClick={startCheckedSession}
+                disabled={micPreflightStatus !== 'ready' || bootstrap === null || !threadId}
+                className="min-h-touch rounded-2xl bg-emerald-600 px-4 py-3 text-[15px] font-extrabold text-white shadow-[0_16px_34px_-18px_rgba(5,150,105,0.9)] transition hover:bg-emerald-700 disabled:bg-slate-300 disabled:shadow-none"
+              >
+                Start session
+              </button>
+            </div>
+
+            <p className="mt-4 text-[12px] leading-relaxed text-[#64748B]">
+              On mobile, this setup step prevents repeated permission prompts and keeps the conversation turns moving.
+            </p>
+          </section>
+        </main>
+      ) : (
+        <>
       <header
         className={clsx(
           'shrink-0 z-30 px-4 pt-[max(0.6rem,env(safe-area-inset-top))] pb-3 border-b backdrop-blur-md',
@@ -2995,6 +3128,8 @@ export function LiveConversationScreen({
         turnDebug={lastDebug}
         timeline={lastTimeline}
       />
+        </>
+      )}
     </div>
   )
 }
