@@ -3,11 +3,11 @@
   "userId": "beta-lee-hotmail",
   "userProgress": {
     "userId": "beta-lee-hotmail",
-    "totalXP": 239,
-    "weeklyXP": 239,
-    "currentStreak": 3,
+    "totalXP": 280,
+    "weeklyXP": 280,
+    "currentStreak": 1,
     "longestStreak": 3,
-    "lastActiveDate": "2026-06-15"
+    "lastActiveDate": "2026-06-18"
   },
   "dailyByDate": {
     "2026-05-30": {
@@ -45,6 +45,16 @@
       "date": "2026-06-15",
       "completedUnits": 2,
       "xpEarned": 82,
+      "streakCounted": true,
+      "activityTypes": [
+        "scenario"
+      ]
+    },
+    "2026-06-18": {
+      "userId": "beta-lee-hotmail",
+      "date": "2026-06-18",
+      "completedUnits": 1,
+      "xpEarned": 41,
       "streakCounted": true,
       "activityTypes": [
         "scenario"
@@ -134,6 +144,20 @@
       ],
       "xpAwarded": 41,
       "createdAt": "2026-06-15T07:59:42.709Z",
+      "meaningfulCompletion": true
+    },
+    {
+      "sessionId": "F135ACF0-8A75-404A-829A-E126FBC96D88",
+      "userId": "beta-lee-hotmail",
+      "type": "scenario",
+      "durationSeconds": 58,
+      "completed": true,
+      "turns": 4,
+      "improvements": [
+        "Duidelijk vragen over openbaar vervoer en bevestigen"
+      ],
+      "xpAwarded": 41,
+      "createdAt": "2026-06-18T12:39:08.753Z",
       "meaningfulCompletion": true
     }
   ]
