@@ -95,7 +95,7 @@ export function CoachDailyRecapCard() {
           <p className="text-caption font-bold uppercase tracking-wide text-slate-600">Daily recap</p>
           <p className="mt-1 text-body-sm font-semibold text-ink-primary leading-snug">How today felt in Dutch</p>
           <p className="mt-1 text-caption text-ink-tertiary leading-relaxed">
-            Snapshot of practice, lift-offs, and one sharp focus — still mock until recap syncs from your sessions.
+            Snapshot of practice, lift-offs, and one sharp focus from your recent sessions.
           </p>
         </div>
       </div>

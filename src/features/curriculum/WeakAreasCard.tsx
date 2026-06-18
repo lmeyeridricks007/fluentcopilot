@@ -65,7 +65,7 @@ export function WeakAreasCard() {
             <div>
               <p className="font-medium text-ink-primary capitalize">{t.tag.replace(/_/g, ' ')}</p>
               <p className="text-caption text-ink-secondary">
-                {t.wrongCount} missed · {t.rightCount} correct (demo)
+                {t.wrongCount} missed · {t.rightCount} correct
               </p>
             </div>
             <Button size="sm" variant="secondary" onClick={() => router.push('/app/revision')}>

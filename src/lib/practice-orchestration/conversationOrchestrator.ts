@@ -9,6 +9,7 @@ import { selectTurnFeedbackTier, inferTurnObjective } from '@/lib/practice-orche
 import { detectRecovery } from '@/lib/practice-orchestration/recoveryPolicy'
 import { buildTurnFeedbackSignals } from '@/lib/practice-orchestration/feedbackPolicy'
 import { finalizeAssistantResponse } from '@/lib/practice-orchestration/responsePostProcessor'
+import { isClientMockEngineAllowed } from '@/lib/api/apiConfig'
 import { mockDeterministicAssistantReply } from '@/lib/practice-orchestration/mockDeterministicProvider'
 import type {
   ListeningOutputHints,
@@ -69,7 +70,7 @@ export async function runPracticeConversationTurn(
   if (recovery.scriptedAssistantNl) {
     assistantNl = recovery.scriptedAssistantNl
     coachEn = recovery.coachEn
-  } else {
+  } else if (isClientMockEngineAllowed()) {
     const mock = mockDeterministicAssistantReply({
       scenarioId: input.scenarioId,
       mode: input.mode,
@@ -79,6 +80,8 @@ export async function runPracticeConversationTurn(
     })
     assistantNl = mock.assistantNl
     coachEn = mock.coachEn
+  } else {
+    throw new Error('Conversation backend is required for practice replies.')
   }
 
   const ft = input.feedbackTiming ?? 'end'

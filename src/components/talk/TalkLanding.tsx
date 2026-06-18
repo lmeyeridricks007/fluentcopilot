@@ -97,7 +97,6 @@ export function TalkLanding({ vm, retentionStreak, retentionCaption, totalXp, ex
     continueQuery,
     activeTrainingLoops,
     backendTrainContinue,
-    activeTrainThread,
     showContinueCard,
   } = useTalkContinueSessions()
 
@@ -110,10 +109,10 @@ export function TalkLanding({ vm, retentionStreak, retentionCaption, totalXp, ex
   const trainScenario = useMemo(() => getScenario(TRAIN_STATION_SCENARIO_ID), [])
   const trainPersona = useMemo(() => getPersona(trainScenario.personaId), [trainScenario])
 
-  const continueThreadId = useBackend ? backendTrainContinue?.threadId : activeTrainThread?.id
-  const continueUpdatedAt = useBackend ? backendTrainContinue?.updatedAt : activeTrainThread?.updatedAt
-  const continueMode = useBackend ? backendTrainContinue?.mode : activeTrainThread?.mode
-  const continueFeedback = useBackend ? backendTrainContinue?.feedbackMode : activeTrainThread?.feedbackMode
+  const continueThreadId = backendTrainContinue?.threadId
+  const continueUpdatedAt = backendTrainContinue?.updatedAt
+  const continueMode = backendTrainContinue?.mode
+  const continueFeedback = backendTrainContinue?.feedbackMode
 
   const practiceContinue = vm.continueItem ?? vm.fallbackPrimary
 
@@ -135,7 +134,7 @@ export function TalkLanding({ vm, retentionStreak, retentionCaption, totalXp, ex
       return {
         kind: 'train' as const,
         title: 'Train station',
-        subtitle: `With ${(useBackend ? backendTrainContinue?.personaName : trainPersona.displayName) ?? trainPersona.displayName}. ${continueMode === 'guided' ? 'Guided' : 'Free flow'} · ${continueFeedback === 'after_each' ? 'Notes after each turn' : 'Recap at the end'}.`,
+        subtitle: `With ${backendTrainContinue?.personaName ?? trainPersona.displayName}. ${continueMode === 'guided' ? 'Guided' : 'Free flow'} · ${continueFeedback === 'after_each' ? 'Notes after each turn' : 'Recap at the end'}.`,
         href: appTalkThread(continueThreadId),
         meta: formatUpdated(continueUpdatedAt),
       }

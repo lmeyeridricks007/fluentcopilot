@@ -28,8 +28,10 @@ import { getScenario } from '@/ai-conversation-engine/config/scenarios'
 import { ensureCatalogScenariosRegistered } from '@/lib/practice/conversation/ensureCatalogScenarios'
 import {
   generateOpenPracticeReply,
-  getOpeningLineForScenario,
 } from '@/lib/practice/conversation/generateOpenPracticeReply'
+import { startOpenPracticeBackendSession } from '@/lib/practice/conversation/openPracticeBackend'
+import { isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
+import { BackendRequiredScreen } from '@/lib/api/BackendRequiredScreen'
 import {
   applyPracticeFeedbackClientEffects,
   buildPostConversationFeedback,
@@ -147,6 +149,9 @@ export function OpenPracticeScenarioPage({
   const progressionOpenIdRef = useRef(`open_${scenarioId}_${newId()}`)
   const openedAtMsRef = useRef<number | null>(null)
   const chatStartedAtMsRef = useRef<number | null>(null)
+  const backendThreadIdRef = useRef<string | null>(null)
+  const [sessionBootError, setSessionBootError] = useState<string | null>(null)
+  const [startingChat, setStartingChat] = useState(false)
   const supportToolUsesRef = useRef(0)
   const phaseRef = useRef<Phase>(phase)
   phaseRef.current = phase
@@ -228,10 +233,12 @@ export function OpenPracticeScenarioPage({
     return true
   }, [atScenarioCap, canStartScenario])
 
-  const startChat = useCallback(() => {
+  const startChat = useCallback(async () => {
     if (!ensureScenarioAccess()) return
     if (started.current) return
     started.current = true
+    setStartingChat(true)
+    setSessionBootError(null)
     chatStartedAtMsRef.current = Date.now()
     trackScenarioStarted({
       scenario_id: scenarioId,
@@ -239,24 +246,32 @@ export function OpenPracticeScenarioPage({
       scenario_category: entry?.category,
       entitlement_tier: tier,
     })
-    const opening = getOpeningLineForScenario(scenarioId)
-    setMessages([
-      {
-        id: newId(),
-        role: 'assistant',
-        content: opening,
-        translationEn:
-          mode === 'semi_guided' ? 'Opening line from the other person in the scene.' : undefined,
-      },
-    ])
-    setPhase('chat')
-    setLastPracticeContinue({
-      scenarioId,
-      title,
-      mode,
-      updatedAt: new Date().toISOString(),
-    })
-    track(ANALYTICS_EVENTS.practice_open_conversation_started, { scenarioId, mode })
+    try {
+      const session = await startOpenPracticeBackendSession(scenarioId, mode)
+      backendThreadIdRef.current = session.threadId
+      setMessages([
+        {
+          id: newId(),
+          role: 'assistant',
+          content: session.openingAssistantNl,
+          translationEn:
+            mode === 'semi_guided' ? 'Opening line from the other person in the scene.' : undefined,
+        },
+      ])
+      setPhase('chat')
+      setLastPracticeContinue({
+        scenarioId,
+        title,
+        mode,
+        updatedAt: new Date().toISOString(),
+      })
+      track(ANALYTICS_EVENTS.practice_open_conversation_started, { scenarioId, mode })
+    } catch (e) {
+      started.current = false
+      setSessionBootError(e instanceof Error ? e.message : 'Could not start practice')
+    } finally {
+      setStartingChat(false)
+    }
   }, [ensureScenarioAccess, entry?.category, mode, scenarioId, tier, title])
 
   const userTurns = messages.filter((m) => m.role === 'user').length
@@ -461,6 +476,7 @@ export function OpenPracticeScenarioPage({
         messageHistory,
         difficulty: sessionDifficulty,
         easierModeActive,
+        backendThreadId: backendThreadIdRef.current ?? undefined,
       })
       const asst: PracticeThreadMessage = {
         id: newId(),
@@ -568,6 +584,17 @@ export function OpenPracticeScenarioPage({
       .catch(() => {})
   }, [authUserId, feedbackResult, phase, queryClient])
 
+  if (!isFeature1ChatBackendEnabled()) {
+    return (
+      <BackendRequiredScreen
+        title="Practice needs the API"
+        description="Semi-guided and free practice use your FluentCopilot backend for real assistant replies. Set NEXT_PUBLIC_API_BASE_URL and NEXT_PUBLIC_FEATURE1_CHAT_SOURCE=backend, then redeploy."
+        backHref={`/app/practice/scenario/${encodeURIComponent(scenarioId)}`}
+        backLabel="Back to scenario"
+      />
+    )
+  }
+
   if (!entry || !access.allowed) {
     return (
       <div className="px-4 py-10 text-center text-body-sm text-ink-secondary max-w-lg mx-auto">
@@ -623,8 +650,15 @@ export function OpenPracticeScenarioPage({
               won’t interrupt you otherwise.
             </p>
           )}
-          <Button type="button" size="lg" fullWidth onClick={startChat}>
-            {mode === 'semi_guided' ? 'Start semi-guided chat' : 'Start free conversation'}
+          {sessionBootError ? (
+            <p className="text-body-sm text-red-700 rounded-lg border border-red-200 bg-red-50 px-3 py-2">{sessionBootError}</p>
+          ) : null}
+          <Button type="button" size="lg" fullWidth onClick={startChat} disabled={startingChat}>
+            {startingChat
+              ? 'Starting…'
+              : mode === 'semi_guided'
+                ? 'Start semi-guided chat'
+                : 'Start free conversation'}
           </Button>
         </div>
       ) : null}

@@ -1,18 +1,16 @@
 'use client'
 
 import { useQuery, useQueryClient } from '@tanstack/react-query'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
+import { BackendRequiredScreen } from '@/lib/api/BackendRequiredScreen'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import { conversationClient } from '@/lib/api/conversationClient'
 import {
   mapApiFeedbackModeToUi,
-  mockConversationSummaryToRecapView,
   parseThreadSummaryTextToRecap,
 } from '@/lib/api/conversationMappers'
-import { useFeature1ConversationStore } from './store/conversationStore'
-import { getScenario } from './mock/mockScenarioConfigs'
 import { ConversationRecapView } from './components/ConversationRecapView'
 import { RecapContentShell } from './components/ConversationThreadShell'
 import { appTalkThread } from '@/lib/routing/appRoutes'
@@ -22,46 +20,6 @@ type RecapCachePayload = {
   model: ConversationRecapViewModel
   scenarioTitle: string
   feedbackMode: FeedbackMode
-}
-
-function TrainStationRecapPageMock() {
-  const params = useParams()
-  const router = useRouter()
-  const threadId = typeof params.threadId === 'string' ? params.threadId : params.threadId?.[0] ?? ''
-
-  const thread = useFeature1ConversationStore((s) => s.getThread(threadId))
-  const [storeHydrated, setStoreHydrated] = useState(false)
-
-  useEffect(() => {
-    const finish = () => setStoreHydrated(true)
-    if (useFeature1ConversationStore.persist.hasHydrated()) finish()
-    else return useFeature1ConversationStore.persist.onFinishHydration(finish)
-  }, [])
-
-  useEffect(() => {
-    if (!storeHydrated || !threadId) return
-    if (!thread) {
-      router.replace('/app/talk')
-      return
-    }
-    if (thread.status !== 'completed' || !thread.summary) {
-      router.replace(appTalkThread(threadId))
-    }
-  }, [storeHydrated, thread, threadId, router])
-
-  if (!storeHydrated || !thread?.summary) {
-    return <RecapContentShell />
-  }
-
-  const scenario = getScenario(thread.scenarioId)
-
-  return (
-    <ConversationRecapView
-      model={mockConversationSummaryToRecapView(thread.summary)}
-      feedbackMode={thread.feedbackMode}
-      scenarioTitle={scenario.title}
-    />
-  )
 }
 
 function TrainStationRecapPageBackend() {
@@ -143,5 +101,13 @@ function TrainStationRecapPageBackend() {
 }
 
 export function TrainStationRecapPage() {
-  return isFeature1ChatBackendEnabled() ? <TrainStationRecapPageBackend /> : <TrainStationRecapPageMock />
+  if (!isFeature1ChatBackendEnabled()) {
+    return (
+      <BackendRequiredScreen
+        title="Recap needs the API"
+        description="Session recaps are loaded from your FluentCopilot backend. Set NEXT_PUBLIC_API_BASE_URL and NEXT_PUBLIC_FEATURE1_CHAT_SOURCE=backend, then redeploy."
+      />
+    )
+  }
+  return <TrainStationRecapPageBackend />
 }

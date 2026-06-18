@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * FD-09 — Daily Lessons hub: today status, activity timeline, capture, generate.
  */
@@ -20,7 +22,25 @@ import { useDailyLessonPreferencesStore } from '../store/dailyLessonPreferencesS
 import { usePremiumStore } from '@/store/premiumStore'
 import { track } from '@/lib/analytics'
 
+import { isClientMockEngineAllowed } from '@/lib/api/apiConfig'
+import { BackendRequiredScreen } from '@/lib/api/BackendRequiredScreen'
+
 export function DailyLessonsHubPage() {
+  if (!isClientMockEngineAllowed()) {
+    return (
+      <BackendRequiredScreen
+        title="Daily lessons coming soon"
+        description="Personalized daily lessons will use your FluentCopilot backend once this feature is connected to the API."
+        backHref="/app"
+        backLabel="Back home"
+      />
+    )
+  }
+
+  return <DailyLessonsHubPageInner />
+}
+
+function DailyLessonsHubPageInner() {
   const router = useRouter()
   const queryClient = useQueryClient()
   const enabled = useDailyLessonPreferencesStore((s) => s.enabled)

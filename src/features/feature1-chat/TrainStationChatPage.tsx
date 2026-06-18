@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { useParams, useRouter, useSearchParams } from 'next/navigation'
 import { isConversationStreamEnabled, isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
+import { BackendRequiredScreen } from '@/lib/api/BackendRequiredScreen'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import { conversationClient } from '@/lib/api/conversationClient'
 import {
@@ -16,9 +17,6 @@ import {
   mergeSendMessageIntoSession,
 } from '@/lib/api/conversationMappers'
 import type { MappedConversationSession } from '@/lib/api/conversationMappers'
-import { useFeature1ConversationStore } from './store/conversationStore'
-import { getScenario } from './mock/mockScenarioConfigs'
-import { getPersona } from './mock/mockPersonas'
 import { ChatSubheader } from './components/ChatSubheader'
 import { EndConversationConfirmModal } from './components/EndConversationConfirmModal'
 import { StartNewConversationModal } from './components/StartNewConversationModal'
@@ -100,297 +98,6 @@ function speakLiveHrefForThread(scenario: ScenarioConfig): string {
   const scenarioId = scenario.slug ?? scenario.id
   const level = scenario.difficulty === 'B1' ? 'B1' : scenario.difficulty === 'A1' ? 'A1' : 'A2'
   return speakLiveRunHref({ scenarioId, level })
-}
-
-function TrainStationChatPageMock() {
-  const params = useParams()
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const threadId = typeof params.threadId === 'string' ? params.threadId : params.threadId?.[0] ?? ''
-
-  const thread = useFeature1ConversationStore((s) => s.getThread(threadId))
-  const sendUserMessage = useFeature1ConversationStore((s) => s.sendUserMessage)
-  const dismissContext = useFeature1ConversationStore((s) => s.dismissContext)
-  const endThread = useFeature1ConversationStore((s) => s.endThread)
-  const pauseTrainThread = useFeature1ConversationStore((s) => s.pauseTrainThread)
-  const resumeTrainThread = useFeature1ConversationStore((s) => s.resumeTrainThread)
-
-  const [composer, setComposer] = useState('')
-  const [savedToast, setSavedToast] = useState<string | null>(null)
-  const [savedKeys, setSavedKeys] = useState<Set<string>>(() => new Set())
-  const [storeHydrated, setStoreHydrated] = useState(false)
-  const [newModalOpen, setNewModalOpen] = useState(false)
-  const [endConfirmOpen, setEndConfirmOpen] = useState(false)
-  const bottomRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const finish = () => setStoreHydrated(true)
-    if (useFeature1ConversationStore.persist.hasHydrated()) finish()
-    else return useFeature1ConversationStore.persist.onFinishHydration(finish)
-  }, [])
-
-  useEffect(() => {
-    if (!storeHydrated || !threadId) return
-    if (!thread) {
-      router.replace('/app/talk')
-    } else if (thread.status === 'completed') {
-      router.replace(appTalkThreadRecap(threadId))
-    }
-  }, [storeHydrated, thread, threadId, router])
-
-  useEffect(() => {
-    if (searchParams.get('endReview') !== '1' || !threadId) return
-    setEndConfirmOpen(true)
-    router.replace(appTalkThread(threadId))
-  }, [searchParams, threadId, router])
-
-  useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [thread?.messages.length, thread?.assistantTyping])
-
-  useEffect(() => {
-    return () => {
-      chatAudioManager.stop()
-    }
-  }, [])
-
-  useEffect(() => {
-    if (!thread?.messages) return
-    for (const m of thread.messages) {
-      if (m.sender === 'ai' && m.content.trim()) {
-        chatAudioManager.preload(m.id, m.content, m.metadata?.audioUrl, threadId)
-      }
-    }
-  }, [thread?.messages, threadId])
-
-  const scenario = thread ? getScenario(thread.scenarioId) : null
-  const persona = thread ? getPersona(thread.personaId) : null
-
-  const suggestions = useMemo(() => {
-    if (!thread || !scenario) return []
-    if (thread.mode !== 'guided') return []
-    return scenario.starterSuggestions
-  }, [thread, scenario])
-
-  const voiceReferenceFromComposer = useMemo(
-    () => (suggestions.length > 0 ? pickMatchingStarterSuggestion(composer, suggestions) : null),
-    [composer, suggestions]
-  )
-
-  const showToast = useCallback((msg: string) => {
-    setSavedToast(msg)
-    playAppSound('tap')
-    window.setTimeout(() => setSavedToast(null), 2200)
-  }, [])
-
-  const handleSave = useCallback(
-    async (text: string, source: 'chat_ai' | 'chat_feedback', messageId: string, disambiguator?: string) => {
-      if (!thread || !scenario) return
-      const part = disambiguator ?? (source === 'chat_feedback' ? 'correct' : text)
-      const key = `${messageId}|${source}|${part}`
-      setSavedKeys((prev) => new Set(prev).add(key))
-      try {
-        await saveLexemeFromChatAsync({
-          text,
-          meaning: source === 'chat_ai' ? 'From assistant reply' : 'Coach correction',
-          sourceType: source,
-          sourceScenarioId: scenario.id,
-          sourceThreadId: thread.id,
-          sourceMessageId: messageId,
-          createdAt: new Date().toISOString(),
-        })
-        showToast('Saved to Library')
-      } catch {
-        setSavedKeys((prev) => {
-          const n = new Set(prev)
-          n.delete(key)
-          return n
-        })
-        showToast('Could not save — try again')
-      }
-    },
-    [thread, scenario, showToast]
-  )
-
-  const onSend = useCallback(
-    (sendPayload: ComposerSendPayload) => {
-      if (!thread || thread.assistantTyping || thread.status !== 'active') return
-      const t = composer.trim()
-      if (!t) return
-      sendUserMessage(thread.id, t, sendPayload.inputMeta)
-      setComposer('')
-    },
-    [thread, composer, sendUserMessage]
-  )
-
-  const userTurnCount = useMemo(
-    () => (thread ? thread.messages.filter((m) => m.sender === 'user').length : 0),
-    [thread]
-  )
-
-  const openNewFlow = useCallback(() => {
-    if (!thread) return
-    if (thread.status === 'active') {
-      setNewModalOpen(true)
-      return
-    }
-    router.push(`${APP_TALK_HUB}?openTrainSetup=1`)
-  }, [thread, router])
-
-  const confirmEnd = useCallback(() => {
-    if (!thread) return
-    endThread(thread.id)
-    setEndConfirmOpen(false)
-    router.push(appTalkThreadRecap(thread.id))
-  }, [thread, endThread, router])
-
-  if (!storeHydrated || !thread || !scenario || !persona) {
-    return <ConversationThreadShell statusLine="Loading your practice thread…" />
-  }
-
-  return (
-    <div className="flex flex-col min-h-[calc(100dvh-7rem)] max-w-lg mx-auto w-full px-4 pb-4">
-      <StartNewConversationModal
-        open={newModalOpen}
-        onClose={() => setNewModalOpen(false)}
-        onContinueCurrent={() => setNewModalOpen(false)}
-        onPauseAndStartNew={() => {
-          pauseTrainThread(thread.id)
-          router.push(`${APP_TALK_HUB}?openTrainSetup=1`)
-        }}
-        onEndAndReviewFirst={() => {
-          setEndConfirmOpen(true)
-        }}
-      />
-      <EndConversationConfirmModal
-        open={endConfirmOpen}
-        onClose={() => setEndConfirmOpen(false)}
-        onConfirm={confirmEnd}
-      />
-      <ChatSubheader
-        backHref={APP_TALK_HUB}
-        scenarioTitle={scenario.title}
-        personaLabel={persona.displayName}
-        mode={thread.mode}
-        threadStatus={thread.status}
-        onNewConversation={openNewFlow}
-        newDisabled={thread.assistantTyping}
-        onPauseConversation={() => pauseTrainThread(thread.id)}
-        pauseDisabled={thread.assistantTyping || thread.status !== 'active'}
-      />
-
-      {thread.status === 'active' ? (
-        <div className="mb-2 flex justify-end">
-          <Link
-            href={speakLiveHrefForThread(scenario)}
-            className="text-caption font-bold text-primary-700 hover:text-primary-900 underline-offset-2 hover:underline min-h-touch inline-flex items-center px-1 py-1"
-          >
-            Switch to speaking
-          </Link>
-        </div>
-      ) : null}
-
-      {thread.status === 'paused' ? (
-        <div className="mb-2 rounded-xl border border-amber-200/80 bg-amber-50/90 px-3 py-2.5 text-caption text-amber-950 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-medium">This conversation is paused — resume to keep messaging.</p>
-          <button
-            type="button"
-            onClick={() => resumeTrainThread(thread.id)}
-            className="shrink-0 min-h-touch rounded-lg bg-amber-900 text-white text-caption font-bold px-3 py-2"
-          >
-            Resume
-          </button>
-        </div>
-      ) : null}
-
-      {!thread.contextDismissed ? (
-        <TrainStationContextBanner scenario={scenario} onDismiss={() => dismissContext(thread.id)} />
-      ) : null}
-
-      <div className="flex-1 overflow-y-auto space-y-3 pr-0.5 pb-44 scroll-smooth">
-        {thread.messages.map((msg, i) => {
-          if (msg.sender === 'user' || msg.sender === 'ai') {
-            const fb =
-              msg.sender === 'ai'
-                ? findFeedbackForAiTurn(thread.messages, i, thread.pendingFeedback, thread.feedbackMode)
-                : null
-            return (
-              <div key={msg.id} className="space-y-2">
-                <ChatMessageBubble
-                  message={msg}
-                  personaEmoji={persona.avatarEmoji}
-                  savedKeys={savedKeys}
-                  playbackThreadId={thread.id}
-                  onSaveText={
-                    msg.sender === 'ai'
-                      ? (text, source) => void handleSave(text, source, msg.id)
-                      : undefined
-                  }
-                />
-                {fb ? (
-                  <InlineCoachFeedback
-                    item={fb}
-                    savedKeys={savedKeys}
-                    onSavePhrase={(text, source) =>
-                      void handleSave(text, source, fb.id, text === fb.corrected ? 'correct' : text)
-                    }
-                  />
-                ) : null}
-              </div>
-            )
-          }
-          return null
-        })}
-        {thread.assistantTyping ? (
-          <TypingIndicator label={`${persona.displayName} is typing`} />
-        ) : null}
-        <div ref={bottomRef} className="h-2" aria-hidden />
-      </div>
-
-      <StickyChatComposer
-        value={composer}
-        onChange={setComposer}
-        onSend={onSend}
-        sending={thread.assistantTyping}
-        disabled={thread.assistantTyping || thread.status !== 'active'}
-        voiceEnabled={thread.status === 'active' && !thread.assistantTyping}
-        voiceCefrLevel={scenario.difficulty === 'B1' ? 'B1' : 'A2'}
-        voiceScenarioHint={scenario.title}
-        voiceThreadId={thread.id}
-        voiceScenarioId={scenario.id}
-        voiceReferencePhrase={voiceReferenceFromComposer}
-        voiceAssessmentMode={voiceReferenceFromComposer ? 'reference' : 'open_response'}
-        voiceGuidedStarters={thread.mode === 'guided' ? suggestions : undefined}
-        voiceOnApplyPhrase={(phrase) => setComposer(phrase)}
-        voiceOnSavePhrase={(text) =>
-          void handleSave(text, 'chat_feedback', `voice-feedback-${thread.id}`, `voice|${text.trim()}`)
-        }
-        suggestions={suggestions}
-        onPickSuggestion={(text) => {
-          setComposer((c) => (c.trim() ? `${c.trim()} ${text}` : text))
-        }}
-        endAndReview={
-          thread.status === 'active' && userTurnCount >= 2
-            ? {
-                visible: true,
-                disabled: thread.assistantTyping,
-                onPress: () => setEndConfirmOpen(true),
-                label: 'End & review',
-              }
-            : undefined
-        }
-      />
-
-      {savedToast ? (
-        <div
-          className="fixed top-[calc(env(safe-area-inset-top)+4rem)] left-1/2 -translate-x-1/2 z-50 rounded-full bg-ink-primary text-white text-caption font-semibold px-4 py-2 shadow-lg motion-safe:animate-fc-message-in"
-          role="status"
-        >
-          {savedToast}
-        </div>
-      ) : null}
-    </div>
-  )
 }
 
 function TrainStationChatPageBackend() {
@@ -1110,5 +817,13 @@ function TrainStationChatPageBackend() {
 }
 
 export function TrainStationChatPage() {
-  return isFeature1ChatBackendEnabled() ? <TrainStationChatPageBackend /> : <TrainStationChatPageMock />
+  if (!isFeature1ChatBackendEnabled()) {
+    return (
+      <BackendRequiredScreen
+        title="Talk chat needs the API"
+        description="Text conversations use your FluentCopilot backend for the assistant, speech, and recap. Set NEXT_PUBLIC_API_BASE_URL and NEXT_PUBLIC_FEATURE1_CHAT_SOURCE=backend, then redeploy."
+      />
+    )
+  }
+  return <TrainStationChatPageBackend />
 }

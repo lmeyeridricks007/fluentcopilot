@@ -86,7 +86,7 @@ export function ProgressPage() {
         <Card variant="outlined" padding="md">
           <CardTitle className="text-body">This week</CardTitle>
           <p className="text-display font-bold text-ink-primary mt-1">{p.weeklyMinutes} min</p>
-          <CardDescription>Study time (demo)</CardDescription>
+          <CardDescription>Study time</CardDescription>
         </Card>
       </div>
     </div>

@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * FD-08 — Smart Prompts feed (today’s and recent prompts).
  */
@@ -10,13 +12,29 @@ import { PromptEmptyState } from '../components/PromptEmptyState'
 import { PromptLoadingState } from '../components/PromptLoadingState'
 import { PromptDeniedState } from '../components/PromptDeniedState'
 import { PromptUnsupportedState } from '../components/PromptUnsupportedState'
-import { MOCK_LOCATION_PROMPTS } from '../mocks/prompts'
 import { locationPromptService } from '../services/mockServices'
 import { useLocationPermission } from '../hooks/useLocationPermission'
 import { track } from '@/lib/analytics'
 import { useLocationPromptPreferencesStore } from '../store/locationPromptPreferencesStore'
+import { isClientMockEngineAllowed } from '@/lib/api/apiConfig'
+import { BackendRequiredScreen } from '@/lib/api/BackendRequiredScreen'
 
 export function ContextPromptsFeedPage() {
+  if (!isClientMockEngineAllowed()) {
+    return (
+      <BackendRequiredScreen
+        title="Smart prompts coming soon"
+        description="Location-based practice prompts will connect to your FluentCopilot backend once this feature is available."
+        backHref="/app"
+        backLabel="Back home"
+      />
+    )
+  }
+
+  return <ContextPromptsFeedPageInner />
+}
+
+function ContextPromptsFeedPageInner() {
   const router = useRouter()
   const queryClient = useQueryClient()
   const { status } = useLocationPermission()
@@ -84,14 +102,7 @@ export function ContextPromptsFeedPage() {
         </div>
       )}
       {!isLoading && !error && prompts && prompts.length === 0 && (
-        <PromptEmptyState
-          onOpenSettings={() => router.push('/app/context-prompts/settings')}
-          showSimulate
-          onSimulate={() => {
-            const first = MOCK_LOCATION_PROMPTS[0]
-            if (first) router.push(`/app/context-prompts/${first.promptId}`)
-          }}
-        />
+        <PromptEmptyState onOpenSettings={() => router.push('/app/context-prompts/settings')} />
       )}
       {!isLoading && !error && prompts && prompts.length > 0 && (
         <div className="space-y-3">

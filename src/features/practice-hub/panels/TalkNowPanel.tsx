@@ -43,7 +43,6 @@ import {
   getScenario,
   NewConversationSetupSheet,
   TRAIN_STATION_SCENARIO_ID,
-  useFeature1ConversationStore,
 } from '@/features/feature1-chat'
 import type { ConversationMode, FeedbackMode } from '@/features/feature1-chat/types'
 import {
@@ -547,15 +546,12 @@ export function TalkNowPanel({
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const createTrainStationThread = useFeature1ConversationStore((s) => s.createTrainStationThread)
-  const pauseTrainThreadMock = useFeature1ConversationStore((s) => s.pauseTrainThread)
   const {
     useBackend,
     continueQuery,
     nextTrainingLoop,
     activeTrainingLoops,
     backendTrainContinue,
-    activeTrainThread,
     pauseTrainMut,
     startMut,
     showContinueCard,
@@ -582,38 +578,36 @@ export function TalkNowPanel({
   const trainScenario = useMemo(() => getScenario(TRAIN_STATION_SCENARIO_ID), [])
   const trainPersona = useMemo(() => getPersona(trainScenario.personaId), [trainScenario])
 
-  const continueThreadId = useBackend ? backendTrainContinue?.threadId : activeTrainThread?.id
-  const continueUpdatedAt = useBackend ? backendTrainContinue?.updatedAt : activeTrainThread?.updatedAt
-  const continueMode = useBackend ? backendTrainContinue?.mode : activeTrainThread?.mode
-  const continueFeedback = useBackend ? backendTrainContinue?.feedbackMode : activeTrainThread?.feedbackMode
+  const continueThreadId = backendTrainContinue?.threadId
+  const continueUpdatedAt = backendTrainContinue?.updatedAt
+  const continueMode = backendTrainContinue?.mode
+  const continueFeedback = backendTrainContinue?.feedbackMode
 
   const startTrainChat = useCallback(() => {
     setStartError(null)
-    if (useBackend) {
-      startMut.mutate(
-        { mode: draftMode, feedbackMode: draftFeedback },
-        {
-          onSuccess: (data) => {
-            setSetupOpen(false)
-            router.push(appTalkThread(data.thread.id))
-          },
-          onError: (e) => {
-            const msg =
-              e instanceof ApiRequestError
-                ? e.message
-                : e instanceof Error
-                  ? e.message
-                  : 'Could not start chat'
-            setStartError(msg)
-          },
-        }
-      )
+    if (!useBackend) {
+      setStartError('Talk chat requires the backend API.')
       return
     }
-    const id = createTrainStationThread({ mode: draftMode, feedbackMode: draftFeedback })
-    setSetupOpen(false)
-    router.push(appTalkThread(id))
-  }, [useBackend, startMut, createTrainStationThread, draftFeedback, draftMode, router])
+    startMut.mutate(
+      { mode: draftMode, feedbackMode: draftFeedback },
+      {
+        onSuccess: (data) => {
+          setSetupOpen(false)
+          router.push(appTalkThread(data.thread.id))
+        },
+        onError: (e) => {
+          const msg =
+            e instanceof ApiRequestError
+              ? e.message
+              : e instanceof Error
+                ? e.message
+                : 'Could not start chat'
+          setStartError(msg)
+        },
+      }
+    )
+  }, [useBackend, startMut, draftFeedback, draftMode, router])
 
   const practiceContinue = vm.continueItem ?? vm.fallbackPrimary
 
@@ -658,9 +652,7 @@ export function TalkNowPanel({
   const messageHref =
     showContinueCard && continueThreadId ? appTalkThread(continueThreadId) : '/app/talk?openTrainSetup=1'
 
-  const canManageTrainThread = Boolean(
-    (useBackend && backendTrainContinue) || (!useBackend && activeTrainThread),
-  )
+  const canManageTrainThread = Boolean(backendTrainContinue)
 
   const trainLearningHint = useMemo(() => {
     const lf = continueQuery.data?.learningFocus
@@ -752,22 +744,6 @@ export function TalkNowPanel({
           onEndAndReviewFirst={() => {
             setTrainNewModalOpen(false)
             router.push(`${appTalkThread(backendTrainContinue.threadId)}?endReview=1`)
-          }}
-        />
-      ) : null}
-      {!useBackend && activeTrainThread ? (
-        <StartNewConversationModal
-          open={trainNewModalOpen}
-          onClose={() => setTrainNewModalOpen(false)}
-          onContinueCurrent={() => setTrainNewModalOpen(false)}
-          onPauseAndStartNew={() => {
-            pauseTrainThreadMock(activeTrainThread.id)
-            setTrainNewModalOpen(false)
-            setSetupOpen(true)
-          }}
-          onEndAndReviewFirst={() => {
-            setTrainNewModalOpen(false)
-            router.push(`${appTalkThread(activeTrainThread.id)}?endReview=1`)
           }}
         />
       ) : null}

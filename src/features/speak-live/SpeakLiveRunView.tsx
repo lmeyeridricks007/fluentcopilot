@@ -101,13 +101,12 @@ import {
   type StorytellingScenarioOverrides,
   type OpinionsDiscussionsScenarioOverrides,
 } from './speakLiveScenarios'
-import { SpeakLiveCallScreen } from './call/SpeakLiveCallScreen'
 import { LiveConversationScreen } from './live/LiveConversationScreen'
 import type { LiveSessionBootstrap } from './live/liveSpeakTypes'
 import { SpeakLiveTrainDebugPanel } from './SpeakLiveTrainDebugPanel'
-import { APP_TALK_HUB, appSpeakLiveSessionEvaluation, appSpeakLiveThreadRecap } from '@/lib/routing/appRoutes'
+import { APP_TALK_HUB, appSpeakLiveSessionEvaluation } from '@/lib/routing/appRoutes'
 import { playAppSound } from '@/lib/interaction/appSounds'
-import { isFeature1ChatBackendEnabled, isSpeakLiveDevUiMockEnabled } from '@/lib/api/apiConfig'
+import { isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
 import type { LanguageCoachConversationRole, LanguageCoachStartBody } from '@/lib/api/languageCoachTypes'
 import { LANGUAGE_COACH_ROLE_CARDS, parseLanguageCoachRoleParam } from './languageCoachRoleCatalog'
 import { conversationClient } from '@/lib/api/conversationClient'
@@ -118,8 +117,6 @@ import type { SpeakLiveTurnResponse } from '@/lib/api/apiTypes'
 import { clearResumableLiveSession, writeResumableLiveSession } from '@/lib/speak-live/resumableLiveSessionStorage'
 import type { FeedbackMode } from '@/features/feature1-chat/types'
 
-const STORAGE_KEY = 'fc-speak-live-saved-sessions'
-
 const LANGUAGE_COACH_GOAL_LABELS: Record<string, string> = {
   general: 'General conversation',
   fluency: 'Fluency',
@@ -128,30 +125,6 @@ const LANGUAGE_COACH_GOAL_LABELS: Record<string, string> = {
   confidence: 'Confidence',
   storytelling: 'Storytelling',
   follow_up_questions: 'Follow-up questions',
-}
-
-type SavedSession = {
-  savedAt: string
-  scenarioId: string
-  level: string
-  note: string
-}
-
-function readSaved(): SavedSession[] {
-  if (typeof window === 'undefined') return []
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    if (!raw) return []
-    const parsed = JSON.parse(raw) as unknown
-    return Array.isArray(parsed) ? (parsed as SavedSession[]) : []
-  } catch {
-    return []
-  }
-}
-
-function writeSaved(rows: SavedSession[]) {
-  if (typeof window === 'undefined') return
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(rows.slice(0, 12)))
 }
 
 function isTransientSessionBootError(err: unknown): boolean {
@@ -1213,7 +1186,6 @@ export function SpeakLiveRunView() {
   }, [router])
 
   const backend = isFeature1ChatBackendEnabled()
-  const devMock = isSpeakLiveDevUiMockEnabled()
 
   useEffect(() => {
     if (!backend) return
@@ -1321,14 +1293,6 @@ export function SpeakLiveRunView() {
     languageCoachStartBody,
   ])
 
-  const recapHref = useMemo(() => {
-    const q = new URLSearchParams({ scenarioId, level })
-    if (bootstrap?.threadId && backend) {
-      return `${appSpeakLiveThreadRecap(bootstrap.threadId)}?${q.toString()}`
-    }
-    return `${APP_TALK_HUB}?speakLiveSummary=1`
-  }, [bootstrap?.threadId, scenarioId, level, backend])
-
   const handleEndCall = useCallback(async () => {
     if (!backend || !bootstrap?.threadId) {
       exitToTalk()
@@ -1422,43 +1386,8 @@ export function SpeakLiveRunView() {
     router.push(APP_TALK_HUB)
   }, [bootstrap?.threadId, scenarioId, level, scenarioTitle, router, exitToTalk])
 
-  const saveSession = useCallback(() => {
-    const row: SavedSession = {
-      savedAt: new Date().toISOString(),
-      scenarioId,
-      level,
-      note: 'Speak Live session',
-    }
-    writeSaved([row, ...readSaved()])
-    showToast('Session saved on this device')
-  }, [scenarioId, level, showToast])
-
-  if (!backend && !devMock) {
+  if (!backend) {
     return <SpeakLiveBackendRequiredScreen onBack={exitToTalk} />
-  }
-
-  if (!backend && devMock) {
-    return (
-      <>
-        <SpeakLiveCallScreen
-          scenarioTitle={scenarioTitle}
-          scenarioId={scenarioId}
-          modeLabel="Dev mock"
-          levelLabel={level}
-          onExit={exitToTalk}
-          onSaveSession={saveSession}
-          summaryHref={recapHref}
-        />
-        {toast ? (
-          <div
-            className="fixed top-[max(5rem,env(safe-area-inset-top)+4rem)] left-1/2 -translate-x-1/2 z-[60] rounded-full bg-emerald-600 text-white text-caption font-semibold px-4 py-2 shadow-lg"
-            role="status"
-          >
-            {toast}
-          </div>
-        ) : null}
-      </>
-    )
   }
 
   return (

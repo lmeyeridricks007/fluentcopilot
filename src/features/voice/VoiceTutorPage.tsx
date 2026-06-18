@@ -6,7 +6,7 @@ import { Mic } from 'lucide-react'
 import { Card, CardTitle, CardDescription } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { PremiumLock } from '@/components/premium/PremiumLock'
-import { MOCK_SCENARIOS } from '@/mocks/scenarios'
+import { getScenarioCatalogEntry } from '@/lib/practice/scenarioCatalog'
 import { usePremiumStore } from '@/store/premiumStore'
 import { isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
 import {
@@ -48,7 +48,7 @@ export function VoiceTutorPage() {
   const isPremium = usePremiumStore((s) => s.isPremium)
   const backend = isFeature1ChatBackendEnabled()
   const demoScenarioId = typeof params?.scenarioId === 'string' ? params.scenarioId.trim() : ''
-  const scenario = demoScenarioId ? MOCK_SCENARIOS.find((s) => s.id === demoScenarioId) : null
+  const scenario = demoScenarioId ? getScenarioCatalogEntry(demoScenarioId) : null
   const speakLiveHref = demoScenarioId ? speakLiveHrefForVoicePracticeScenario(demoScenarioId) : null
 
   useEffect(() => {
@@ -63,8 +63,8 @@ export function VoiceTutorPage() {
         <PremiumLock featureName="Voice tutor" variant="card" />
         <div className="mt-4 space-y-2">
           <p className="text-body-sm text-ink-secondary mb-2">Choose a scenario (Premium):</p>
-          {MOCK_SCENARIOS.map((s) => (
-            <Button key={s.id} variant="secondary" fullWidth onClick={() => router.push(`/app/practice/voice/${s.id}`)}>
+          {speakLiveHrefForAllVoicePracticeScenarios().map((s) => (
+            <Button key={s.demoId} variant="secondary" fullWidth onClick={() => router.push(s.href)}>
               {s.title}
             </Button>
           ))}

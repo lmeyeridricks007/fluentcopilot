@@ -22,11 +22,24 @@ export function getApiBaseUrl(): string {
 export type Feature1ChatSource = 'backend' | 'mock'
 
 /**
- * When `NEXT_PUBLIC_FEATURE1_CHAT_SOURCE=mock`, always use the local mock store.
+ * Whether client-side mock conversation engines / canned replies are allowed.
+ * Production and configured API builds always use the real backend (or show BackendRequired).
+ */
+export function isClientMockEngineAllowed(): boolean {
+  if (process.env.NODE_ENV === 'production') return false
+  const explicit = trim(process.env.NEXT_PUBLIC_FEATURE1_CHAT_SOURCE).toLowerCase()
+  if (explicit === 'mock') return true
+  if (explicit === 'backend' || getApiBaseUrl()) return false
+  return true
+}
+
+/**
+ * When `NEXT_PUBLIC_FEATURE1_CHAT_SOURCE=mock` (dev only), use the local mock store.
  * When `backend`, use HTTP client (requires base URL).
- * Default: backend if `NEXT_PUBLIC_API_BASE_URL` is set, otherwise mock (pleasant local FE-only dev).
+ * Default: backend when `NEXT_PUBLIC_API_BASE_URL` is set; otherwise mock only in local dev.
  */
 export function getFeature1ChatSource(): Feature1ChatSource {
+  if (!isClientMockEngineAllowed()) return 'backend'
   const explicit = trim(process.env.NEXT_PUBLIC_FEATURE1_CHAT_SOURCE).toLowerCase()
   if (explicit === 'mock') return 'mock'
   if (explicit === 'backend') return 'backend'
@@ -106,10 +119,9 @@ export function isSpeakLiveAzureSttVerboseLogsEnabled(): boolean {
   return v === '1' || v === 'true' || v === 'yes'
 }
 
-/** Legacy canned Speak Live call UI (browser TTS + fake lines). Dev-only. */
+/** @deprecated Dev canned Speak Live UI removed — always false. */
 export function isSpeakLiveDevUiMockEnabled(): boolean {
-  const v = trim(process.env.NEXT_PUBLIC_SPEAK_LIVE_DEV_UI_MOCK).toLowerCase()
-  return v === '1' || v === 'true' || v === 'yes'
+  return false
 }
 
 /** NDJSON streaming send (`/messages/stream`) — progressive assistant text. */

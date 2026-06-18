@@ -2,70 +2,26 @@
 
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useMemo } from 'react'
-import { isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
 import { conversationClient } from '@/lib/api/conversationClient'
 import {
   mapApiFeedbackModeToUi,
   mapStartConversationResponseToMappedSession,
-  mapUiFeedbackModeToApi,
 } from '@/lib/api/conversationMappers'
 import { logConversationPerf } from '@/lib/api/conversationPerfLog'
-import { TRAIN_STATION_SCENARIO_ID, useFeature1ConversationStore } from '@/features/feature1-chat'
+import { isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
+import { TRAIN_STATION_SCENARIO_ID } from '@/features/feature1-chat'
 import { useAuthStore } from '@/store/authStore'
 import { LOCAL_ANONYMOUS_LEARNER_ID } from '@/lib/storage/storageKeys'
 import type { ApiConversationThread } from '@/lib/api/apiTypes'
-import type { ConversationMode, ConversationThread, FeedbackMode } from '@/features/feature1-chat/types'
-
-function mockThreadToApiThread(t: ConversationThread, externalUserId: string): ApiConversationThread {
-  const st = t.summary
-  const summaryText =
-    st?.nextStep?.trim() || st?.usefulPhrase?.trim() || st?.usefulWord?.trim() || null
-  return {
-    id: t.id,
-    userId: externalUserId,
-    scenarioId: t.scenarioId,
-    personaId: t.personaId,
-    mode: t.mode,
-    conversationSurface: t.conversationSurface ?? 'text',
-    feedbackMode: mapUiFeedbackModeToApi(t.feedbackMode),
-    status: t.status,
-    summaryText,
-    currentStage: t.currentStage,
-    createdAt: t.createdAt,
-    updatedAt: t.updatedAt,
-    lastUserMessageAt: null,
-  }
-}
+import type { ConversationMode, FeedbackMode } from '@/features/feature1-chat/types'
 
 /**
  * Shared train-station chat + `/talk/continue` data for Talk landing and Activity page.
- * Does not change API contracts — only centralizes the query and mock fallbacks.
  */
 export function useTalkContinueSessions() {
   const qc = useQueryClient()
   const userId = useAuthStore((s) => s.user?.id ?? LOCAL_ANONYMOUS_LEARNER_ID)
   const useBackend = isFeature1ChatBackendEnabled()
-
-  const activeTrainThread = useFeature1ConversationStore((s) =>
-    s.byUserId[userId]?.threads.find(
-      (t) => t.scenarioId === TRAIN_STATION_SCENARIO_ID && t.status === 'active'
-    )
-  )
-  const mockTrainThreads = useFeature1ConversationStore((s) => s.byUserId[userId]?.threads)
-
-  const pausedMockThreads = useMemo(() => {
-    const list = mockTrainThreads ?? []
-    return list
-      .filter((t) => t.scenarioId === TRAIN_STATION_SCENARIO_ID && t.status === 'paused')
-      .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
-  }, [mockTrainThreads])
-
-  const completedMockThreads = useMemo(() => {
-    const list = mockTrainThreads ?? []
-    return list
-      .filter((t) => t.scenarioId === TRAIN_STATION_SCENARIO_ID && t.status === 'completed')
-      .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
-  }, [mockTrainThreads])
 
   const continueQuery = useQuery({
     queryKey: ['talk', 'continue'],
@@ -84,13 +40,8 @@ export function useTalkContinueSessions() {
   })
 
   const completedThreadsForHistory = useMemo((): ApiConversationThread[] => {
-    if (useBackend) return sessionHistoryQuery.data?.threads ?? []
-    const list = mockTrainThreads ?? []
-    return list
-      .filter((t) => t.status === 'completed')
-      .sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime())
-      .map((t) => mockThreadToApiThread(t, userId))
-  }, [useBackend, sessionHistoryQuery.data?.threads, mockTrainThreads, userId])
+    return sessionHistoryQuery.data?.threads ?? []
+  }, [sessionHistoryQuery.data?.threads])
 
   const backendTrainContinue = useMemo(() => {
     if (!useBackend || !continueQuery.data?.activeThread || !continueQuery.data.scenario) return null
@@ -129,24 +80,21 @@ export function useTalkContinueSessions() {
     },
   })
 
-  const trainPausedList = useBackend ? (continueQuery.data?.trainPausedThreads ?? []) : pausedMockThreads
-  const trainCompletedList = useBackend ? (continueQuery.data?.trainRecentCompleted ?? []) : completedMockThreads
-
-  const showContinueCard = useBackend ? Boolean(backendTrainContinue) : Boolean(activeTrainThread)
+  const trainPausedList = continueQuery.data?.trainPausedThreads ?? []
+  const trainCompletedList = continueQuery.data?.trainRecentCompleted ?? []
 
   return {
     useBackend,
     continueQuery,
     sessionHistoryQuery,
-    /** All recently completed threads (Speak Live + coach chat) for History / Activity — not train-only. */
     completedThreadsForHistory,
     backendTrainContinue,
-    activeTrainThread,
+    activeTrainThread: null,
     pauseTrainMut,
     startMut,
     trainPausedList,
     trainCompletedList,
-    showContinueCard,
+    showContinueCard: Boolean(backendTrainContinue),
     nextTrainingLoop: continueQuery.data?.nextTrainingLoop ?? null,
     activeTrainingLoops: continueQuery.data?.activeTrainingLoops ?? [],
     trainingLoopHistory: continueQuery.data?.trainingLoopHistory ?? [],

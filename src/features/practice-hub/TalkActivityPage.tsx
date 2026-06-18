@@ -23,7 +23,6 @@ import {
   personalizedPracticeReportHref,
   speakLiveRunHref,
 } from '@/lib/routing/appRoutes'
-import { getPersona } from '@/features/feature1-chat'
 import type { ConversationThread } from '@/features/feature1-chat/types'
 import { readResumableLiveSession, type ResumableLiveSession } from '@/lib/speak-live/resumableLiveSessionStorage'
 import { loadReadAloudReport } from '@/features/read-aloud/readAloudStorage'
@@ -166,7 +165,6 @@ export function TalkActivityPage() {
     completedThreadsForHistory,
     showContinueCard,
     backendTrainContinue,
-    activeTrainThread,
     activeTrainingLoops,
     trainingLoopHistory,
   } = useTalkContinueSessions()
@@ -236,21 +234,20 @@ export function TalkActivityPage() {
     return sorted.slice(0, 5)
   }, [examSessionsQ.data])
 
-  const activeThreadId = useBackend ? backendTrainContinue?.threadId : activeTrainThread?.id
+  const activeThreadId = backendTrainContinue?.threadId
 
   const pausedWithoutActive = useMemo(() => {
     return trainPausedList.filter((t) => t.id !== activeThreadId)
   }, [trainPausedList, activeThreadId])
 
   const activeChatSubline = useMemo(() => {
-    if (!useBackend && activeTrainThread) return trainThreadContextLine(activeTrainThread)
-    if (useBackend && backendTrainContinue) {
+    if (backendTrainContinue) {
       const mode = backendTrainContinue.mode === 'guided' ? 'Guided' : 'Free flow'
       const fb = feedbackPreferencePhrase(backendTrainContinue.feedbackMode)
       return `${mode} · ${fb} · ${formatUpdated(backendTrainContinue.updatedAt)}`
     }
     return 'Your last chat is open'
-  }, [useBackend, activeTrainThread, backendTrainContinue])
+  }, [backendTrainContinue])
 
   const tabs: { id: SessionFilterTab; label: string }[] = [
     { id: 'all', label: 'All' },
@@ -314,17 +311,17 @@ export function TalkActivityPage() {
     if (
       showContinueCard &&
       activeThreadId &&
-      (backendTrainContinue || activeTrainThread) &&
+      backendTrainContinue &&
       modalityMatchesTab('chat', tab)
     ) {
-      const updatedAt = useBackend ? backendTrainContinue!.updatedAt : activeTrainThread!.updatedAt
+      const updatedAt = backendTrainContinue.updatedAt
       rows.push({
         key: `chat-active-${activeThreadId}`,
         modality: 'chat',
         sortAt: new Date(updatedAt).getTime(),
         title: TRAIN_DESK_HEADLINE,
         titleHint: `#${shortThreadRef(activeThreadId)}`,
-        subtitle: `${useBackend ? (backendTrainContinue?.personaName ?? 'Assistant') : getPersona(activeTrainThread!.personaId).displayName} · ${activeChatSubline}`,
+        subtitle: `${backendTrainContinue.personaName ?? 'Assistant'} · ${activeChatSubline}`,
         status: 'active',
         dateLabel: `Updated ${formatUpdated(updatedAt)}`,
         primary: { label: 'Resume chat', href: appTalkThread(activeThreadId) },
@@ -364,7 +361,6 @@ export function TalkActivityPage() {
     showContinueCard,
     activeThreadId,
     backendTrainContinue,
-    activeTrainThread,
     useBackend,
     pausedWithoutActive,
     activeChatSubline,

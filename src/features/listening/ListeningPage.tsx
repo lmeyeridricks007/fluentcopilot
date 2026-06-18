@@ -53,7 +53,7 @@ export function ListeningPage() {
             <Play className={`w-10 h-10 text-primary-600 ${playing ? 'hidden' : ''}`} />
           </Button>
         </div>
-        <p className="text-body-sm text-ink-secondary">Audio will play here. (Mock)</p>
+        <p className="text-body-sm text-ink-secondary">Audio will play here when listening exercises are connected.</p>
         <Button variant="secondary" size="sm" className="mt-2" onClick={() => setShowTranscript((s) => !s)}>
           {showTranscript ? 'Hide' : 'Show'} transcript
         </Button>

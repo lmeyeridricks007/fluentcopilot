@@ -1,5 +1,10 @@
+import { isClientMockEngineAllowed } from '@/lib/api/apiConfig'
 import { runPracticeConversationTurn } from '@/lib/practice-orchestration/conversationOrchestrator'
 import { getOrchestratedOpeningLine } from '@/lib/practice-orchestration/openingLine'
+import {
+  sendOpenPracticeBackendMessage,
+  startOpenPracticeBackendSession,
+} from '@/lib/practice/conversation/openPracticeBackend'
 import type { A2DifficultyBand } from '@/lib/practice-orchestration/types'
 
 export type OpenPracticeMode = 'semi_guided' | 'free'
@@ -15,6 +20,8 @@ export interface GenerateOpenPracticeReplyInput {
   /** Session difficulty (easier mode lowers band). */
   difficulty?: A2DifficultyBand
   easierModeActive?: boolean
+  /** Backend text thread id (set after {@link startOpenPracticeBackendSession}). */
+  backendThreadId?: string
 }
 
 export interface GenerateOpenPracticeReplyOutput {
@@ -23,11 +30,19 @@ export interface GenerateOpenPracticeReplyOutput {
 }
 
 /**
- * Client-friendly facade over `runPracticeConversationTurn` (orchestration + mock provider).
+ * Client-friendly facade — backend conversation API when configured, local orchestrator only in dev mock mode.
  */
 export async function generateOpenPracticeReply(
   input: GenerateOpenPracticeReplyInput
 ): Promise<GenerateOpenPracticeReplyOutput> {
+  if (!isClientMockEngineAllowed()) {
+    const threadId = input.backendThreadId
+    if (!threadId) {
+      throw new Error('Practice session not started — reload and try again.')
+    }
+    return sendOpenPracticeBackendMessage(threadId, input.lastUserMessage, input.mode)
+  }
+
   const out = await runPracticeConversationTurn({
     scenarioId: input.scenarioId,
     mode: input.mode,
