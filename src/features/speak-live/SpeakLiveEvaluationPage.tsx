@@ -6,9 +6,10 @@ import { useQueryClient } from '@tanstack/react-query'
 import {
   Mic, MicOff, ChevronDown, ChevronUp,
   Play, Square, ArrowLeftRight, BookmarkPlus, ArrowRight,
-  CheckCircle2, XCircle, AlertCircle, Pause, Volume2,
+  CheckCircle2, AlertCircle, Pause, Volume2,
   Languages, Sparkles, Hash, Check, TrendingUp, TrendingDown, Minus,
-  RotateCcw, Timer,
+  RotateCcw, Timer, Star, Target, Lightbulb, ChevronLeft, ChevronRight,
+  MessageCircle, ClipboardList, BookOpen, Bookmark, AudioLines, Type,
 } from 'lucide-react'
 import type { ApiLiveSessionEvaluationResponse } from '@/lib/api/apiTypes'
 import { getApiBaseUrl, isFeature1ChatBackendEnabled } from '@/lib/api/apiConfig'
@@ -20,7 +21,15 @@ import {
 } from '@/lib/hooks/useProgression'
 import { ApiRequestError } from '@/lib/api/apiErrors'
 import { conversationClient, type SpeakLiveTtsWordBoundary } from '@/lib/api/conversationClient'
-import { APP_LANGUAGE_COACH, APP_TALK_HUB, appSpeakLiveThreadRecap, speakLiveRunHref } from '@/lib/routing/appRoutes'
+import {
+  APP_COACH_HUB,
+  APP_EXAM_HUB,
+  APP_LANGUAGE_COACH,
+  APP_LIBRARY_HUB,
+  APP_TALK_HUB,
+  appSpeakLiveThreadRecap,
+  speakLiveRunHref,
+} from '@/lib/routing/appRoutes'
 import type {
   SessionEvaluationReport, TurnEvaluation, ScoredDimension,
   FocusArea,
@@ -48,11 +57,7 @@ import {
   type WordCorrection,
 } from './evaluation/dutchWordGlossSupport'
 import { LanguageCoachDedicatedReport } from './evaluation/LanguageCoachDedicatedReport'
-import { SessionVoiceTeacherSummaryCard } from './evaluation/SessionVoiceTeacherSummaryCard'
-import type { SessionTeacherSummaryInput } from './evaluation/sessionTeacherVoiceSummary'
 import { LearningMemoryRibbon, learningMemoryRibbonHasContent } from './evaluation/LearningMemoryRibbon'
-import { ReportPracticeNowSection } from './evaluation/ReportPracticeNowSection'
-import { ReportQuickCapturePrompt } from '@/components/capture/ReportQuickCapturePrompt'
 import { EvaluationPreparingSteps } from './evaluation/EvaluationPreparingSteps'
 import { EvaluationTimingBreakdown } from './evaluation/EvaluationTimingBreakdown'
 import { ScenarioReportGenerationDevPanel } from './evaluation/ScenarioReportGenerationDevPanel'
@@ -67,7 +72,6 @@ import {
 } from './evaluation/scenarioReportGenerationState'
 import { fetchSpeakingProgression } from '@/lib/speaking/speakingProgressClient'
 import type { SpeakingProgressSummary } from '@/lib/speaking/speakingProgressTypes'
-import { isDevToolsEnabledClient } from '@/lib/dev-tools'
 import { getSpeakLiveCatalogItem, LANGUAGE_COACH_SCENARIO_ID } from './speakLiveScenarios'
 
 async function runWithRetry(sessionId: string, opts?: { forceRestart?: boolean }): Promise<ApiLiveSessionEvaluationResponse> {
@@ -92,18 +96,7 @@ async function runWithRetry(sessionId: string, opts?: { forceRestart?: boolean }
 // EVIDENCE HELPERS — split audio vs language
 // ═══════════════════════════════════════════════════════════════════════════
 
-type AudioEvidenceStatus = 'all' | 'partial' | 'none'
 type LanguageEvidenceStatus = 'available' | 'unavailable'
-
-function deriveAudioEvidence(es: EvidenceSummary): { status: AudioEvidenceStatus; label: string } {
-  const total = es.totalLearnerTurnCount
-  const recorded = es.audioTurnCount
-  const assessed = es.audioPipelineDiagnostics?.turnsAssessedOk ?? es.azurePronunciationTurnCount
-  if (assessed >= total && assessed > 0) return { status: 'all', label: `Scored on all ${total} sentences` }
-  if (assessed > 0) return { status: 'partial', label: `Scored on ${assessed} of ${total} sentences` }
-  if (recorded > 0) return { status: 'partial', label: `Recorded on ${recorded} of ${total} sentences, but not scored` }
-  return { status: 'none', label: 'Missing' }
-}
 
 function summarizeAudioFailure(reason: string | undefined | null): string {
   const text = (reason ?? '').trim()
@@ -130,15 +123,6 @@ function formatDurationMs(ms: number | undefined | null): string {
   const wholeSec = Math.round(ms / 1000)
   const min = Math.floor(wholeSec / 60)
   const rem = wholeSec % 60
-  return `${min}m ${rem}s`
-}
-
-function formatSessionDuration(seconds: number): string {
-  const safe = Math.max(0, Math.round(seconds || 0))
-  const min = Math.floor(safe / 60)
-  const rem = safe % 60
-  if (min <= 0) return `${rem}s`
-  if (rem === 0) return `${min}m`
   return `${min}m ${rem}s`
 }
 
@@ -974,13 +958,21 @@ function DimensionRow({ dim }: { dim: ScoredDimension }) {
 
 function GoalRow({ goal }: { goal: GoalEvidence }) {
   const icon = goal.status === 'completed'
-    ? <CheckCircle2 className="h-4 w-4 text-emerald-600 shrink-0 mt-0.5" />
+    ? <CheckCircle2 className="h-6 w-6 text-emerald-500 shrink-0 mt-0.5" />
     : goal.status === 'partial'
-      ? <AlertCircle className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
-      : <XCircle className="h-4 w-4 text-rose-400 shrink-0 mt-0.5" />
+      ? <AlertCircle className="h-6 w-6 text-amber-400 shrink-0 mt-0.5" />
+      : <span className="mt-0.5 h-6 w-6 shrink-0 rounded-full border-2 border-amber-300" aria-hidden />
   const weightPct = goal.weight != null ? Math.round(goal.weight * 100) : null
+  const progressPct =
+    weightPct == null
+      ? null
+      : goal.status === 'completed'
+        ? Math.min(100, Math.max(12, weightPct * 2.25))
+        : goal.status === 'partial'
+          ? Math.min(100, Math.max(12, weightPct * 1.1))
+          : Math.min(100, Math.max(10, weightPct * 0.7))
   const stateLabel =
-    goal.status === 'completed' ? 'completed' : goal.status === 'partial' ? 'partial' : goal.tier === 'stretch' ? 'not completed' : 'missing'
+    goal.status === 'completed' ? 'Completed' : goal.status === 'partial' ? 'In progress' : goal.tier === 'stretch' ? 'Not completed' : 'Missing'
   const stateTone =
     goal.status === 'completed'
       ? 'text-emerald-700'
@@ -989,34 +981,44 @@ function GoalRow({ goal }: { goal: GoalEvidence }) {
         : goal.tier === 'stretch'
           ? 'text-slate-500'
           : 'text-rose-600'
-  const cardTint =
-    goal.status === 'completed'
-      ? 'border-emerald-200/90 bg-gradient-to-br from-emerald-50/90 via-white to-white shadow-[0_10px_28px_-18px_rgba(5,150,105,0.25)]'
-      : goal.status === 'partial'
-        ? 'border-amber-200/90 bg-gradient-to-br from-amber-50/70 via-white to-white shadow-[0_10px_28px_-18px_rgba(217,119,6,0.2)]'
-        : 'border-slate-200/90 bg-white/90 shadow-[0_8px_24px_-20px_rgba(15,23,42,0.3)]'
   return (
-    <div className={`rounded-2xl border px-4 py-3.5 ${cardTint}`}>
-      <div className="flex gap-3">
+    <div className="rounded-[20px] border border-slate-200/75 bg-white px-4 py-4 shadow-[0_12px_28px_-24px_rgba(15,23,42,0.25)]">
+      <div className="flex gap-3.5">
       {icon}
       <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-          <p className="text-[13px] font-semibold text-ink-primary leading-snug">
+        <div className="flex flex-col gap-2.5">
+          <p className="text-[14px] font-bold text-ink-primary leading-snug">
             {stripSpeakLiveGoalIdBrackets(goal.goalLabel)}
           </p>
-          <span className={`text-[11px] font-semibold ${stateTone}`}>{stateLabel}</span>
-          {weightPct != null ? (
-            <span className="rounded-full bg-violet-100/90 px-2 py-0.5 text-[10px] font-semibold text-violet-900 ring-1 ring-violet-200/80">
-              {weightPct}% weight
-            </span>
-          ) : null}
+          <div className="grid grid-cols-[auto_minmax(5.5rem,1fr)] items-center gap-x-3 gap-y-1.5">
+            {weightPct != null ? (
+              <span className="text-[13px] font-extrabold text-violet-600">
+                {weightPct}% weight
+              </span>
+            ) : null}
+            {progressPct != null ? (
+              <span className="h-2 overflow-hidden rounded-full bg-slate-100">
+                <span
+                  className={`block h-full rounded-full ${
+                    goal.status === 'completed'
+                      ? 'bg-violet-300'
+                      : goal.status === 'partial'
+                        ? 'bg-rose-100'
+                        : 'bg-amber-100'
+                  }`}
+                  style={{ width: `${progressPct}%` }}
+                />
+              </span>
+            ) : null}
+            <span className={`col-span-2 text-[11px] font-semibold ${stateTone}`}>{stateLabel}</span>
+          </div>
         </div>
         {goal.status === 'completed' && goal.evidenceText ? (
-          <p className="mt-1.5 text-[12px] text-ink-secondary leading-relaxed">
+          <p className="mt-3 text-[12px] text-ink-secondary leading-relaxed">
             &ldquo;{goal.evidenceText.slice(0, 100)}{goal.evidenceText.length > 100 ? '…' : ''}&rdquo;
           </p>
         ) : goal.completionHint ? (
-          <p className="mt-1.5 text-[12px] text-ink-secondary leading-snug">
+          <p className="mt-3 text-[12px] text-ink-secondary leading-snug">
             <span className="font-semibold text-ink-primary">Try:</span>{' '}
             &ldquo;{shortenCoachBullet(sanitizeCoachText(goal.completionHint), 120)}&rdquo;
           </p>
@@ -1026,6 +1028,640 @@ function GoalRow({ goal }: { goal: GoalEvidence }) {
       </div>
       </div>
     </div>
+  )
+}
+
+function ReportScoreRing({ score }: { score: number | null }) {
+  const pct = score == null ? 0 : Math.max(0, Math.min(100, score))
+  return (
+    <div
+      className="relative grid h-[106px] w-[106px] shrink-0 place-items-center rounded-full"
+      style={{
+        background: `conic-gradient(#6d28d9 ${pct * 3.6}deg, #eee9ff ${pct * 3.6}deg)`,
+      }}
+      role={score == null ? 'presentation' : 'progressbar'}
+      aria-label="Session score"
+      aria-valuemin={0}
+      aria-valuemax={100}
+      aria-valuenow={score ?? undefined}
+    >
+      <div className="h-[76px] w-[76px] rounded-full bg-white shadow-[inset_0_0_0_1px_rgba(109,40,217,0.08)]" />
+    </div>
+  )
+}
+
+function ReportSummaryCard({
+  score,
+  summary,
+  strengthsCount,
+  improveCount,
+}: {
+  score: number | null
+  summary: string
+  strengthsCount: number
+  improveCount: number
+}) {
+  return (
+    <section className="rounded-[24px] border border-slate-200/75 bg-white px-5 py-5 shadow-[0_18px_46px_-34px_rgba(15,23,42,0.3)]">
+      <div className="flex items-center gap-5">
+        <ReportScoreRing score={score} />
+        <div className="min-w-0">
+          {score != null ? (
+            <p className="text-[42px] font-extrabold leading-none tracking-tight text-violet-700 tabular-nums">{score}%</p>
+          ) : (
+            <p className="text-[28px] font-extrabold leading-none tracking-tight text-violet-700">Ready</p>
+          )}
+          <p className="mt-2 text-[17px] font-extrabold leading-tight text-ink-primary">
+            {score != null && score >= 70 ? 'Good progress!' : score != null && score >= 45 ? 'Keep going!' : 'Good effort!'}
+          </p>
+          <p className="mt-2 text-[12px] font-semibold leading-relaxed text-slate-500">{summary}</p>
+        </div>
+      </div>
+      <div className="mt-6 grid grid-cols-2 gap-3">
+        <div className="rounded-2xl border border-slate-200/75 bg-white px-4 py-4 text-center shadow-[0_10px_24px_-22px_rgba(15,23,42,0.3)]">
+          <span className="mx-auto grid h-9 w-9 place-items-center rounded-full bg-emerald-50 text-emerald-500">
+            <CheckCircle2 className="h-5 w-5" aria-hidden />
+          </span>
+          <p className="mt-2 text-[24px] font-extrabold leading-none text-ink-primary">{strengthsCount}</p>
+          <p className="mt-1 text-[12px] font-bold leading-tight text-slate-600">Strengths</p>
+        </div>
+        <div className="rounded-2xl border border-slate-200/75 bg-white px-4 py-4 text-center shadow-[0_10px_24px_-22px_rgba(15,23,42,0.3)]">
+          <span className="mx-auto grid h-9 w-9 place-items-center rounded-full bg-amber-50 text-amber-400">
+            <Target className="h-5 w-5" aria-hidden />
+          </span>
+          <p className="mt-2 text-[24px] font-extrabold leading-none text-ink-primary">{improveCount}</p>
+          <p className="mt-1 text-[12px] font-bold leading-tight text-slate-600">Things to improve</p>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function ReportBottomNav() {
+  const items = [
+    { label: 'Talk', href: APP_TALK_HUB, icon: MessageCircle, active: true },
+    { label: 'Coach', href: APP_COACH_HUB, icon: Sparkles, active: false },
+    { label: 'Exam', href: APP_EXAM_HUB, icon: ClipboardList, active: false },
+    { label: 'Library', href: APP_LIBRARY_HUB, icon: BookOpen, active: false },
+  ] as const
+  return (
+    <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-100 bg-white/95 px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl">
+      <div className="mx-auto grid max-w-md grid-cols-4 gap-1">
+        {items.map(({ label, href, icon: Icon, active }) => (
+          <a key={label} href={href} className="flex min-h-touch flex-col items-center justify-center gap-1 text-[11px] font-bold text-slate-600">
+            <span className={`grid h-8 w-8 place-items-center rounded-full ${active ? 'bg-violet-100 text-violet-700' : 'text-slate-500'}`}>
+              <Icon className="h-5 w-5" aria-hidden />
+            </span>
+            <span className={active ? 'text-violet-700' : undefined}>{label}</span>
+          </a>
+        ))}
+      </div>
+    </nav>
+  )
+}
+
+function ReportListCard({
+  title,
+  icon,
+  iconTone,
+  items,
+  empty,
+}: {
+  title: string
+  icon: ReactNode
+  iconTone: string
+  items: string[]
+  empty: string
+}) {
+  return (
+    <section className="rounded-[22px] border border-slate-200/80 bg-white px-5 py-5 shadow-[0_16px_40px_-32px_rgba(15,23,42,0.28)]">
+      <div className="flex items-center gap-3">
+        <span className={`grid h-7 w-7 shrink-0 place-items-center rounded-full ${iconTone}`}>{icon}</span>
+        <h2 className="text-[15px] font-bold text-ink-primary">{title}</h2>
+      </div>
+      {items.length > 0 ? (
+        <ul className="mt-4 space-y-3">
+          {items.slice(0, 3).map((line, i) => (
+            <li key={`${title}-${i}-${line.slice(0, 28)}`} className="flex gap-3 text-[13px] font-medium leading-snug text-slate-600">
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600" aria-hidden />
+              <span>{line}</span>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="mt-4 text-[13px] leading-relaxed text-slate-500">{empty}</p>
+      )}
+    </section>
+  )
+}
+
+function FocusWorkCard({ items, retryHref }: { items: string[]; retryHref: string }) {
+  const visible = items.length > 0 ? items.slice(0, 3) : ['Try the scenario again and make each answer clear and specific.']
+  return (
+    <section className="space-y-4">
+      <h2 className="text-center text-[17px] font-bold text-ink-primary">What to work on</h2>
+      <div className="space-y-4">
+        {visible.map((line, i) => (
+          <div key={`work-${i}-${line.slice(0, 28)}`} className="rounded-[22px] border border-slate-200/80 bg-white px-5 py-6 text-center shadow-[0_14px_34px_-30px_rgba(15,23,42,0.28)]">
+            <Star className="mx-auto h-5 w-5 text-emerald-500" aria-hidden />
+            <p className="mx-auto mt-3 max-w-[17rem] text-[17px] font-bold leading-snug text-ink-primary">{line}</p>
+            <a
+              href={retryHref}
+              className="mt-5 inline-flex min-h-[36px] items-center justify-center rounded-full border border-violet-100 bg-white px-5 text-[12px] font-bold text-violet-700 shadow-sm"
+            >
+              View examples
+            </a>
+          </div>
+        ))}
+      </div>
+      <a
+        href={retryHref}
+        className="inline-flex min-h-touch w-full items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-violet-700 px-4 py-3.5 text-[15px] font-bold text-white shadow-[0_18px_34px_-20px_rgba(109,40,217,0.65)]"
+      >
+        Practice again
+      </a>
+    </section>
+  )
+}
+
+function voiceScoreLabel(score: number | null | undefined): string {
+  if (typeof score !== 'number' || Number.isNaN(score)) return 'Not scored'
+  if (score >= 85) return 'Strong'
+  if (score >= 70) return 'Solid'
+  if (score >= 55) return 'Building'
+  return 'Needs work'
+}
+
+function InlineVoiceScoreRow({
+  label,
+  score,
+  note,
+  tone = 'violet',
+}: {
+  label: string
+  score: number | null | undefined
+  note?: string | null
+  tone?: 'violet' | 'amber'
+}) {
+  const safeScore = typeof score === 'number' && Number.isFinite(score) ? Math.max(0, Math.min(100, Math.round(score))) : null
+  const barClass = tone === 'amber' ? 'bg-amber-500' : 'bg-violet-600'
+  const trackClass = tone === 'amber' ? 'bg-amber-100' : 'bg-violet-100'
+  const pillClass = tone === 'amber'
+    ? 'bg-amber-50 text-amber-900 ring-amber-200'
+    : 'bg-violet-50 text-violet-700 ring-violet-100'
+  return (
+    <div className="border-t border-slate-100 py-4 first:border-t-0 first:pt-0 last:pb-0">
+      <div className="flex items-center justify-between gap-3">
+        <p className="text-[16px] font-extrabold text-ink-primary">{label}</p>
+        <span className={`rounded-full px-3 py-1.5 text-[12px] font-extrabold ring-1 ${pillClass}`}>
+          {voiceScoreLabel(safeScore)}
+        </span>
+      </div>
+      <div className="mt-3 grid grid-cols-[minmax(0,1fr)_2.75rem] items-center gap-4">
+        <div className={`h-2.5 overflow-hidden rounded-full ${trackClass}`}>
+          {safeScore != null ? (
+            <div className={`h-full rounded-full ${barClass}`} style={{ width: `${safeScore}%` }} />
+          ) : null}
+        </div>
+        <p className="text-right text-[16px] font-extrabold tabular-nums text-slate-700">{safeScore ?? '-'}</p>
+      </div>
+      {note ? <p className="mt-3 text-[13px] font-semibold leading-relaxed text-slate-600">{note}</p> : null}
+    </div>
+  )
+}
+
+function SentenceFeedbackPreview({
+  turns,
+  activeIndex,
+  onChangeIndex,
+  onSeeAll,
+  onSave,
+  saving,
+  savedKeys,
+  resolvedMedia,
+  audio,
+  onPlaySnippet,
+}: {
+  turns: TurnEvaluation[]
+  activeIndex: number
+  onChangeIndex: (index: number) => void
+  onSeeAll: (turnId: string | null) => void
+  onSave: (input: Record<string, unknown>) => void
+  saving: string | null
+  savedKeys: Set<string>
+  resolvedMedia: Record<string, { learner?: string; reference?: string }>
+  audio: AudioController
+  onPlaySnippet: (turnId: string, text: string) => Promise<void>
+}) {
+  const [activeDetail, setActiveDetail] = useState<'listen' | 'voice' | 'language' | 'grammar' | 'words' | 'why'>('listen')
+  const [snippetLoading, setSnippetLoading] = useState<'learner' | 'reference' | null>(null)
+  if (turns.length === 0) return null
+  const safeIndex = Math.max(0, Math.min(activeIndex, turns.length - 1))
+  const turn = turns[safeIndex]!
+  const turnId = turn.turnId || `sentence-${safeIndex}`
+  const media = resolvedMedia[turn.turnId] ?? {}
+  const learnerSrc = media.learner ?? null
+  const refSrc = media.reference ?? null
+  const transcript = (turn.learnerTranscript || turn.transcriptOriginal || '').trim()
+  const corrections = (turn.wrongWordDetections?.length ?? 0) > 0 ? wrongDetectionsToCorrections(turn.wrongWordDetections ?? []) : extractWordCorrections(turn)
+  const better = pickDisplayCorrectedPhrase(transcript, corrections, [
+    turn.naturalRewrite?.improved,
+    turn.languageEvaluation?.improvedVersion,
+    turn.sentenceGroundedReview?.nativePhrase,
+    turn.referenceSentence,
+  ]).trim()
+  const issue = sanitizeCoachText(turn.sentenceGroundedReview?.mainFix || turn.keyProblems[0] || 'Try making this sentence clearer.')
+  const issueTitle = /word order|verb|inversion/i.test(issue) ? 'Word order' : /pronun|sound|stress|rhythm/i.test(issue) ? 'Pronunciation' : 'Sentence fix'
+  const tip = sanitizeCoachText(
+    turn.sentenceGroundedReview?.pattern ||
+    turn.sentenceGroundedReview?.whyBetter ||
+    turn.referenceSentenceReason ||
+    turn.keyProblems[1] ||
+    issue,
+  )
+  const canPrev = safeIndex > 0
+  const canNext = safeIndex < turns.length - 1
+  const goNext = () => onChangeIndex(canNext ? safeIndex + 1 : 0)
+  const saveKey = `sentence-preview-save-${turn.turnId || safeIndex}-${(better || transcript).slice(0, 48).replace(/\s+/g, '-')}`
+  const saved = savedKeys.has(saveKey)
+  const saveLabel = saved ? 'Added to practice' : saving === saveKey ? 'Saving...' : 'Save for practice'
+  const issueTone = issueTitle === 'Pronunciation' ? 'text-rose-500' : 'text-violet-600'
+  const issueBg = issueTitle === 'Pronunciation' ? 'border-rose-100 bg-rose-50/65' : 'border-violet-100 bg-violet-50/65'
+  const referenceText = better && !isSameAsOriginal(transcript, better) ? better : turn.referenceSentence?.trim() || better
+  const learnerActive = audio.isActive(turnId, 'learner')
+  const refActive = audio.isActive(turnId, 'reference', referenceText)
+  const learnerPlaying = learnerActive && audio.state === 'playing'
+  const refPlaying = refActive && audio.state === 'playing'
+  const ac = turn.audioCoaching
+  const wordRows = turn.audioCoaching?.wordAssessments ?? []
+  const pronunciationScore = ac?.pronunciationScore ?? turn.audioScores?.pronunciation ?? null
+  const rhythmScore = ac?.rhythmScore ?? turn.audioScores?.rhythm ?? null
+  const fluencyScore = ac?.fluencyScore ?? turn.audioScores?.fluency ?? null
+  const hasVoiceScores = pronunciationScore != null || rhythmScore != null || fluencyScore != null
+  const taskSuccessScore = turn.scenarioGoalFit?.alignmentScore ?? turn.combinedScores?.overallTurnScore ?? null
+  const understandabilityScore = turn.combinedScores?.clarityScore ?? turn.audioScores?.clarity ?? null
+  const naturalDutchScore = turn.languageScores?.naturalness ?? turn.combinedScores?.dutchLikenessScore ?? null
+  const grammarControlScore = turn.languageScores?.grammaticalStability ?? null
+  const hasLanguageScores =
+    taskSuccessScore != null ||
+    understandabilityScore != null ||
+    naturalDutchScore != null ||
+    grammarControlScore != null
+  const voiceSummary = sanitizeCoachText(
+    turn.sentenceGroundedReview?.mainVoiceFix ||
+    turn.audioFindings[0] ||
+    turn.pronunciationIssues[0]?.issue ||
+    turn.fluencyIssues[0]?.issue ||
+    '',
+  )
+  const languageSummary = sanitizeCoachText(
+    turn.scenarioGoalFit?.summary ||
+    turn.sentenceGroundedReview?.mainFix ||
+    turn.keyStrengths[0] ||
+    turn.keyProblems[0] ||
+    '',
+  )
+  const whyItems = dedupeCoachItems(
+    [
+      turn.sentenceGroundedReview?.whyBetter,
+      turn.referenceSentenceReason,
+      ...turn.keyStrengths,
+      ...turn.keyProblems,
+      issue,
+    ],
+    [],
+  ).map(sanitizeCoachText).filter(Boolean).slice(0, 3)
+
+  function playLearnerInline() {
+    if (learnerActive && (audio.state === 'playing' || audio.state === 'loading')) {
+      audio.stop()
+      return
+    }
+    if (learnerSrc) audio.playLearner(turnId, learnerSrc)
+  }
+
+  function playReferenceInline() {
+    if (refActive && (audio.state === 'playing' || audio.state === 'loading' || snippetLoading === 'reference')) {
+      audio.stop()
+      setSnippetLoading(null)
+      return
+    }
+    if (referenceText?.trim()) {
+      setSnippetLoading('reference')
+      void onPlaySnippet(turnId, referenceText).finally(() => setSnippetLoading(null))
+    } else if (refSrc) {
+      audio.playReference(turnId, refSrc, referenceText || undefined)
+    }
+  }
+
+  function previewPlayButton(kind: 'learner' | 'reference') {
+    const active = kind === 'learner' ? learnerActive : refActive
+    const playing = kind === 'learner' ? learnerPlaying : refPlaying
+    const disabled = kind === 'learner' ? !learnerSrc : !refSrc && !referenceText?.trim()
+    const loading = (active && audio.state === 'loading') || snippetLoading === kind
+    return (
+      <button
+        type="button"
+        disabled={disabled}
+        onClick={kind === 'learner' ? playLearnerInline : playReferenceInline}
+        className="mt-auto grid h-10 w-10 place-items-center rounded-full bg-violet-50 text-violet-700 disabled:cursor-not-allowed disabled:text-slate-300"
+        aria-label={kind === 'learner' ? 'Play your recording' : 'Play better version'}
+      >
+        {playing ? <Pause className="h-4 w-4" aria-hidden /> : loading ? <Square className="h-4 w-4" aria-hidden /> : <Play className="h-4 w-4 fill-current" aria-hidden />}
+      </button>
+    )
+  }
+
+  function detailContent() {
+    if (activeDetail === 'listen') {
+      return (
+        <div className="rounded-[18px] border border-slate-200/75 bg-white px-5 py-5">
+          <SentenceAudioControls
+            turnId={turnId}
+            learnerSrc={learnerSrc}
+            refSrc={refSrc}
+            referenceText={referenceText}
+            onPlaySnippet={onPlaySnippet}
+            audio={audio}
+            hideMissingLearnerHint
+          />
+          <p className="mt-4 text-[13px] font-semibold leading-relaxed text-slate-600">
+            Tip: Listen for rhythm and intonation, then compare your line with the better version.
+          </p>
+        </div>
+      )
+    }
+    if (activeDetail === 'voice') {
+      return (
+        <div className="rounded-[18px] border border-slate-200/75 bg-white px-5 py-5">
+          <div className="flex items-center gap-3">
+            <Volume2 className="h-5 w-5 text-violet-600" aria-hidden />
+            <h3 className="text-[18px] font-extrabold text-ink-primary">Voice</h3>
+          </div>
+          <p className="mt-4 text-[15px] font-semibold leading-relaxed text-slate-700">
+            {voiceSummary || 'Voice scoring for this sentence focuses on how clearly and smoothly this line came through.'}
+          </p>
+          {hasVoiceScores ? (
+            <div className="mt-5">
+              <InlineVoiceScoreRow
+                label="Pronunciation"
+                score={pronunciationScore}
+                note={turn.pronunciationIssues[0]?.fix || turn.pronunciationIssues[0]?.issue || null}
+              />
+              <InlineVoiceScoreRow
+                label="Rhythm & flow"
+                score={rhythmScore ?? fluencyScore}
+                note={turn.fluencyIssues[0]?.fix || turn.fluencyIssues[0]?.issue || null}
+              />
+            </div>
+          ) : (
+            <p className="mt-4 rounded-2xl bg-slate-50 px-4 py-3 text-[13px] font-semibold leading-relaxed text-slate-600">
+              No voice score was available for this sentence, but language feedback is still shown above.
+            </p>
+          )}
+        </div>
+      )
+    }
+    if (activeDetail === 'language') {
+      return (
+        <div className="rounded-[18px] border border-slate-200/75 bg-white px-5 py-5">
+          <div className="flex items-center gap-3">
+            <Languages className="h-5 w-5 text-violet-600" aria-hidden />
+            <h3 className="text-[18px] font-extrabold text-ink-primary">Language</h3>
+          </div>
+          <p className="mt-4 text-[15px] font-semibold leading-relaxed text-slate-700">
+            {languageSummary || 'Language scoring for this sentence focuses on task fit, clarity, natural Dutch, and grammar control.'}
+          </p>
+          {hasLanguageScores ? (
+            <div className="mt-5">
+              <InlineVoiceScoreRow
+                label="Task success"
+                score={taskSuccessScore}
+                note={turn.scenarioGoalFit?.summary || null}
+              />
+              <InlineVoiceScoreRow
+                label="Understandability"
+                score={understandabilityScore}
+                note={turn.keyStrengths[0] || null}
+              />
+              <InlineVoiceScoreRow
+                label="Natural Dutch"
+                score={naturalDutchScore}
+                tone={(naturalDutchScore ?? 100) < 70 ? 'amber' : 'violet'}
+                note={turn.sentenceGroundedReview?.whyBetter || turn.referenceSentenceReason || null}
+              />
+              <InlineVoiceScoreRow
+                label="Grammar & sentence control"
+                score={grammarControlScore}
+                tone={(grammarControlScore ?? 100) < 75 ? 'amber' : 'violet'}
+                note={turn.transcriptCoaching.issues[0]?.fix || turn.transcriptCoaching.issues[0]?.issue || issue || null}
+              />
+            </div>
+          ) : (
+            <p className="mt-4 rounded-2xl bg-slate-50 px-4 py-3 text-[13px] font-semibold leading-relaxed text-slate-600">
+              No language score was available for this sentence, but sentence feedback is still shown above.
+            </p>
+          )}
+        </div>
+      )
+    }
+    if (activeDetail === 'grammar') {
+      const glossPhrase = better || referenceText || transcript
+      return (
+        <div className="rounded-[18px] border border-slate-200/75 bg-white px-5 py-5">
+          <GrammarStructureExplainer turn={turn} transcript={transcript} dedupeAgainst={[issue, tip].filter(Boolean)} />
+          {better ? (
+            <div className="mt-4 rounded-2xl bg-emerald-50/70 px-4 py-3 ring-1 ring-emerald-100">
+              <p className="text-[12px] font-extrabold text-emerald-700">Better version</p>
+              <p className="mt-2 text-[15px] font-bold leading-snug text-ink-primary">{better}</p>
+            </div>
+          ) : null}
+          {glossPhrase.trim() ? (
+            <div className="mt-4 rounded-2xl border border-violet-100 bg-violet-50/45 px-4 py-3">
+              <DutchWordGlossPicker
+                phrase={glossPhrase}
+                corrections={corrections}
+                detections={turn.wrongWordDetections?.length ? turn.wrongWordDetections : undefined}
+                label="Tap a word for Dutch and English meaning"
+                enablePracticeSave
+                practiceSaveLabel="Saved from grammar breakdown"
+                onPlayPickedWord={(word) => onPlaySnippet(`${turnId}-word-${word}`, word)}
+              />
+            </div>
+          ) : null}
+        </div>
+      )
+    }
+    if (activeDetail === 'words') {
+      return (
+        <div className="rounded-[18px] border border-slate-200/75 bg-white px-5 py-5">
+          <p className="text-[15px] font-extrabold text-ink-primary">Per-word pronunciation</p>
+          {wordRows.length > 0 ? (
+            <div className="mt-4 space-y-2">
+              {wordRows.slice(0, 8).map((w, i) => {
+                const weak = w.status === 'weak' || w.status === 'unclear' || w.score < 70
+                return (
+                  <div key={`${w.word}-${i}`} className={`flex items-center justify-between rounded-xl border px-4 py-2.5 ${weak ? 'border-rose-100 bg-rose-50/45' : 'border-emerald-100 bg-emerald-50/45'}`}>
+                    <span className="text-[14px] font-bold text-ink-primary">{w.word}</span>
+                    <span className={`text-[14px] font-extrabold tabular-nums ${weak ? 'text-rose-500' : 'text-emerald-600'}`}>{Math.round(w.score)}</span>
+                  </div>
+                )
+              })}
+            </div>
+          ) : (
+            <p className="mt-3 text-[13px] font-semibold leading-relaxed text-slate-600">Word-level audio scores were not available for this sentence.</p>
+          )}
+        </div>
+      )
+    }
+    return (
+      <div className="rounded-[18px] border border-slate-200/75 bg-white px-5 py-5">
+        <p className="text-[15px] font-extrabold text-ink-primary">Why this sounds better</p>
+        <ul className="mt-4 space-y-3">
+          {(whyItems.length > 0 ? whyItems : [tip || issue]).map((line, i) => (
+            <li key={`${line}-${i}`} className="flex gap-3 text-[14px] font-semibold leading-relaxed text-slate-700">
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-emerald-500" aria-hidden />
+              <span>{line}</span>
+            </li>
+          ))}
+        </ul>
+        {better ? (
+          <div className="mt-5 rounded-2xl bg-violet-50/80 px-4 py-4 ring-1 ring-violet-100">
+            <p className="text-[12px] font-extrabold text-violet-700">Real-life example</p>
+            <p className="mt-2 text-[15px] font-bold leading-snug text-ink-primary">{better}</p>
+          </div>
+        ) : null}
+      </div>
+    )
+  }
+
+  return (
+    <section id="sentence-review" className="scroll-mt-24 rounded-[28px] bg-white px-1 py-2">
+      <div className="mb-7 flex items-center justify-between">
+        <button
+          type="button"
+          disabled={!canPrev}
+          onClick={() => onChangeIndex(safeIndex - 1)}
+          className="grid h-11 w-11 place-items-center rounded-full border border-slate-100 bg-white text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.45)] disabled:opacity-40"
+          aria-label="Previous sentence"
+        >
+          <ChevronLeft className="h-5 w-5" aria-hidden />
+        </button>
+        <p className="text-[18px] font-extrabold text-ink-primary">{safeIndex + 1} of {turns.length}</p>
+        <button
+          type="button"
+          onClick={goNext}
+          className="grid h-11 w-11 place-items-center rounded-full border border-slate-100 bg-white text-slate-700 shadow-[0_10px_24px_-20px_rgba(15,23,42,0.45)]"
+          aria-label="Next sentence"
+        >
+          <ChevronRight className="h-5 w-5" aria-hidden />
+        </button>
+      </div>
+      <p className="text-[23px] font-extrabold leading-tight tracking-tight text-ink-primary">{transcript || 'Your sentence'}</p>
+      <div className={`mt-6 rounded-[20px] border px-5 py-4 ${issueBg}`}>
+        <div className="flex items-center gap-2">
+          <AlertCircle className={`h-5 w-5 ${issueTone}`} aria-hidden />
+          <p className={`text-[14px] font-extrabold ${issueTone}`}>{issueTitle}</p>
+        </div>
+        <p className="mt-3 text-[15px] font-semibold leading-relaxed text-slate-700">{issue}</p>
+      </div>
+      <div className="mt-6 grid grid-cols-2 gap-4">
+        <div className="flex min-h-[148px] flex-col rounded-[20px] border border-slate-200/75 bg-white px-4 py-4 shadow-[0_10px_26px_-24px_rgba(15,23,42,0.3)]">
+          <p className="text-[13px] font-extrabold text-violet-600">You said</p>
+          <p className="mt-5 text-[16px] font-extrabold leading-snug text-ink-primary">{transcript || 'No transcript available.'}</p>
+          {previewPlayButton('learner')}
+        </div>
+        <div className="flex min-h-[148px] flex-col rounded-[20px] border border-slate-200/75 bg-white px-4 py-4 shadow-[0_10px_26px_-24px_rgba(15,23,42,0.3)]">
+          <p className="text-[13px] font-extrabold text-emerald-600">Better version</p>
+          <p className="mt-5 text-[16px] font-extrabold leading-snug text-ink-primary">{better && !isSameAsOriginal(transcript, better) ? better : 'This sentence is mostly fine.'}</p>
+          {previewPlayButton('reference')}
+        </div>
+      </div>
+      <div className="mt-6 rounded-[20px] bg-violet-50/80 px-5 py-5 ring-1 ring-violet-100">
+        <div className="flex items-center gap-2">
+          <Lightbulb className="h-5 w-5 text-violet-600" aria-hidden />
+          <p className="text-[16px] font-extrabold text-violet-700">Tip</p>
+        </div>
+        <p className="mt-3 pl-8 text-[15px] font-semibold leading-relaxed text-slate-700">{tip}</p>
+      </div>
+      <button
+        type="button"
+        disabled={Boolean(saving) || saved}
+        onClick={() =>
+          onSave({
+            type: 'save_phrase',
+            title: `${issueTitle}: ${(better || transcript).slice(0, 52)}`,
+            content: [
+              transcript ? `Your sentence: ${transcript}` : '',
+              better ? `Better version: ${better}` : '',
+              issue ? `Feedback: ${issue}` : '',
+              tip ? `Tip: ${tip}` : '',
+            ].filter(Boolean).join('\n'),
+            sourceTurnId: turn.turnId,
+            saveBusyKey: saveKey,
+            learnerOriginalSentence: transcript,
+            improvedSentence: better || null,
+            tagCategory: 'phrasing_upgrade',
+            suggestedTrainingMode: null,
+          })
+        }
+        className="mt-6 flex min-h-touch w-full items-center justify-between rounded-[18px] border border-slate-200/75 bg-white px-5 py-4 text-left text-[15px] font-bold text-slate-600 shadow-[0_10px_26px_-24px_rgba(15,23,42,0.3)] disabled:opacity-65"
+      >
+        <span className="inline-flex items-center gap-3">
+          <Bookmark className="h-5 w-5 text-slate-500" aria-hidden />
+          {saveLabel}
+        </span>
+        <ChevronRight className="h-5 w-5 text-slate-400" aria-hidden />
+      </button>
+      <details className="group mt-6 rounded-[20px] border border-violet-100 bg-violet-50/35 px-4 py-2 open:pb-4">
+        <summary className="flex cursor-pointer list-none items-center justify-between py-3 text-[15px] font-extrabold text-violet-700 marker:content-none [&::-webkit-details-marker]:hidden">
+          <span>Detailed analysis</span>
+          <ChevronDown className="h-5 w-5 transition-transform group-open:rotate-180" aria-hidden />
+        </summary>
+        <div className="space-y-2">
+          {[
+            { id: 'listen' as const, label: 'Listen & compare', icon: AudioLines },
+            { id: 'voice' as const, label: 'Voice score', icon: Volume2 },
+            { id: 'language' as const, label: 'Language score', icon: Languages },
+            { id: 'grammar' as const, label: 'Grammar breakdown', icon: BookOpen },
+            { id: 'words' as const, label: 'Word accuracy', icon: Type },
+            { id: 'why' as const, label: 'Why it matters', icon: Star },
+          ].map(({ id, label, icon: Icon }) => (
+            <button
+              key={label}
+              type="button"
+              onClick={() => setActiveDetail(id)}
+              className={`flex min-h-[52px] w-full items-center justify-between rounded-2xl border px-4 text-left text-[14px] font-extrabold shadow-[0_8px_18px_-18px_rgba(15,23,42,0.25)] ${
+                activeDetail === id
+                  ? 'border-violet-200 bg-violet-50/80 text-violet-800'
+                  : 'border-slate-100 bg-white text-ink-primary'
+              }`}
+            >
+              <span className="inline-flex items-center gap-3">
+                <Icon className="h-5 w-5 text-violet-600" aria-hidden />
+                {label}
+              </span>
+              <ChevronRight className="h-5 w-5 text-slate-400" aria-hidden />
+            </button>
+          ))}
+          {detailContent()}
+        </div>
+      </details>
+      <button
+        type="button"
+        onClick={goNext}
+        className="mt-7 inline-flex min-h-touch w-full items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-violet-700 px-4 py-4 text-[16px] font-extrabold text-white shadow-[0_18px_34px_-20px_rgba(109,40,217,0.65)]"
+      >
+        {canNext ? 'Next sentence' : 'First sentence'}
+      </button>
+      <button
+        type="button"
+        onClick={() => onSeeAll(turn.turnId || null)}
+        className="mt-5 w-full text-center text-[13px] font-bold text-violet-700"
+      >
+        See all feedback
+      </button>
+    </section>
   )
 }
 
@@ -3792,6 +4428,8 @@ export function SpeakLiveEvaluationPage() {
   } | null>(null)
   const speakLiveHubProgressionRef = useRef<string | null>(null)
   const [openTurnId, setOpenTurnId] = useState<string | null>(null)
+  const [activeSentenceIndex, setActiveSentenceIndex] = useState(0)
+  const [fullFeedbackOpen, setFullFeedbackOpen] = useState(false)
   const [regeneratingReport, setRegeneratingReport] = useState(false)
   const [timingOpen, setTimingOpen] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
@@ -3916,6 +4554,9 @@ export function SpeakLiveEvaluationPage() {
   )
   const showBuildTimingOnReport = evalTimingDebug || !!report?.generationDiagnostics
   const turns = useMemo(() => report?.turnEvaluations ?? [], [report])
+  useEffect(() => {
+    if (activeSentenceIndex >= turns.length) setActiveSentenceIndex(0)
+  }, [activeSentenceIndex, turns.length])
   const missingCoreGoalIds = useMemo(() => {
     return new Set(
       (report?.taskOutcome?.goalEvidence ?? [])
@@ -4243,25 +4884,6 @@ export function SpeakLiveEvaluationPage() {
     [derivedFocus, priorityTurn],
   )
 
-  const teacherSummaryInput = useMemo((): SessionTeacherSummaryInput | null => {
-    if (!report) return null
-    const completedCoreGoals = coreGoals.filter((g) => g.status === 'completed').length
-    const voiceHero =
-      sanitizeCoachText(report.keyTakeaway?.message)
-      || sanitizeCoachText(report.coachHeadline)
-      || ''
-    return {
-      scenarioTitle: report.scenarioName || report.scenarioTitle || 'your session',
-      wentWellBullets: wentWellBullets,
-      fixNextBullets: fixNextBullets,
-      heroLine: voiceHero || null,
-      practicePhrase: practiceModel.phrase.trim() || null,
-      completedCoreGoals,
-      totalCoreGoals: coreGoals.length,
-      turns,
-    }
-  }, [report, coreGoals, wentWellBullets, fixNextBullets, practiceModel.phrase, turns])
-
   const collapsedMainFixDedupePool = useMemo(
     () => [...fixNextBullets, practiceModel.phrase].filter(Boolean),
     [fixNextBullets, practiceModel.phrase],
@@ -4329,11 +4951,6 @@ export function SpeakLiveEvaluationPage() {
         speakLiveHubProgressionRef.current = null
       })
   }, [sessionId, report, payload?.status, scenarioId, queryClient])
-
-  const practiceSavePhraseKey = useMemo(() => {
-    if (!practiceModel.turnId || !practiceModel.phrase.trim()) return null
-    return `save-phrase-hero-${practiceModel.turnId}-${practiceModel.phrase.slice(0, 48)}`
-  }, [practiceModel.turnId, practiceModel.phrase])
 
   const handleSave = async (input: Record<string, unknown>) => {
     const key = String(input.saveBusyKey ?? `${input.sourceTurnId}-${input.type}-${input.title}`)
@@ -4535,7 +5152,6 @@ export function SpeakLiveEvaluationPage() {
   // ─── Full report ───────────────────────────────────────────────────────
 
   const es = report.evidenceSummary
-  const audioEv = es ? deriveAudioEvidence(es) : null
   const langEv = es ? deriveLanguageEvidence(es) : null
   const reportTitle = report.scenarioName || report.scenarioTitle
   const retryHref =
@@ -4592,15 +5208,24 @@ export function SpeakLiveEvaluationPage() {
       : null
 
   return (
-    <div className="min-h-[100dvh] bg-[#f7f7f3] text-ink-primary">
-      <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/92 backdrop-blur-xl px-5 py-3.5 flex items-center justify-between gap-3">
-        <button type="button" onClick={() => { audio.stop(); router.push(APP_TALK_HUB) }} className="text-[13px] font-semibold text-slate-600 shrink-0 hover:text-ink-primary">Done</button>
-        <p className="text-[12px] font-medium uppercase tracking-[0.12em] text-slate-400 truncate text-center flex-1">Session report</p>
-        <button type="button" onClick={() => router.push(recapHref)} className="text-[12px] font-medium text-slate-400 hover:text-slate-600 shrink-0">Recap</button>
+    <div className="min-h-[100dvh] bg-white text-ink-primary">
+      <header className="sticky top-0 z-30 border-b border-slate-200/70 bg-white/95 px-5 py-4 backdrop-blur-xl">
+        <div className="mx-auto grid max-w-md grid-cols-[2rem_minmax(0,1fr)_2rem] items-center gap-3">
+          <button
+            type="button"
+            onClick={() => { audio.stop(); router.push(APP_TALK_HUB) }}
+            className="grid h-8 w-8 place-items-center rounded-full text-slate-800 hover:bg-slate-100"
+            aria-label="Back to Talk"
+          >
+            <ChevronLeft className="h-5 w-5" aria-hidden />
+          </button>
+          <p className="truncate text-center text-[16px] font-bold text-ink-primary">Session feedback</p>
+          <button type="button" onClick={() => router.push(recapHref)} className="text-[11px] font-bold text-violet-600 opacity-0 focus:opacity-100">Recap</button>
+        </div>
       </header>
 
-      <main className="mx-auto max-w-3xl px-4 py-8 pb-16 sm:px-5 sm:py-10 sm:pb-20">
-        <div className="space-y-12">
+      <main className="mx-auto max-w-md px-4 py-5 pb-32 sm:px-5 sm:py-7 sm:pb-36">
+        <div className="space-y-7">
         {saveError ? (
           <div
             role="alert"
@@ -4654,210 +5279,95 @@ export function SpeakLiveEvaluationPage() {
           </div>
         ) : null}
 
-        {/* Above the fold: coach stack (A–D) */}
-        <div className="rounded-[28px] border border-violet-200/50 bg-gradient-to-br from-violet-50/40 via-white to-violet-50/35 px-5 py-8 shadow-[0_28px_64px_-48px_rgba(79,70,229,0.18)] ring-1 ring-violet-100/40 sm:px-8 sm:py-10">
-          <div className="space-y-10 sm:space-y-12">
-        {/* A — Top summary */}
-        <div className="space-y-6">
-          <div className="space-y-3">
-            <p className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-violet-700">
-              <span className="h-1 w-6 rounded-full bg-gradient-to-r from-violet-500 to-violet-500" aria-hidden />
-              How you did
-            </p>
-            <h1 className="text-[clamp(1.5rem,4.5vw,1.85rem)] font-semibold tracking-tight text-ink-primary leading-[1.12]">{reportTitle}</h1>
-          </div>
-          {heroCoachLine ? (
-            <p className="max-w-2xl text-[15px] leading-relaxed text-slate-600">{heroCoachLine}</p>
-          ) : null}
-          <div className="flex flex-wrap items-end justify-between gap-4 border-b border-violet-100/80 pb-6">
-            {primaryReportScore != null ? (
-              <div className="min-w-0 rounded-2xl bg-gradient-to-br from-white to-violet-50/60 px-4 py-3 ring-1 ring-violet-200/60 shadow-[0_12px_28px_-20px_rgba(109,40,217,0.2)]">
-                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-violet-600/90">Overall</p>
-                <p className="mt-1.5 bg-gradient-to-r from-violet-700 to-violet-600 bg-clip-text text-[40px] font-semibold tabular-nums tracking-tight text-transparent leading-none sm:text-[44px]">
-                  {primaryReportScore}
-                </p>
-              </div>
-            ) : (
-              <div className="text-[13px] text-slate-500">See full feedback for scores.</div>
-            )}
-          </div>
-          <p className="text-[13px] leading-relaxed text-slate-500">
-            <span className="font-medium text-slate-600">{report.targetLevel}</span>
-            <span className="mx-2 text-slate-300 select-none" aria-hidden>·</span>
-            <span>{formatSessionDuration(report.sessionDurationSeconds)}</span>
-            <span className="mx-2 text-slate-300 select-none" aria-hidden>·</span>
-            <span>
-              {report.learnerTurnCount} {report.learnerTurnCount === 1 ? 'turn' : 'turns'}
-            </span>
-            {audioEv ? (
-              <>
-                <span className="mx-2 text-slate-300 select-none" aria-hidden>·</span>
-                <span className={audioEv.status === 'none' ? 'text-amber-700/90' : undefined}>
-                  Audio{' '}
-                  {audioEv.status === 'all' ? 'captured end-to-end' : audioEv.status === 'partial' ? 'partially captured' : 'not available'}
-                </span>
-              </>
-            ) : null}
-          </p>
-          {sessionHubProgression ? (
-            <div
-              className="flex flex-wrap items-center gap-x-5 gap-y-2 rounded-2xl border border-emerald-200/85 bg-gradient-to-r from-emerald-50/90 to-teal-50/50 px-4 py-3.5 ring-1 ring-emerald-100/60"
-              aria-live="polite"
-            >
-              <div className="flex items-baseline gap-2">
-                <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-emerald-900/75">Progress</span>
-                <span className="text-[22px] font-bold tabular-nums text-emerald-950">
-                  +{sessionHubProgression.xpAwarded} XP
-                </span>
-              </div>
-              <div className="min-w-0 text-[13px] leading-snug text-emerald-950/90">
-                {sessionHubProgression.streakChanged ? (
-                  <span className="font-semibold">Streak updated — {sessionHubProgression.newStreak} day streak.</span>
-                ) : sessionHubProgression.newStreak > 0 ? (
-                  <span>Current streak: {sessionHubProgression.newStreak} day{sessionHubProgression.newStreak === 1 ? '' : 's'}.</span>
-                ) : (
-                  <span>Logged to your Talk momentum (streak builds on daily practice).</span>
-                )}
-              </div>
-            </div>
-          ) : null}
-        </div>
-
-        {sessionId && teacherSummaryInput ? (
-          <SessionVoiceTeacherSummaryCard sessionId={sessionId} summaryInput={teacherSummaryInput} />
-        ) : null}
-
-        {/* B — What went well */}
-        <section className="space-y-4">
-          <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] text-emerald-700/90">What went well</h2>
-          {wentWellBullets.length > 0 ? (
-            <ul className="space-y-3">
-              {wentWellBullets.map((line, i) => (
-                <li key={`well-${i}-${line.slice(0, 24)}`} className="flex gap-3 text-[14px] leading-snug text-ink-primary">
-                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-600/90" aria-hidden />
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-[13px] leading-relaxed text-slate-500">Highlights are light this run — full feedback includes goal-by-goal notes.</p>
-          )}
-        </section>
-
-        {/* C — Fix this next (high-visibility callout) */}
-        <section
-          className="rounded-2xl border border-amber-300/55 bg-gradient-to-br from-amber-50/95 via-white to-orange-50/30 px-4 py-5 shadow-[0_14px_36px_-28px_rgba(180,83,9,0.35)] ring-1 ring-amber-200/45 sm:px-5 sm:py-6"
-          aria-labelledby="speak-live-fix-next-heading"
-        >
-          <div className="flex flex-wrap items-center gap-2">
-            <h2 id="speak-live-fix-next-heading" className="text-[11px] font-bold uppercase tracking-[0.16em] text-amber-950/90">
-              Fix this next
-            </h2>
-            <span className="rounded-full bg-amber-600/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-amber-950/85">
-              Priority
-            </span>
-          </div>
-          {fixNextBullets.length > 0 ? (
-            <ul className="mt-4 space-y-3">
-              {fixNextBullets.map((line, i) => (
-                <li
-                  key={`fix-${i}-${line.slice(0, 24)}`}
-                  className="flex gap-3 rounded-xl border border-amber-200/60 bg-white/90 px-3 py-2.5 text-[14px] leading-snug text-ink-primary shadow-sm"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" aria-hidden />
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="mt-3 text-[13px] leading-relaxed text-amber-950/80">No urgent fix flagged — open full feedback below for goal-by-goal notes.</p>
-          )}
-        </section>
-
-        {/* D — Practice now (single primary CTA: scenario retry) */}
-        <section className="rounded-2xl bg-gradient-to-br from-indigo-950 via-slate-950 to-sky-950 px-5 py-6 text-white shadow-[0_28px_56px_-36px_rgba(30,27,75,0.65)] ring-1 ring-violet-500/25 sm:px-6 sm:py-7">
-          <h2 className="text-[11px] font-bold uppercase tracking-[0.16em] text-violet-200/80">Practice now</h2>
-          {practiceModel.phrase.trim() ? (
-            <p className="mt-3 text-[17px] font-semibold leading-snug tracking-tight text-white">{practiceModel.phrase}</p>
-          ) : (
-            <p className="mt-3 text-[14px] leading-relaxed text-white/80">Run the scenario again and aim for one clear Dutch line each turn.</p>
-          )}
-          <div className="mt-6 space-y-3">
-            <a
-              href={retryHref}
-              className="inline-flex min-h-touch w-full items-center justify-center gap-2 rounded-xl bg-violet-500 px-4 py-3.5 text-[15px] font-semibold text-white shadow-[0_12px_28px_-14px_rgba(14,165,233,0.55)] hover:bg-violet-400 active:scale-[0.99] transition-transform"
-            >
-              <ArrowRight className="h-4 w-4 shrink-0" aria-hidden />
-              {report.scenarioId === 'language_coach' ? 'Start another session' : 'Practice this scenario'}
-            </a>
-            {(practiceModel.phrase.trim() && practiceModel.turnId && sessionHasAnyAudio) ||
-            (practiceModel.phrase.trim() && practiceModel.turnId && practiceSavePhraseKey) ? (
-              <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-2">
-                {practiceModel.phrase.trim() && practiceModel.turnId && sessionHasAnyAudio ? (
-                  <button
-                    type="button"
-                    onClick={() =>
-                      void playReferenceSnippet(
-                        practiceModel.turnId!,
-                        (priorityTurn?.referenceSentence?.trim() || practiceModel.phrase).trim(),
-                      )
-                    }
-                    className="inline-flex min-h-touch items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-4 py-2.5 text-[13px] font-medium text-white/90 hover:bg-white/10"
-                  >
-                    <Play className="h-4 w-4 shrink-0" aria-hidden />
-                    Hear reference clip
-                  </button>
-                ) : null}
-                {practiceModel.phrase.trim() && practiceModel.turnId && practiceSavePhraseKey ? (
-                  <button
-                    type="button"
-                    disabled={Boolean(saving) || savedKeys.has(practiceSavePhraseKey)}
-                    onClick={() =>
-                      void handleSave({
-                        type: 'save_phrase',
-                        title: 'Corrected phrase',
-                        content: [
-                          `Original: ${practiceModel.learnerLine ?? ''}`,
-                          `Corrected: ${practiceModel.phrase}`,
-                          `Scenario: ${reportTitle}`,
-                        ].join('\n'),
-                        sourceTurnId: practiceModel.turnId,
-                        saveBusyKey: practiceSavePhraseKey,
-                        learnerOriginalSentence: practiceModel.learnerLine ?? '',
-                        improvedSentence: practiceModel.phrase,
-                        tagCategory: 'phrasing_upgrade',
-                        suggestedTrainingMode: null,
-                      })
-                    }
-                    className="inline-flex min-h-touch items-center justify-center gap-2 rounded-xl border border-white/20 bg-transparent px-4 py-2.5 text-[13px] font-medium text-white/85 hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
-                  >
-                    <BookmarkPlus className="h-4 w-4 shrink-0" aria-hidden />
-                    {savedKeys.has(practiceSavePhraseKey) ? 'Saved' : saving === practiceSavePhraseKey ? 'Saving…' : 'Save this phrase'}
-                  </button>
-                ) : null}
-              </div>
-            ) : null}
-          </div>
-        </section>
-          </div>
-
-        <ReportPracticeNowSection
-          bundle={payload.practiceNow}
-          showEngineDebug={isDevToolsEnabledClient() || searchParams.get('evalTiming') === '1'}
+        <ReportSummaryCard
+          score={primaryReportScore}
+          summary={heroCoachLine || outcomeSummary(primaryReportScore)}
+          strengthsCount={Math.max(1, wentWellBullets.length)}
+          improveCount={Math.max(1, fixNextBullets.length)}
         />
 
-        <div className="mt-6">
-          <ReportQuickCapturePrompt variant="onLight" initial="problem" />
-        </div>
+        {sessionHubProgression ? (
+          <div className="rounded-[18px] border border-emerald-100 bg-emerald-50/80 px-4 py-3 text-[13px] font-semibold leading-snug text-emerald-950">
+            +{sessionHubProgression.xpAwarded} XP
+            {sessionHubProgression.streakChanged
+              ? ` · ${sessionHubProgression.newStreak} day streak`
+              : sessionHubProgression.newStreak > 0
+                ? ` · Current streak: ${sessionHubProgression.newStreak}`
+                : ''}
+          </div>
+        ) : null}
+
+        {coreGoals.length > 0 ? (
+          <section className="rounded-[24px] border border-slate-200/70 bg-white px-4 py-5 shadow-[0_16px_40px_-34px_rgba(15,23,42,0.24)]">
+            <div className="flex items-center justify-between">
+              <h2 className="text-[12px] font-extrabold uppercase tracking-[0.12em] text-slate-500">Core goals progress</h2>
+              <p className="text-[13px] font-bold text-slate-500">
+                {coreGoals.filter((goal) => goal.status === 'completed').length} of {coreGoals.length} completed
+              </p>
+            </div>
+            <div className="mt-5 space-y-3">
+              {coreGoals.map((goal, index) => <GoalRow key={`${goal.goalId}-${index}`} goal={goal} />)}
+            </div>
+          </section>
+        ) : null}
+
+        {turns.length > 0 ? (
+          <button
+            type="button"
+            onClick={() => document.getElementById('sentence-review')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            className="inline-flex min-h-touch w-full items-center justify-center rounded-xl bg-gradient-to-r from-violet-600 to-violet-700 px-4 py-4 text-[16px] font-extrabold text-white shadow-[0_18px_34px_-20px_rgba(109,40,217,0.65)]"
+          >
+            Review sentences
+          </button>
+        ) : null}
+
+        <ReportListCard
+          title="What went well"
+          icon={<Star className="h-4 w-4" aria-hidden />}
+          iconTone="text-emerald-600"
+          items={wentWellBullets}
+          empty="Highlights are light this run. Full feedback includes goal-by-goal notes."
+        />
+
+        <ReportListCard
+          title="What to focus on"
+          icon={<Target className="h-4 w-4" aria-hidden />}
+          iconTone="text-amber-500"
+          items={fixNextBullets.slice(0, 1)}
+          empty="No urgent fix flagged. Open the full report for the detailed breakdown."
+        />
+
+        <SentenceFeedbackPreview
+          turns={turns}
+          activeIndex={activeSentenceIndex}
+          onChangeIndex={setActiveSentenceIndex}
+          onSeeAll={(turnId) => {
+            setFullFeedbackOpen(true)
+            setOpenTurnId(turnId)
+            window.setTimeout(() => {
+              document.getElementById('sentence-feedback-list')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }, 80)
+          }}
+          onSave={(input) => void handleSave(input)}
+          saving={saving}
+          savedKeys={savedKeys}
+          resolvedMedia={resolvedMedia}
+          audio={audio}
+          onPlaySnippet={playReferenceSnippet}
+        />
+
+        <FocusWorkCard items={fixNextBullets} retryHref={retryHref} />
 
         {payload.learningMemoryRibbon && learningMemoryRibbonHasContent(payload.learningMemoryRibbon) ? (
-          <div className="mt-8">
-            <LearningMemoryRibbon ribbon={payload.learningMemoryRibbon} />
-          </div>
+          <LearningMemoryRibbon ribbon={payload.learningMemoryRibbon} />
         ) : null}
 
         {/* Progressive disclosure: one entry, all deep modules preserved below */}
-        <details className="group motion-safe:transition-[box-shadow] motion-safe:duration-300 open:shadow-[0_12px_40px_-28px_rgba(15,23,42,0.12)]">
+        <details
+          open={fullFeedbackOpen}
+          onToggle={(event) => setFullFeedbackOpen(event.currentTarget.open)}
+          className="group motion-safe:transition-[box-shadow] motion-safe:duration-300 open:shadow-[0_12px_40px_-28px_rgba(15,23,42,0.12)]"
+        >
           <summary className="mt-8 flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl border border-slate-200/80 bg-slate-50/90 px-4 py-3.5 text-left marker:content-none [&::-webkit-details-marker]:hidden motion-safe:transition-[background-color,border-color] motion-safe:duration-200 hover:border-slate-300 hover:bg-slate-50 sm:px-5">
             <span className="text-[15px] font-semibold tracking-tight text-ink-primary">See full feedback</span>
             <ChevronDown className="h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300 ease-out group-open:rotate-180" aria-hidden />
@@ -5070,7 +5580,7 @@ export function SpeakLiveEvaluationPage() {
           <ProgressionSignalSection progression={progression} />
 
           {turns.length > 0 ? (
-            <details className="sub-details group/sc rounded-[28px] border border-slate-200/90 bg-white shadow-[0_12px_28px_-22px_rgba(15,23,42,0.25)]">
+            <details id="sentence-feedback-list" className="sub-details group/sc scroll-mt-24 rounded-[28px] border border-slate-200/90 bg-white shadow-[0_12px_28px_-22px_rgba(15,23,42,0.25)]">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-4 py-4 text-[16px] font-semibold tracking-tight text-ink-primary marker:content-none [&::-webkit-details-marker]:hidden sm:px-5">
                 <span>Sentence coaching</span>
                 <ChevronDown className="h-5 w-5 shrink-0 text-slate-500 transition-transform group-open/sc:rotate-180" aria-hidden />
@@ -5155,7 +5665,7 @@ export function SpeakLiveEvaluationPage() {
           </div>
         </details>
         </div>
-        </div>
+        <ReportBottomNav />
       </main>
 
       {showBuildTimingOnReport ? (

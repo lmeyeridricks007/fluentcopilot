@@ -1,7 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { BookmarkPlus, Check } from 'lucide-react'
+import { BookmarkPlus, Check, Volume2 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { addSavedDrill } from '@/features/read-aloud/readAloudStorage'
 import { getApiBaseUrl } from '@/lib/api/apiConfig'
@@ -355,6 +355,7 @@ export function DutchWordGlossPicker({
   /** Show save-to-library actions when a word is selected. */
   enablePracticeSave = false,
   practiceSaveLabel = 'Saved from practice',
+  onPlayPickedWord,
 }: {
   phrase: string
   corrections: WordCorrection[]
@@ -365,12 +366,14 @@ export function DutchWordGlossPicker({
   serverGlosses?: ServerWordGlossMap
   enablePracticeSave?: boolean
   practiceSaveLabel?: string
+  onPlayPickedWord?: (word: string) => void | Promise<void>
 }) {
   const [pickedRaw, setPickedRaw] = useState<string | null>(null)
   const [displayGlossEn, setDisplayGlossEn] = useState<string | null>(null)
   const [displayGlossNl, setDisplayGlossNl] = useState<string | null>(null)
   const [glossLoading, setGlossLoading] = useState(false)
   const [savedToast, setSavedToast] = useState<string | null>(null)
+  const [wordAudioLoading, setWordAudioLoading] = useState(false)
   const glossCacheRef = useRef<Map<string, WordGlossPair>>(new Map())
 
   const libraryWords = usePersonalLibraryStore((s) => s.words)
@@ -428,6 +431,12 @@ export function DutchWordGlossPicker({
     })
     showSavedMessage('Saved phrase for later practice.')
   }, [phrase, savedPhraseKeys, practiceSaveLabel, showSavedMessage])
+
+  const playPickedWord = useCallback(() => {
+    if (!pickedKey || !onPlayPickedWord) return
+    setWordAudioLoading(true)
+    void Promise.resolve(onPlayPickedWord(pickedKey)).finally(() => setWordAudioLoading(false))
+  }, [onPlayPickedWord, pickedKey])
 
   useEffect(() => {
     onPickedWordChange?.(pickedRaw)
@@ -626,8 +635,23 @@ export function DutchWordGlossPicker({
                 : 'Meaning could not be loaded. Check that the API is running and refresh the page.'}
             </p>
           ) : null}
-          {enablePracticeSave ? (
+          {(enablePracticeSave || onPlayPickedWord) ? (
             <div className="flex flex-wrap gap-2 pt-1 border-t border-violet-200/60">
+              {onPlayPickedWord ? (
+                <Button
+                  type="button"
+                  variant="secondary"
+                  size="sm"
+                  className="gap-1.5 text-caption"
+                  disabled={!pickedKey || wordAudioLoading}
+                  onClick={playPickedWord}
+                >
+                  <Volume2 className="h-3.5 w-3.5 shrink-0" aria-hidden />
+                  {wordAudioLoading ? 'Loading audio…' : 'Hear Dutch'}
+                </Button>
+              ) : null}
+              {enablePracticeSave ? (
+                <>
               <Button
                 type="button"
                 variant="secondary"
@@ -660,6 +684,8 @@ export function DutchWordGlossPicker({
                   ? 'Phrase saved'
                   : 'Save whole phrase'}
               </Button>
+                </>
+              ) : null}
             </div>
           ) : null}
         </div>
