@@ -218,6 +218,7 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
 
 const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
 const ASSISTANT_PLAYBACK_VOLUME = 1
+const MIN_TOGGLE_LISTEN_BEFORE_COMMIT_MS = 900
 
 /** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
 async function fetchSpeakLiveReplyAudio(
@@ -593,6 +594,8 @@ export function LiveConversationScreen({
   const commitInFlightRef = useRef(false)
   /** Dedupes release bursts from the same physical lift within a few hundred ms. */
   const lastPointerReleaseMsRef = useRef(0)
+  /** Toggle mode starts on pointerdown for mobile reliability; suppress the following synthetic click. */
+  const togglePointerHandledRef = useRef(false)
   const statusRef = useRef<LiveSessionStatus>('idle')
   const mutedRef = useRef(false)
   /** Single DOM audio element — reliable mute/replay vs `new Audio()`. */
@@ -1099,7 +1102,6 @@ export function LiveConversationScreen({
               },
               onDelta: (chunk) => {
                 setAssistantStreamDraft((prev) => prev + chunk)
-                chunkedTts.feedDelta(chunk)
               },
             }
           )
@@ -1108,11 +1110,6 @@ export function LiveConversationScreen({
           }
           const afterLlm = Date.now()
           latency?.markLlmDone()
-
-          chunkedTts.flush()
-          chunkedTts.startPlayback()
-          chunkedTts.setMuted(mutedRef.current)
-          latency?.setTtsChunkCount(chunkedTts.getChunkCount())
 
           if (streamRes.speakLiveStreamMeta) {
             const meta = streamRes.speakLiveStreamMeta as Record<string, unknown>
@@ -1175,79 +1172,65 @@ export function LiveConversationScreen({
           setLastCoachTurnFeedback(streamRes.liveCoachTurnFeedback ?? null)
           onTurnDebug?.(null)
 
-          if (chunkedTts.getChunkCount() > 0) {
+          setStatus('replying')
+          void (async () => {
+            assistantTtsAbortRef.current?.abort()
+            const ac = new AbortController()
+            assistantTtsAbortRef.current = ac
+            setAssistantMediaPhase('assistant_audio_loading')
+            if (!latency?.ttsStartMs) latency?.markTtsStart()
+            let audioUrl = ''
+            try {
+              audioUrl = await fetchSpeakLiveReplyAudio(aText, threadId, ac.signal)
+              if (ac.signal.aborted) {
+                if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
+                setAssistantMediaPhase('idle')
+                return
+              }
+            } catch (ttsErr) {
+              if (ac.signal.aborted) {
+                if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
+                setAssistantMediaPhase('idle')
+                return
+              }
+              const rep = speakLivePipelineErrorReport('tts_after_stream', ttsErr)
+              setLastPipelineError(rep)
+              logSpeakLivePipelineFailure(rep)
+            }
             latency?.markTtsDone()
-            const trace = latency?.finish() ?? null
-            if (trace) setLastLatencyTrace(trace)
-            if (mutedRef.current) {
+            latency?.setTtsChunkCount(audioUrl ? 1 : 0)
+            tl?.mark('firstTtsChunkReady')
+            if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
+            if (audioUrl) {
+              setLastAssistantAudioUrl(audioUrl)
+              setLastAssistantTtsFailed(false)
+              setAssistantMediaPhase('assistant_audio_ready')
+              if (mutedRef.current) {
+                setAssistantMediaPhase('idle')
+                setStatus('idle')
+                tl?.mark('turnCompleted')
+              } else {
+                tl?.mark('playbackRequested')
+                playAssistantUrl(audioUrl, {
+                  onPlaybackMark: () => {
+                    latency?.markPlaybackStart()
+                    tl?.mark('playbackStarted')
+                    setAssistantMediaPhase('idle')
+                  },
+                })
+              }
+            } else if (!ac.signal.aborted) {
+              setLastAssistantTtsFailed(true)
               setAssistantMediaPhase('idle')
+              setSttWarning('You have the reply in text — no voice this time. Read it above.')
               setStatus('idle')
               tl?.mark('turnCompleted')
-              const snap = tl?.logSummary() ?? null
-              if (snap) setLastTimeline(snap)
             }
-          } else {
-            setStatus('replying')
-            void (async () => {
-              assistantTtsAbortRef.current?.abort()
-              const ac = new AbortController()
-              assistantTtsAbortRef.current = ac
-              setAssistantMediaPhase('assistant_audio_loading')
-              if (!latency?.ttsStartMs) latency?.markTtsStart()
-              let audioUrl = ''
-              try {
-                audioUrl = await fetchSpeakLiveReplyAudio(aText, threadId, ac.signal)
-                if (ac.signal.aborted) {
-                  if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
-                  setAssistantMediaPhase('idle')
-                  return
-                }
-              } catch (ttsErr) {
-                if (ac.signal.aborted) {
-                  if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
-                  setAssistantMediaPhase('idle')
-                  return
-                }
-                const rep = speakLivePipelineErrorReport('tts_after_stream', ttsErr)
-                setLastPipelineError(rep)
-                logSpeakLivePipelineFailure(rep)
-              }
-              latency?.markTtsDone()
-              tl?.mark('firstTtsChunkReady')
-              if (assistantTtsAbortRef.current === ac) assistantTtsAbortRef.current = null
-              if (audioUrl) {
-                setLastAssistantAudioUrl(audioUrl)
-                setLastAssistantTtsFailed(false)
-                setAssistantMediaPhase('assistant_audio_ready')
-                if (mutedRef.current) {
-                  setAssistantMediaPhase('idle')
-                  setStatus('idle')
-                  tl?.mark('turnCompleted')
-                } else {
-                  tl?.mark('playbackRequested')
-                  playAssistantUrl(audioUrl, {
-                    onPlaybackMark: () => {
-                      latency?.markPlaybackStart()
-                      tl?.mark('playbackStarted')
-                      setAssistantMediaPhase('idle')
-                    },
-                  })
-                }
-              } else {
-                if (!ac.signal.aborted) {
-                  setLastAssistantTtsFailed(true)
-                  setAssistantMediaPhase('idle')
-                  setSttWarning('You have the reply in text — no voice this time. Read it above.')
-                  setStatus('idle')
-                  tl?.mark('turnCompleted')
-                }
-              }
-              const trace = latency?.finish() ?? null
-              if (trace) setLastLatencyTrace(trace)
-              const snap = tl?.logSummary() ?? null
-              if (snap) setLastTimeline(snap)
-            })()
-          }
+            const trace = latency?.finish() ?? null
+            if (trace) setLastLatencyTrace(trace)
+            const snap = tl?.logSummary() ?? null
+            if (snap) setLastTimeline(snap)
+          })()
         } else {
           const res = await conversationClient.speakLiveTurn({
             threadId,
@@ -1778,6 +1761,15 @@ export function LiveConversationScreen({
     setAssistantMediaPhase('idle')
     listenArmRef.current = false
     autoCommit.reset()
+    const at = Date.now()
+    listenStartRef.current = at
+    setListenMs(0)
+    statusRef.current = 'listening'
+    setStatus('listening')
+    if (listenTickRef.current) window.clearInterval(listenTickRef.current)
+    listenTickRef.current = window.setInterval(() => {
+      if (listenStartRef.current) setListenMs(Date.now() - listenStartRef.current)
+    }, 120)
 
     const tl = new TurnTimeline()
     timelineRef.current = tl
@@ -1836,35 +1828,70 @@ export function LiveConversationScreen({
       evalCapRef.current = null
       listenArmRef.current = false
       setMicError(micErrorKind(e))
+      if (listenTickRef.current) {
+        window.clearInterval(listenTickRef.current)
+        listenTickRef.current = null
+      }
+      listenStartRef.current = null
+      setListenMs(0)
+      statusRef.current = 'idle'
       setStatus('idle')
       return
     } finally {
       micBootRef.current = false
     }
     tl.mark('sttSessionReady')
-    const at = Date.now()
-    listenStartRef.current = at
-    setListenMs(0)
     if (threadId) {
       const lt = new LiveSpeechTurnTimer(threadId)
       latencyTimerRef.current = lt
       lt.markCaptureReady()
     }
-    setStatus('listening')
     autoCommit.setCommitCallback(() => {
       if (listenArmRef.current || statusRef.current === 'listening') {
         autoCommit.markManualCommit()
         void commitListening()
       }
     })
-    listenTickRef.current = window.setInterval(() => {
-      if (listenStartRef.current) setListenMs(Date.now() - listenStartRef.current)
-    }, 120)
   }, [startContinuous, stopAssistantAudio, threadId, autoCommit, chunkedTts, commitListening])
 
+  const handleToggleMicGesture = () => {
+    const current = statusRef.current
+    if (current === 'paused' || current === 'thinking' || current === 'transcribing' || current === 'got_it') return
+    if (micError) setMicError(null)
+    armAssistantAudio({ playPendingGreeting: false })
+    playAppSound('tap')
+    if (current === 'replying') {
+      assistantTtsAbortRef.current?.abort()
+      void beginListening()
+      return
+    }
+    if (current === 'speaking') {
+      stopAssistantAudio()
+      void beginListening()
+      return
+    }
+    if (current === 'idle' || current === 'error') {
+      void beginListening()
+      return
+    }
+    if (current === 'listening') {
+      const startedAt = listenStartRef.current
+      if (startedAt && Date.now() - startedAt < MIN_TOGGLE_LISTEN_BEFORE_COMMIT_MS) {
+        return
+      }
+      armAssistantAudio({ playPendingGreeting: false })
+      void commitListening()
+    }
+  }
+
   const onMicPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
-    if (micMode !== 'hold') return
-    if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
+    if (micMode !== 'hold') {
+      e.preventDefault()
+      togglePointerHandledRef.current = true
+      handleToggleMicGesture()
+      return
+    }
+    if (statusRef.current === 'paused' || statusRef.current === 'thinking' || statusRef.current === 'transcribing' || statusRef.current === 'got_it') return
     armAssistantAudio({ playPendingGreeting: false })
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
@@ -1913,28 +1940,10 @@ export function LiveConversationScreen({
       e.preventDefault()
       return
     }
-    if (status === 'paused' || status === 'thinking' || status === 'transcribing' || status === 'got_it') return
-    if (micError) setMicError(null)
-    armAssistantAudio({ playPendingGreeting: false })
-    playAppSound('tap')
-    if (status === 'replying') {
-      assistantTtsAbortRef.current?.abort()
-      void beginListening()
-      return
-    }
-    if (status === 'speaking') {
-      stopAssistantAudio()
-      void beginListening()
-      return
-    }
-    if (status === 'idle' || status === 'error') {
-      void beginListening()
-      return
-    }
-    if (status === 'listening') {
-      armAssistantAudio({ playPendingGreeting: false })
-      void commitListening()
-    }
+    // Pointer events are the source of truth on mobile; the synthetic click can arrive after
+    // React has rendered `listening` and accidentally stop a just-started recording.
+    togglePointerHandledRef.current = false
+    e.preventDefault()
   }
 
   const togglePause = () => {
