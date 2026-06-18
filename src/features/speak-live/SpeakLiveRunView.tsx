@@ -154,6 +154,21 @@ function writeSaved(rows: SavedSession[]) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(rows.slice(0, 12)))
 }
 
+function isTransientSessionBootError(err: unknown): boolean {
+  if (!(err instanceof ApiRequestError)) return false
+  if (err.code === 'DATABASE_ERROR' || err.code === 'DEPENDENCY_UNAVAILABLE') return true
+  if (err.status === 502 || err.status === 503 || err.status === 504) return true
+  return /Failed to connect|database|timeout|temporarily unreachable|could not reach the api/i.test(
+    err.message,
+  )
+}
+
+function sleepMs(ms: number): Promise<void> {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms)
+  })
+}
+
 function SpeakLiveBackendRequiredScreen({ onBack }: { onBack: () => void }) {
   return (
     <div className="min-h-[100dvh] bg-surface text-ink-primary flex flex-col items-center justify-center px-6 text-center gap-4">
@@ -1233,17 +1248,30 @@ export function SpeakLiveRunView() {
         return
       }
       try {
-        const res = await conversationClient.startConversation(
-          {
-            scenarioId,
-            feedbackMode: speakLiveFeedbackMode,
-            conversationSurface: 'speak_live',
-            cefrLevel: level,
-            ...(scenarioOverrides && Object.keys(scenarioOverrides).length > 0 ? { scenarioOverrides } : {}),
-            ...(languageCoachStartBody ? { languageCoach: languageCoachStartBody } : {}),
-          },
-          { signal: ac.signal }
-        )
+        const startBody = {
+          scenarioId,
+          feedbackMode: speakLiveFeedbackMode,
+          conversationSurface: 'speak_live' as const,
+          cefrLevel: level,
+          ...(scenarioOverrides && Object.keys(scenarioOverrides).length > 0 ? { scenarioOverrides } : {}),
+          ...(languageCoachStartBody ? { languageCoach: languageCoachStartBody } : {}),
+        }
+        let res: Awaited<ReturnType<typeof conversationClient.startConversation>> | null = null
+        let lastErr: unknown = null
+        for (let attempt = 0; attempt < 3; attempt++) {
+          if (ac.signal.aborted) return
+          try {
+            res = await conversationClient.startConversation(startBody, { signal: ac.signal })
+            lastErr = null
+            break
+          } catch (err) {
+            lastErr = err
+            if (!isTransientSessionBootError(err) || attempt >= 2) throw err
+            await sleepMs(900 * (attempt + 1))
+          }
+        }
+        if (lastErr) throw lastErr
+        if (!res) return
         if (!ac.signal.aborted) {
           setBootstrap({
             threadId: res.thread.id,
@@ -1277,7 +1305,9 @@ export function SpeakLiveRunView() {
           setSessionBootError(err.message || 'Could not start Speak Live session.')
           return
         }
-        setSessionBootError('Could not start Speak Live session. Check your connection and API URL.')
+        setSessionBootError(
+          'Could not start Speak Live session. Check your connection and try again — the database may be waking up.',
+        )
       }
     })()
     return () => ac.abort()

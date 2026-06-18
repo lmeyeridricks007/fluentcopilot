@@ -1,5 +1,12 @@
 import { AiConfigurationError } from '../services/ai/errors'
 
+function isSqlConnectionError(err: unknown): boolean {
+  const msg = err instanceof Error ? err.message : String(err ?? '')
+  return /Failed to connect|ECONNRESET|ETIMEDOUT|Connection lost|socket hang up|ConnectionError|Timeout/i.test(
+    msg,
+  )
+}
+
 export type ErrorCode =
   | 'VALIDATION_ERROR'
   | 'NOT_FOUND'
@@ -52,6 +59,17 @@ export function toErrorBody(err: unknown): {
         error: {
           code: 'DEPENDENCY_UNAVAILABLE' as const,
           message: err.message,
+        },
+      },
+    }
+  }
+  if (isSqlConnectionError(err)) {
+    return {
+      status: 503,
+      body: {
+        error: {
+          code: 'DATABASE_ERROR' as const,
+          message: 'Database is temporarily unreachable. Please try again in a moment.',
         },
       },
     }
