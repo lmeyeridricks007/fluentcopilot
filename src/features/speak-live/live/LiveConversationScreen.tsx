@@ -1940,10 +1940,15 @@ export function LiveConversationScreen({
       e.preventDefault()
       return
     }
-    // Pointer events are the source of truth on mobile; the synthetic click can arrive after
-    // React has rendered `listening` and accidentally stop a just-started recording.
-    togglePointerHandledRef.current = false
+    // Click is the fallback for mobile/browser shells that do not reliably deliver pointerdown.
+    // If pointerdown already handled the tap, ignore this synthetic click so it cannot stop
+    // a just-started recording.
     e.preventDefault()
+    if (togglePointerHandledRef.current) {
+      togglePointerHandledRef.current = false
+      return
+    }
+    handleToggleMicGesture()
   }
 
   const togglePause = () => {
