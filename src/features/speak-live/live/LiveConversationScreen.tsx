@@ -219,6 +219,10 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
 const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
 const ASSISTANT_PLAYBACK_VOLUME = 1
 const MIN_TOGGLE_LISTEN_BEFORE_COMMIT_MS = 900
+const MEDIA_VAD_SPEECH_RMS = 0.018
+const MEDIA_VAD_SILENCE_COMMIT_MS = 950
+const MEDIA_VAD_MIN_TURN_MS = 1200
+const MEDIA_VAD_NO_SPEECH_TIMEOUT_MS = 9000
 
 /** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
 async function fetchSpeakLiveReplyAudio(
@@ -580,6 +584,12 @@ export function LiveConversationScreen({
   const mediaCapRef = useRef<ActiveMediaRecording | null>(null)
   /** Keep the approved mic stream for this session so mobile browsers do not re-prompt every turn. */
   const micStreamRef = useRef<MediaStream | null>(null)
+  const vadAudioContextRef = useRef<AudioContext | null>(null)
+  const vadSourceRef = useRef<MediaStreamAudioSourceNode | null>(null)
+  const vadRafRef = useRef<number | null>(null)
+  const vadSpeechStartedRef = useRef(false)
+  const vadLastVoiceAtRef = useRef<number | null>(null)
+  const vadStartedAtRef = useRef<number | null>(null)
   /**
    * When browser Azure STT is on, we still need a MediaRecorder clip for `learnerAudioBlobPath` (post-session evaluation).
    * Azure SDK uses the mic separately; a second `getUserMedia` often succeeds and runs in parallel.
@@ -1744,6 +1754,91 @@ export function LiveConversationScreen({
     }
   }, [runTurn, stopAndGetTranscript, threadId, scenarioId, scenarioTitle, lastGoalLine, levelLabel])
 
+  const stopVoiceActivityWatch = useCallback(() => {
+    if (vadRafRef.current != null) {
+      window.cancelAnimationFrame(vadRafRef.current)
+      vadRafRef.current = null
+    }
+    vadSourceRef.current?.disconnect()
+    vadSourceRef.current = null
+    const ctx = vadAudioContextRef.current
+    vadAudioContextRef.current = null
+    vadSpeechStartedRef.current = false
+    vadLastVoiceAtRef.current = null
+    vadStartedAtRef.current = null
+    if (ctx && ctx.state !== 'closed') {
+      void ctx.close().catch(() => undefined)
+    }
+  }, [])
+
+  const startVoiceActivityWatch = useCallback(
+    (stream: MediaStream) => {
+      stopVoiceActivityWatch()
+      if (typeof window === 'undefined') return
+      const Ctor =
+        window.AudioContext ||
+        (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
+      if (!Ctor) return
+      try {
+        const ctx = new Ctor()
+        const analyser = ctx.createAnalyser()
+        analyser.fftSize = 1024
+        analyser.smoothingTimeConstant = 0.18
+        const source = ctx.createMediaStreamSource(stream)
+        source.connect(analyser)
+        vadAudioContextRef.current = ctx
+        vadSourceRef.current = source
+        vadSpeechStartedRef.current = false
+        vadLastVoiceAtRef.current = null
+        vadStartedAtRef.current = Date.now()
+        void ctx.resume().catch(() => undefined)
+
+        const data = new Uint8Array(analyser.fftSize)
+        const tick = () => {
+          if (!listenArmRef.current || statusRef.current !== 'listening' || commitInFlightRef.current) {
+            vadRafRef.current = null
+            return
+          }
+          analyser.getByteTimeDomainData(data)
+          let sum = 0
+          for (let i = 0; i < data.length; i += 1) {
+            const centered = (data[i] - 128) / 128
+            sum += centered * centered
+          }
+          const rms = Math.sqrt(sum / data.length)
+          const now = Date.now()
+          if (rms >= MEDIA_VAD_SPEECH_RMS) {
+            vadSpeechStartedRef.current = true
+            vadLastVoiceAtRef.current = now
+          }
+          const elapsed = vadStartedAtRef.current ? now - vadStartedAtRef.current : 0
+          const silentFor = vadLastVoiceAtRef.current ? now - vadLastVoiceAtRef.current : 0
+          if (
+            vadSpeechStartedRef.current &&
+            elapsed >= MEDIA_VAD_MIN_TURN_MS &&
+            silentFor >= MEDIA_VAD_SILENCE_COMMIT_MS
+          ) {
+            vadRafRef.current = null
+            autoCommit.markManualCommit()
+            void commitListening()
+            return
+          }
+          if (!vadSpeechStartedRef.current && elapsed >= MEDIA_VAD_NO_SPEECH_TIMEOUT_MS) {
+            vadRafRef.current = null
+            autoCommit.markManualCommit()
+            void commitListening()
+            return
+          }
+          vadRafRef.current = window.requestAnimationFrame(tick)
+        }
+        vadRafRef.current = window.requestAnimationFrame(tick)
+      } catch {
+        stopVoiceActivityWatch()
+      }
+    },
+    [autoCommit, commitListening, stopVoiceActivityWatch],
+  )
+
   const beginListening = useCallback(async () => {
     if (statusRef.current === 'paused' || statusRef.current === 'thinking' || statusRef.current === 'transcribing' || statusRef.current === 'got_it') return
     if (statusRef.current === 'replying') {
@@ -1819,6 +1914,7 @@ export function LiveConversationScreen({
       } else {
         mediaCapRef.current = cap
       }
+      startVoiceActivityWatch(micStream)
       /** Arm before `micBoot` clears so a fast pointer-up never misses capture (see `onMicPointerUp`). */
       listenArmRef.current = true
     } catch (e) {
@@ -1852,7 +1948,7 @@ export function LiveConversationScreen({
         void commitListening()
       }
     })
-  }, [startContinuous, stopAssistantAudio, threadId, autoCommit, chunkedTts, commitListening])
+  }, [startContinuous, stopAssistantAudio, threadId, autoCommit, chunkedTts, commitListening, startVoiceActivityWatch])
 
   const handleToggleMicGesture = () => {
     const current = statusRef.current
