@@ -69,7 +69,10 @@ export function speakAiLine(params: {
 }
 
 export async function ensureMicStream(streamRef: { current: MediaStream | null }): Promise<MediaStream> {
-  if (streamRef.current?.getAudioTracks().some((track) => track.readyState === 'live')) return streamRef.current
+  if (streamRef.current?.getAudioTracks().some((track) => track.readyState === 'live')) {
+    resumeMicStream(streamRef)
+    return streamRef.current
+  }
   streamRef.current = null
   if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
     throw new Error('NO_MEDIA')
@@ -110,6 +113,11 @@ export function resumeMicStream(streamRef: { current: MediaStream | null }): voi
 export function stopMediaStream(streamRef: { current: MediaStream | null }): void {
   streamRef.current?.getTracks().forEach((t) => t.stop())
   streamRef.current = null
+}
+
+export async function refreshMicStream(streamRef: { current: MediaStream | null }): Promise<MediaStream> {
+  stopMediaStream(streamRef)
+  return ensureMicStream(streamRef)
 }
 
 export function micErrorKind(e: unknown): 'mic_denied' | 'audio_failed' {

@@ -25,10 +25,11 @@ import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } fr
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
-import { ensureMicStream, micErrorKind, queryMicrophonePermission, resumeMicStream, stopMediaStream, suspendMicStream } from '../call/speakLiveSpeech'
+import { ensureMicStream, micErrorKind, queryMicrophonePermission, refreshMicStream, resumeMicStream, stopMediaStream, suspendMicStream } from '../call/speakLiveSpeech'
 import { startMediaRecordingSession, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
 import { LiveLatestAssistantCard } from './LiveLatestAssistantCard'
 import { LanguageCoachTurnFeedbackCard } from './LanguageCoachTurnFeedbackCard'
+import { resolveToggleMicClick } from './liveMicTurnGuards'
 import { LiveSpeechPerfOverlay } from './LiveSpeechPerfOverlay'
 import { LiveTranscriptThread } from './LiveTranscriptThread'
 import { LiveSessionControls, type LiveMicMode } from './LiveSessionControls'
@@ -218,11 +219,6 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
 
 const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
 const ASSISTANT_PLAYBACK_VOLUME = 1
-const MIN_TOGGLE_LISTEN_BEFORE_COMMIT_MS = 900
-const MEDIA_VAD_SPEECH_RMS = 0.018
-const MEDIA_VAD_SILENCE_COMMIT_MS = 950
-const MEDIA_VAD_MIN_TURN_MS = 1200
-const MEDIA_VAD_NO_SPEECH_TIMEOUT_MS = 9000
 
 /** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
 async function fetchSpeakLiveReplyAudio(
@@ -584,12 +580,6 @@ export function LiveConversationScreen({
   const mediaCapRef = useRef<ActiveMediaRecording | null>(null)
   /** Keep the approved mic stream for this session so mobile browsers do not re-prompt every turn. */
   const micStreamRef = useRef<MediaStream | null>(null)
-  const vadAudioContextRef = useRef<AudioContext | null>(null)
-  const vadSourceRef = useRef<MediaStreamAudioSourceNode | null>(null)
-  const vadRafRef = useRef<number | null>(null)
-  const vadSpeechStartedRef = useRef(false)
-  const vadLastVoiceAtRef = useRef<number | null>(null)
-  const vadStartedAtRef = useRef<number | null>(null)
   /**
    * When browser Azure STT is on, we still need a MediaRecorder clip for `learnerAudioBlobPath` (post-session evaluation).
    * Azure SDK uses the mic separately; a second `getUserMedia` often succeeds and runs in parallel.
@@ -604,9 +594,13 @@ export function LiveConversationScreen({
   const commitInFlightRef = useRef(false)
   /** Dedupes release bursts from the same physical lift within a few hundred ms. */
   const lastPointerReleaseMsRef = useRef(0)
-  /** Toggle mode starts on pointerdown for mobile reliability; suppress the following synthetic click. */
-  const togglePointerHandledRef = useRef(false)
   const statusRef = useRef<LiveSessionStatus>('idle')
+
+  const setSessionStatus = useCallback((next: LiveSessionStatus) => {
+    statusRef.current = next
+    setStatus(next)
+  }, [])
+
   const mutedRef = useRef(false)
   /** Single DOM audio element — reliable mute/replay vs `new Audio()`. */
   const audioRef = useRef<HTMLAudioElement | null>(null)
@@ -660,14 +654,14 @@ export function LiveConversationScreen({
       timelineRef.current?.mark('playbackStarted')
       setAssistantMediaPhase('idle')
       if (statusRef.current !== 'speaking') {
-        setStatus('speaking')
+        setSessionStatus('speaking')
       }
     },
     onPlaybackEnd: () => {
       timelineRef.current?.mark('turnCompleted')
       const snap = timelineRef.current?.logSummary() ?? null
       if (snap) setLastTimeline(snap)
-      setStatus('idle')
+      setSessionStatus('idle')
     },
   })
 
@@ -720,7 +714,6 @@ export function LiveConversationScreen({
     return () => document.removeEventListener('mousedown', onDoc)
   }, [headerSessionMenuOpen])
 
-  statusRef.current = status
   mutedRef.current = muted
 
   /** True after the learner taps the mic — reset() must not clear this or TTS never plays on mobile. */
@@ -865,7 +858,7 @@ export function LiveConversationScreen({
     const bail = window.setTimeout(() => {
       if (statusRef.current !== 'replying' && statusRef.current !== 'speaking') return
       setAssistantMediaPhase('idle')
-      setStatus('idle')
+      setSessionStatus('idle')
       setSttWarning('Voice is taking longer than usual — read the reply above, or use Replay in the menu.')
     }, 38_000)
     return () => {
@@ -942,12 +935,12 @@ export function LiveConversationScreen({
       opts?.onPlaybackMark?.()
       timelineRef.current?.mark('playCallFired')
       if (!opts?.sequentialChunk) {
-        setStatus('speaking')
+        setSessionStatus('speaking')
       }
       a.onended = () => {
         revoke?.()
         if (!opts?.sequentialChunk) {
-          setStatus('idle')
+          setSessionStatus('idle')
         }
         opts?.onEnded?.()
       }
@@ -955,7 +948,7 @@ export function LiveConversationScreen({
         revoke?.()
         setAssistantPlaybackFailed(true)
         if (!opts?.sequentialChunk) {
-          setStatus('idle')
+          setSessionStatus('idle')
         }
         opts?.onError?.()
       }
@@ -963,12 +956,12 @@ export function LiveConversationScreen({
         revoke?.()
         setAssistantPlaybackFailed(true)
         if (!opts?.sequentialChunk) {
-          setStatus('idle')
+          setSessionStatus('idle')
         }
         opts?.onError?.()
       })
     },
-    [muted, stopAssistantAudio]
+    [muted, setSessionStatus, stopAssistantAudio]
   )
 
   const playAssistantClipAsync = useCallback(
@@ -1047,7 +1040,7 @@ export function LiveConversationScreen({
         setLastAssistantTtsFailed(!res)
         if (res) {
           if (mutedRef.current) {
-            setStatus('idle')
+            setSessionStatus('idle')
           } else if (
             assistantPlaybackArmedRef.current &&
             statusRef.current === 'idle' &&
@@ -1092,7 +1085,7 @@ export function LiveConversationScreen({
        *  in this useCallback — keeps `runTurn` identity stable across innocuous re-renders. */
       const chunkedTts = chunkedTtsRef.current
       textPaintTargetIdRef.current = null
-      setStatus('thinking')
+      setSessionStatus('thinking')
       setAssistantMediaPhase('idle')
       setLastServerStreamPerf(null)
       setPartialUserText('')
@@ -1106,7 +1099,7 @@ export function LiveConversationScreen({
         setLastAssistantTtsFailed(false)
         const trimmedTx = params.transcript?.trim()
         if (trimmedTx) {
-          setStatus('got_it')
+          setSessionStatus('got_it')
           chunkedTts.reset({ preservePlayback: assistantPlaybackArmedRef.current })
           chunkedTts.startPlayback()
           const tl = timelineRef.current
@@ -1135,7 +1128,7 @@ export function LiveConversationScreen({
                 latency?.markLlmFirstDelta()
                 tl?.mark('firstResponseByte')
                 tl?.mark('firstAssistantText')
-                setStatus('replying')
+                setSessionStatus('replying')
                 latency?.markTtsStart()
                 tl?.mark('firstTtsChunkRequested')
               },
@@ -1211,7 +1204,7 @@ export function LiveConversationScreen({
           setLastCoachTurnFeedback(streamRes.liveCoachTurnFeedback ?? null)
           onTurnDebug?.(null)
 
-          setStatus('replying')
+          setSessionStatus('replying')
           void (async () => {
             assistantTtsAbortRef.current?.abort()
             const ac = new AbortController()
@@ -1246,7 +1239,7 @@ export function LiveConversationScreen({
               setAssistantMediaPhase('assistant_audio_ready')
               if (mutedRef.current) {
                 setAssistantMediaPhase('idle')
-                setStatus('idle')
+                setSessionStatus('idle')
                 tl?.mark('turnCompleted')
               } else {
                 tl?.mark('playbackRequested')
@@ -1262,7 +1255,7 @@ export function LiveConversationScreen({
               setLastAssistantTtsFailed(true)
               setAssistantMediaPhase('idle')
               setSttWarning('You have the reply in text — no voice this time. Read it above.')
-              setStatus('idle')
+              setSessionStatus('idle')
               tl?.mark('turnCompleted')
             }
             const trace = latency?.finish() ?? null
@@ -1309,7 +1302,7 @@ export function LiveConversationScreen({
             latency?.setServerLatencyTrace(res.liveTurnLatencyTrace)
           }
           setLastAssistantTtsFailed(false)
-          setStatus('replying')
+          setSessionStatus('replying')
 
           const serverAudio = res.audioUrl?.trim() ?? ''
 
@@ -1318,7 +1311,7 @@ export function LiveConversationScreen({
             setAssistantMediaPhase('assistant_audio_ready')
             if (mutedRef.current) {
               setAssistantMediaPhase('idle')
-              setStatus('idle')
+              setSessionStatus('idle')
             } else {
               playAssistantUrl(serverAudio, {
                 onPlaybackMark: () => {
@@ -1363,7 +1356,7 @@ export function LiveConversationScreen({
                 setAssistantMediaPhase('assistant_audio_ready')
                 if (mutedRef.current) {
                   setAssistantMediaPhase('idle')
-                  setStatus('idle')
+                  setSessionStatus('idle')
                 } else {
                   playAssistantUrl(audioUrl, {
                     onPlaybackMark: () => {
@@ -1376,7 +1369,7 @@ export function LiveConversationScreen({
                 setLastAssistantTtsFailed(true)
                 setAssistantMediaPhase('idle')
                 setSttWarning('Reply is on screen without voice — read it here, or replay if you see the option.')
-                setStatus('idle')
+                setSessionStatus('idle')
               }
               const traceBundledAsync = latency?.finish() ?? null
               if (traceBundledAsync) setLastLatencyTrace(traceBundledAsync)
@@ -1445,7 +1438,7 @@ export function LiveConversationScreen({
           setSttWarning(
             'Quick reconnect — the server hiccupped for a moment. Tap the mic and try once more; the conversation is still active.'
           )
-          setStatus('idle')
+          setSessionStatus('idle')
           return
         }
         if (speechLike) {
@@ -1479,14 +1472,14 @@ export function LiveConversationScreen({
               ? `\n\n[dev] correlationId=${e.correlationId} code=${e.code} status=${e.status}`
               : ''
           setSttWarning(`${detail}${dev}`)
-          setStatus('idle')
+          setSessionStatus('idle')
         } else {
-          setStatus('error')
-          window.setTimeout(() => setStatus('idle'), 2800)
+          setSessionStatus('error')
+          window.setTimeout(() => setSessionStatus('idle'), 2800)
         }
       }
     },
-    [threadId, scenarioId, levelLabel, onTurnDebug, playAssistantUrl, stopAssistantAudio]
+    [threadId, scenarioId, levelLabel, onTurnDebug, playAssistantUrl, setSessionStatus, stopAssistantAudio]
   )
 
   const commitListening = useCallback(async () => {
@@ -1513,9 +1506,9 @@ export function LiveConversationScreen({
 
       const committedPartial = partialUserTextRef.current.trim()
       if (committedPartial) {
-        setStatus('got_it')
+        setSessionStatus('got_it')
       } else {
-        setStatus('transcribing')
+        setSessionStatus('transcribing')
       }
       setSttWarning(null)
 
@@ -1606,7 +1599,7 @@ export function LiveConversationScreen({
           })
         if (shouldConfirm) {
           try {
-            setStatus('transcribing')
+            setSessionStatus('transcribing')
             let b64: string
             let transcribeMime = recordingMime
             const prepWall = Date.now()
@@ -1696,7 +1689,8 @@ export function LiveConversationScreen({
        * (see `prepareAudioForAzurePronunciationAssessment` comment in the codebase).
        */
       if (!recordingBlob || recordingBlob.size < minBytes) {
-        setStatus('idle')
+        stopMediaStream(micStreamRef)
+        setSessionStatus('idle')
         setSttWarning('We did not hear speech — try a little longer, or check the mic is on.')
         return
       }
@@ -1721,13 +1715,13 @@ export function LiveConversationScreen({
           setLastPipelineError(rep)
           logSpeakLivePipelineFailure(rep)
           console.warn('[Speak Live pipeline] prepare_audio', prepErr)
-          setStatus('idle')
+          setSessionStatus('idle')
           setSttWarning(prepareFailureUserMessage(prepErr))
           return
         }
         const maxB64 = maxTranscribeBase64Chars()
         if (b64.length > maxB64) {
-          setStatus('idle')
+          setSessionStatus('idle')
           setSttWarning('That take ran long — release the mic a bit sooner and try again.')
           return
         }
@@ -1757,7 +1751,7 @@ export function LiveConversationScreen({
         tl?.updateAudioUploadMs(Date.now() - sttWall)
         const t = tr.text.trim()
         if (!t) {
-          setStatus('idle')
+          setSessionStatus('idle')
           setSttWarning('We did not hear speech — try a little longer, or check the mic is on.')
           return
         }
@@ -1775,106 +1769,24 @@ export function LiveConversationScreen({
         setLastPipelineError(rep)
         logSpeakLivePipelineFailure(rep)
         console.warn('[Speak Live pipeline] transcribe', e)
-        setStatus('idle')
+        setSessionStatus('idle')
         setSttWarning(transcribeFailureUserMessage(e))
       }
     } finally {
       commitInFlightRef.current = false
     }
-  }, [runTurn, stopAndGetTranscript, threadId, scenarioId, scenarioTitle, lastGoalLine, levelLabel])
-
-  const stopVoiceActivityWatch = useCallback(() => {
-    if (vadRafRef.current != null) {
-      window.cancelAnimationFrame(vadRafRef.current)
-      vadRafRef.current = null
-    }
-    vadSourceRef.current?.disconnect()
-    vadSourceRef.current = null
-    const ctx = vadAudioContextRef.current
-    vadAudioContextRef.current = null
-    vadSpeechStartedRef.current = false
-    vadLastVoiceAtRef.current = null
-    vadStartedAtRef.current = null
-    if (ctx && ctx.state !== 'closed') {
-      void ctx.close().catch(() => undefined)
-    }
-  }, [])
-
-  const startVoiceActivityWatch = useCallback(
-    (stream: MediaStream) => {
-      stopVoiceActivityWatch()
-      if (typeof window === 'undefined') return
-      const Ctor =
-        window.AudioContext ||
-        (window as Window & { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
-      if (!Ctor) return
-      try {
-        const ctx = new Ctor()
-        const analyser = ctx.createAnalyser()
-        analyser.fftSize = 1024
-        analyser.smoothingTimeConstant = 0.18
-        const source = ctx.createMediaStreamSource(stream)
-        source.connect(analyser)
-        vadAudioContextRef.current = ctx
-        vadSourceRef.current = source
-        vadSpeechStartedRef.current = false
-        vadLastVoiceAtRef.current = null
-        vadStartedAtRef.current = Date.now()
-        void ctx.resume().catch(() => undefined)
-
-        const data = new Uint8Array(analyser.fftSize)
-        const tick = () => {
-          if (!listenArmRef.current || statusRef.current !== 'listening' || commitInFlightRef.current) {
-            vadRafRef.current = null
-            return
-          }
-          analyser.getByteTimeDomainData(data)
-          let sum = 0
-          for (let i = 0; i < data.length; i += 1) {
-            const centered = (data[i] - 128) / 128
-            sum += centered * centered
-          }
-          const rms = Math.sqrt(sum / data.length)
-          const now = Date.now()
-          if (rms >= MEDIA_VAD_SPEECH_RMS) {
-            vadSpeechStartedRef.current = true
-            vadLastVoiceAtRef.current = now
-          }
-          const elapsed = vadStartedAtRef.current ? now - vadStartedAtRef.current : 0
-          const silentFor = vadLastVoiceAtRef.current ? now - vadLastVoiceAtRef.current : 0
-          if (
-            vadSpeechStartedRef.current &&
-            elapsed >= MEDIA_VAD_MIN_TURN_MS &&
-            silentFor >= MEDIA_VAD_SILENCE_COMMIT_MS
-          ) {
-            vadRafRef.current = null
-            autoCommit.markManualCommit()
-            void commitListening()
-            return
-          }
-          if (!vadSpeechStartedRef.current && elapsed >= MEDIA_VAD_NO_SPEECH_TIMEOUT_MS) {
-            vadRafRef.current = null
-            autoCommit.markManualCommit()
-            void commitListening()
-            return
-          }
-          vadRafRef.current = window.requestAnimationFrame(tick)
-        }
-        vadRafRef.current = window.requestAnimationFrame(tick)
-      } catch {
-        stopVoiceActivityWatch()
-      }
-    },
-    [autoCommit, commitListening, stopVoiceActivityWatch],
-  )
+  }, [runTurn, setSessionStatus, stopAndGetTranscript, threadId, scenarioId, scenarioTitle, lastGoalLine, levelLabel])
 
   const beginListening = useCallback(async () => {
-    if (statusRef.current === 'paused' || statusRef.current === 'thinking' || statusRef.current === 'transcribing' || statusRef.current === 'got_it') return
-    if (statusRef.current === 'replying') {
+    const current = statusRef.current
+    if (current === 'paused' || current === 'thinking' || current === 'transcribing' || current === 'got_it') return
+    if (commitInFlightRef.current || micBootRef.current) return
+    if (current === 'listening' && listenArmRef.current) return
+    if (current === 'replying') {
       assistantTtsAbortRef.current?.abort()
       chunkedTts.abort()
     }
-    if (statusRef.current === 'speaking') {
+    if (current === 'speaking') {
       stopAssistantAudio()
       chunkedTts.abort()
     }
@@ -1888,8 +1800,7 @@ export function LiveConversationScreen({
     const at = Date.now()
     listenStartRef.current = at
     setListenMs(0)
-    statusRef.current = 'listening'
-    setStatus('listening')
+    setSessionStatus('listening')
     if (listenTickRef.current) window.clearInterval(listenTickRef.current)
     listenTickRef.current = window.setInterval(() => {
       if (listenStartRef.current) setListenMs(Date.now() - listenStartRef.current)
@@ -1905,13 +1816,30 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
-      /** Ask for mic access once, then reuse that stream for short capture clips during this session. */
-      const micStream = await ensureMicStream(micStreamRef)
-      const cap = await startMediaRecordingSession({
-        requestDataBeforeStop: true,
-        stream: micStream,
-        stopTracksOnStop: false,
-      })
+      /**
+       * iOS Safari often rejects a second MediaRecorder on the same stream. Refresh the stream
+       * whenever we already hold one; permission stays granted so this is silent after the first allow.
+       */
+      const micStream = micStreamRef.current
+        ? await refreshMicStream(micStreamRef)
+        : await ensureMicStream(micStreamRef)
+      resumeMicStream(micStreamRef)
+      let cap: ActiveMediaRecording
+      try {
+        cap = await startMediaRecordingSession({
+          requestDataBeforeStop: true,
+          stream: micStream,
+          stopTracksOnStop: false,
+        })
+      } catch {
+        const retryStream = await refreshMicStream(micStreamRef)
+        resumeMicStream(micStreamRef)
+        cap = await startMediaRecordingSession({
+          requestDataBeforeStop: true,
+          stream: retryStream,
+          stopTracksOnStop: false,
+        })
+      }
       if (useAzureRef.current) {
         try {
           await startContinuous(
@@ -1943,7 +1871,6 @@ export function LiveConversationScreen({
       } else {
         mediaCapRef.current = cap
       }
-      startVoiceActivityWatch(micStream)
       /** Arm before `micBoot` clears so a fast pointer-up never misses capture (see `onMicPointerUp`). */
       listenArmRef.current = true
     } catch (e) {
@@ -1959,8 +1886,7 @@ export function LiveConversationScreen({
       }
       listenStartRef.current = null
       setListenMs(0)
-      statusRef.current = 'idle'
-      setStatus('idle')
+      setSessionStatus('idle')
       return
     } finally {
       micBootRef.current = false
@@ -1977,46 +1903,13 @@ export function LiveConversationScreen({
         void commitListening()
       }
     })
-  }, [startContinuous, stopAssistantAudio, threadId, autoCommit, chunkedTts, commitListening, startVoiceActivityWatch])
-
-  const handleToggleMicGesture = () => {
-    const current = statusRef.current
-    if (current === 'paused' || current === 'thinking' || current === 'transcribing' || current === 'got_it') return
-    if (micError) setMicError(null)
-    armAssistantAudio({ playPendingGreeting: false })
-    playAppSound('tap')
-    if (current === 'replying') {
-      assistantTtsAbortRef.current?.abort()
-      void beginListening()
-      return
-    }
-    if (current === 'speaking') {
-      stopAssistantAudio()
-      void beginListening()
-      return
-    }
-    if (current === 'idle' || current === 'error') {
-      void beginListening()
-      return
-    }
-    if (current === 'listening') {
-      const startedAt = listenStartRef.current
-      if (startedAt && Date.now() - startedAt < MIN_TOGGLE_LISTEN_BEFORE_COMMIT_MS) {
-        return
-      }
-      armAssistantAudio({ playPendingGreeting: false })
-      void commitListening()
-    }
-  }
+  }, [startContinuous, stopAssistantAudio, setSessionStatus, threadId, autoCommit, chunkedTts, commitListening])
 
   const onMicPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
-    if (micMode !== 'hold') {
-      e.preventDefault()
-      togglePointerHandledRef.current = true
-      handleToggleMicGesture()
-      return
-    }
-    if (statusRef.current === 'paused' || statusRef.current === 'thinking' || statusRef.current === 'transcribing' || statusRef.current === 'got_it') return
+    if (micMode !== 'hold') return
+    const current = statusRef.current
+    if (current === 'paused' || current === 'thinking' || current === 'transcribing' || current === 'got_it') return
+    if (commitInFlightRef.current || micBootRef.current) return
     armAssistantAudio({ playPendingGreeting: false })
     if (status === 'replying') {
       assistantTtsAbortRef.current?.abort()
@@ -2065,22 +1958,44 @@ export function LiveConversationScreen({
       e.preventDefault()
       return
     }
-    // Click is the fallback for mobile/browser shells that do not reliably deliver pointerdown.
-    // If pointerdown already handled the tap, ignore this synthetic click so it cannot stop
-    // a just-started recording.
     e.preventDefault()
-    if (togglePointerHandledRef.current) {
-      togglePointerHandledRef.current = false
+
+    const action = resolveToggleMicClick({
+      status: statusRef.current,
+      listenArmed: listenArmRef.current,
+      commitInFlight: commitInFlightRef.current,
+      micBooting: micBootRef.current,
+    })
+    if (action === 'ignore') return
+
+    if (micError) setMicError(null)
+    armAssistantAudio({ playPendingGreeting: false })
+    playAppSound('tap')
+
+    if (action === 'commit') {
+      void commitListening()
       return
     }
-    handleToggleMicGesture()
+
+    if (action === 'interrupt_and_start') {
+      if (statusRef.current === 'replying') {
+        assistantTtsAbortRef.current?.abort()
+        chunkedTts.abort()
+      }
+      if (statusRef.current === 'speaking') {
+        stopAssistantAudio()
+        chunkedTts.abort()
+      }
+    }
+
+    void beginListening()
   }
 
   const togglePause = () => {
     playAppSound('tap')
     if (status === 'paused') {
       resumeMicStream(micStreamRef)
-      setStatus('idle')
+      setSessionStatus('idle')
       return
     }
     void closeRecognizer()
@@ -2098,7 +2013,7 @@ export function LiveConversationScreen({
     setPartialUserText('')
     partialUserTextRef.current = ''
     setAssistantMediaPhase('idle')
-    setStatus('paused')
+    setSessionStatus('paused')
   }
 
   const handleEndChoice = async (c: EndSessionChoice) => {
