@@ -25,7 +25,7 @@ import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } fr
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
-import { ensureMicStream, micErrorKind, queryMicrophonePermission, refreshMicStream, resumeMicStream, stopMediaStream, suspendMicStream } from '../call/speakLiveSpeech'
+import { ensureMicStream, micErrorKind, queryMicrophonePermission, resumeMicStream, stopMediaStream, suspendMicStream } from '../call/speakLiveSpeech'
 import { startMediaRecordingSession, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
 import { LiveLatestAssistantCard } from './LiveLatestAssistantCard'
 import { LanguageCoachTurnFeedbackCard } from './LanguageCoachTurnFeedbackCard'
@@ -219,6 +219,8 @@ function trainVisualTone(status: LiveSessionStatus): 'idle' | 'listening' | 'pro
 
 const SPEAK_LIVE_REPLY_TTS_TIMEOUT_MS = 28_000
 const ASSISTANT_PLAYBACK_VOLUME = 1
+/** Ignore tap-to-send if the recorder just started (prevents instant empty commits on mobile). */
+const MIN_LISTEN_MS_BEFORE_COMMIT = 450
 
 /** Same endpoint as streaming chunks — with a hard timeout so mobile never spins forever. */
 async function fetchSpeakLiveReplyAudio(
@@ -749,6 +751,16 @@ export function LiveConversationScreen({
     setMicPreflightError(null)
     setMicError(null)
     try {
+      const permission = await queryMicrophonePermission()
+      if (permission === 'granted') {
+        setMicPreflightDeviceLabel('Microphone allowed for this site')
+        setMicPreflightStatus('ready')
+        return true
+      }
+      if (permission === 'denied') {
+        throw Object.assign(new Error('MIC_DENIED'), { name: 'NotAllowedError' })
+      }
+      /** First allow — must happen on this button tap (user gesture). Reused for the whole session. */
       const stream = await ensureMicStream(micStreamRef)
       const liveTrack = stream.getAudioTracks().find((track) => track.readyState === 'live')
       if (!liveTrack) {
@@ -794,10 +806,7 @@ export function LiveConversationScreen({
     void (async () => {
       const permission = await queryMicrophonePermission()
       if (cancelled || permission !== 'granted') return
-
-      const ok = await checkMicrophone({ silent: true, softFail: true })
-      if (cancelled || !ok) return
-
+      /** Do not call getUserMedia here — iOS re-prompts. Wait for the learner's first mic tap. */
       setSessionStarted(true)
       armAssistantAudio()
     })()
@@ -805,7 +814,7 @@ export function LiveConversationScreen({
     return () => {
       cancelled = true
     }
-  }, [armAssistantAudio, bootstrap, checkMicrophone, sessionStarted, threadId])
+  }, [armAssistantAudio, bootstrap, sessionStarted, threadId])
 
   useEffect(() => {
     if (bootstrap?.messages?.length) {
@@ -1689,7 +1698,6 @@ export function LiveConversationScreen({
        * (see `prepareAudioForAzurePronunciationAssessment` comment in the codebase).
        */
       if (!recordingBlob || recordingBlob.size < minBytes) {
-        stopMediaStream(micStreamRef)
         setSessionStatus('idle')
         setSttWarning('We did not hear speech — try a little longer, or check the mic is on.')
         return
@@ -1797,14 +1805,6 @@ export function LiveConversationScreen({
     setAssistantMediaPhase('idle')
     listenArmRef.current = false
     autoCommit.reset()
-    const at = Date.now()
-    listenStartRef.current = at
-    setListenMs(0)
-    setSessionStatus('listening')
-    if (listenTickRef.current) window.clearInterval(listenTickRef.current)
-    listenTickRef.current = window.setInterval(() => {
-      if (listenStartRef.current) setListenMs(Date.now() - listenStartRef.current)
-    }, 120)
 
     const tl = new TurnTimeline()
     timelineRef.current = tl
@@ -1816,30 +1816,13 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
-      /**
-       * iOS Safari often rejects a second MediaRecorder on the same stream. Refresh the stream
-       * whenever we already hold one; permission stays granted so this is silent after the first allow.
-       */
-      const micStream = micStreamRef.current
-        ? await refreshMicStream(micStreamRef)
-        : await ensureMicStream(micStreamRef)
-      resumeMicStream(micStreamRef)
-      let cap: ActiveMediaRecording
-      try {
-        cap = await startMediaRecordingSession({
-          requestDataBeforeStop: true,
-          stream: micStream,
-          stopTracksOnStop: false,
-        })
-      } catch {
-        const retryStream = await refreshMicStream(micStreamRef)
-        resumeMicStream(micStreamRef)
-        cap = await startMediaRecordingSession({
-          requestDataBeforeStop: true,
-          stream: retryStream,
-          stopTracksOnStop: false,
-        })
-      }
+      /** One mic grant per session — reuse the live stream; never stop/re-open (iOS re-prompts). */
+      const micStream = await ensureMicStream(micStreamRef)
+      const cap = await startMediaRecordingSession({
+        requestDataBeforeStop: true,
+        stream: micStream,
+        stopTracksOnStop: false,
+      })
       if (useAzureRef.current) {
         try {
           await startContinuous(
@@ -1871,7 +1854,6 @@ export function LiveConversationScreen({
       } else {
         mediaCapRef.current = cap
       }
-      /** Arm before `micBoot` clears so a fast pointer-up never misses capture (see `onMicPointerUp`). */
       listenArmRef.current = true
     } catch (e) {
       mediaCapRef.current?.cancel()
@@ -1880,18 +1862,21 @@ export function LiveConversationScreen({
       evalCapRef.current = null
       listenArmRef.current = false
       setMicError(micErrorKind(e))
-      if (listenTickRef.current) {
-        window.clearInterval(listenTickRef.current)
-        listenTickRef.current = null
-      }
-      listenStartRef.current = null
-      setListenMs(0)
       setSessionStatus('idle')
       return
     } finally {
       micBootRef.current = false
     }
+
     tl.mark('sttSessionReady')
+    const at = Date.now()
+    listenStartRef.current = at
+    setListenMs(0)
+    setSessionStatus('listening')
+    if (listenTickRef.current) window.clearInterval(listenTickRef.current)
+    listenTickRef.current = window.setInterval(() => {
+      if (listenStartRef.current) setListenMs(Date.now() - listenStartRef.current)
+    }, 120)
     if (threadId) {
       const lt = new LiveSpeechTurnTimer(threadId)
       latencyTimerRef.current = lt
@@ -1973,6 +1958,8 @@ export function LiveConversationScreen({
     playAppSound('tap')
 
     if (action === 'commit') {
+      const startedAt = listenStartRef.current
+      if (startedAt && Date.now() - startedAt < MIN_LISTEN_MS_BEFORE_COMMIT) return
       void commitListening()
       return
     }
