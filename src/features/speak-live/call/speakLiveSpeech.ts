@@ -1,5 +1,24 @@
 'use client'
 
+import { clearMicConsent, recordMicConsentGranted } from '@/lib/speech/microphoneConsentStorage'
+
+export type MicrophonePermissionState = 'granted' | 'denied' | 'prompt' | 'unsupported'
+
+export async function queryMicrophonePermission(): Promise<MicrophonePermissionState> {
+  if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
+    return 'unsupported'
+  }
+  try {
+    const result = await navigator.permissions?.query({ name: 'microphone' as PermissionName })
+    if (!result) return 'prompt'
+    if (result.state === 'granted') return 'granted'
+    if (result.state === 'denied') return 'denied'
+    return 'prompt'
+  } catch {
+    return 'prompt'
+  }
+}
+
 export function cancelAiSpeech(): void {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
   window.speechSynthesis.cancel()
@@ -56,15 +75,36 @@ export async function ensureMicStream(streamRef: { current: MediaStream | null }
     throw new Error('NO_MEDIA')
   }
   /** Same constraints as chat dictation (`mediaRecorderCapture`) for consistent WebM/Opus quality. */
-  const stream = await navigator.mediaDevices.getUserMedia({
-    audio: {
-      echoCancellation: true,
-      noiseSuppression: true,
-      channelCount: 1,
-    },
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({
+      audio: {
+        echoCancellation: true,
+        noiseSuppression: true,
+        channelCount: 1,
+      },
+    })
+    streamRef.current = stream
+    recordMicConsentGranted()
+    return stream
+  } catch (e) {
+    if (e && typeof e === 'object' && 'name' in e && (e as DOMException).name === 'NotAllowedError') {
+      clearMicConsent()
+    }
+    throw e
+  }
+}
+
+/** Pause capture without releasing browser permission (avoids re-prompting on resume). */
+export function suspendMicStream(streamRef: { current: MediaStream | null }): void {
+  streamRef.current?.getAudioTracks().forEach((track) => {
+    track.enabled = false
   })
-  streamRef.current = stream
-  return stream
+}
+
+export function resumeMicStream(streamRef: { current: MediaStream | null }): void {
+  streamRef.current?.getAudioTracks().forEach((track) => {
+    track.enabled = true
+  })
 }
 
 export function stopMediaStream(streamRef: { current: MediaStream | null }): void {

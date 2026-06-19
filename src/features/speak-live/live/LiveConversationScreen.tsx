@@ -25,7 +25,7 @@ import { armHtmlAudioElement, configureHtmlAudioElement, toPlayableAudioSrc } fr
 import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
-import { ensureMicStream, micErrorKind, stopMediaStream } from '../call/speakLiveSpeech'
+import { ensureMicStream, micErrorKind, queryMicrophonePermission, resumeMicStream, stopMediaStream, suspendMicStream } from '../call/speakLiveSpeech'
 import { startMediaRecordingSession, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
 import { LiveLatestAssistantCard } from './LiveLatestAssistantCard'
 import { LanguageCoachTurnFeedbackCard } from './LanguageCoachTurnFeedbackCard'
@@ -750,8 +750,8 @@ export function LiveConversationScreen({
     }
   }, [])
 
-  const checkMicrophone = useCallback(async () => {
-    playAppSound('tap')
+  const checkMicrophone = useCallback(async (opts?: { silent?: boolean; softFail?: boolean }) => {
+    if (!opts?.silent) playAppSound('tap')
     setMicPreflightStatus('checking')
     setMicPreflightError(null)
     setMicError(null)
@@ -763,8 +763,13 @@ export function LiveConversationScreen({
       }
       setMicPreflightDeviceLabel(liveTrack.label?.trim() || 'Microphone ready')
       setMicPreflightStatus('ready')
+      return true
     } catch (e) {
       stopMediaStream(micStreamRef)
+      if (opts?.softFail) {
+        setMicPreflightStatus('idle')
+        return false
+      }
       const kind = micErrorKind(e)
       setMicError(kind)
       setMicPreflightStatus('error')
@@ -773,17 +778,41 @@ export function LiveConversationScreen({
           ? 'Microphone access is blocked for this site. Allow it in your browser settings, then try again.'
           : 'We could not find a working microphone. Check your browser permissions or connect a mic, then try again.'
       )
+      return false
     }
   }, [])
 
-  const startCheckedSession = useCallback(() => {
-    if (micPreflightStatus !== 'ready') return
+  const startCheckedSession = useCallback(async () => {
     playAppSound('tap')
+    if (micPreflightStatus !== 'ready') {
+      const ok = await checkMicrophone({ silent: true })
+      if (!ok) return
+    }
     setSessionStarted(true)
     setMicPreflightError(null)
     setMicError(null)
     armAssistantAudio()
-  }, [armAssistantAudio, micPreflightStatus])
+  }, [armAssistantAudio, checkMicrophone, micPreflightStatus])
+
+  useEffect(() => {
+    if (sessionStarted || !threadId || bootstrap === null) return undefined
+
+    let cancelled = false
+    void (async () => {
+      const permission = await queryMicrophonePermission()
+      if (cancelled || permission !== 'granted') return
+
+      const ok = await checkMicrophone({ silent: true, softFail: true })
+      if (cancelled || !ok) return
+
+      setSessionStarted(true)
+      armAssistantAudio()
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [armAssistantAudio, bootstrap, checkMicrophone, sessionStarted, threadId])
 
   useEffect(() => {
     if (bootstrap?.messages?.length) {
@@ -2050,6 +2079,7 @@ export function LiveConversationScreen({
   const togglePause = () => {
     playAppSound('tap')
     if (status === 'paused') {
+      resumeMicStream(micStreamRef)
       setStatus('idle')
       return
     }
@@ -2059,7 +2089,7 @@ export function LiveConversationScreen({
     mediaCapRef.current = null
     evalCapRef.current?.cancel()
     evalCapRef.current = null
-    stopMediaStream(micStreamRef)
+    suspendMicStream(micStreamRef)
     if (listenTickRef.current) {
       window.clearInterval(listenTickRef.current)
       listenTickRef.current = null
@@ -2311,31 +2341,33 @@ export function LiveConversationScreen({
                 {micPreflightStatus === 'ready'
                   ? micPreflightDeviceLabel ?? 'Your browser confirmed a live microphone.'
                   : micPreflightError ??
-                    'Tap Check microphone and allow access if your browser asks. We keep that permission for this session.'}
+                    'Tap Start session and choose Allow when your browser asks. Pick Allow (not “Allow once”) so access is remembered for about 30 days.'}
               </p>
             </div>
 
             <div className="mt-5 grid gap-2">
               <button
                 type="button"
-                onClick={() => void checkMicrophone()}
-                disabled={micPreflightStatus === 'checking'}
-                className="min-h-touch rounded-2xl border border-slate-200 bg-white px-4 py-3 text-[14px] font-extrabold text-[#0F172A] shadow-sm transition hover:bg-slate-50 disabled:opacity-50"
-              >
-                {micPreflightStatus === 'checking' ? 'Checking…' : micPreflightStatus === 'ready' ? 'Check again' : 'Check microphone'}
-              </button>
-              <button
-                type="button"
-                onClick={startCheckedSession}
-                disabled={micPreflightStatus !== 'ready' || bootstrap === null || !threadId}
+                onClick={() => void startCheckedSession()}
+                disabled={micPreflightStatus === 'checking' || bootstrap === null || !threadId}
                 className="min-h-touch rounded-2xl bg-emerald-600 px-4 py-3 text-[15px] font-extrabold text-white shadow-[0_16px_34px_-18px_rgba(5,150,105,0.9)] transition hover:bg-emerald-700 disabled:bg-slate-300 disabled:shadow-none"
               >
-                Start session
+                {micPreflightStatus === 'checking' ? 'Checking microphone…' : 'Start session'}
               </button>
+              {micPreflightStatus !== 'ready' ? (
+                <button
+                  type="button"
+                  onClick={() => void checkMicrophone()}
+                  disabled={micPreflightStatus === 'checking'}
+                  className="min-h-touch rounded-2xl border border-slate-200 bg-white px-4 py-3 text-[14px] font-extrabold text-[#0F172A] shadow-sm transition hover:bg-slate-50 disabled:opacity-50"
+                >
+                  Check microphone only
+                </button>
+              ) : null}
             </div>
 
             <p className="mt-4 text-[12px] leading-relaxed text-[#64748B]">
-              On mobile, this setup step prevents repeated permission prompts and keeps the conversation turns moving.
+              Your browser stores microphone access for this site. If you are asked every time, choose Allow (not “Allow once”) or enable the mic in site settings.
             </p>
           </section>
         </main>
