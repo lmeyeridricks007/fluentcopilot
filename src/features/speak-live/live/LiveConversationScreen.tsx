@@ -26,7 +26,7 @@ import { stripMarkdownForTts } from '@/lib/speech/stripMarkdownForTts'
 import { getSpeakLiveAzureSegmentationSilenceMs } from '@/lib/api/apiConfig'
 import { appTalkThread } from '@/lib/routing/appRoutes'
 import { ensureMicStream, micErrorKind, queryMicrophonePermission, resumeMicStream, stopMediaStream, suspendMicStream } from '../call/speakLiveSpeech'
-import { startMediaRecordingSession, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
+import { SharedMicClipRecorder, type ActiveMediaRecording } from '@/lib/speech/mediaRecorderCapture'
 import { LiveLatestAssistantCard } from './LiveLatestAssistantCard'
 import { LanguageCoachTurnFeedbackCard } from './LanguageCoachTurnFeedbackCard'
 import { resolveToggleMicClick } from './liveMicTurnGuards'
@@ -528,7 +528,10 @@ export function LiveConversationScreen({
   const [assistantMediaPhase, setAssistantMediaPhase] = useState<LiveAssistantMediaPhase>('idle')
   const [partialUserText, setPartialUserText] = useState('')
   const partialUserTextRef = useRef('')
-  const [micMode, setMicMode] = useState<LiveMicMode>('toggle')
+  const [micMode, setMicMode] = useState<LiveMicMode>(() => {
+    if (typeof window === 'undefined') return 'hold'
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0 ? 'hold' : 'toggle'
+  })
   const [muted, setMuted] = useState(false)
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [listenMs, setListenMs] = useState(0)
@@ -582,6 +585,8 @@ export function LiveConversationScreen({
   const mediaCapRef = useRef<ActiveMediaRecording | null>(null)
   /** Keep the approved mic stream for this session so mobile browsers do not re-prompt every turn. */
   const micStreamRef = useRef<MediaStream | null>(null)
+  /** One MediaRecorder per session — iOS breaks on a second instance on the same stream. */
+  const sharedMicRecorderRef = useRef<SharedMicClipRecorder | null>(null)
   /**
    * When browser Azure STT is on, we still need a MediaRecorder clip for `learnerAudioBlobPath` (post-session evaluation).
    * Azure SDK uses the mic separately; a second `getUserMedia` often succeeds and runs in parallel.
@@ -720,15 +725,33 @@ export function LiveConversationScreen({
 
   /** True after the learner taps the mic — reset() must not clear this or TTS never plays on mobile. */
   const assistantPlaybackArmedRef = useRef(false)
+  /** iOS unlock runs once per session — repeating it resets volume and can block TTS. */
+  const htmlAudioArmedRef = useRef(false)
+
+  const ensureSharedMicRecorder = useCallback(async (): Promise<SharedMicClipRecorder> => {
+    const existing = sharedMicRecorderRef.current
+    if (existing?.mediaStream.getAudioTracks().some((track) => track.readyState === 'live')) {
+      resumeMicStream(micStreamRef)
+      return existing
+    }
+    sharedMicRecorderRef.current = null
+    const stream = await ensureMicStream(micStreamRef)
+    const recorder = new SharedMicClipRecorder(stream, { requestDataBeforeStop: true })
+    sharedMicRecorderRef.current = recorder
+    return recorder
+  }, [])
 
   const armAssistantAudio = useCallback((opts?: { playPendingGreeting?: boolean }) => {
     const playPendingGreeting = opts?.playPendingGreeting ?? true
     assistantPlaybackArmedRef.current = true
-    chunkedTtsRef.current.startPlayback()
     const a = audioRef.current
     if (a) {
-      a.volume = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
-      armHtmlAudioElement(a)
+      const vol = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
+      a.volume = vol
+      if (!htmlAudioArmedRef.current) {
+        htmlAudioArmedRef.current = true
+        armHtmlAudioElement(a, ASSISTANT_PLAYBACK_VOLUME)
+      }
     }
     const pending = pendingOpeningGreetingUrlRef.current
     if (
@@ -752,25 +775,18 @@ export function LiveConversationScreen({
     setMicError(null)
     try {
       const permission = await queryMicrophonePermission()
-      if (permission === 'granted') {
-        setMicPreflightDeviceLabel('Microphone allowed for this site')
-        setMicPreflightStatus('ready')
-        return true
-      }
       if (permission === 'denied') {
         throw Object.assign(new Error('MIC_DENIED'), { name: 'NotAllowedError' })
       }
-      /** First allow — must happen on this button tap (user gesture). Reused for the whole session. */
-      const stream = await ensureMicStream(micStreamRef)
-      const liveTrack = stream.getAudioTracks().find((track) => track.readyState === 'live')
-      if (!liveTrack) {
-        throw new Error('NO_LIVE_AUDIO_TRACK')
-      }
-      setMicPreflightDeviceLabel(liveTrack.label?.trim() || 'Microphone ready')
+      /** Defer getUserMedia to the first mic tap — one prompt for the whole session. */
+      setMicPreflightDeviceLabel(
+        permission === 'granted'
+          ? 'Microphone allowed for this site'
+          : 'Microphone will be requested when you first speak',
+      )
       setMicPreflightStatus('ready')
       return true
     } catch (e) {
-      stopMediaStream(micStreamRef)
       if (opts?.softFail) {
         setMicPreflightStatus('idle')
         return false
@@ -856,12 +872,8 @@ export function LiveConversationScreen({
     const kick = window.setTimeout(() => {
       if (statusRef.current !== 'replying') return
       if (assistantPlaybackArmedRef.current) {
-        chunkedTtsRef.current.startPlayback()
         const a = audioRef.current
-        if (a) {
-          a.volume = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
-          armHtmlAudioElement(a)
-        }
+        if (a) a.volume = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
       }
     }, 400)
     const bail = window.setTimeout(() => {
@@ -888,6 +900,8 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
+      sharedMicRecorderRef.current?.cancelClip()
+      sharedMicRecorderRef.current = null
       stopMediaStream(micStreamRef)
       /** Read the latest audio element at unmount time on purpose — the ref may have changed
        *  since the effect was set up (e.g. multiple chunks played during the session). */
@@ -939,8 +953,12 @@ export function LiveConversationScreen({
       timelineRef.current?.mark('audioSourceAssigned')
       const { src, revoke } = toPlayableAudioSrc(url)
       a.src = src
-      a.volume = muted ? 0 : ASSISTANT_PLAYBACK_VOLUME
-      a.oncanplay = () => { timelineRef.current?.mark('audioCanPlay') }
+      const playbackVolume = mutedRef.current ? 0 : ASSISTANT_PLAYBACK_VOLUME
+      a.volume = playbackVolume
+      a.oncanplay = () => {
+        a.volume = playbackVolume
+        timelineRef.current?.mark('audioCanPlay')
+      }
       opts?.onPlaybackMark?.()
       timelineRef.current?.mark('playCallFired')
       if (!opts?.sequentialChunk) {
@@ -961,16 +979,21 @@ export function LiveConversationScreen({
         }
         opts?.onError?.()
       }
-      void a.play().catch(() => {
-        revoke?.()
-        setAssistantPlaybackFailed(true)
-        if (!opts?.sequentialChunk) {
-          setSessionStatus('idle')
-        }
-        opts?.onError?.()
-      })
+      void a
+        .play()
+        .then(() => {
+          a.volume = playbackVolume
+        })
+        .catch(() => {
+          revoke?.()
+          setAssistantPlaybackFailed(true)
+          if (!opts?.sequentialChunk) {
+            setSessionStatus('idle')
+          }
+          opts?.onError?.()
+        })
     },
-    [muted, setSessionStatus, stopAssistantAudio]
+    [setSessionStatus, stopAssistantAudio]
   )
 
   const playAssistantClipAsync = useCallback(
@@ -1110,7 +1133,6 @@ export function LiveConversationScreen({
         if (trimmedTx) {
           setSessionStatus('got_it')
           chunkedTts.reset({ preservePlayback: assistantPlaybackArmedRef.current })
-          chunkedTts.startPlayback()
           const tl = timelineRef.current
           const llmClock = Date.now()
           latency?.markLlmRequestStart()
@@ -1816,13 +1838,14 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
-      /** One mic grant per session — reuse the live stream; never stop/re-open (iOS re-prompts). */
-      const micStream = await ensureMicStream(micStreamRef)
-      const cap = await startMediaRecordingSession({
-        requestDataBeforeStop: true,
-        stream: micStream,
-        stopTracksOnStop: false,
-      })
+      /** One mic grant + one MediaRecorder per session (iOS re-prompts on re-open). */
+      const sharedRecorder = await ensureSharedMicRecorder()
+      sharedRecorder.cancelClip()
+      sharedRecorder.startClip()
+      const cap: ActiveMediaRecording = {
+        stop: () => sharedRecorder.stopClip(),
+        cancel: () => sharedRecorder.cancelClip(),
+      }
       if (useAzureRef.current) {
         try {
           await startContinuous(
@@ -1888,7 +1911,7 @@ export function LiveConversationScreen({
         void commitListening()
       }
     })
-  }, [startContinuous, stopAssistantAudio, setSessionStatus, threadId, autoCommit, chunkedTts, commitListening])
+  }, [ensureSharedMicRecorder, startContinuous, stopAssistantAudio, setSessionStatus, threadId, autoCommit, chunkedTts, commitListening])
 
   const onMicPointerDown = (e: React.PointerEvent<HTMLButtonElement>) => {
     if (micMode !== 'hold') return
@@ -2017,6 +2040,8 @@ export function LiveConversationScreen({
       mediaCapRef.current = null
       evalCapRef.current?.cancel()
       evalCapRef.current = null
+      sharedMicRecorderRef.current?.cancelClip()
+      sharedMicRecorderRef.current = null
       stopMediaStream(micStreamRef)
       try {
         await onSaveAndExitLater()
@@ -2033,6 +2058,8 @@ export function LiveConversationScreen({
     mediaCapRef.current = null
     evalCapRef.current?.cancel()
     evalCapRef.current = null
+    sharedMicRecorderRef.current?.cancelClip()
+    sharedMicRecorderRef.current = null
     stopMediaStream(micStreamRef)
     await onEndSessionEvaluate()
   }

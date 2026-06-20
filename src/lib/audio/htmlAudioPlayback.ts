@@ -24,10 +24,9 @@ export function createHtmlAudio(src?: string): HTMLAudioElement {
  * Prime a specific `<audio>` element during a user gesture (mic tap).
  * iOS only allows later async `play()` on the same element that was unlocked.
  */
-export function armHtmlAudioElement(el: HTMLAudioElement): void {
+export function armHtmlAudioElement(el: HTMLAudioElement, restoreVolume = 1): void {
   if (typeof window === 'undefined') return
   configureHtmlAudioElement(el)
-  const previousVolume = el.volume
   const { src, revoke } = toPlayableAudioSrc(SILENT_WAV)
   el.volume = 0.001
   el.src = src
@@ -36,11 +35,11 @@ export function armHtmlAudioElement(el: HTMLAudioElement): void {
     .then(() => {
       el.pause()
       el.currentTime = 0
-      el.volume = previousVolume
+      el.volume = restoreVolume
       revoke?.()
     })
     .catch(() => {
-      el.volume = previousVolume
+      el.volume = restoreVolume
       revoke?.()
     })
 }
